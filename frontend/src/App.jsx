@@ -1,12 +1,17 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 import data from "./components/data";
 import Header from "./components/header"
 
 function App(){
   return(
+    <BrowserRouter>
 <div>
 <Header />
-<h1>Products</h1>
+
+
+<main>
+<h1>Laptops</h1>
 <div className="products">
 {data.products.map(product=>{
   return <div className="product" key={product.Comp_Name}>
@@ -24,12 +29,15 @@ function App(){
   </div>
 })}
 </div>
+</main>
+
 
 
 </div>
     
- 
+    </BrowserRouter>
   )
+  
 }
 
 export default App;
