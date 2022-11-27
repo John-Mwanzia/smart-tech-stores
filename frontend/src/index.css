@@ -8,38 +8,3 @@ body{
  min-height: 100vh;
  overflow-x: hidden;
 }
-
-.header{
-  background-color: #888;
-  padding: 1rem;
-}
-.products{
-  display: flex;
-  /* align-items: center; */
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 1.6rem;
-  flex: 1;
-}
-.product{
-  border:1px solid #888;
-}
-
-.product img{
-  max-height: 180px;
- /* max-width: 240px; */
-}
-.product p{
-  margin-bottom: .7rem;
-}
-.product button{
-  padding: .5rem;
-  border: none;
-  border-radius: 5px;
-  background-color: darkorange;
-}
-.product-details{
-  text-align: center;
-  padding: 1rem;
-}

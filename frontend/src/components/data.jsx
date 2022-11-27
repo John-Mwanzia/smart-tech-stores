@@ -1,7 +1,7 @@
 const data = {
     products : [
            {
-               Comp_Name:"hp elitebook 840 g4 png",
+               Comp_Name:"hp elitebook 840 g4 ",
                Img_Url: "https://e7.pngegg.com/pngimages/242/438/png-clipart-hp-elitebook-840-g3-laptop-hewlett-packard-intel-core-i5-laptop-electronics-netbook.png",              
                price:35000,
                cointInStock:4,
