@@ -1,6 +1,4 @@
 # smart-tech-stores
-simple web app for selling computer accessories
+simple web app for selling computer accessories for
 different categories of accessories i.e laptops, phones ,and others
-has an add to cart options
-services payable via mpesa services
-delivery services in consideration
+made using MERN technology
