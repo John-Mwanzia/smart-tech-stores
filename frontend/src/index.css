@@ -8,3 +8,7 @@ body{
  min-height: 100vh;
  overflow-x: hidden;
 }
+
+.more-items  img{
+  max-width: 20px;
+}
