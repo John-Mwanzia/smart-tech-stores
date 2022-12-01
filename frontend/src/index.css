@@ -8,7 +8,21 @@ body{
  min-height: 100vh;
  overflow-x: hidden;
 }
+.images{
+  min-height: 100%;
+}
+
+.more-items{
+  border: 1px #404040 solid;
+  padding: .4rem;
+  border-radius: 20px;
+ 
+}
 
 .more-items  img{
   max-width: 20px;
+}
+
+.cart-img{
+  max-width: 30px;
 }

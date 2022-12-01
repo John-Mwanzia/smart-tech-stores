@@ -1,20 +1,23 @@
 const data = {
     products : [
            {
+                Brand:"Hp",
                Comp_Name:"hp elitebook 840 g4 ",
-               Img_Url: "https://e7.pngegg.com/pngimages/242/438/png-clipart-hp-elitebook-840-g3-laptop-hewlett-packard-intel-core-i5-laptop-electronics-netbook.png",              
+               Img_Url: "https://cdn.shopify.com/s/files/1/1918/7539/products/Hp-840-g4-touch.png?v=1647739774",              
                price:35000,
                cointInStock:4,
                Specs:{
                 Cpu: " Intel Core i7-6300U 2.60GHz ",
                  Ram:"8GB DDR4 RAM ",
                 Storage : " 256GB SSD",
-                Display:"14 LED Display"
+                Display:"14 LED Display",
+                graphics:"Intel HD* Graphics"
                   
                }
            },
    
            {
+               Brand:"Hp",
                Comp_Name:"Hp Elitebook 840 G3",
                Img_Url:  "https://w7.pngwing.com/pngs/548/236/png-transparent-hp-elitebook-840-g3-laptop-hp-elitebook-820-g3-hp-elitebook-745-g3-laptop-electronics-netbook-computer.png",
                price:35000,
@@ -29,8 +32,9 @@ const data = {
            },
    
            {
-               Comp_Name:"dell latitude e7470",
-               Img_Url: "https://deprimesolutions.co.ke/wp-content/uploads/2020/04/Dell-ex-uk-i7-deprime-solutions-laptops-1.jpg",
+               Brand:"lenovo",
+               Comp_Name:"Lenovo ThinkPad T470s ",
+               Img_Url: "https://www.lenovo.com/medias/lenovo-laptop-thinkpad-t470s-hero.png?context=bWFzdGVyfGltYWdlc3wyMjU4NjF8aW1hZ2UvcG5nfGltYWdlcy9oN2YvaDAzLzE0MzMyNjg1MDkwODQ2LnBuZ3w2ZWY5N2ZjZjQ3OGY1MTFkNTlkMmI2YjY3NjZmNDEyOGQxZTFiYWVmNzgwNjY2NTJjZDRlYzk1MTRmZjU0MjVl",
                price:35000,
                cointInStock:6,
                Specs:{
@@ -43,8 +47,9 @@ const data = {
            },
    
            {
-               Comp_Name: "Macbook Pro 16 2020 MVVK2",
-               Img_Url: "https://fastdeal.co.ke/wp-content/uploads/2022/02/og__csakh451i0eq_large.png",
+            Brand:"Apple",
+               Comp_Name: "Macbook Pro 16  MVVK2",
+               Img_Url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe2dwWjlnZOSiKq03vu6k0iSCYzO0kp9CNgg&usqp=CAU",
                price:35000,
                cointInStock:3,
                Specs:{

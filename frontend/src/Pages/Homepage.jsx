@@ -2,20 +2,23 @@ import React from 'react'
 import data from "../components/data";
 import { Button, Card, Col, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Homepage() {
   return (
     <div>
-      
+   
 <h1>Laptops</h1>
-<Row>
+<Row >
 {data.products.map(product=>{
   return(
-   <Col sm={6} md={4} lg={3}  key={product.Comp_Name}  >
+   <Col sm={6} md={4} lg={3}  key={product.Comp_Name}   className='d-flex mt-3 justify-content-center '>
 
    <Card>
          <Link to={`/product/ ${product.Comp_Name}`}>
-             <img src={product.Img_Url} alt={product.Comp_Name} className="card-img-top"/>
+         <Card.Img  src={product.Img_Url} alt={product.Comp_Name} className='images'/>
+        
          </Link>
     <Card.Body>
         <Card.Title> 
@@ -23,7 +26,7 @@ export default function Homepage() {
            </Link>
           </Card.Title>
          <Card.Text> Price: KSh.{product.price}</Card.Text>
-         <Button variant="warning">Add to cart</Button>
+         <Button variant='warning' className='mb-1'>Add to cart</Button>
     </Card.Body>
 
     </Card>
@@ -31,17 +34,13 @@ export default function Homepage() {
 )})}
 </Row>
 
- <Row className='mt-3  ' >
+ <Row className='mt-3 ' >
     <Col className='  d-flex justify-content-center  '>
-       <Link style={{textDecoration: 'none'}}  to="/allItems"> 
-       <Card    className='pd-1 rounded-pill more-items'>
-       
-       <Card.Body>
-          More items {' '}
-         <Card.Img variant='right' src='https://static.vecteezy.com/system/resources/previews/006/827/566/original/down-arrow-icon-sign-symbol-logo-vector.jpg'/>
-         </Card.Body> 
-      
-      </Card>
+       <Link style={{textDecoration: 'none'}}  to="/allitems"> 
+       <div className=' more-items'>
+         More items {' '}
+         <KeyboardArrowDownIcon />
+      </div>
        </Link>
        </Col>  
  </Row>
