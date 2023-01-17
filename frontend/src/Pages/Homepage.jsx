@@ -8,8 +8,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 export default function Homepage() {
   return (
     <div>
-   
-<h1>Laptops</h1>
+
+      <div className='intro'> <h2 data-text="Welcome to smart tech stores... The World of Tech">Welcome to smart tech stores... The World of Tech</h2></div>
+    
+      <h1>Laptops</h1>
 <Row >
 {data.products.map(product=>{
   return(
