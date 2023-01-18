@@ -8,6 +8,9 @@ app.get('/api/products', (req,res)=>{
 });
 
 
-app.listen(3000, ()=>{
-    console.log("server started on port 3000");
-});
+app.listen(3000,  (error) =>{
+    if(!error)
+        console.log("Server  Successfully started on port 3000")
+    else 
+        console.log("Error occurred, server can't start", error);
+    });
