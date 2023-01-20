@@ -1,12 +1,23 @@
-import React from 'react'
-import data from "../components/data";
+import React, { useEffect, useState } from 'react'
 import { Button, Card, Col, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import MenuIcon from '@mui/icons-material/Menu';
 import Product from '../components/product';
+import axios from "axios"
 
 export default function Homepage() {
+  const [products, setproducts] = useState([])
+  
+    useEffect(()=>{
+      const fetchData = async()=>{
+      const results = await axios.get('http://localhost:3000/api/products')
+       setproducts(results.data)
+       console.log(results);
+    };
+      fetchData();
+    }, [])
+ 
   return (
     <div>
 
@@ -14,7 +25,7 @@ export default function Homepage() {
     
       <h1>Laptops</h1>
 <Row >
-{data.products.map(product=>{
+{products.map(product=>{
   return(
    <Col sm={6} md={4} lg={3}  key={product.Comp_Name}   className='d-flex mt-3 justify-content-center '>
 
