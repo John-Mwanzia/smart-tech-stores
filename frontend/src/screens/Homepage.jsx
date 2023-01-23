@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useReducer, useState } from 'react'
 import { Button, Card, Col, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -9,11 +9,12 @@ import axios from "axios"
 export default function Homepage() {
   const [products, setproducts] = useState([])
   
+  const [state, Dispatch] = useReducer(reducer, initialState)
     useEffect(()=>{
       const fetchData = async()=>{
       const results = await axios.get('http://localhost:3000/api/products')
        setproducts(results.data)
-       console.log(results);
+    
     };
       fetchData();
     }, [])

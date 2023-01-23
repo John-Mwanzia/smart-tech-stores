@@ -8,7 +8,7 @@ export default function Product(props) {
   return (
     <div>
      <Card>
-         <Link to={`/product/ ${product.Comp_Name}`}>
+         <Link to={`/products/product/ ${product.Comp_Name}`}>
          <Card.Img  src={product.Img_Url} alt={product.Comp_Name} className='images'/>
         
          </Link>
