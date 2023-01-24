@@ -9,7 +9,7 @@ import axios from "axios"
 export default function Homepage() {
   const [products, setproducts] = useState([])
   
-  const [state, Dispatch] = useReducer(reducer, initialState)
+  // const [state, Dispatch] = useReducer(reducer, initialState)
     useEffect(()=>{
       const fetchData = async()=>{
       const results = await axios.get('http://localhost:3000/api/products')

@@ -61,3 +61,7 @@ body{
 .cart-img{
   max-width: 30px;
 }
+
+.product-img{
+  max-width: 400px;
+}
