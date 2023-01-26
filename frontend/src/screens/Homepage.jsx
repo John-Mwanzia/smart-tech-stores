@@ -6,14 +6,40 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Product from '../components/product';
 import axios from "axios"
 
+const reducer = (state, action)=>{
+  switch(action.type){
+    case 'FETCH-REQUEST':
+      return {...state, loading: true}
+    case 'FETCH-SUCCESS':
+      return {...state, loading: false, products: action.payload}
+    case 'FETCH-FAILURE':
+      return {...state, loading: false, error: action.payload}  
+    default:
+    return state    
+  }
+}
+
 export default function Homepage() {
-  const [products, setproducts] = useState([])
+  // const [products, setproducts] = useState([])
+
+  const [{products,loading,error}, dispatch] = useReducer(reducer, {
+    products: [],
+    loading: true,
+    error: ''
+  })
   
   // const [state, Dispatch] = useReducer(reducer, initialState)
     useEffect(()=>{
       const fetchData = async()=>{
-      const results = await axios.get('http://localhost:3000/api/products')
-       setproducts(results.data)
+        dispatch({type: 'FETCH-REQUEST'})
+        try {
+          const results = await axios.get('http://localhost:3000/api/products')
+          dispatch({type: 'FETCH-SUCCESS', payload: results.data})
+        } catch (error) {
+           dispatch({type: 'FETCH-FAILURE', error: error})
+        }
+    
+      //  setproducts(results.data)
     
     };
       fetchData();
