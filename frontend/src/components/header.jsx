@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 // import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { LinkContainer } from "react-router-bootstrap";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
-import { Nav, NavDropdown } from "react-bootstrap";
+import { Badge, Nav, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { Store } from "../store";
 
 function Header() {
+
+  const {state} = useContext(Store)
+    const {cart} = state;
+    const {cartItems} = cart;
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
@@ -23,6 +28,7 @@ function Header() {
                 className="  cart-img"
                 src="https://cdn-icons-png.flaticon.com/512/8974/8974464.png"
               />
+              {cart.cartItems.length > 0 && <Badge pill bg="danger">{cartItems.reduce((a,c)=> a + c.quantity, 0)}</Badge>}
             </Link>
 
             <NavDropdown title="Category">

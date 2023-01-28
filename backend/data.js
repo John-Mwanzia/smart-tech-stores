@@ -1,6 +1,7 @@
 const data = {
     products : [
            {
+            _id:"1",
               Brand:"Hp",
                Comp_Name:"hp elitebook 840 g4 ",
                slug:"hp-elitebook-840-g4",
@@ -11,6 +12,7 @@ const data = {
            },
    
            {
+            _id:"2",
                Brand:"Hp",
                Comp_Name:"Hp Elitebook 840 G3",
                slug:"Hp-Elitebook-840-G3",
@@ -21,6 +23,7 @@ const data = {
            },
    
            {
+            _id:"3",
                Brand:"lenovo",
                Comp_Name:"Lenovo ThinkPad T470s ",
                slug:"Lenovo-ThinkPad-T470s",
@@ -31,6 +34,7 @@ const data = {
            },
    
            {
+            _id:"4",
             Brand:"Apple",
                Comp_Name: "Macbook Pro 16  MVVK2",
               slug: "Macbook-Pro-16-MVVK2",

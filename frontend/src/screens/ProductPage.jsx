@@ -35,8 +35,9 @@ export default function ProductPage() {
           try {
             const results = await axios.get(`http://localhost:3000/api/product/${slug}`)
             dispatch({type: 'FETCH-SUCCESS', payload: results.data})
+           
           } catch (error) {
-             dispatch({type: 'FETCH-FAILURE', error: error})
+             dispatch({type: 'FETCH-FAILURE', payload: error.message})
           }
       
         //  setproducts(results.data)
@@ -46,10 +47,21 @@ export default function ProductPage() {
       }, [slug])      
       
       //rename dispatch to context dispatch
-      const {state, dispatch:ctxdispatch} = useContext(Store)
+      const {state, dispatch:ctxdispatch} = useContext(Store);
+      const {cart} = state;
   
-    const addToCart = ()=>{
-        ctxdispatch({type: 'ADD-TO-CART', payload: product})
+    const addToCart = async()=>{
+        // ctxdispatch({type: 'ADD-TO-CART', payload: product})
+        const existItem = cart.cartItems.find(item =>{
+          item._id
+         })
+         const quantity = existItem? existItem.quantity + 1 : 1;
+         const {data} = await axios.get(`http://localhost:3000/api/products/${product._id}`)
+          if(data.countInStock< quantity){
+            window.alert(" Sorry, the product is out of stock");
+            return;
+          } else
+          ctxdispatch({type:"ADD-TO-CART", payload: {...product, quantity} })
 
     }
   
