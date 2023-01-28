@@ -1,7 +1,8 @@
 import axios from 'axios';
-import React, { useEffect, useReducer, useState } from 'react'
+import React, { useContext, useEffect, useReducer, useState } from 'react'
 import { Badge, Button, Col, ListGroup, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom'
+import { Store } from '../store';
 // import data from '../../../backend/data';
 
 const reducer = (state, action)=>{
@@ -42,37 +43,44 @@ export default function ProductPage() {
       
       };
         fetchData();
-      }, [slug])                 
+      }, [slug])      
+      
+      //rename dispatch to context dispatch
+      const {state, dispatch:ctxdispatch} = useContext(Store)
   
-    
+    const addToCart = ()=>{
+        ctxdispatch({type: 'ADD-TO-CART', payload: product})
+
+    }
   
    
 
   return (
     <div>
-      <h1>{slug}</h1>
-    <Row>
-   <Col md={6}>
+      {/* <h1>{slug}</h1> */}
+    <Row className='mt-3'>
+   <Col md={5}>
    <img src={product. Img_Url} alt={product.Comp_Name} className="product-img" />
    </Col> 
-   <Col md={3}>
+   <Col md={5}>
    
-    <ListGroup>
+    <ListGroup variant='flush'>
     <h1>Description</h1>
       <ListGroup.Item>Brand: {product.Brand}</ListGroup.Item>
-      <ListGroup.Item>{product.Specs}</ListGroup.Item>
+      <ListGroup.Item>{product.Comp_Name}</ListGroup.Item>
+      <ListGroup.Item> <strong>Specs:</strong> {product.Specs}</ListGroup.Item>
     </ListGroup>
    </Col> 
-   <Col md={3}>
-    <ListGroup>
+   <Col md={2}>
+    <ListGroup >
       <ListGroup.Item>
         Price: Ksh. {product.price}
       </ListGroup.Item>
-      <ListGroup.Item>
+      <ListGroup.Item className='mb-1'>
         Status: {product.countInStock>0 ? <Badge bg='success'>Available</Badge> : <Badge bg='danger'>out of stock</Badge>}
       </ListGroup.Item>
-      <div className='d-grid mt-3' >
-        <Button variant='warning'>
+      <div className='d-grid ' >
+        <Button variant='warning'onClick={addToCart} >
            Add to cart
         </Button>
       </div>
