@@ -14,6 +14,11 @@ const reducer = (state, action)=>{
             const cartItems = existItem? state.cart.cartItems.map((item) =>item._id === existItem._id? newItem : item
             ) :[...state.cart.cartItems, newItem];
             return {...state, cart: {...state.cart, cartItems}}
+
+        case 'REMOVE-CART-ITEM': {
+                const cartItems = state.cart.cartItems.filter( (item) => item._id !== action.payload._id);
+                return  {...state, cart: {...state.cart, cartItems}}
+             }
         default:
             return state
     }

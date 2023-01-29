@@ -3,6 +3,7 @@ import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import { Link, Route, Routes } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import Header from "./components/header"
+import CartScreen from "./screens/CartScreen";
 import Homepage from "./screens/Homepage";
 import ProductPage from "./screens/ProductPage";
 
@@ -19,6 +20,7 @@ function App(){
 <Routes>
   <Route path="/" element={<Homepage />}/>
   <Route path="/product/:slug" element={<ProductPage />} />
+  <Route path="/cart" element={<CartScreen/>}/>
 </Routes>
 
 </Container>

@@ -28,7 +28,7 @@ function Header() {
                 className="  cart-img"
                 src="https://cdn-icons-png.flaticon.com/512/8974/8974464.png"
               />
-              {cart.cartItems.length > 0 && <Badge pill bg="danger">{cartItems.reduce((a,c)=> a + c.quantity, 0)}</Badge>}
+              {cart.cartItems.length > 0 && <Badge pill bg="danger">{cart.cartItems.reduce((a, c)=> a + c.quantity, 0)}</Badge>}
             </Link>
 
             <NavDropdown title="Category">
