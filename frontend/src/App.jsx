@@ -12,13 +12,16 @@ function App(){
     <BrowserRouter>
 <div>
 <Header />
+<Routes>
+<Route path="/" element={<Homepage />}/>
+</Routes>
 
 
 <main>
 <Container>
 
 <Routes>
-  <Route path="/" element={<Homepage />}/>
+  
   <Route path="/product/:slug" element={<ProductPage />} />
   <Route path="/cart" element={<CartScreen/>}/>
 </Routes>

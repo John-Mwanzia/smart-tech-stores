@@ -16,7 +16,16 @@ function Header() {
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
         <LinkContainer to="/">
-          <Navbar.Brand> Smart tech stores</Navbar.Brand>
+          <Navbar.Brand>
+          <img
+              alt=""
+              src="/images/johny14_typography_logo_of_ST_initials_exactly_with_a_laptop_ph_0c2675b4-ca3a-4143-ab56-d061caf3437b.png" 
+              width="50"
+              height="50"
+              className="d-inline-block align-top"
+            />{' '}
+           Smart tech stores
+           </Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

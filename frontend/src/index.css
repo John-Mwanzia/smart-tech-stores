@@ -12,8 +12,10 @@ body{
 .intro h2{
   position: relative;
   font-size: 3vw;
-  color: #252839;
-  -webkit-text-stroke: 0.3vw #383d52;
+  /* color: #252839; */
+   color:  #f3f4f7;
+  /* -webkit-text-stroke: 0.3vw #383d52; */
+  /* -webkit-text-stroke: 0.3vw #f3f4f7; */
   text-transform: uppercase;
 }
 
@@ -42,6 +44,23 @@ body{
     width:100%;
 }
 }
+
+.landing-page{
+ background-image: url('/images/John-Mwanzia-beautiful-e-commerc.png');  
+ height: 700px;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+ color: white;
+ 
+ 
+}
+.hero-title{
+  display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
 
 .images{
   min-height: 100%;

@@ -48,7 +48,19 @@ export default function Homepage() {
   return (
     <div>
 
-      <div className='intro'> <h2 data-text="Welcome to smart tech stores... The World of Tech">Welcome to smart tech stores... The World of Tech</h2></div>
+    <div className='landing-page'>
+   
+    <div className='intro'> <h2 data-text="Welcome to smart tech stores... The World of Tech">Welcome to smart tech stores... The World of Tech</h2></div>
+    <div className='hero-title'>
+    <h1>Get the best deals on computer accessories and other electronics</h1>
+    </div>
+  
+    
+    </div>
+
+   <div className='text-center'>
+   <h1>Upgrade your Tech with our wide selection of products</h1>
+   </div>
     
       <h1>Laptops</h1>
 <Row >
