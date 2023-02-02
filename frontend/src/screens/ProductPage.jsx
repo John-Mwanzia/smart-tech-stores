@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useReducer, useState } from 'react'
 import { Badge, Button, Col, ListGroup, Row } from 'react-bootstrap';
-import { Navigate, useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { Store } from '../store';
 // import data from '../../../backend/data';
 
