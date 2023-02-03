@@ -5,6 +5,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import MenuIcon from '@mui/icons-material/Menu';
 import Product from '../components/product';
 import axios from "axios"
+import { Helmet } from 'react-helmet-async';
 
 const reducer = (state, action)=>{
   switch(action.type){
@@ -47,6 +48,10 @@ export default function Homepage() {
  
   return (
     <div>
+
+    <Helmet>
+      <title>Smart Tech Stores</title>
+    </Helmet>
 
     <div className='landing-page'>
    

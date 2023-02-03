@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useReducer, useState } from 'react'
 import { Badge, Button, Col, ListGroup, Row } from 'react-bootstrap';
+import { Helmet } from 'react-helmet-async';
 import { useNavigate, useParams } from 'react-router-dom'
 import { Store } from '../store';
 // import data from '../../../backend/data';
@@ -71,6 +72,13 @@ export default function ProductPage() {
 
   return (
     <div>
+     
+     <Helmet>
+       <title>
+        {slug}
+       </title>
+     </Helmet>
+
       {/* <h1>{slug}</h1> */}
     <Row className='mt-3'>
    <Col md={5}>

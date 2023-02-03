@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useContext } from 'react'
 import { Button, Card, Col, ListGroup, Row } from 'react-bootstrap';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { Store } from '../store';
@@ -26,6 +27,13 @@ export default function CartScreen() {
   
   return (
     <div>
+
+    <Helmet>
+      <title>
+        Shopping cart
+      </title>
+    </Helmet>
+
    <h1>Shopping List</h1>
 
    <Row>
