@@ -78,7 +78,7 @@ export default function Homepage() {
 )})}
 </Row>
 
- <Row className='mt-3 ' >
+ {/* <Row className='mt-3 ' >
     <Col className='  d-flex justify-content-center  '>
        <Link style={{textDecoration: 'none'}}  to="/allitems"> 
        <div className=' more-items'>
@@ -87,7 +87,7 @@ export default function Homepage() {
       </div>
        </Link>
        </Col>  
- </Row>
+ </Row> */}
     </div>
   )
 }
