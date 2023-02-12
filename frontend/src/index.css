@@ -47,8 +47,8 @@ body{
 
 
 .landing-page{
- background-image: url('/images/My project-1.png');  
- height: 1100px;
+ /* background-image: url('/images/My project-1.png');   */
+ /* height: 1100px; */
  background-repeat: no-repeat;
  /* background-position: center; */
  background-size: cover;
