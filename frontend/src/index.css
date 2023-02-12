@@ -12,10 +12,10 @@ body{
 .intro h2{
   position: relative;
   font-size: 3vw;
-  /* color: #252839; */
+  color: #01fe87;;
    color:  #f3f4f7;
-  /* -webkit-text-stroke: 0.3vw #383d52; */
-  /* -webkit-text-stroke: 0.3vw #f3f4f7; */
+  -webkit-text-stroke: 0.3vw #01fe87;;
+  -webkit-text-stroke: 0.3vw #f3f4f7;
   text-transform: uppercase;
 }
 
@@ -26,9 +26,9 @@ body{
   left: 0;
   width:0;
   height: 100%;
-  /* color: #01fe87; */
+  color: #01fe87;
   color: blue;
-  -webkit-text-stroke: 0vw #383d52;
+  -webkit-text-stroke: 0vw #01fe87;
   border-right: 3px solid  blue;
   overflow: hidden;
   animation: animate 6s linear infinite;
@@ -45,16 +45,17 @@ body{
 }
 }
 
-/* .landing-page{
- background-image: url('/images/John-Mwanzia-beautiful-e-commerc.png');  
- height: 700px;
+
+.landing-page{
+ background-image: url('/images/My project-1.png');  
+ height: 1100px;
  background-repeat: no-repeat;
- background-position: center;
+ /* background-position: center; */
  background-size: cover;
  color: white;
  
  
-} */
+}
 .hero-title{
   display: flex;
  justify-content: center;
