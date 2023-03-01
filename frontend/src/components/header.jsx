@@ -13,7 +13,7 @@ function Header() {
     const {cart} = state;
     const {cartItems} = cart;
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar className="Nav" variant="dark" expand="lg">
       <Container>
         <LinkContainer to="/">
           <Navbar.Brand>

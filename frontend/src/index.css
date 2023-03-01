@@ -8,6 +8,11 @@ body{
  min-height: 100vh;
  overflow-x: hidden;
 }
+.Nav{
+  background-color: #3e976c;
+    /* opacity: 0.15; */
+   color: black;
+}
 
 .intro h2{
   position: relative;
