@@ -1,8 +1,6 @@
 import React, { useEffect, useReducer, useState } from 'react'
 import { Button, Card, Col, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import MenuIcon from '@mui/icons-material/Menu';
 import Product from '../components/product';
 import axios from "axios"
 import { Helmet } from 'react-helmet-async';
@@ -53,19 +51,38 @@ export default function Homepage() {
       <title>Smart Tech Stores</title>
     </Helmet>
 
-    <div className='landing-page'>
+    <Row className="landing">
+     <div>  
+          <ul className='d-flex justify-content-center mb-3 landing-list'>
+            <li>laptops</li>
+            <li>phones</li>
+            <li>Chargers</li>
+            <li>phones</li>
+          </ul>
+          </div>
+
+          <Col md={6}>
+                {/* <div className='intro'> <h2 data-text="Welcome to smart tech stores... The World of Tech">Welcome to smart tech stores... The World of Tech</h2></div> */}
+                <div className='hero-title'><h1>Get the best deals on computer accessories and other electronics</h1> </div> 
+                <h1>Upgrade your Tech with our wide selection of products</h1>
+          </Col>
+          <Col md={6}>
+            <div className='slider-container'>
+               <img src='public\images\johnte.png'></img> 
+            </div>
+          </Col>
+
+    </Row>     
+
+    {/* <div className='landing-page'>
    
-    <div className='intro'> <h2 data-text="Welcome to smart tech stores... The World of Tech">Welcome to smart tech stores... The World of Tech</h2></div>
-    <div className='hero-title'>
-    <h1>Get the best deals on computer accessories and other electronics</h1>
-
-    </div> 
     
-    </div>
+    
+    </div> */}
 
-  <div className='text-center'>
-   <h1>Upgrade your Tech with our wide selection of products</h1>
-   </div>
+  {/* <div className='text-center'>
+ 
+   </div> */}
     
       <h1>Laptops</h1>
 <Row >

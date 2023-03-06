@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 // import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { InputGroup, FormControl, Button, Row, Col } from 'react-bootstrap';
 import { LinkContainer } from "react-router-bootstrap";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
@@ -13,8 +14,21 @@ function Header() {
     const {cart} = state;
     const {cartItems} = cart;
   return (
+    
     <Navbar className="Nav" variant="dark" expand="lg">
-      <Container>
+
+   <Container>
+   <div className="input-container">
+     <InputGroup>
+ 
+  <FormControl className="input-contaner-wrapper" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2" />
+      
+     <Button variant="light"><i className="fa fa-search" aria-hidden = "true"></i></Button>
+       
+    </InputGroup>
+    </div>
+     
+       <div className="d-flex justify-content-center align-items-center">
         <LinkContainer to="/">
           <Navbar.Brand>
           <img
@@ -27,11 +41,13 @@ function Header() {
            Smart tech stores
            </Navbar.Brand>
         </LinkContainer>
+      </div>
+</Container>
+
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="w-100 justify-content-end">
             <Link to="/cart">
-              {/* <ShoppingCartIcon /> */}
 
               <img
                 className="  cart-img"
@@ -53,8 +69,12 @@ function Header() {
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
-      </Container>
+
+     
+      
     </Navbar>
+
+  
   );
 }
 

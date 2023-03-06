@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -9,9 +10,57 @@ body{
  overflow-x: hidden;
 }
 .Nav{
-  background-color: #3e976c;
-    /* opacity: 0.15; */
+  background-color: rgba(62, 151, 108, 0.25);
    color: black;
+}
+/* .input-contaner{
+  width: 500px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+
+} */
+/* .input-contaner > i{
+   font-size: 20px;
+   color: #777;
+}
+
+.input-contaner-wrapper{
+  flex: 1;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+
+} */
+
+.landing{
+  background-color: rgba(62, 151, 108, 0.25);
+  height: 700px;
+  
+}
+.landing-list{
+  display: flex;
+  justify-content: space-between;
+}
+
+.landing-list li{
+  display: inline-block;
+  padding: 0px 20px;
+  list-style-type: none;
+
+  
+}
+.slider-container{
+  height: 600px;
+  width: 785px;
+  
+}
+.slider-container img{
+  border-radius: 120%;
 }
 
 .intro h2{
@@ -19,7 +68,7 @@ body{
   font-size: 3vw;
   color: #01fe87;;
    color:  #f3f4f7;
-  -webkit-text-stroke: 0.3vw #01fe87;;
+  -webkit-text-stroke: 0.3vw #01fe87;
   -webkit-text-stroke: 0.3vw #f3f4f7;
   text-transform: uppercase;
 }
@@ -51,21 +100,23 @@ body{
 }
 
 
-.landing-page{
- /* background-image: url('/images/My project-1.png');   */
- /* height: 1100px; */
+/* .landing-page{
+ background-image: url('/images/My project-1.png');  
+  height: 1100px;
  background-repeat: no-repeat;
- /* background-position: center; */
+ background-position: center;
  background-size: cover;
  color: white;
  
  
 }
+*/
 .hero-title{
-  display: flex;
+  /* display: flex;
  justify-content: center;
- align-items: center;
-}
+ align-items: center; */
+ font-family: 'Tilt Warp', cursive;
+} 
 
 
 .images{
