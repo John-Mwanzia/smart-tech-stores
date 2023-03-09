@@ -1,8 +1,9 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useReducer, useState } from 'react'
-import { Badge, Button, Col, ListGroup, Row } from 'react-bootstrap';
+import { Badge, Button, Col, Container, ListGroup, Row } from 'react-bootstrap';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate, useParams } from 'react-router-dom'
+import Header from '../components/header';
 import { Store } from '../store';
 // import data from '../../../backend/data';
 
@@ -78,9 +79,10 @@ export default function ProductPage() {
         {slug}
        </title>
      </Helmet>
-
-      {/* <h1>{slug}</h1> */}
-    <Row className='mt-3'>
+<Header />
+      <h1>{product.Comp_Name}</h1>
+<Container>
+    <Row className='mt-4'>
    <Col md={5}>
    <img src={product. Img_Url} alt={product.Comp_Name} className="product-img" />
    </Col> 
@@ -111,7 +113,7 @@ export default function ProductPage() {
    
     </Row>
     
-
+</Container>
   
         
     </div>

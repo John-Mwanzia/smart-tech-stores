@@ -18,7 +18,7 @@ function App(){
 
 
 <main>
-<Container>
+
 
 <Routes>
   
@@ -26,7 +26,6 @@ function App(){
   <Route path="/cart" element={<CartScreen/>}/>
 </Routes>
 
-</Container>
 </main>
 
 

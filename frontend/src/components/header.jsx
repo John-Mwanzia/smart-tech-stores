@@ -14,12 +14,13 @@ function Header() {
   return (
     <Navbar className="flex justify-between py-4  Nav" expand="lg">
       <Container>
-        <div className="flex items-cente w-4 ">
+        <div className="flex items-center search-wrapper ">
         <form>
           <input
             placeholder="Search"
             aria-label="Search"
             aria-describedby="basic-addon2"
+            className="search-input"
           />
 
           <Button variant="light">

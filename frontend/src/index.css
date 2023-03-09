@@ -20,9 +20,32 @@ body{
    color: black;
 }
 
+.search-wrapper{
+ width: 300px; 
+ height: 40px;
+ background-color: white;
+ border-radius: 30px;
+ display: flex;
+  align-items: center;
+  padding:  20px;
+
+}
+.search-wrapper Button > i{
+  color: black;
+  font-size: 20px;
+}
+.search-input{
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding-left: 10px;
+  
+} 
+
 .landing{
   background-color: rgba(62, 151, 108, 0.25);
-  height: 700px;
+  height: 900px;
   
 }
 .landing-list{
@@ -33,6 +56,8 @@ body{
 .landing-list li{
   display: inline-block;
   padding: 0px 20px;
+  font-size: 20px;
+  font-weight: 500;
   list-style-type: none;
 
   

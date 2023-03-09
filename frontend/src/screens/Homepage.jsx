@@ -62,7 +62,7 @@ export default function Homepage() {
 
         <Col md={6}>
           {/* <div className='intro'> <h2 data-text="Welcome to smart tech stores... The World of Tech">Welcome to smart tech stores... The World of Tech</h2></div> */}
-          <div className="px-3 bg-red-500 hero-title ">
+          <div>
             <h1>
               Get the best deals on computer accessories and other electronics
             </h1>
@@ -72,7 +72,8 @@ export default function Homepage() {
           </div>
         </Col>
         <Col md={6}>
-          <div className="slider-container">
+        {/* flex flex-1 flex-wrap w-full h-auto sm:w-1/2 md:w-1/3 */}
+          <div className="  slider-container"> 
             <img src="\images\johnte.png"></img>
           </div>
         </Col>

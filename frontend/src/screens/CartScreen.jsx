@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useContext } from 'react'
-import { Button, Card, Col, ListGroup, Row } from 'react-bootstrap';
+import { Button, Card, Col, Container, ListGroup, Row } from 'react-bootstrap';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
@@ -33,7 +33,7 @@ export default function CartScreen() {
         Shopping cart
       </title>
     </Helmet>
-
+<Container>
    <h1>Shopping List</h1>
 
    <Row>
@@ -81,7 +81,7 @@ export default function CartScreen() {
             </Card>
           </Col>
         </Row>
-      
+        </Container> 
     </div>
   )
 }
