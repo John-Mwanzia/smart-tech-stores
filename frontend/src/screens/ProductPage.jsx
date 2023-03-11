@@ -80,7 +80,7 @@ export default function ProductPage() {
        </title>
      </Helmet>
 <Header />
-      <h1>{product.Comp_Name}</h1>
+      <h1 className='px-4 mt-4'>{product.Comp_Name}</h1>
 <Container>
     <Row className='mt-4'>
    <Col md={5}>

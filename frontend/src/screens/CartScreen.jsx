@@ -1,13 +1,15 @@
 import axios from 'axios';
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Button, Card, Col, Container, ListGroup, Row } from 'react-bootstrap';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import Header from '../components/header';
 import { Store } from '../store';
 
 export default function CartScreen() {
    
+  const [currentPage, setCurrentPage] = useState('cartScreen');
     const {state, dispatch:ctxdispatch} = useContext(Store)
       const { cart} = state;
       const {cartItems} = cart;
@@ -27,7 +29,7 @@ export default function CartScreen() {
   
   return (
     <div>
-
+<Header currentPage={currentPage}/>
     <Helmet>
       <title>
         Shopping cart
