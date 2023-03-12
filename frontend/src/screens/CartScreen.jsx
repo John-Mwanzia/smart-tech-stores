@@ -36,7 +36,7 @@ export default function CartScreen() {
       </title>
     </Helmet>
 <Container>
-   <h1>Shopping List</h1>
+   <h1 className='mt-4'>Shopping List</h1>
 
    <Row>
           <Col md={8}>

@@ -97,3 +97,9 @@ body {
 .img-thumbnail {
   max-height: 60px;
 }
+.footer-wrapper{
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
+}

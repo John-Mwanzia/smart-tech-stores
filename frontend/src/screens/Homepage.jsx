@@ -5,6 +5,7 @@ import Product from "../components/product";
 import axios from "axios";
 import { Helmet } from "react-helmet-async";
 import Header from "../components/header";
+import Footer from "../components/Footer";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -72,8 +73,7 @@ export default function Homepage() {
           </div>
         </Col>
         <Col md={6}>
-
-          <div className="   slider-container "> 
+          <div className="   slider-container ">
             <img src="\images\johnte.png"></img>
           </div>
         </Col>
@@ -98,7 +98,7 @@ export default function Homepage() {
         </Row>
 
         {/* <Row className='mt-3 ' >
-    <Col className='  d-flex justify-content-center  '>
+     <Col className='  d-flex justify-content-center  '>
        <Link style={{textDecoration: 'none'}}  to="/allitems"> 
        <div className=' more-items'>
          More items {' '}
@@ -106,8 +106,10 @@ export default function Homepage() {
       </div>
        </Link>
        </Col>  
- </Row> */}
+      </Row> */}
       </Container>
+
+      <Footer />
     </div>
   );
 }
