@@ -51,7 +51,7 @@ export default function Homepage() {
         <title>Smart Tech Stores</title>
       </Helmet>
       <Header />
-      <Row className="landing">
+      <div className="landing">
         <div>
           <ul className="d-flex justify-content-center mb-3 landing-list">
             <li>laptops</li>
@@ -61,23 +61,25 @@ export default function Homepage() {
           </ul>
         </div>
 
-        <Col md={6}>
-          {/* <div className='intro'> <h2 data-text="Welcome to smart tech stores... The World of Tech">Welcome to smart tech stores... The World of Tech</h2></div> */}
-          <div className="px-4">
-            <h1>
-              Get the best deals on computer accessories and other electronics
-            </h1>
+        <div className="hero-section">
+          <div>
+            {/* <div className='intro'> <h2 data-text="Welcome to smart tech stores... The World of Tech">Welcome to smart tech stores... The World of Tech</h2></div> */}
+            <div className="px-4">
+              <h1 className="hero-text">
+                Get the best deals on computer accessories and other electronics
+              </h1>
+            </div>
+            <div className="px-4 ">
+              <h2> And upgrade your Tech with our wide selection of products</h2>
+            </div>
           </div>
-          <div className="px-4 ">
-            <h2>Upgrade your Tech with our wide selection of products</h2>
+          <div>
+            <div className="   slider-container ">
+              <img src="\images\johnte.png"></img>
+            </div>
           </div>
-        </Col>
-        <Col md={6}>
-          <div className="   slider-container ">
-            <img src="\images\johnte.png"></img>
-          </div>
-        </Col>
-      </Row>
+        </div>
+      </div>
 
       <Container>
         <h1>Laptops</h1>
