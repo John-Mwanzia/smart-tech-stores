@@ -77,9 +77,11 @@ body {
   flex-wrap: wrap;
   height: 100%;
   width: 100%;
+  gap: 5rem;
 }
 .hero-text{
   max-width: 500px;
+  font-weight: bold;
 }
 .slider-container {
   max-height: 600px;

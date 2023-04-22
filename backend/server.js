@@ -8,6 +8,9 @@ app.use(cors())
 app.get('/api/products', (req,res)=>{
    res.send(data.products);
 });
+app.get('/api/featuredProducts', (req,res)=>{
+  res.send(data.featuredProducts);
+});
 
 app.get('/api/product/:slug', (req,res)=>{
    const product = data.products.find(x => x.slug === req.params.slug);

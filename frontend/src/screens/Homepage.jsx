@@ -6,6 +6,7 @@ import axios from "axios";
 import { Helmet } from "react-helmet-async";
 import Header from "../components/header";
 import Footer from "../components/Footer";
+import FeaturedProducts from "../components/FeaturedProducts";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -53,7 +54,7 @@ export default function Homepage() {
       <Header />
       <div className="landing">
         <div>
-          <ul className="d-flex justify-content-center mb-3 landing-list">
+          <ul className="d-flex flex-wrap justify-content-center mb-3 landing-list">
             <li>laptops</li>
             <li>phones</li>
             <li>Chargers</li>
@@ -69,9 +70,7 @@ export default function Homepage() {
                 Get the best deals on computer accessories and other electronics
               </h1>
             </div>
-            <div className="px-4 ">
-              <h2> And upgrade your Tech with our wide selection of products</h2>
-            </div>
+            
           </div>
           <div>
             <div className="   slider-container ">
@@ -97,6 +96,10 @@ export default function Homepage() {
               </Col>
             );
           })}
+        </Row>
+
+        <Row className="mt-3 ">
+          <FeaturedProducts />
         </Row>
 
         {/* <Row className='mt-3 ' >

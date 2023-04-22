@@ -45,6 +45,44 @@ const data = {
                   
                
             }
+       ],
+       featuredProducts : [
+        {
+            _id:"1",
+               Gadget_Name:" samsung-a23 ",
+               slug:"samsung-a23",
+               Img_Url: "https://www.91-cdn.com/hub/wp-content/uploads/2022/02/Samsung-Galaxy-A23-5G-6.jpeg",              
+               price:35000,
+               countInStock:4,
+           },
+
+           {
+            _id:"2",
+               Gadget_Name:"huawei honor 10  ",
+               slug:"huawei-honor-10 ",
+               Img_Url: "https://www.priceinkenya.com/_ipx/b_%23ffffff,f_png,q_75,fit_contain,s_300x300/https://api.priceinkenya.com/media/121038/conversions/huawei-honor-10-64gb-zwXAQG9nI2-original.webp",              
+               price:35000,
+               countInStock:4,
+           },
+        
+           {
+            _id:"3",
+               Gadget_Name:"headphones",
+               slug:"headphones-1",
+               Img_Url:    "https://t4.ftcdn.net/jpg/05/35/49/97/240_F_535499727_fLDl5BxuoURnqRVLJ9jc46rBMws9lgMs.jpg",              
+               price:1500,
+               countInStock:4,
+           },
+        
+
+           {
+            _id:"3",
+               Gadget_Name:"hp laptop charger",
+               slug:"hp-laptop-charger",
+               Img_Url: "https://3.imimg.com/data3/WG/AR/MY-22059447/19-5v-4-62a-adapter-500x500.jpg",              
+               price:2500,
+               countInStock:4,
+           },
        ]
    }
 export default data;
