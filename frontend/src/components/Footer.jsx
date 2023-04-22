@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div>
-      <footer className="mt-4 bg-slate-800 ">
+    <>
+      <div className="mt-4 bg-slate-800 ">
         <div className=" footer-wrapper flex flex-row ">
           <div>
             <h2 className="text-center">About us</h2>
@@ -30,14 +30,14 @@ export default function Footer() {
               electronics needs. We look forward to serving you!
             </p> */}
             <div className="about-wapper">
-              <Link style={{textDecoration: 'none', color: 'white'}} to="">
-              <p>About smart-tech</p>
+              <Link style={{ textDecoration: "none", color: "white" }} to="">
+                <p>About smart-tech</p>
               </Link>
-              <Link style={{textDecoration: 'none', color: 'white'}} to="">
-              <p>Terms and conditions</p>
+              <Link style={{ textDecoration: "none", color: "white" }} to="">
+                <p>Terms and conditions</p>
               </Link>
-              <Link style={{textDecoration: 'none', color: 'white'}} to="">
-              <p>privacy policy</p>
+              <Link style={{ textDecoration: "none", color: "white" }} to="">
+                <p>privacy policy</p>
               </Link>
             </div>
           </div>
@@ -78,7 +78,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-      </footer>
-    </div>
+      </div>
+    </>
   );
 }

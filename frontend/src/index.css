@@ -104,6 +104,8 @@ body {
   padding: 20px;
   background-color: black;
   color: white;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
 }
 .footer-wrapper h2{
  text-decoration: underline;
