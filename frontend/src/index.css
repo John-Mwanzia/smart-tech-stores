@@ -100,6 +100,16 @@ body {
 .footer-wrapper{
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
   background-color: black;
   color: white;
 }
+.footer-wrapper h2{
+ text-decoration: underline;
+}
+.icon-wrapper{
+  display: flex;
+  gap: 10px;
+}
+ 
