@@ -1,4 +1,6 @@
 import React from "react";
+import { LinkContainer } from "react-router-bootstrap";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -6,7 +8,7 @@ export default function Footer() {
       <footer className="mt-4 bg-slate-800 ">
         <div className=" footer-wrapper flex flex-row ">
           <div className="about-wapper">
-            <h2  className="text-center">About us</h2>
+            <h2 className="text-center">About us</h2>
             {/* <p className="max-w-max">
               Welcome to our web app! We are passionate about providing
               high-quality computer accessories and electronics to our
@@ -33,7 +35,7 @@ export default function Footer() {
               <p>privacy policy</p>
             </div>
           </div>
-          <div  className="text-center">
+          <div className="text-center">
             <h2 className="text-center">Contact Us</h2>
             <div>
               <p>Phone: 123-456-7890</p>
@@ -49,17 +51,23 @@ export default function Footer() {
               <p>Chat support</p>
             </div>
           </div>
-          <div  className="text-center">
-            <h2  className="text-center">Follow us</h2>
+          <div className="text-center">
+            <h2 className="text-center">Follow us</h2>
             <div className="icon-wrapper">
               <div>
-                <img src="/images/facebook.png" width={40} height={40} />
+                <Link to="/">
+                  <img src="/images/facebook.png" width={40} height={40} />
+                </Link>
               </div>
               <div>
-                <img src="/images/instagram.png" width={40} height={40} />
+                <Link to="/">
+                  <img src="/images/instagram.png" width={40} height={40} />
+                </Link>
               </div>
               <div>
-                <img src="/images/twitter.png" width={40} height={40} />
+                <Link to="/">
+                  <img src="/images/twitter.png" width={40} height={40} />
+                </Link>
               </div>
             </div>
           </div>
