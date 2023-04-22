@@ -7,7 +7,7 @@ export default function Footer() {
     <div>
       <footer className="mt-4 bg-slate-800 ">
         <div className=" footer-wrapper flex flex-row ">
-          <div className="about-wapper">
+          <div>
             <h2 className="text-center">About us</h2>
             {/* <p className="max-w-max">
               Welcome to our web app! We are passionate about providing
@@ -29,10 +29,16 @@ export default function Footer() {
               Thank you for choosing our web app for your computer accessory and
               electronics needs. We look forward to serving you!
             </p> */}
-            <div>
+            <div className="about-wapper">
+              <Link style={{textDecoration: 'none', color: 'white'}} to="">
               <p>About smart-tech</p>
+              </Link>
+              <Link style={{textDecoration: 'none', color: 'white'}} to="">
               <p>Terms and conditions</p>
+              </Link>
+              <Link style={{textDecoration: 'none', color: 'white'}} to="">
               <p>privacy policy</p>
+              </Link>
             </div>
           </div>
           <div className="text-center">
