@@ -6,6 +6,7 @@ import Header from "./components/header"
 import CartScreen from "./screens/CartScreen";
 import Homepage from "./screens/Homepage";
 import ProductPage from "./screens/ProductPage";
+import FeaturedProductPage from "./screens/FeaturedProductPage";
 
 function App(){
   return(
@@ -23,6 +24,7 @@ function App(){
 <Routes>
   
   <Route path="/product/:slug" element={<ProductPage />} />
+  <Route path="/featuredProduct/:slug" element={<FeaturedProductPage />} />
   <Route path="/cart" element={<CartScreen/>}/>
 </Routes>
 

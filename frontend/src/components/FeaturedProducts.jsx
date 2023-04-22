@@ -56,7 +56,7 @@ export default function FeaturedProducts() {
               className="d-flex mt-3 justify-content-center "
             >
               <Card>
-                <Link to={`/product/${product.slug}`}>
+                <Link to={`/featuredProduct/${product.slug}`}>
                   <Card.Img
                     src={product.Img_Url}
                     alt={product.Gadget_Name}
@@ -65,7 +65,7 @@ export default function FeaturedProducts() {
                 </Link>
                 <Card.Body>
                   <Card.Title>
-                    <Link to={`/product/${product.slug}`}>
+                    <Link to={`/featuredProduct/${product.slug}`}>
                       {product.Gadget_Name}
                     </Link>
                   </Card.Title>
