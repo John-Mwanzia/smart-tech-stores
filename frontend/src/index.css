@@ -112,6 +112,15 @@ body {
 .img-thumbnail {
   max-height: 60px;
 }
+
+/* make card elements to be of the same size regardless of the image size. */
+.card{
+  flex-basis: 100%;
+  max-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
 .footer-wrapper{
   display: flex;
   justify-content: space-around;

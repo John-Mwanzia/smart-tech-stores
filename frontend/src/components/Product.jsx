@@ -30,7 +30,7 @@ export default function Product(props) {
 
   return (
     <div>
-     <Card>
+     <Card className='card'>
          <Link to={`/product/${product.slug}`}>
          <Card.Img  src={product.Img_Url} alt={product.Comp_Name} className='images'/>
         
