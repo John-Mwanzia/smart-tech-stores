@@ -55,10 +55,14 @@ export default function Homepage() {
       <div className="landing">
         <div>
           <ul className="d-flex flex-wrap justify-content-center mb-3 landing-list">
-            <li>laptops</li>
-            <li>phones</li>
-            <li>Chargers</li>
-            <li>phones</li>
+          <Link to=""> <li>laptops</li></Link>
+          <Link to=""><li>phones</li></Link>
+          <Link to=""><li>Chargers</li></Link>
+          <Link to=""><li>other Electronics</li></Link>
+           
+            
+            
+         
           </ul>
         </div>
 
