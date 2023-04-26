@@ -1,10 +1,18 @@
 import express  from "express";
 import data from "./data.js";
 import cors from "cors"
+import mongoose from "mongoose";
+import seedRouter from "./routes/seedRoutes.js";
 
 
 const app = express();
 app.use(cors())
+
+mongoose.connect('mongodb://127.0.0.1:27017/ProductDB', {useNewUrlParser: true, useUnifiedTopology: true}).then(()=>{
+  console.log("connected to db");
+}).catch(err=> console.log(err));
+
+app.use("/api/seed", seedRouter)
 app.get('/api/products', (req,res)=>{
    res.send(data.products);
 });
