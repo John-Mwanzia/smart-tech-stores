@@ -54,7 +54,7 @@ const data = {
   ],
   featuredProducts: [
     {
-      _id: "1",
+      // _id: "1",
       Gadget_Name: " samsung-a23 ",
       slug: "samsung-a23",
       Img_Url:
@@ -64,7 +64,7 @@ const data = {
     },
 
     {
-      _id: "2",
+      // _id: "2",
       Gadget_Name: "huawei honor 10  ",
       slug: "huawei-honor-10 ",
       Img_Url:
@@ -74,7 +74,7 @@ const data = {
     },
 
     {
-      _id: "3",
+      // _id: "3",
       Gadget_Name: "headphones",
       slug: "headphones-1",
       Img_Url:
@@ -84,7 +84,7 @@ const data = {
     },
 
     {
-      _id: "4",
+      // _id: "4",
       Gadget_Name: "hp laptop charger",
       slug: "hp-laptop-charger",
       Img_Url:
@@ -93,7 +93,7 @@ const data = {
       countInStock: 4,
     },
     {
-      _id: "5",
+      // _id: "5",
       Gadget_Name: " iphone 14",
       slug: "iphone-14",
       Img_Url:
@@ -102,7 +102,7 @@ const data = {
       countInStock: 4,
     },
     {
-      _id: "6",
+      // _id: "6",
       Gadget_Name: "wireless mouse",
       slug: "wireless-mouse",
       Img_Url:
@@ -111,7 +111,7 @@ const data = {
       countInStock: 4,
     },
     {
-      _id: "7",
+      // _id: "7",
       Gadget_Name: "webcam",
       slug: "webcam",
       Img_Url:
@@ -120,7 +120,7 @@ const data = {
       countInStock: 4,
     },
     {
-      _id: "8",
+      // _id: "8",
       Gadget_Name: "wireless keyboard",
       slug: "wireless-keyboard",
       Img_Url:
