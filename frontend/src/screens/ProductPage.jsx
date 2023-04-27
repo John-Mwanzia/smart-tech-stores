@@ -36,7 +36,7 @@ export default function ProductPage() {
         const fetchData = async()=>{
           dispatch({type: 'FETCH-REQUEST'})
           try {
-            const results = await axios.get(`http://localhost:3000/api/product/${slug}`)
+            const results = await axios.get(`http://localhost:3000/api/products/${slug}`)
             dispatch({type: 'FETCH-SUCCESS', payload: results.data})
            
           } catch (error) {
