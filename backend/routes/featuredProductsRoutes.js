@@ -9,7 +9,7 @@ featuredProductsRouter.get('/', async (req,res)=>{
   });
 
   
-  featuredProductsRouter.get('/:slug', async(req,res)=>{
+  featuredProductsRouter.get('/slug/:slug', async(req,res)=>{
     const product = await FeaturedProducts.findOne({slug: req.params.slug});
     if(product){
      res.send(product);

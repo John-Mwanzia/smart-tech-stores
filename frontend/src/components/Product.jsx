@@ -31,14 +31,14 @@ export default function Product(props) {
   return (
     <div>
      <Card className='card'>
-         <Link to={`/products/${product.slug}`}>
+         <Link to={`/products/slug/${product.slug}`}>
          <Card.Img  src={product.Img_Url} alt={product.Comp_Name} className='images'/>
         
          </Link>
        <Card.Body>
         <Card.Title> 
         
-           <Link to={`/products/${product.slug}`}>{product.Comp_Name}
+           <Link to={`/products/slug/${product.slug}`}>{product.Comp_Name}
            </Link>
           </Card.Title>
          <Card.Text> Price: KSh.{product.price }</Card.Text>

@@ -22,8 +22,8 @@ function App(){
 
 <Routes>
   
-  <Route path="/products/:slug" element={<ProductPage />} />
-  <Route path="/featuredProduct/:slug" element={<FeaturedProductPage />} />
+  <Route path="/products/slug/:slug" element={<ProductPage />} />
+  <Route path="/featuredProducts/slug/:slug" element={<FeaturedProductPage />} />
   <Route path="/cart" element={<CartScreen/>}/>
 </Routes>
 

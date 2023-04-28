@@ -36,7 +36,7 @@ export default function FeaturedProductPage() {
         const fetchData = async()=>{
           dispatch({type: 'FETCH-REQUEST'})
           try {
-            const results = await axios.get(`http://localhost:3000/api/featuredProducts/${slug}`)
+            const results = await axios.get(`http://localhost:3000/api/featuredProducts/slug/${slug}`)
             console.log(results);
             dispatch({type: 'FETCH-SUCCESS', payload: results.data})
            
@@ -56,7 +56,7 @@ export default function FeaturedProductPage() {
   
     const addToCart = async()=>{
     
-        const existItem = cart.cartItems.findOne(item =>{
+        const existItem = cart.cartItems.find(item =>{
           item._id
          })
          const quantity = existItem? existItem.quantity+1 : 1;
