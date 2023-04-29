@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 import seedRouter from "./routes/seedRoutes.js";
 import productRouter from "./routes/productRoutes.js";
 import featuredProductsRouter from "./routes/featuredProductsRoutes.js";
-import seedfeaturedRouter from "./routes/seedfeaturedProductsRoutes.js";
+// import seedfeaturedRouter from "./routes/seedfeaturedProductsRoutes.js";
 
 
 const app = express();
@@ -16,7 +16,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/ProductDB', {useNewUrlParser: true, 
 }).catch(err=> console.log(err));
 
 app.use("/api/seed", seedRouter)
-app.use("/api/seedFeaturedProducts", seedfeaturedRouter)
+// app.use("/api/seedFeaturedProducts", seedfeaturedRouter)
 app.use("/api/products", productRouter)
 app.use("/api/featuredProducts", featuredProductsRouter)
 
