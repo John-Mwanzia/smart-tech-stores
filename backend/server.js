@@ -20,6 +20,10 @@ app.use("/api/seed", seedRouter)
 app.use("/api/products", productRouter)
 app.use("/api/featuredProducts", featuredProductsRouter)
 
+app.use((err,req,res,next)=>{
+    res.status(500).send({message: err.message})
+})
+
 app.listen(3000,  (error) =>{
     if(!error)
         console.log("Server  Successfully started on port 3000")
