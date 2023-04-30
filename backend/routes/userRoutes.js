@@ -1,19 +1,21 @@
 import express from "express"
 import User from "../models/userModel.js";
+import expressAsyncHandler from "express-async-handler"
+import bcrypt from "bcryptjs"
+import generateToken from "../utils.js"
 
 const userRouter = express.Router();
 
-userRouter.post('/sign', expressAsyncHandler(async(req,res)=>{
+userRouter.post('/signin', expressAsyncHandler(async(req,res)=>{  //express-async-handler =>middleware for handling exceptions inside of async express routes and passing them to your express error handlers.
     const user = await User.findOne({email: req.body.email})
     if(user){
-        if(bcrypt.compareAsync(req.body.password, User.password)){
+        if(bcrypt.compareSync(req.body.password, user.password)){
            res.send({
-            _id: User._id,
-            name: User.name,
-            email: User.email,
-            password: User.password,
-            isAdmin: User.isAdmin
-
+            _id: user._id,
+            name: user.name,
+            email: user.email,
+            isAdmin: user.isAdmin,
+            token: generateToken(user)
            })
         }
         return;
