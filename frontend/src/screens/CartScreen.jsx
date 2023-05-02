@@ -12,6 +12,7 @@ export default function CartScreen() {
   const { state, dispatch: ctxdispatch } = useContext(Store);
   const { cart } = state;
   const { cartItems } = cart;
+  const navigate = useNavigate();
 
   const updateCartHandler = async (item, quantity) => {
     const { data } = await axios.get(
@@ -121,6 +122,7 @@ export default function CartScreen() {
                 type="button"
                 variant="primary"
                 disabled={cartItems.length === 0}
+                onClick={() => navigate("/signin?redirect=shipping")}
               >
                 proceed to checkout
               </Button>
