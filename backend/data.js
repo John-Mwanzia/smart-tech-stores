@@ -17,7 +17,7 @@ const data = {
   ],
   products: [
     {
-      // _id: "1",
+  
       Brand: "Hp",
       Comp_Name: "hp elitebook 840 g4 ",
       slug: "hp-elitebook-840-g4",
@@ -30,7 +30,7 @@ const data = {
     },
 
     {
-      // _id: "2",
+    
       Brand: "Hp",
       Comp_Name: "Hp Elitebook 840 G3",
       slug: "Hp-Elitebook-840-G3",
@@ -43,7 +43,6 @@ const data = {
     },
 
     {
-      // _id: "3",
       Brand: "lenovo",
       Comp_Name: "Lenovo ThinkPad T470s ",
       slug: "Lenovo-ThinkPad-T470s",
@@ -56,7 +55,6 @@ const data = {
     },
 
     {
-      // _id: "4",
       Brand: "Apple",
       Comp_Name: "Macbook Pro 16  MVVK2",
       slug: "Macbook-Pro-16-MVVK2",
@@ -70,7 +68,7 @@ const data = {
   ],
   featuredProducts: [
     {
-      // _id: "1",
+  
       Gadget_Name: " samsung-a23 ",
       slug: "samsung-a23",
       Img_Url:
@@ -80,7 +78,6 @@ const data = {
     },
 
     {
-      // _id: "2",
       Gadget_Name: "huawei honor 10  ",
       slug: "huawei-honor-10 ",
       Img_Url:
@@ -90,7 +87,6 @@ const data = {
     },
 
     {
-      // _id: "3",
       Gadget_Name: "headphones",
       slug: "headphones-1",
       Img_Url:
@@ -100,7 +96,6 @@ const data = {
     },
 
     {
-      // _id: "4",
       Gadget_Name: "hp laptop charger",
       slug: "hp-laptop-charger",
       Img_Url:
@@ -109,8 +104,7 @@ const data = {
       countInStock: 4,
     },
     {
-      // _id: "5",
-      Gadget_Name: " iphone 14",
+      Gadget_Name: "iphone 14",
       slug: "iphone-14",
       Img_Url:
         "https://s7d1.scene7.com/is/image/dish/iPhone_14_Pro_Max_Deep_Purple_phonewall?$ProductBase$",
@@ -118,7 +112,6 @@ const data = {
       countInStock: 4,
     },
     {
-      // _id: "6",
       Gadget_Name: "wireless mouse",
       slug: "wireless-mouse",
       Img_Url:
@@ -127,7 +120,6 @@ const data = {
       countInStock: 4,
     },
     {
-      // _id: "7",
       Gadget_Name: "webcam",
       slug: "webcam",
       Img_Url:
@@ -136,7 +128,6 @@ const data = {
       countInStock: 4,
     },
     {
-      // _id: "8",
       Gadget_Name: "wireless keyboard",
       slug: "wireless-keyboard",
       Img_Url:
