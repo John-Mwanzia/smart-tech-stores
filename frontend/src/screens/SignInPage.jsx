@@ -7,11 +7,11 @@ export default function SignInPage() {
         <h2>SignIn</h2>
         <form action="">
             <div class="user-box">
-                <input type="text" name="" required=""/>
-                <label for="">Username</label>
+                <input type="Email" name="" required/>
+                <label >Email</label>
             </div>
             <div class="user-box">
-                <input type="password" name="" required=""/>
+                <input type="password" name="" required/>
                 <label for="">Password</label>
             </div>
             <a href="#">
