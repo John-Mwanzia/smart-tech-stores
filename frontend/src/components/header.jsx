@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 import { Store } from "../store";
 
 function Header({ currentPage}) {
-  const { state } = useContext(Store);
+  const { state, userInfo } = useContext(Store);
   const { cart } = state;
   const { cartItems } = cart;
   return (
@@ -94,6 +94,7 @@ function Header({ currentPage}) {
               </Badge>
             )}
           </Link>
+          {userInfo?(<h2>{userInfo.name}</h2>):( <Link to="/signin">SignIn</Link>)}
         </div>
       </Container>
     </Navbar>

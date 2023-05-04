@@ -1,22 +1,29 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { Store } from "../store";
+import { useNavigate } from "react-router-dom";
 
 export default function SignInPage() {
-  const [email, setEmail] = useState("")
-  const [password, setPassword]= useState();
+  const [email, setEmail] = useState("");
+  const [password, setPassword]= useState("");
+  const {state, dispatch: ctxDispatch} = useContext(Store)
+  const navigate = useNavigate()
 
   const submitHandler = async(e)=>{
-    e.preventDefault()
+    e.preventDefault();
     try { 
       //send  a post  request with email & passsword variables and deconstruct data from the response
-      const {data} = await axios.post("http://localhost:3000/api/users/signin", {
+      const { data } = await axios.post("http://localhost:3000/api/users/signin", {
         email,
-        password
+        password,
       });
       console.log(data);
+      ctxDispatch({type :"USER_SIGNIN", payload: data});
+      localStorage.setItem("userInfo", JSON.stringify(data));
+      navigate(redirect || "/")
     } catch (err) {
-      
-    }
+      alert("invalid email or password");
+    } 
   }
   return (
     <> 
