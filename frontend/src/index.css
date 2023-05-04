@@ -209,22 +209,29 @@ body{
 
 }
 
-.container-signin form  a {
+.container-signin form  .button-wrapper{
  position: relative;
- display: inline-block;
-padding: 10px 20px;
- color: #1da4f2;
- font-size: 16px;
- text-decoration: none;
- text-transform: uppercase;
+ /* take min width of the available */
+ display: inline-block; 
+ padding: 10px 20px;
  overflow: hidden;
  transition: 0.5s;
  margin-top: 40px;
- letter-spacing: 4px; 
+
 
 }
 
-.container-signin a:hover{
+.container-signin form  .button-wrapper button{
+  /* outline: none; */
+  background-color: transparent;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 4px; 
+
+}
+
+.container-signin .button-wrapper:hover{
   background: #1da4f2;
   color: #fff;
   border-radius: 5px;
@@ -236,13 +243,13 @@ padding: 10px 20px;
 
 } 
 
-.container-signin a span{
+.container-signin .button-wrapper span{
    position: absolute;
   display: block;  
 }
 
 
-.container-signin a span:nth-child(1){
+.container-signin .button-wrapper span:nth-child(1){
   top: 0;
   left: -100%;
   width: 100%;
@@ -260,7 +267,7 @@ padding: 10px 20px;
   }
 }
 
-.container-signin a span:nth-child(2){
+.container-signin .button-wrapper span:nth-child(2){
   top: -100%;
   right: 0;
   width: 2px;
@@ -280,7 +287,7 @@ padding: 10px 20px;
 }
 
 
-.container-signin a span:nth-child(3){
+.container-signin .button-wrapper span:nth-child(3){
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -299,7 +306,7 @@ padding: 10px 20px;
   }
 }
 
-.container-signin a span:nth-child(4){
+.container-signin .button-wrapper span:nth-child(4){
   bottom: -100%;
   left: 0;
   width: 2px;
