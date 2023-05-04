@@ -157,7 +157,8 @@ body{
   justify-content: center;
   align-items: center;
   justify-items: center;
-  height: 920px;
+  height: 975px;
+  background-color: #393f4a ; 
 }
 
 .container-signin{
