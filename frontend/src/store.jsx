@@ -4,6 +4,19 @@ import { createContext } from "react";
 
 export const Store = createContext()
 
+const initials = {
+    userInfo: localStorage.getItem("userInfo")
+    ? JSON.parse(localStorage.getItem("userInfo")) 
+    : null,
+
+   cart: {
+    cartItems: localStorage.getItem("cartItems")?  
+    JSON.parse(localStorage.getItem("cartItems")) 
+     : []
+   },
+ 
+}
+
 const reducer = (state, action)=>{
     
     switch(action.type){
@@ -23,23 +36,15 @@ const reducer = (state, action)=>{
              }
 
         case 'USER_SIGNIN':
-            return {...state, userInfo: action.payload}     
+            return {...state, userInfo: action.payload}    
+        
         default:
             return state
     }
 }
 
 export default function StoreProvider(props) {
-    const [state, dispatch] = useReducer(reducer, {
-        userInfo: localStorage.getItem("userInfo")?  
-        JSON.parse(localStorage.getItem("userInfo")) : null,
-       cart: {
-        cartItems: localStorage.getItem("cartItems")?  
-        JSON.parse(localStorage.getItem("cartItems")) 
-         : []
-       },
-     
-    })
+    const [state, dispatch] = useReducer(reducer, initials )
    
   const value= {state,dispatch}
   return ( <Store.Provider value = {value} >{props.children}</Store.Provider>)

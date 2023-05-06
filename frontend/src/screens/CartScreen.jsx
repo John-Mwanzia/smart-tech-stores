@@ -122,7 +122,7 @@ export default function CartScreen() {
                 type="button"
                 variant="primary"
                 disabled={cartItems.length === 0}
-                onClick={() => navigate("/signin?redirect=shipping")}
+                onClick={() => navigate("/signin?redirect=/shipping")}
               >
                 proceed to checkout
               </Button>
