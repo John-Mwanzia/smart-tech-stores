@@ -45,6 +45,11 @@ const reducer = (state, action)=>{
 
 export default function StoreProvider(props) {
     const [state, dispatch] = useReducer(reducer, initials )
+
+//     const userInfoString = localStorage.getItem("userInfo");
+// console.log("userInfoString:", userInfoString);
+// const userInfo = userInfoString ? JSON.parse(userInfoString) : null;
+// console.log("userInfo:", userInfo);
    
   const value= {state,dispatch}
   return ( <Store.Provider value = {value} >{props.children}</Store.Provider>)

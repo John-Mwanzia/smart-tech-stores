@@ -15,8 +15,8 @@ import { Link } from "react-router-dom";
 import { Store } from "../store";
 
 function Header({ currentPage }) {
-  const { state, userInfo } = useContext(Store);
-  const { cart } = state;
+  const { state } = useContext(Store);
+  const { cart ,  userInfo } = state;
   const { cartItems } = cart;
   return (
     <>
@@ -45,7 +45,7 @@ function Header({ currentPage }) {
                 />
                 {cart.cartItems.length > 0 && (
                   <Badge pill bg="danger">
-                    {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
+                    {cartItems.reduce((a, c) => a + c.quantity, 0)}
                   </Badge>
                 )}
               </Link>
@@ -82,11 +82,11 @@ function Header({ currentPage }) {
               </Button>
             </div>
 
-            <div className="flex gap-4 items-center justify-end ">
+            <div className="flex  flex-row items-center  ">
             {userInfo ? (
-                <div>
-                  <h2>{userInfo.name}</h2>
-                </div>
+                
+                  <h6>{userInfo.name}</h6>
+              
               ) : (
                 <Link to="/signin">SignIn</Link>
               )}
