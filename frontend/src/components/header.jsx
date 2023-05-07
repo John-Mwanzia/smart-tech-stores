@@ -53,9 +53,9 @@ function Header({ currentPage }) {
           </Container>
         </Navbar>
       ) : (
-        <Navbar className="flex justify-between py-4  Nav" expand="lg">
+        <Navbar className="  py-4  Nav" expand="lg">
           <Container>
-            <div className="flex justify-center space-x-10 font-bold text-lg">
+            <div className="">
               <LinkContainer to="/">
                 <Navbar.Brand>
                   <img
