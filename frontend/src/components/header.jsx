@@ -16,7 +16,7 @@ import { Store } from "../store";
 
 function Header({ currentPage }) {
   const { state } = useContext(Store);
-  const { cart ,  userInfo } = state;
+  const { cart, userInfo } = state;
   const { cartItems } = cart;
   return (
     <>
@@ -83,13 +83,14 @@ function Header({ currentPage }) {
             </div>
 
             <div className="flex  flex-row items-center  ">
-            {userInfo ? (
-                
-                  <h6>{userInfo.name}</h6>
-              
+              {userInfo ? (
+                <div>
+                <h6>{userInfo.name}</h6>
+                </div>
               ) : (
                 <Link to="/signin">SignIn</Link>
               )}
+              <div>
               <Link to="/cart">
                 <img
                   className="  cart-img"
@@ -101,7 +102,7 @@ function Header({ currentPage }) {
                   </Badge>
                 )}
               </Link>
-             
+              </div>
             </div>
           </Container>
         </Navbar>
