@@ -83,25 +83,25 @@ function Header({ currentPage }) {
             </div>
 
             <div className="flex  flex-row items-center  ">
-              {userInfo ? (
-                <div>
-                <h6>{userInfo.name}</h6>
-                </div>
-              ) : (
-                <Link to="/signin">SignIn</Link>
-              )}
               <div>
-              <Link to="/cart">
-                <img
-                  className="  cart-img"
-                  src="https://cdn-icons-png.flaticon.com/512/8974/8974464.png"
-                />
-                {cart.cartItems.length > 0 && (
-                  <Badge pill bg="danger">
-                    {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
-                  </Badge>
+                {userInfo ? (
+                  <h6>{userInfo.name}</h6>
+                ) : (
+                  <Link to="/signin">SignIn</Link>
                 )}
-              </Link>
+              </div>
+              <div>
+                <Link to="/cart">
+                  <img
+                    className="  cart-img"
+                    src="https://cdn-icons-png.flaticon.com/512/8974/8974464.png"
+                  />
+                  {cart.cartItems.length > 0 && (
+                    <Badge pill bg="danger">
+                      {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
+                    </Badge>
+                  )}
+                </Link>
               </div>
             </div>
           </Container>
