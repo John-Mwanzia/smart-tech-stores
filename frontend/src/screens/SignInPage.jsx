@@ -32,6 +32,16 @@ export default function SignInPage() {
     } catch (error) {
       alert("invalid email or password");
     }
+
+const handleLogin = (googleData) =>{
+  console.log(googleData);
+
+}
+
+const handleFailure = (result) =>{
+  alert(result);
+}
+
   };
   return (
     <>
