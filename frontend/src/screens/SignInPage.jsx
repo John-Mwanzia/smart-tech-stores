@@ -33,16 +33,18 @@ export default function SignInPage() {
       alert("invalid email or password");
     }
 
-const handleLogin = (googleData) =>{
-  console.log(googleData);
-
-}
-
-const handleFailure = (result) =>{
-  alert(result);
-}
 
   };
+
+  const handleLogin = (googleData) =>{
+    console.log(googleData);
+  
+  }
+  
+  const handleFailure = (result) =>{
+    alert(result);
+  }
+
   return (
     <>
       <div className="signin-wrapper">
@@ -78,7 +80,8 @@ const handleFailure = (result) =>{
             <h5>or</h5>
 
             <GoogleLogin
-              clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
+              // clientId={process.env.REACT_APP_SMART_TECH_GOOGLE_LOGIN_CLIENT_ID}
+              clientId={import.meta.env}
               buttonText="Sign in with Google"
               onSuccess={handleLogin}
               onFailure={handleFailure}
