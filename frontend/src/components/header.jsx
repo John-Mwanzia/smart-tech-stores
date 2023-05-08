@@ -83,13 +83,15 @@ function Header({ currentPage }) {
             </div>
 
             <div className="flex  flex-row items-center  ">
-              <div>
+            
                 {userInfo ? (
-                  <h6>{userInfo.name}</h6>
+                  <div>
+                 {userInfo.name}
+                 </div>
                 ) : (
                   <Link to="/signin">SignIn</Link>
                 )}
-              </div>
+             
               <div>
                 <Link to="/cart">
                   <img
