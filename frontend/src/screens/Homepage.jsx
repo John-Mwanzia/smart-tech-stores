@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet-async";
 import Header from "../components/header";
 import Footer from "../components/Footer";
 import FeaturedProducts from "../components/FeaturedProducts";
+import Slider from "../components/Slider";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -77,9 +78,10 @@ export default function Homepage() {
             
           </div>
           <div>
-            <div className="   slider-container ">
+            {/* <div className="   slider-container ">
               <img src="\images\johnte.png"></img>
-            </div>
+            </div> */}
+            <Slider />
           </div>
         </div>
       </div>
