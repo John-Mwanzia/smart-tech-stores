@@ -78,9 +78,6 @@ export default function Homepage() {
             
           </div>
           <div>
-            {/* <div className="   slider-container ">
-              <img src="\images\johnte.png"></img>
-            </div> */}
             <Slider />
           </div>
         </div>
