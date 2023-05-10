@@ -16,7 +16,6 @@ const nextSlide = () => {
 
 
   useEffect(() => {
-    console.log('Setting up slider interval');
     const intervalId = setInterval(nextSlide, 3000);
     return () => clearInterval(intervalId);
   }, [nextSlide]);
