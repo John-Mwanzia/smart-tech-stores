@@ -3,7 +3,8 @@ import React from 'react'
 export default function Slider() {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-    const images = ['image1.jpg', 'image2.jpg', 'image3.jpg'];
+    const images = ['images/image1.png', 'images/image2.png', 'images/image3.png'];
+
   
     const nextImage = () => {
       setCurrentImageIndex(currentImageIndex === images.length - 1 ? 0 : currentImageIndex + 1);
