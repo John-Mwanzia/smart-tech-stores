@@ -36,14 +36,16 @@ export default function SignInPage() {
 
   };
 
+  // console.log(import.meta.env.VITE_GOOGLE_LOGIN_CLIENT_ID);
+  const handleFailure = (result) =>{
+    alert(result + "failed to login");
+  }
+
   const handleLogin = (googleData) =>{
     console.log(googleData);
   
   }
   
-  const handleFailure = (result) =>{
-    alert(result);
-  }
 
   return (
     <>
@@ -80,8 +82,7 @@ export default function SignInPage() {
             <h5>or</h5>
 
             <GoogleLogin
-              // clientId={process.env.REACT_APP_SMART_TECH_GOOGLE_LOGIN_CLIENT_ID}
-              clientId={import.meta.env}
+              client_id= {import.meta.env.VITE_CLIENT_ID}
               buttonText="Sign in with Google"
               onSuccess={handleLogin}
               onFailure={handleFailure}
