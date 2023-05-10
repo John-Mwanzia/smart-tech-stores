@@ -1,18 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+
+
 
 export default function SearchBar() {
+    const [query, setQuery] = useState('')
+    const navigate = useNavigate()
+    const submitHandler = (e) => {
+        e.preventDefault();
+        navigate(query ? `/search/?query=${query}` : '/search')
+    }
+
   return (
     <div>
-      <form className="flex items-center search-wrapper ">
+      <form className="flex items-center search-wrapper " onSubmit={submitHandler}>
         <input
           placeholder="Search"
           aria-label="Search"
-          aria-describedby="basic-addon2"
+          aria-describedby="search-button"
           className="search-input"
+          name="q"
+          id="q"
+          onChange={(e) => setQuery(e.target.value)}
         />
 
-        <Button variant="light">
+        <Button variant="light" type="submit" id="search-button">
           <i className="fa fa-search" aria-hidden="true"></i>
         </Button>
       </form>
