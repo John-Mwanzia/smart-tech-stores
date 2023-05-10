@@ -13,6 +13,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { Badge, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Store } from "../store";
+import SearchBar from "./SearchBar";
 
 function Header({ currentPage }) {
   const { state } = useContext(Store);
@@ -69,29 +70,17 @@ function Header({ currentPage }) {
                 </Navbar.Brand>
               </LinkContainer>
             </div>
-            <div className="flex items-center search-wrapper ">
-              <input
-                placeholder="Search"
-                aria-label="Search"
-                aria-describedby="basic-addon2"
-                className="search-input"
-              />
-
-              <Button variant="light">
-                <i className="fa fa-search" aria-hidden="true"></i>
-              </Button>
+            <div >
+                <SearchBar />
             </div>
 
             <div className="flex  flex-row items-center  ">
-            
-                {userInfo ? (
-                  <div>
-                 {userInfo.name}
-                 </div>
-                ) : (
-                  <Link to="/signin">SignIn</Link>
-                )}
-             
+              {userInfo ? (
+                <div>{userInfo.name}</div>
+              ) : (
+                <Link to="/signin">SignIn</Link>
+              )}
+
               <div>
                 <Link to="/cart">
                   <img
