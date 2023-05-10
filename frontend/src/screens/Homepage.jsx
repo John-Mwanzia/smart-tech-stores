@@ -69,7 +69,6 @@ export default function Homepage() {
 
         <div className="hero-section">
           <div>
-            {/* <div className='intro'> <h2 data-text="Welcome to smart tech stores... The World of Tech">Welcome to smart tech stores... The World of Tech</h2></div> */}
             <div className="px-4">
               <h1 className="hero-text">
                 Get the best deals on computer accessories and other electronics
@@ -105,16 +104,7 @@ export default function Homepage() {
           <FeaturedProducts />
         </Row>
 
-        {/* <Row className='mt-3 ' >
-     <Col className='  d-flex justify-content-center  '>
-       <Link style={{textDecoration: 'none'}}  to="/allitems"> 
-       <div className=' more-items'>
-         More items {' '}
-         <KeyboardArrowDownIcon />
-      </div>
-       </Link>
-       </Col>  
-      </Row> */}
+    
       </Container>
 
       <Footer />
