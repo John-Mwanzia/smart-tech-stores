@@ -7,6 +7,7 @@ import Homepage from "./screens/Homepage";
 import ProductPage from "./screens/ProductPage";
 import FeaturedProductPage from "./screens/FeaturedProductPage";
 import SignInPage from "./screens/SignInPage";
+import SearchPage from "./screens/SearchPage";
 
 function App(){
   return(
@@ -26,6 +27,7 @@ function App(){
   <Route path="/products/slug/:slug" element={<ProductPage />} />
   <Route path="/featuredProducts/slug/:slug" element={<FeaturedProductPage />} />
   <Route path="/cart" element={<CartScreen/>}/>
+  <Route path="/search" element={<SearchPage />}/>
   <Route path="/signin" element={<SignInPage />}/>
 </Routes>
 

@@ -56,7 +56,7 @@ export default function Homepage() {
       <div className="landing">
         <div>
           <ul className="d-flex flex-wrap justify-content-center mb-3 landing-list">
-          <Link to="/search?category=/laptops"> <li>laptops</li></Link>
+          <Link to="/search?category=laptops"> <li>laptops</li></Link>
           <Link to="/search?category=/phones"><li>phones</li></Link>
           <Link to="/search?category=/Chargers"><li>Chargers</li></Link>
           <Link to="/search?category=/other-Electronics"><li>other Electronics</li></Link>
