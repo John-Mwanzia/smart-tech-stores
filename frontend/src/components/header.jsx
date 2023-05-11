@@ -12,11 +12,11 @@ function Header({ currentPage }) {
   return (
     <>
       {currentPage === "cartScreen" ? (
-        <Navbar className="flex justify-between py-4  Nav" expand="lg">
-          <Container>
+        <nav className="flex justify-between py-4  Nav" expand="lg">
+          
             <div className="flex justify-center space-x-10 font-bold text-lg">
-              <LinkContainer to="/">
-                <Navbar.Brand>
+              <Link to="/">
+               
                   <img
                     alt=""
                     src="/images/johny14_typography_logo_of_ST_initials_exactly_with_a_laptop_ph_0c2675b4-ca3a-4143-ab56-d061caf3437b.png"
@@ -25,8 +25,8 @@ function Header({ currentPage }) {
                     className="rounded"
                   />{" "}
                   Smart tech stores
-                </Navbar.Brand>
-              </LinkContainer>
+               
+              </Link>
             </div>
             <div className="flex  items-center justify-end max-w-70">
               <Link to="/cart">
@@ -35,14 +35,14 @@ function Header({ currentPage }) {
                   src="https://cdn-icons-png.flaticon.com/512/8974/8974464.png"
                 />
                 {cart.cartItems.length > 0 && (
-                  <Badge pill bg="danger">
+                  <div pill bg="danger">
                     {cartItems.reduce((a, c) => a + c.quantity, 0)}
-                  </Badge>
+                  </div>
                 )}
               </Link>
             </div>
-          </Container>
-        </Navbar>
+          
+        </nav>
       ) : (
         <nav className="Nav flex justify-around p-6" expand="lg">
         
@@ -78,9 +78,9 @@ function Header({ currentPage }) {
                     src="https://cdn-icons-png.flaticon.com/512/8974/8974464.png"
                   />
                   {cart.cartItems.length > 0 && (
-                    <Badge pill bg="danger">
+                    <div pill bg="danger">
                       {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
-                    </Badge>
+                    </div>
                   )}
                 </Link>
               </div>
