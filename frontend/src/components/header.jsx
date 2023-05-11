@@ -54,11 +54,11 @@ function Header({ currentPage }) {
           </Container>
         </Navbar>
       ) : (
-        <Navbar className="  py-4  Nav" expand="lg">
-          <Container>
+        <nav className="Nav flex justify-around p-6" expand="lg">
+        
             <div className="">
-              <LinkContainer to="/">
-                <Navbar.Brand>
+              <Link to="/">
+               
                   <img
                     alt=""
                     src="/images/johny14_typography_logo_of_ST_initials_exactly_with_a_laptop_ph_0c2675b4-ca3a-4143-ab56-d061caf3437b.png"
@@ -67,8 +67,8 @@ function Header({ currentPage }) {
                     className="rounded"
                   />{" "}
                   Smart tech stores
-                </Navbar.Brand>
-              </LinkContainer>
+               
+              </Link>
             </div>
             <div >
                 <SearchBar />
@@ -95,8 +95,9 @@ function Header({ currentPage }) {
                 </Link>
               </div>
             </div>
-          </Container>
-        </Navbar>
+         
+        </nav>
+        
       )}
     </>
   );
