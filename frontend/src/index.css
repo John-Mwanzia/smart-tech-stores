@@ -31,7 +31,7 @@ body {
   align-items: center;
   /* margin-top: 20px; */
 }
-.search-wrapper Button > i {
+.search-wrapper button > i {
   color: black;
   font-size: 20px;
 }
@@ -39,6 +39,8 @@ body {
   background-color: transparent;
   border: none;
   outline: none;
+  padding-left: 6px;
+  padding-right: 6px;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   cursor: pointer;
