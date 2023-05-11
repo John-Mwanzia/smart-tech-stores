@@ -3,7 +3,7 @@ import React, { useEffect, useReducer, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Product from "../components/product";
 import SearchBar from "../components/SearchBar";
-import { Button } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 
 const initialState = {
   loading: true,
@@ -33,8 +33,8 @@ export default function SearchPage() {
   const navigate = useNavigate();
   const { search } = useLocation();
   const sp = new URLSearchParams(search);
-  const query = sp.get("query")|| "all";
-  const category = sp.get("category" ) || "all";
+  const query = sp.get("query") || "all";
+  const category = sp.get("category") || "all";
 
   const [{ loading, error, products, countProducts }, dispatch] = useReducer(
     reducer,
@@ -80,9 +80,8 @@ export default function SearchPage() {
 
   return (
     <div>
-      <h2>Filter</h2>
       <div>
-        <h3>Categories</h3>
+        <h3 className="underline">Categories</h3>
         <ul>
           <li>
             <Link
@@ -105,8 +104,7 @@ export default function SearchPage() {
           ))}
         </ul>
       </div>
-
-      <div className="col-9">
+      <div>
         {loading ? (
           <div>Loading...</div>
         ) : error ? (
@@ -131,16 +129,56 @@ export default function SearchPage() {
             </div>
           </>
         )}
+      </div>
 
+      <div className="d-flex justify-center max-w-[300px] px-4 gap-6">
         {products.length === 0 && <h2> No Product Found </h2>}
+        {products.map((product) => (
+          
+          <Card className="card">
+            <Link to={`/products/slug/${product.slug}`}>
+              <Card.Img
+                src={product.Img_Url}
+                alt={product.Comp_Name}
+                className="images"
+              />
+            </Link>
+            <Card.Body>
+              <Card.Title>
+                <Link to={`/products/slug/${product.slug}`}>
+                  {product.Comp_Name}
+                </Link>
+              </Card.Title>
+              <Card.Text> Price: KSh.{product.price}</Card.Text>
 
-
-        <div>
-          {products.map((product) => (
-            <Product key={product._id} product={product}></Product>
-          ))}
-        </div>
+              <Button
+                variant="warning"
+                onClick={() => updateCart(product)}
+                className="mb-1"
+              >
+                Add to cart
+              </Button>
+            </Card.Body>
+          </Card>
+        ))}
       </div>
     </div>
   );
+}
+
+{
+  /* <div>
+      <h2>Filter</h2>
+      
+      <div>
+    
+
+        <Product key={product._id} product={product} /> 
+
+
+        <div>
+         
+   </div>
+ </div>
+ </div> */
 }
