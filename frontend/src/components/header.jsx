@@ -1,16 +1,6 @@
 import React, { useContext } from "react";
 // import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import {
-  InputGroup,
-  FormControl,
-  Button,
-  Row,
-  Col,
-  Container,
-} from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
-import Navbar from "react-bootstrap/Navbar";
-import { Badge, Nav } from "react-bootstrap";
+
 import { Link } from "react-router-dom";
 import { Store } from "../store";
 import SearchBar from "./SearchBar";
