@@ -44,7 +44,7 @@ function Header({ currentPage }) {
           
         </nav>
       ) : (
-        <nav className="Nav flex justify-around p-6" expand="lg">
+        <nav className="Nav flex justify-around p-6">
         
             <div className="">
               <Link to="/">
@@ -75,7 +75,7 @@ function Header({ currentPage }) {
                     src="https://cdn-icons-png.flaticon.com/512/8974/8974464.png"
                   />
                   {cart.cartItems.length > 0 && (
-                    <div pill bg="danger">
+                    <div>
                       {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
                     </div>
                   )}
