@@ -50,13 +50,10 @@ function Header({ currentPage }) {
               <Link to="/">
                
                   <img
-                    alt=""
-                    src="/images/johny14_typography_logo_of_ST_initials_exactly_with_a_laptop_ph_0c2675b4-ca3a-4143-ab56-d061caf3437b.png"
-                    width="50"
-                    height="50"
-                    className="rounded"
-                  />{" "}
-                  Smart tech stores
+                    alt="logo"
+                    src="/images/Logo.svg"
+                  
+                  />
                
               </Link>
             </div>
