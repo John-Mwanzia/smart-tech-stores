@@ -54,7 +54,7 @@ export default function Homepage() {
       </Helmet>
       <Header />
       <div className="landing">
-        <div>
+        {/* <div>
           <ul className="d-flex flex-wrap justify-content-center mb-3 landing-list">
           <Link to="/search?category=laptops"> <li>laptops</li></Link>
           <Link to="/search?category=/phones"><li>phones</li></Link>
@@ -65,9 +65,9 @@ export default function Homepage() {
             
          
           </ul>
-        </div>
+        </div> */}
 
-        <div className="hero-section">
+        {/* <div className="hero-section">
           <div>
             <div className="px-4">
               <h1 className="hero-text">
@@ -79,7 +79,7 @@ export default function Homepage() {
           <div>
             <Slider />
           </div>
-        </div>
+        </div> */}
       </div>
 
       <Container>
