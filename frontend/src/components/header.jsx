@@ -61,6 +61,13 @@ function Header({ currentPage }) {
                 <SearchBar />
             </div>
 
+            <div className="flex flex-col top-[-150px] lg:flex-row space-x-8 absolute lg:relative lg:top-0">
+              <Link to='/'> <p className="font-sans text-lg" >Home</p></Link>
+              <Link to='/'> <p className="font-sans text-lg" >About us</p></Link>
+              <Link to='/'> <p className="font-sans text-lg" >Blog</p></Link>
+              <Link to='/'> <p className="font-sans text-lg" >Contact</p></Link>
+            </div>
+
             <div className="flex  flex-row items-center  ">
               {userInfo ? (
                 <div>{userInfo.name}</div>
