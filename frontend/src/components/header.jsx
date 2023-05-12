@@ -44,8 +44,8 @@ function Header({ currentPage }) {
           
         </nav>
       ) : (
-        <nav className="Nav flex justify-around items-center p-6">
-        
+        <nav className="Nav flex justify-around items-center p-6 relative">
+            <img className=" md:hidden w-[25px] left-2" src="/images/Hamburger.svg" alt="hamburger" />
             <div className="">
               <Link to="/">
                
@@ -68,14 +68,14 @@ function Header({ currentPage }) {
                 <Link to="/signin">SignIn</Link>
               )}
 
-              <div>
+              <div className="relative">
                 <Link to="/cart">
                   <img
                     className="  cart-img"
                     src="https://cdn-icons-png.flaticon.com/512/8974/8974464.png"
                   />
                   {cart.cartItems.length > 0 && (
-                    <div>
+                    <div className="absolute top-[-10px] right-[-24px] rounded-full px-2 bg-red-400">
                       {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
                     </div>
                   )}
