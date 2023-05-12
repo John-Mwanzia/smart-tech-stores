@@ -44,7 +44,7 @@ function Header({ currentPage }) {
           
         </nav>
       ) : (
-        <nav className="Nav flex justify-around p-6">
+        <nav className="Nav flex justify-around items-center p-6">
         
             <div className="">
               <Link to="/">

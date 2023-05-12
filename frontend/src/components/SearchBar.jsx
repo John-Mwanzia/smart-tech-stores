@@ -14,7 +14,7 @@ export default function SearchBar() {
 
   return (
     <div>
-      <form className="flex items-center search-wrapper " onSubmit={submitHandler}>
+      <form className="flex items-center search-wrapper sm:absolute  lg:relative" onSubmit={submitHandler}>
         <input
           placeholder="Search"
           aria-label="Search"
