@@ -77,12 +77,21 @@ export default function Homepage() {
   </select>
 </div>
 
-        <div className="hero-section">
+        <div className="flex justify-center gap-24 mt-20  flex-wrap">
           <div>
-            <div className="px-4">
-              <h1 className="hero-text">
-                Get the best deals on computer accessories and other electronics
+            <div>
+              <h1 className="font-sans font-bold text-5xl">
+              Upgrade Your Tech with <br /> Our High-Quality <br /> Accessories
               </h1>
+            </div>
+            <div className="mt-16 text-xs">
+            Discover a wide range of computer accessories to elevate your tech experience.<br/> From keyboards and mice to monitors and headsets, our e-commerce platform <br/>has everything  you need to take your computer setup to the next level. With our <br/> user-friendly interface and seamless checkout process, shopping for tech has <br/>never been easier.
+            </div>
+
+            <div>
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 mt-8 rounded-3xl">
+                Shop Now
+              </button>
             </div>
             
           </div>
