@@ -175,19 +175,4 @@ export default function SearchPage() {
   );
 }
 
-{
-  /* <div>
-      <h2>Filter</h2>
-      
-      <div>
-    
 
-        <Product key={product._id} product={product} /> 
-
-
-        <div>
-         
-   </div>
- </div>
- </div> */
-}
