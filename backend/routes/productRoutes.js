@@ -17,20 +17,16 @@ productRouter.get(
     const category = req.query.category || "";
     const searchQuery = req.query.query || "";
 
-    console.log('searchQuery:', searchQuery);
-    console.log('category:', category);
-
      // Define a query filter based on the search query
     const queryFilter =
       searchQuery && searchQuery !== "all"
         ? { Comp_Name: { $regex: searchQuery, $options: "i" } }
         : {};
 
-        console.log('queryFilter:', queryFilter);
+       
       // Define a category filter based on the category
 
     const categoryFilter = category && category !== "all" ? { category } : {};
-     console.log('categoryFilter:', categoryFilter);
     
 
       // Find products that match the query and category filters
@@ -39,7 +35,6 @@ productRouter.get(
       ...queryFilter,
     });
 
- console.log('products:', products);
     // Count the number of products that match the query and category filters
     const countProducts = await Product.countDocuments({
       ...categoryFilter,
@@ -59,7 +54,7 @@ productRouter.get(
   expressAsyncHandler(async (req, res) => {
      // Retrieve all distinct categories from the products collection
     const categories = await Product.find().distinct("category");
-    console.log('categories:', categories);
+   
       // Send the categories as a response
     res.send(categories);
   })
