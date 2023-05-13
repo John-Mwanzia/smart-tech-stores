@@ -68,24 +68,36 @@ export default function Homepage() {
         </div> */}
 
         <div className=" text-center left-1/2">
-  <label htmlFor="category-select">Select a category:</label>
-  <select id="category-select" className="bg-transparent border border-gray-300 rounded-md px-4 py-2" name="category">
-    <option value="laptops">Laptops</option>
-    <option value="phones">Phones</option>
-    <option value="chargers">Chargers</option>
-    <option value="other-electronics">Other Electronics</option>
-  </select>
-</div>
+          <label htmlFor="category-select">Select a category:</label>
+          <select
+            id="category-select"
+            className="bg-transparent border border-gray-300 rounded-md px-4 py-2"
+            name="category"
+          >
+            <option value="laptops">Laptops</option>
+            <option value="phones">Phones</option>
+            <option value="chargers">Chargers</option>
+            <option value="other-electronics">Other Electronics</option>
+          </select>
+        </div>
 
-        <div className="flex justify-center gap-24 mt-20  flex-wrap">
+        <div className="flex justify-center gap-24 mt-20 flex-col  lg:flex-row">
           <div>
             <div>
               <h1 className="font-sans font-bold text-5xl">
-              Upgrade Your Tech with <br /> Our High-Quality <br /> Accessories
+                Upgrade Your Tech with <br /> Our High-Quality <br />{" "}
+                Accessories
               </h1>
             </div>
             <div className="mt-16 text-xs">
-            Discover a wide range of computer accessories to elevate your tech experience.<br/> From keyboards and mice to monitors and headsets, our e-commerce platform <br/>has everything  you need to take your computer setup to the next level. With our <br/> user-friendly interface and seamless checkout process, shopping for tech has <br/>never been easier.
+              Discover a wide range of computer accessories to elevate your tech
+              experience.
+              <br /> From keyboards and mice to monitors and headsets, our
+              e-commerce platform <br />
+              has everything you need to take your computer setup to the next
+              level. With our <br /> user-friendly interface and seamless
+              checkout process, shopping for tech has <br />
+              never been easier.
             </div>
 
             <div>
@@ -93,7 +105,6 @@ export default function Homepage() {
                 Shop Now
               </button>
             </div>
-            
           </div>
           <div>
             <Slider />
@@ -122,8 +133,6 @@ export default function Homepage() {
         <Row className="mt-3 ">
           <FeaturedProducts />
         </Row>
-
-    
       </Container>
 
       <Footer />

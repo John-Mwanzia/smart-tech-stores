@@ -10,12 +10,7 @@ function Header({ currentPage }) {
   const { cart, userInfo } = state;
   const { cartItems } = cart;
 
-  // const [isOpen, setIsOpen] = useState(false);
 
-  // const toggleNavbar = () => {
-  //   console.log("clicked");
-  //   setIsOpen(!isOpen);
-  // };
 
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -30,7 +25,8 @@ function Header({ currentPage }) {
   return (
     <>
       {currentPage === "cartScreen" ? (
-        {/* <nav className="flex justify-between py-4  " expand="lg">
+        {
+          /* <nav className="flex justify-between py-4  " expand="lg">
           <div className="flex justify-center space-x-10 font-bold text-lg">
             <Link to="/">
               <img
@@ -56,32 +52,30 @@ function Header({ currentPage }) {
               )}
             </Link>
           </div>
-        </nav> */}
+        </nav> */
+        }
       ) : (
         <nav className="Nav flex justify-around w-full items-center p-6 relative">
-   
-
           {!menuOpen && (
-           
-        <button onClick={() => toggleMenu("open")}>
-          <img
-            className="md:hidden w-[25px] left-2"
-            src="/images/Hamburger.svg"
-            alt="hamburger"
-          />
-        </button>
-      )}
-      {menuOpen && (
-        <div className="absolute top-0 left-1/2 z-50 ">
-        <button onClick={() => toggleMenu("close")} className="z-50">
-          <img
-            className="md:hidden w-[25px] left-2 "
-            src="/images/Hamburger-closed.svg"
-            alt="hamburger"
-          />
-        </button>
-        </div>
-      )}
+            <button onClick={() => toggleMenu("open")}>
+              <img
+                className="md:hidden w-[25px] left-2"
+                src="/images/Hamburger.svg"
+                alt="hamburger"
+              />
+            </button>
+          )}
+          {menuOpen && (
+            <div className="absolute top-0 left-1/2 z-50 ">
+              <button onClick={() => toggleMenu("close")} className="z-50">
+                <img
+                  className="md:hidden w-[25px] left-2 "
+                  src="/images/Hamburger-closed.svg"
+                  alt="hamburger"
+                />
+              </button>
+            </div>
+          )}
 
           <div className="">
             <Link to="/">
@@ -93,55 +87,53 @@ function Header({ currentPage }) {
           </div>
 
           <div
-        className={`${
-          menuOpen ? "translate-x-4  lg:translate-x-0 fixed top-0 pt-8 left-0 w-screen  h-screen  bg-gray-200 bg-opacity-10 backdrop-filter backdrop-blur-lg " : "left-[-150px]"
-        } transform transition duration-300 ease-in-out flex flex-col gap-4  lg:flex-row lg:space-x-8 absolute lg:relative lg:left-0`}
-        
-      >
-        <Link to="/">
-          {" "}
-          <p className="font-sans text-lg">Home</p>
-        </Link>
-        <Link to="/">
-          {" "}
-          <p className="font-sans text-lg">About us</p>
-        </Link>
-        <Link to="/">
-          {" "}
-          <p className="font-sans text-lg">Blog</p>
-        </Link>
-        <Link to="/">
-          {" "}
-          <p className="font-sans text-lg">Contact</p>
-        </Link>
-      </div>
-
-  
-
-      <div className="flex  flex-row items-center  ">
-  {userInfo ? (
-    <div>{userInfo.name}</div>
-  ) : (
-    <Link to="/signin">SignIn</Link>
-  )}
-{/* the cart image was showing when menuOpen was true, so i had to use conditional rendering to hide it when menuOpen is true */}
-  {!menuOpen && (
-    <div className="relative">
-      <Link to="/cart">
-        <img
-          className="cart-img"
-          src="https://cdn-icons-png.flaticon.com/512/8974/8974464.png"
-        />
-        {cart.cartItems.length > 0 && (
-          <div className="absolute top-[-10px] right-[-24px] rounded-full px-2 bg-red-400">
-            {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
+            className={`${
+              menuOpen
+                ? "translate-x-4  lg:translate-x-0 fixed top-0 pt-8 left-0 w-screen  h-screen  bg-gray-200 bg-opacity-10 backdrop-filter backdrop-blur-lg "
+                : "left-[-150px]"
+            } transform transition duration-300 ease-in-out flex flex-col gap-4  lg:flex-row lg:space-x-8 absolute lg:relative lg:left-0`}
+          >
+            <Link to="/">
+              {" "}
+              <p className="font-sans text-lg">Home</p>
+            </Link>
+            <Link to="/">
+              {" "}
+              <p className="font-sans text-lg">About us</p>
+            </Link>
+            <Link to="/">
+              {" "}
+              <p className="font-sans text-lg">Blog</p>
+            </Link>
+            <Link to="/">
+              {" "}
+              <p className="font-sans text-lg">Contact</p>
+            </Link>
           </div>
-        )}
-      </Link>
-    </div>
-  )}
-</div>
 
+          <div className="flex  flex-row items-center  ">
+            {userInfo ? (
+              <div>{userInfo.name}</div>
+            ) : (
+              <Link to="/signin">SignIn</Link>
+            )}
+            {/* the cart image was showing when menuOpen was true, so i had to use conditional rendering to hide it when menuOpen is true */}
+            {!menuOpen && (
+              <div className="relative">
+                <Link to="/cart">
+                  <img
+                    className="cart-img"
+                    src="https://cdn-icons-png.flaticon.com/512/8974/8974464.png"
+                  />
+                  {cart.cartItems.length > 0 && (
+                    <div className="absolute top-[-10px] right-[-24px] rounded-full px-2 bg-red-400">
+                      {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
+                    </div>
+                  )}
+                </Link>
+              </div>
+            )}
+          </div>
         </nav>
       )}
     </>
