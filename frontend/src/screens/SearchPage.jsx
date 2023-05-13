@@ -5,12 +5,15 @@ import Product from "../components/product";
 import SearchBar from "../components/SearchBar";
 import { Button, Card } from "react-bootstrap";
 
+
+// Define the initial state for the reducer
 const initialState = {
   loading: true,
   products: [],
   error: "",
 };
 
+//// Define the reducer function
 const reducer = (state, action) => {
   switch (action.type) {
     case "FETCH_REQUEST":
@@ -31,16 +34,20 @@ const reducer = (state, action) => {
 
 export default function SearchPage() {
   const navigate = useNavigate();
+
+  // Get the search query and category from the URL using useLocation hook
   const { search } = useLocation();
   const sp = new URLSearchParams(search);
   const query = sp.get("query") || "all";
   const category = sp.get("category") || "all";
 
+ // Use the reducer to manage the state of the component
   const [{ loading, error, products, countProducts }, dispatch] = useReducer(
     reducer,
     initialState
   );
 
+   // Fetch the search results from the backend API when the component mounts
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -57,7 +64,7 @@ export default function SearchPage() {
   }, [query, category]);
 
   const [categories, setCategories] = useState([]);
-
+  // Fetch the list of categories from the backend API when the component mounts
   useEffect(() => {
     const fetchCategories = async () => {
       try {
@@ -72,12 +79,14 @@ export default function SearchPage() {
     fetchCategories();
   }, [dispatch]);
 
+  // Helper function to get the filter URL for a given filter
   const getFilterUrl = (filter) => {
     const filterQuery = filter.query || query;
     const filterCategory = filter.category || category;
     return `/search?query=${filterQuery}&category=${filterCategory}`;
   };
 
+    // Render the component
   return (
     <div>
       <div>
