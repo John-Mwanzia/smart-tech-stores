@@ -53,7 +53,7 @@ export default function Homepage() {
         <title>Smart Tech Stores</title>
       </Helmet>
       <Header />
-      <div className="landing">
+      <div className="landing ">
         {/* <div>
           <ul className="d-flex flex-wrap justify-content-center mb-3 landing-list">
           <Link to="/search?category=laptops"> <li>laptops</li></Link>
@@ -67,7 +67,17 @@ export default function Homepage() {
           </ul>
         </div> */}
 
-        {/* <div className="hero-section">
+        <div className=" text-center left-1/2">
+  <label htmlFor="category-select">Select a category:</label>
+  <select id="category-select" className="bg-transparent border border-gray-300 rounded-md px-4 py-2" name="category">
+    <option value="laptops">Laptops</option>
+    <option value="phones">Phones</option>
+    <option value="chargers">Chargers</option>
+    <option value="other-electronics">Other Electronics</option>
+  </select>
+</div>
+
+        <div className="hero-section">
           <div>
             <div className="px-4">
               <h1 className="hero-text">
@@ -79,7 +89,7 @@ export default function Homepage() {
           <div>
             <Slider />
           </div>
-        </div> */}
+        </div>
       </div>
 
       <Container>

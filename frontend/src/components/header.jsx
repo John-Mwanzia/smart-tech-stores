@@ -124,7 +124,7 @@ function Header({ currentPage }) {
   ) : (
     <Link to="/signin">SignIn</Link>
   )}
-
+{/* the cart image was showing when menuOpen was true, so i had to use conditional rendering to hide it when menuOpen is true */}
   {!menuOpen && (
     <div className="relative">
       <Link to="/cart">
