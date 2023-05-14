@@ -120,7 +120,7 @@ export default function Homepage() {
               <div
 
                 key={product.Comp_Name}
-                className="d-flex mt-3 justify-content-center "
+                className="flex mt-3 justify-content-center "
               >
                 <Product product={product} />
               </div>
