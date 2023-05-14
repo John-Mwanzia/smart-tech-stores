@@ -117,10 +117,11 @@ export default function Homepage() {
    
           {products.map((product) => {
             return (
+              
               <div
 
                 key={product.Comp_Name}
-                className="flex flex-row mt-3 justify-content-center "
+          
               >
                 <Product product={product} />
               </div>
