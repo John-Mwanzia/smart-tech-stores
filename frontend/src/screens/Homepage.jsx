@@ -112,28 +112,26 @@ export default function Homepage() {
         </div>
       </div>
 
-      <Container>
+    
         <h1>Laptops</h1>
-        <Row>
+   
           {products.map((product) => {
             return (
-              <Col
-                sm={6}
-                md={4}
-                lg={3}
+              <div
+
                 key={product.Comp_Name}
                 className="d-flex mt-3 justify-content-center "
               >
                 <Product product={product} />
-              </Col>
+              </div>
             );
           })}
-        </Row>
+       
 
-        <Row className="mt-3 ">
+        <div className="mt-3 ">
           <FeaturedProducts />
-        </Row>
-      </Container>
+        </div>
+    
 
       <Footer />
     </div>
