@@ -137,7 +137,7 @@ export default function Homepage() {
         <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[273px] font-semibold mb-4">
           Features
         </h1>
-        <div className="flex justify-center gap-8 mt-6">
+        <div className="flex justify-center flex-wrap gap-8 mt-6">
           <div>
             <img
               src="/images/features/customizable-products.svg"
