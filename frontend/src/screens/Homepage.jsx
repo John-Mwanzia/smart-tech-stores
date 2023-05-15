@@ -133,7 +133,7 @@ export default function Homepage() {
         <FeaturedProducts />
       </div>
       {/* Features section */}
-      <div className="mt-12 mb-16">
+      <div className="mt-12 mb-32">
         <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[273px] font-semibold mb-4">
           Features
         </h1>
@@ -161,12 +161,14 @@ export default function Homepage() {
               alt="customizable-products"
               className="mx-auto"
             />
-            <h1 className=" font-sans text-3xl font-semibold text-center  mb-4">Fast Delivery</h1>
+            <h1 className=" font-sans text-3xl font-semibold text-center  mb-4">
+              Fast Delivery
+            </h1>
             <p className="text-center">
               we offer lightning-fast delivery options, with same-day <br />
-               and next-day delivery available for many products. <br />
-              Plus, our delivery team is dedicated to  making sure <br />
-              your order arrives on time  and in perfect condition <br />
+              and next-day delivery available for many products. <br />
+              Plus, our delivery team is dedicated to making sure <br />
+              your order arrives on time and in perfect condition <br />
             </p>
           </div>
           <div>
@@ -175,28 +177,79 @@ export default function Homepage() {
               alt="customizable-products"
               className="mx-auto"
             />
-            <h1 className=" font-sans text-3xl font-semibold text-center mb-4">Warranty</h1>
-            <p className="text-center"> 
-              Our warranties and guarantees typically include coverage for <br />
-              defects in materials for one year after purchase.<br /> We want you to 
-              feel confident in your purchase,<br /> which is why we stand behind our
-              products with these  <br /> guarantees.
+            <h1 className=" font-sans text-3xl font-semibold text-center mb-4">
+              Warranty
+            </h1>
+            <p className="text-center">
+              Our warranties and guarantees typically include coverage for{" "}
+              <br />
+              defects in materials for one year after purchase.
+              <br /> We want you to feel confident in your purchase,
+              <br /> which is why we stand behind our products with these <br />{" "}
+              guarantees.
             </p>
           </div>
         </div>
       </div>
       <div>
-        <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[273px] font-semibold mb-4">
-             Textimonials
+        <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[273px] font-semibold  mb-32">
+          Textimonials
         </h1>
-        <div className="flex justify-center gap-8 mt-6">
-          <div>
-            <img src="/images/testimonials/1.png" alt="customizable-products" className="mx-auto" />
-             <div></div>
+        <div className="flex justify-center gap-8  flex-wrap">
+          <div className="font-sans  relative  bg-blue-300 rounded-3xl px-4 pb-6 mb-16 lg:mb-0">
+            <img
+              src="/images/testimonials/avatar1.svg"
+              alt="avatar1"
+              className=" absolute left-28 top-[-70px]"
+            />
+            <h1 className="font-semibold  text-center mt-20 mb-12 text-3xl">
+              Natasha
+            </h1>
+            <p className="text-center">
+              “I am blown away by the quality <br /> of the computer accessories
+              I purchased <br /> from Smart Tech Stores.
+              <br /> Not only did they improve my <br />
+              productivity, but they were also stylish <br /> and comfortable to
+              use. <br />I highly recommend Smart Tech Stores <br /> to anyone
+              looking for top-notch tech products."
+            </p>
           </div>
-          <div></div>
-          <div></div>
-         </div> 
+          <div className="font-sans  relative  bg-blue-300 rounded-3xl px-4 pb-6  mb-16 lg:mb-0">
+            <img
+              src="/images/testimonials/avatar1.svg"
+              alt="avatar1"
+              className=" absolute left-28 top-[-70px]"
+            />
+            <h1 className="font-semibold  text-center mt-20 mb-12 text-3xl">
+              Ivy
+            </h1>
+            <p className="text-center">
+              "The customer service
+              <br /> at Smart Tech Stores is unmatched.
+              <br /> I had a question about one of their products <br /> and
+              their team was quick <br /> to respond and very helpful. <br />{" "}
+              It's refreshing to see a company that truly cares <br /> about
+              their customers."
+            </p>
+          </div>
+          <div className="font-sans mb-1 relative  bg-blue-300 rounded-3xl px-4 pb-6 w-[371px]">
+            <img
+              src="/images/testimonials/avatar2.svg"
+              alt="avatar2"
+              className=" absolute left-28 top-[-70px]"
+            />
+            <h1 className="font-semibold  text-center mt-20 mb-12 text-3xl">
+              George
+            </h1>
+            <p className="text-center">
+              "I was skeptical about buying computer <br /> accessories online, but
+              Smart Tech Stores <br /> exceeded my expectations. Their website was<br /> easy
+              to navigate, their prices were <br /> competitive, and my order arrived
+              on time <br /> and in perfect condition. I will definitely be a <br /> repeat
+              customer."
+            </p>
+          </div>
+        </div>
       </div>
       <Footer />
     </div>
