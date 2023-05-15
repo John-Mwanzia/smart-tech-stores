@@ -127,7 +127,7 @@ export default function Homepage() {
         </div>
       </div>
 
-      <div className="mt-3 flex ">
+      <div className="mt-3 ">
         <FeaturedProducts />
       </div>
 
