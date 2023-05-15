@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useReducer } from "react";
-import Product from "./product";
 import axios from "axios";
 import { Button, Card, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -68,45 +67,41 @@ export default function FeaturedProducts() {
   return (
     <div>
       <h1>Featured products</h1>
-      <Row>
+      <div>
         {products.map((product) => {
           return (
-            <Col
-              sm={6}
-              md={4}
-              lg={3}
+            <div
               key={product.Gadget_Name}
               className="d-flex mt-3 justify-content-center "
             >
-              <Card>
+              <div>
                 <Link to={`/featuredProducts/slug/${product.slug}`}>
-                  <Card.Img
+                  <img
                     src={product.Img_Url}
                     alt={product.Gadget_Name}
                     className="images"
                   />
                 </Link>
-                <Card.Body>
-                  <Card.Title>
+                <div>
+                  <div>
                     <Link to={`/featuredProducts/slug/${product.slug}`}>
                       {product.Gadget_Name}
                     </Link>
-                  </Card.Title>
-                  <Card.Text> Price: KSh.{product.price}</Card.Text>
+                  </div>
+                  <div> Price: KSh.{product.price}</div>
 
-                  <Button
-                    variant="warning"
+                  <button
                     onClick={() => updateCart(product)}
-                    className="mb-1"
+                    className="mb-1 btn"
                   >
                     Add to cart
-                  </Button>
-                </Card.Body>
-              </Card>
-            </Col>
+                  </button>
+                </div>
+              </div>
+            </div>
           );
         })}
-      </Row>
+      </div>
     </div>
   );
 }

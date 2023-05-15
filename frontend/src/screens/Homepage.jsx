@@ -1,13 +1,13 @@
 import React, { useEffect, useReducer, useState } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Product from "../components/product";
 import axios from "axios";
 import { Helmet } from "react-helmet-async";
 import Header from "../components/header";
 import Footer from "../components/Footer";
 import FeaturedProducts from "../components/FeaturedProducts";
 import Slider from "../components/Slider";
+import Product from "../components/Product";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -127,7 +127,7 @@ export default function Homepage() {
         </div>
       </div>
 
-      <div className="mt-3 ">
+      <div className="mt-3 flex ">
         <FeaturedProducts />
       </div>
 
