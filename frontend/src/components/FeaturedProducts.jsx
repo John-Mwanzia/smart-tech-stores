@@ -77,7 +77,7 @@ export default function FeaturedProducts() {
                     <img
                       src={product.Img_Url}
                       alt={product.Gadget_Name}
-                      className="images"
+                      className="images max-h-[210px]"
                     />
                   </Link>
                   <div>
@@ -103,7 +103,7 @@ export default function FeaturedProducts() {
 
           
         </div>
-        <div className="flex flex-wrap space-x-8 justify-center">
+        <div className="flex flex-wrap space-x-8 justify-center mt-6">
           {products.slice(4, 8).map((product) => {
             return (
               <div
@@ -115,7 +115,7 @@ export default function FeaturedProducts() {
                     <img
                       src={product.Img_Url}
                       alt={product.Gadget_Name}
-                      className="images"
+                      className="images max-h-[210px]" 
                     />
                   </Link>
                   <div>
