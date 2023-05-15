@@ -133,7 +133,7 @@ export default function Homepage() {
         <FeaturedProducts />
       </div>
       {/* Features section */}
-      <div className="mt-4">
+      <div className="mt-12 mb-16">
         <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[273px] font-semibold mb-4">
           Features
         </h1>
@@ -185,7 +185,19 @@ export default function Homepage() {
           </div>
         </div>
       </div>
-
+      <div>
+        <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[273px] font-semibold mb-4">
+             Textimonials
+        </h1>
+        <div className="flex justify-center gap-8 mt-6">
+          <div>
+            <img src="/images/testimonials/1.png" alt="customizable-products" className="mx-auto" />
+             <div></div>
+          </div>
+          <div></div>
+          <div></div>
+         </div> 
+      </div>
       <Footer />
     </div>
   );
