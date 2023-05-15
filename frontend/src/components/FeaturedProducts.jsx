@@ -65,7 +65,7 @@ export default function FeaturedProducts() {
     <div>
       <div>
         <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[273px] font-semibold mb-4">Featured products</h1>
-        <div className="flex flex-wrap space-x-12 justify-center">
+        <div className="flex flex-wrap space-x-8 justify-center">
           {products.slice(0, 4).map((product) => {
             return (
               <div
@@ -103,7 +103,7 @@ export default function FeaturedProducts() {
 
           
         </div>
-        <div className="flex flex-wrap space-x-12 justify-center">
+        <div className="flex flex-wrap space-x-8 justify-center">
           {products.slice(4, 8).map((product) => {
             return (
               <div
