@@ -66,7 +66,7 @@ export default function FeaturedProducts() {
       <div>
         <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[273px] font-semibold mb-4">Featured products</h1>
         <div className="flex flex-wrap space-x-12 justify-center">
-          {products.map((product) => {
+          {products.slice(0, 4).map((product) => {
             return (
               <div
                 key={product.Gadget_Name}
@@ -99,7 +99,49 @@ export default function FeaturedProducts() {
               </div>
             );
           })}
+
+
+          
         </div>
+        <div className="flex flex-wrap space-x-12 justify-center">
+          {products.slice(4, 8).map((product) => {
+            return (
+              <div
+                key={product.Gadget_Name}
+            
+              >
+                <div className="card">
+                  <Link to={`/featuredProducts/slug/${product.slug}`}>
+                    <img
+                      src={product.Img_Url}
+                      alt={product.Gadget_Name}
+                      className="images"
+                    />
+                  </Link>
+                  <div>
+                    <div>
+                      <Link to={`/featuredProducts/slug/${product.slug}`}>
+                        {product.Gadget_Name}
+                      </Link>
+                    </div>
+                    <div> Price: KSh.{product.price}</div>
+
+                    <button
+                      onClick={() => updateCart(product)}
+                      className="mb-1 btn"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+
+
+          
+        </div>
+
       </div>
     </div>
   );
