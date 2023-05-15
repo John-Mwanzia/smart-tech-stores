@@ -193,7 +193,7 @@ export default function Homepage() {
       </div>
       <div>
         <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[273px] font-semibold  mb-32">
-          Textimonials
+          Testimonials
         </h1>
         <div className="flex justify-center gap-8  flex-wrap">
           <div className="font-sans  relative  bg-blue-300 rounded-3xl px-4 pb-6 mb-16 lg:mb-0">
