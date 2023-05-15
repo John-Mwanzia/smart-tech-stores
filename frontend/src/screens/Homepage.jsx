@@ -113,7 +113,9 @@ export default function Homepage() {
       </div>
 
       <div className="mt-8">
-        <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[273px] font-semibold mb-4">Laptops</h1>
+        <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[273px] font-semibold mb-4">
+          Laptops
+        </h1>
         <div className="flex justify-center space-x-8 flex-wrap">
           {products.map((product) => {
             return (
@@ -127,8 +129,19 @@ export default function Homepage() {
         </div>
       </div>
 
-      <div className="mt-3 ">
+      <div className="mt-4 ">
         <FeaturedProducts />
+      </div>
+      {/* Features section */}
+      <div className="mt-4">
+        <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[273px] font-semibold mb-4">
+          Features
+        </h1>
+        <div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
 
       <Footer />
