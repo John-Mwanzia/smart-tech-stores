@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     backgroundColor: {
       'custom-green': 'rgba(62, 151, 108, 0.25)',
+      'btn-orange': 'rgb(255, 166, 0)',
     },
     screens: {
       sm: '640px',

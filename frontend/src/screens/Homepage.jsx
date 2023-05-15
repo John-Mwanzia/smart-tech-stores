@@ -53,7 +53,7 @@ export default function Homepage() {
         <title>Smart Tech Stores</title>
       </Helmet>
       <Header />
-      <div className="landing ">
+      <div className="landing  pb-4">
         {/* <div>
           <ul className="d-flex flex-wrap justify-content-center mb-3 landing-list">
           <Link to="/search?category=laptops"> <li>laptops</li></Link>
@@ -112,27 +112,24 @@ export default function Homepage() {
         </div>
       </div>
 
-    
-        <h1>Laptops</h1>
-   
+      <div className="mt-8">
+        <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[273px] font-semibold mb-4">Laptops</h1>
+        <div className="flex justify-center space-x-8 flex-wrap">
           {products.map((product) => {
             return (
-              
-              <div
-
-                key={product.Comp_Name}
-          
-              >
-                <Product product={product} />
+              <div key={product.Comp_Name}>
+                <div>
+                  <Product product={product} />
+                </div>
               </div>
             );
           })}
-       
-
-        <div className="mt-3 ">
-          <FeaturedProducts />
         </div>
-    
+      </div>
+
+      <div className="mt-3 ">
+        <FeaturedProducts />
+      </div>
 
       <Footer />
     </div>

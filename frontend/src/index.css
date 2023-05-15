@@ -60,7 +60,7 @@ body {
 
 .landing {
   background-color: rgba(62, 151, 108, 0.25);
-  height: 900px;
+  /* height: 900px; */
 }
 .landing-list {
   display: flex;
@@ -86,7 +86,7 @@ body {
 
 
 .images {
-  max-width: 180px;
+  max-width: 280px;
   height: auto;
 }
 
@@ -105,6 +105,15 @@ body {
   padding: 20px;
   box-sizing: border-box;
   border: 1px solid #ccc;
+}
+
+.btn{
+  background-color: rgb(255, 166, 0);
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 5px;
 }
 .footer-wrapper{
   display: flex;
