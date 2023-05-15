@@ -64,7 +64,7 @@ export default function FeaturedProducts() {
   return (
     <div>
       <div>
-        <h1>Featured products</h1>
+        <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[273px] font-semibold mb-4">Featured products</h1>
         <div className="flex flex-wrap space-x-12 justify-center">
           {products.map((product) => {
             return (
