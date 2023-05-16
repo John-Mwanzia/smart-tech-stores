@@ -105,19 +105,6 @@ body {
   padding-bottom: 8px;
   border-radius: 5px;
 }
-.footer-wrapper{
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 20px;
-  background-color: black;
-  color: white;
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
-}
-.footer-wrapper h2{
- text-decoration: underline;
-}
 .icon-wrapper{
   display: flex;
   gap: 10px;

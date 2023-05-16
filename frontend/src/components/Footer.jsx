@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <>
-      <div className="mt-4 bg-slate-800 ">
+      <div className="mt-4 ">
         <div className=" footer-wrapper flex flex-row ">
           
           <div className="text-center">
