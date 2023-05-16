@@ -83,14 +83,13 @@ body {
 
 /* make card elements to be of the same size regardless of the image size. */
 .card{
-  flex-basis: 100%;
-  max-width: 100%;
   padding: 20px;
   box-sizing: border-box;
   
     border-image: linear-gradient(90deg, rgba(62, 100, 255, 1) 0%, rgba(94, 223, 255, 1) 100%);
     border-image-slice: 1;
     border-width: 1px;
+    border-radius: 20px;
   
 }
 

@@ -65,19 +65,19 @@ export default function FeaturedProducts() {
     <div>
       <div>
         <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[273px] font-semibold mb-4">Featured products</h1>
-        <div className="flex flex-wrap  space-x-8 justify-center">
+        <div className="flex flex-wrap  space-x-8 justify-center mb-24">
           {products.slice(0, 4).map((product) => {
             return (
               <div
                 key={product.Gadget_Name}
-            
+                className="flex-1 max-w-[322px] max-h-[332px]  "
               >
                 <div className="card">
                   <Link to={`/featuredProducts/slug/${product.slug}`}>
                     <img
                       src={product.Img_Url}
                       alt={product.Gadget_Name}
-                      className="images max-h-[210px]"
+                      className="images max-h-[200px] "
                     />
                   </Link>
                   <div>
@@ -108,6 +108,7 @@ export default function FeaturedProducts() {
             return (
               <div
                 key={product.Gadget_Name}
+                className="flex-1 max-w-[322px] max-h-[332px]"
             
               >
                 <div className="card">
