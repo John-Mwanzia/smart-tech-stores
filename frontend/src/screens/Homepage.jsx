@@ -81,7 +81,7 @@ export default function Homepage() {
           </select>
         </div>
 
-        <div className="flex justify-center gap-24 mt-20 flex-col  lg:flex-row">
+        <div className="flex justify-center gap-24 mt-40 flex-col  lg:flex-row">
           <div>
             <div>
               <h1 className="font-sans font-bold text-5xl">
