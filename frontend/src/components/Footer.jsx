@@ -9,7 +9,7 @@ export default function Footer() {
           Get in Touch
         </h1>
 
-        <div className="flex justify-center flex-wrap gap-36 mt-6 pb-4">
+        <div className="flex justify-center flex-wrap gap-36 mt-6 mb-16">
           <div>
             <div className="mb-24">
               <img src="/images/Logo.svg" alt="logo" />
@@ -91,6 +91,10 @@ export default function Footer() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="flex justify-center items-center pb-8">
+            <img src="/images/footer/copyRight.svg" alt="copyRight" width={40} height={40} />
+             <p>2023 Smart Tech. All rights reserved</p>
         </div>
       </div>
     </>
