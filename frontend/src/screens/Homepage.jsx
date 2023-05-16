@@ -116,7 +116,7 @@ export default function Homepage() {
         <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[273px] font-semibold mb-4">
           Laptops
         </h1>
-        <div className="flex justify-center space-x-8 flex-wrap">
+        <div className="flex justify-center gap-8 flex-wrap">
           {products.map((product) => {
             return (
               <div key={product.Comp_Name}>
