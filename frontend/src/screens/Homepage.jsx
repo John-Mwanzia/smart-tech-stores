@@ -133,8 +133,8 @@ export default function Homepage() {
         <FeaturedProducts />
       </div>
       {/* Features section */}
-      <div className="mt-12 mb-32">
-        <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[273px] font-semibold mb-4">
+      <div className="mt-32 mb-32">
+        <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[273px] font-semibold mb-16">
           Features
         </h1>
         <div className="flex justify-center flex-wrap gap-8 mt-6">
