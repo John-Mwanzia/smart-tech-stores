@@ -53,7 +53,7 @@ export default function Homepage() {
         <title>Smart Tech Stores</title>
       </Helmet>
       <Header />
-      <div className="landing  pb-4">
+      <div className="bg-customGreen pb-4">
         {/* <div>
           <ul className="d-flex flex-wrap justify-content-center mb-3 landing-list">
           <Link to="/search?category=laptops"> <li>laptops</li></Link>
@@ -196,7 +196,7 @@ export default function Homepage() {
           Testimonials
         </h1>
         <div className="flex justify-center gap-8  flex-wrap">
-          <div className="font-sans  relative  bg-blue-300 rounded-3xl px-4 pb-6 mb-16 lg:mb-0">
+          <div className="font-sans  relative  bg-customBlue rounded-3xl px-4 pb-6 mb-16 lg:mb-0">
             <img
               src="/images/testimonials/avatar1.svg"
               alt="avatar1"
@@ -214,7 +214,7 @@ export default function Homepage() {
               looking for top-notch tech products."
             </p>
           </div>
-          <div className="font-sans  relative  bg-blue-300 rounded-3xl px-4 pb-6  mb-16 lg:mb-0">
+          <div className="font-sans  relative  bg-customBlue rounded-3xl px-4 pb-6  mb-16 lg:mb-0">
             <img
               src="/images/testimonials/avatar1.svg"
               alt="avatar1"

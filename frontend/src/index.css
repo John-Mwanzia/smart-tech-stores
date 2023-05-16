@@ -16,11 +16,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
-.Nav {
-  background-color: rgba(62, 151, 108, 0.25);
-  color: black;
-  
-}
+
 
 .search-wrapper {
   width: 300px;
@@ -58,13 +54,7 @@ body {
   border-bottom-left-radius: 30px;
 }
 
-.landing {
-  background-color: rgba(62, 151, 108, 0.25);
-  /* height: 900px; */
-}
-.landing-list {
-  display: flex;
-}
+
 
 .landing-list li {
   display: inline-block;

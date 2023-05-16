@@ -55,7 +55,7 @@ function Header({ currentPage }) {
         </nav> */
         }
       ) : (
-        <nav className="Nav flex justify-around w-full items-center p-6 relative">
+        <nav className=" flex justify-around w-full items-center p-6 relative bg-customGreen">
           {!menuOpen && (
             <button onClick={() => toggleMenu("open")}>
               <img
