@@ -9,7 +9,7 @@ export default function Footer() {
           Get in Touch
         </h1>
 
-        <div className="flex justify-center flex-wrap gap-32 mt-6 pb-4">
+        <div className="flex justify-center flex-wrap gap-36 mt-6 pb-4">
           <div>
             <div className="mb-24">
               <img src="/images/Logo.svg" alt="logo" />
@@ -67,12 +67,12 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="  flex  ">
+          <div>
             <div>
               <h1 className="text-2xl font-sans text-center  font-semibold mb-8">
                 Social Media
               </h1>
-              <div className="icon-wrapper">
+              <div className="flex gap-6">
                 <div>
                   <Link to="/">
                     <img src="/images/facebook.png" width={40} height={40} />
