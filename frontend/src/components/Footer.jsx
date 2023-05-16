@@ -75,17 +75,17 @@ export default function Footer() {
               <div className="flex gap-6">
                 <div>
                   <Link to="/">
-                    <img src="/images/facebook.png" width={40} height={40} />
+                    <img src="/images/footer/facebook.png" width={40} height={40} />
                   </Link>
                 </div>
                 <div>
                   <Link to="/">
-                    <img src="/images/instagram.png" width={40} height={40} />
+                    <img src="/images/footer/instagram.png" width={40} height={40} />
                   </Link>
                 </div>
                 <div>
                   <Link to="/">
-                    <img src="/images/twitter.png" width={40} height={40} />
+                    <img src="/images/footer/twitter.png" width={40} height={40} />
                   </Link>
                 </div>
               </div>
