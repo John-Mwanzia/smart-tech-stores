@@ -232,7 +232,7 @@ export default function Homepage() {
               their customers."
             </p>
           </div>
-          <div className="font-sans mb-1 relative  bg-blue-300 rounded-3xl px-4 pb-6 w-[371px]">
+          <div className="font-sans mb-1 bg-customBlue relative rounded-3xl px-4 pb-6 w-[371px]">
             <img
               src="/images/testimonials/avatar2.svg"
               alt="avatar2"

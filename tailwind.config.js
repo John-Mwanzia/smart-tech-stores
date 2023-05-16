@@ -7,10 +7,10 @@ module.exports = {
 theme: {
   extend: {
       colors: {
-        customblue: '#AEE2FF',
+        customBlue: '#AEE2FF',
         btnOrange: 'rgb(255, 166, 0)',
-        customgreen: 'rgba(62, 151, 108, 0.25)',
-        customgray: 'rgba(0, 0, 0, 0.25)',
+        customGreen: 'rgba(62, 151, 108, 0.25)',
+        customGray: '#FAFAFB',
        },
   
       screens: {
