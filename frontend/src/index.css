@@ -78,7 +78,7 @@ body {
 }
 
 .img-thumbnail {
-  max-height: 60px;
+  max-height: 40px;
 }
 
 /* make card elements to be of the same size regardless of the image size. */

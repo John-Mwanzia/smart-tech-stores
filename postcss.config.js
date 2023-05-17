@@ -12,6 +12,7 @@
               btnOrange: 'rgb(255, 166, 0)',
               customGreen: 'rgba(62, 151, 108, 0.25)',
               customGray: '#FAFAFB',
+              blue : "#0000ff"
              },
              screens: {
               sm: '640px',

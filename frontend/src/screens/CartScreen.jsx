@@ -54,10 +54,10 @@ export default function CartScreen() {
             {cartItems.length === 0 ? (
               <Link to="/">Go to shopping</Link>
             ) : (
-              <div className="flex flex-col">
+              <div className="flex flex-col border p-2 rounded-xl">
                 {cartItems.map((item) => (
                   <div key={item._id} >
-                    <div className="flex gap-28 justify-between items-center ">
+                    <div className="flex gap-28 justify-between items-center border-b pb-4 ">
                       <div className="flex items-center gap-4">
                         <img
                           src={item.Img_Url}
