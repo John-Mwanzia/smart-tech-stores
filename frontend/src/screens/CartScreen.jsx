@@ -12,6 +12,7 @@ export default function CartScreen() {
   const { cart } = state;
   const { cartItems } = cart;
   const navigate = useNavigate();
+  console.log(cartItems);
 
   const updateCartHandler = async (item, quantity) => {
     const { data } = await axios.get(
@@ -66,7 +67,7 @@ export default function CartScreen() {
                         ></img>{" "}
                         {"  "}
                         <Link to={`/product/${item.slug}`}>
-                          {item.Comp_Name}
+                          {item.Comp_Name || item.Gadget_Name}
                         </Link>
                       </div>
                       <div className="flex gap-4">
