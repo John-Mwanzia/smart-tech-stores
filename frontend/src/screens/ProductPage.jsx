@@ -73,9 +73,12 @@ export default function ProductPage() {
         <title>{slug}</title>
       </Helmet>
       <Header />
-      <h1 className="px-4 mt-4">{product.Comp_Name}</h1>
-      <div>
-        <div className="mt-4">
+      {/* <h1 className="px-4 mt-4">{product.Comp_Name}</h1> */}
+      <h1 className="text-5xl font-sans text-center lg:text-left  lg:ml-[273px]  mt-12 mb-16">
+          {product.Comp_Name}
+        </h1>
+     
+        <div className="mt-4 flex flex-wrap gap-12 justify-center pb-8">
           <div>
             <img
               src={product.Img_Url}
@@ -85,9 +88,9 @@ export default function ProductPage() {
           </div>
           <div>
             <div>
-              <h1>Description</h1>
-              <h4>Brand: {product.Brand}</h4>
-              <h4>{product.Comp_Name}</h4>
+              <h1 className="text-5xl font-sans text-center lg:text-left mb-5 ">Description</h1>
+              <h4 className="font-sans border-b mb-2 text-center lg:text-left pb-2">Brand: {product.Brand}</h4>
+              <h4 className="font-sans border-b text-center lg:text-left pb-2">{product.Comp_Name}</h4>
               <h4>
                 {" "}
                 <strong>Specs:</strong> {product.Specs}
@@ -96,8 +99,9 @@ export default function ProductPage() {
           </div>
           <div>
             <div>
-              <h4>Price: Ksh. {product.price}</h4>
-              <h4 className="mb-1">
+              <h4 className="border py-2 px-8 rounded-t-md">Price: Ksh. {product.price}</h4>
+             
+              <h4 className="mb-1 flex border py-2 px-8">
                 Status:{" "}
                 {product.countInStock > 0 ? (
                   <div>Available</div>
@@ -105,7 +109,8 @@ export default function ProductPage() {
                   <div >out of stock</div>
                 )}
               </h4>
-              <div className="d-grid ">
+          
+              <div className="grid btn">
                 <button variant="warning" onClick={addToCart}>
                   Add to cart
                 </button>
@@ -113,7 +118,6 @@ export default function ProductPage() {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 }
