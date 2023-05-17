@@ -83,7 +83,7 @@ export default function ProductPage() {
             <img
               src={product.Img_Url}
               alt={product.Comp_Name}
-              className="product-img"
+              className="max-w-[470px]"
             />
           </div>
           <div>
