@@ -49,7 +49,7 @@ export default function CartScreen() {
       <div>
         <h1 className="mt-4 text-4xl">Shopping List</h1>
 
-        <div className="flex justify-center gap-16">
+        <div className="flex justify-center gap-16 flex-wrap">
           <div>
             {cartItems.length === 0 ? (
               <Link to="/">Go to shopping</Link>
@@ -57,15 +57,15 @@ export default function CartScreen() {
               <div className="flex flex-col border p-2 rounded-xl">
                 {cartItems.map((item) => (
                   <div key={item._id} >
-                    <div className="flex gap-28 justify-between items-center border-b pb-4 ">
-                      <div className="flex items-center gap-4">
+                    <div className="flex gap-2 lg:gap-28 justify-between items-center border-b pb-4  ">
+                      <div className="flex flex-wrap items-center gap-4">
                         <img
                           src={item.Img_Url}
                           alt={item.Comp_Name}
                           className="img-fluid rounded  img-thumbnail"
                         ></img>{" "}
                         {"  "}
-                        <Link to={`/product/${item.slug}`}>
+                        <Link to={`/product/${item.slug}`} className="text-blue-600 underline">
                           {item.Comp_Name || item.Gadget_Name}
                         </Link>
                       </div>
