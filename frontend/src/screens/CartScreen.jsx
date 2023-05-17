@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useContext, useState } from "react";
-import { Button, Card, Col, Container, ListGroup, Row } from "react-bootstrap";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -42,23 +41,24 @@ export default function CartScreen() {
 
   return (
     <div>
-      <Header currentPage={currentPage} />
+      {/* <Header currentPage={currentPage} /> */}
+      <Header />
       <Helmet>
         <title>Shopping cart</title>
       </Helmet>
-      <Container>
-        <h1 className="mt-4">Shopping List</h1>
+      <div>
+        <h1 className="mt-4 text-4xl">Shopping List</h1>
 
-        <Row>
-          <Col md={8}>
+        <div className="flex justify-center gap-16">
+          <div>
             {cartItems.length === 0 ? (
               <Link to="/">Go to shopping</Link>
             ) : (
-              <ListGroup>
+              <div className="flex flex-col">
                 {cartItems.map((item) => (
-                  <ListGroup.Item key={item._id}>
-                    <Row className="align-items-center">
-                      <Col md={4}>
+                  <div key={item._id} >
+                    <div className="flex gap-28 justify-between items-center ">
+                      <div className="flex items-center gap-4">
                         <img
                           src={item.Img_Url}
                           alt={item.Comp_Name}
@@ -68,9 +68,9 @@ export default function CartScreen() {
                         <Link to={`/product/${item.slug}`}>
                           {item.Comp_Name}
                         </Link>
-                      </Col>
-                      <Col md={3}>
-                        <Button
+                      </div>
+                      <div className="flex gap-4">
+                        <button
                           variant="light"
                           disabled={item.quantity == 1}
                           onClick={() => {
@@ -80,9 +80,9 @@ export default function CartScreen() {
                         >
                           {" "}
                           <i className="fas fa-minus-circle" />{" "}
-                        </Button>{" "}
+                        </button>{" "}
                         <span>{item.quantity}</span>
-                        <Button
+                        <button
                           variant="light"
                           disabled={item.quantity == item.countInStock}
                           onClick={() => {
@@ -94,42 +94,42 @@ export default function CartScreen() {
                         >
                           {" "}
                           <i className="fas fa-plus-circle" />{" "}
-                        </Button>
-                      </Col>
-                      <Col md={3}>Ksh.{item.price}</Col>
-                      <Col md={2}>
-                        <Button
+                        </button>
+                      </div>
+                      <div md={3}>Ksh.{item.price}</div>
+                      <div md={2}>
+                        <button
                           variant="light"
                           onClick={() => removeItemHandler(item)}
                         >
                           {" "}
                           <i className="fas fa-trash" />
-                        </Button>
-                      </Col>
-                    </Row>
-                  </ListGroup.Item>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 ))}
-              </ListGroup>
+              </div>
             )}
-          </Col>
-          <Col md={4}>
-            <Card>
+          </div>
+          <div >
+            <div>
               <h3>
                 Subtotal( {cartItems.reduce((a, c) => a + c.quantity, 0)} items)
                 : Ksh. {cartItems.reduce((a, c) => a + c.quantity * c.price, 0)}
               </h3>
-              <Button
+              <button
                 type="button"
                 variant="primary"
                 disabled={cartItems.length === 0}
                 onClick={() => navigate("/signin?redirect=/shipping")}
               >
                 proceed to checkout
-              </Button>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
