@@ -112,8 +112,8 @@ export default function CartScreen() {
               </div>
             )}
           </div>
-          <div >
-            <div>
+          <div>
+            <div className="border py-4 px-8">
               <h3>
                 Subtotal( {cartItems.reduce((a, c) => a + c.quantity, 0)} items)
                 : Ksh. {cartItems.reduce((a, c) => a + c.quantity * c.price, 0)}
@@ -122,6 +122,7 @@ export default function CartScreen() {
                 type="button"
                 variant="primary"
                 disabled={cartItems.length === 0}
+                className=" bg-blue px-8 mt-4 py-2 w-full text-white rounded-xl"
                 onClick={() => navigate("/signin?redirect=/shipping")}
               >
                 proceed to checkout
