@@ -77,10 +77,10 @@ export default function FeaturedProducts() {
                     <img
                       src={product.Img_Url}
                       alt={product.Gadget_Name}
-                      className="images max-h-[200px] "
+                      className="images max-h-[200px] mx-auto "
                     />
                   </Link>
-                  <div>
+                  <div className="text-center pt-8">
                     <div>
                       <Link to={`/featuredProducts/slug/${product.slug}`}>
                         {product.Gadget_Name}
@@ -90,7 +90,7 @@ export default function FeaturedProducts() {
 
                     <button
                       onClick={() => updateCart(product)}
-                      className="mb-1 btn"
+                      className="mb-1 mt-2 btn"
                     >
                       Add to cart
                     </button>
@@ -116,10 +116,10 @@ export default function FeaturedProducts() {
                     <img
                       src={product.Img_Url}
                       alt={product.Gadget_Name}
-                      className="images max-h-[210px]" 
+                      className="images max-h-[210px] mx-auto" 
                     />
                   </Link>
-                  <div>
+                  <div className="text-center pt-8">
                     <div>
                       <Link to={`/featuredProducts/slug/${product.slug}`}>
                         {product.Gadget_Name}
@@ -129,7 +129,7 @@ export default function FeaturedProducts() {
 
                     <button
                       onClick={() => updateCart(product)}
-                      className="mb-1 btn"
+                      className="mb-1 mt-2 btn"
                     >
                       Add to cart
                     </button>

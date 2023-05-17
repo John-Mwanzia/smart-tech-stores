@@ -36,15 +36,15 @@ export default function Product(props) {
             />
           </Link>
         </div>
-        <div>
-          <div>
+        <div className="text-center pt-8">
+          <div className="pb-2">
             <Link to={`/products/slug/${product.slug}`}>
               {product.Comp_Name}
             </Link>
           </div>
           <div> Price: KSh.{product.price}</div>
 
-          <button  onClick={() => updateCart(product)} className="mb-1 py-2 px-5 btn">
+          <button  onClick={() => updateCart(product)} className="mb-1 mt-2 py-2 px-5 btn">
             Add to cart
           </button>
         </div>
