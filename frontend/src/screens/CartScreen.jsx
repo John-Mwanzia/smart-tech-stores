@@ -120,9 +120,8 @@ export default function CartScreen() {
               </h3>
               <button
                 type="button"
-                variant="primary"
                 disabled={cartItems.length === 0}
-                className=" bg-blue px-8 mt-4 py-2 w-full text-white rounded-xl"
+                className=" bg-blue-500 text-white px-8 mt-4 py-2 w-full  rounded-xl"
                 onClick={() => navigate("/signin?redirect=/shipping")}
               >
                 proceed to checkout
