@@ -130,13 +130,12 @@ export default function SearchPage() {
               {query !== "all" && " : " + query}
               {category !== "all" && " : " + category}
               {query !== "all" || category !== "all" ? (
-                <Button
-                  variant="light"
-                  className="btn btn-light"
+                <button
+                  className="btn"
                   onClick={() => navigate("/search")}
                 >
                   Clear
-                </Button>
+                </button>
               ) : null}
             </div>
           </>
