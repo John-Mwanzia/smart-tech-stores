@@ -131,7 +131,7 @@ export default function SearchPage() {
               {category !== "all" && " : " + category}
               {query !== "all" || category !== "all" ? (
                 <button
-                  className="btn"
+                  className="btn ml-3"
                   onClick={() => navigate("/search")}
                 >
                   Clear
