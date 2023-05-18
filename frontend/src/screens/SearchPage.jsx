@@ -89,7 +89,7 @@ export default function SearchPage() {
     // Render the component
   return (
     <>
-    <div className="flex">
+    <div className="flex mt-16 relative gap-8 justify-center">
       <div>
         <h3 className="underline">Categories</h3>
         <ul>
@@ -123,7 +123,7 @@ export default function SearchPage() {
           </div>
         ) : (
           <>
-            <div>
+            <div className="absolute top-[-50px] left-1/2">
               {countProducts === 0 ? "No" : countProducts} Results
               {query !== "all" && " : " + query}
               {category !== "all" && " : " + category}
