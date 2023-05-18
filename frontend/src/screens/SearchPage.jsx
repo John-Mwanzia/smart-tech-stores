@@ -88,7 +88,8 @@ export default function SearchPage() {
 
     // Render the component
   return (
-    <div>
+    <>
+    <div className="flex">
       <div>
         <h3 className="underline">Categories</h3>
         <ul>
@@ -140,7 +141,7 @@ export default function SearchPage() {
         )}
       </div>
 
-      <div className="d-flex justify-center max-w-[300px] px-4 gap-6">
+      <div className="flex justify-center px-4 gap-6">
         {products.length === 0 && <h2> No Product Found </h2>}
         {products.map((product) => (
           
@@ -172,6 +173,7 @@ export default function SearchPage() {
         ))}
       </div>
     </div>
+    </>
   );
 }
 
