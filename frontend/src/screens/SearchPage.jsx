@@ -91,9 +91,11 @@ export default function SearchPage() {
     <>
     <div className="flex mt-16 relative gap-8 justify-center">
       <div>
-        <h3 className="underline">Categories</h3>
+        <h1 className="text-4xl underline font-sans text-center  font-semibold mb-4">
+                  Categories
+        </h1>
         <ul>
-          <li>
+          <li className="border text-center">
             <Link
               className={"all" === category ? "active" : ""}
               to={getFilterUrl({ category: "all" })}
@@ -103,7 +105,7 @@ export default function SearchPage() {
           </li>
 
           {categories.map((c) => (
-            <li key={c}>
+            <li key={c} className="border text-center">
               <Link
                 className={c === category ? "active" : ""}
                 to={getFilterUrl({ category: c })}
