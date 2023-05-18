@@ -146,21 +146,21 @@ export default function SearchPage() {
         {products.length === 0 && <h2> No Product Found </h2>}
         {products.map((product) => (
           
-          <Card className="card">
+          <div className="card">
             <Link to={`/products/slug/${product.slug}`}>
-              <Card.Img
+              <img
                 src={product.Img_Url}
                 alt={product.Comp_Name}
                 className="images"
               />
             </Link>
-            <Card.Body>
-              <Card.Title>
+            <div>
+              <div>
                 <Link to={`/products/slug/${product.slug}`}>
                   {product.Comp_Name}
                 </Link>
-              </Card.Title>
-              <Card.Text> Price: KSh.{product.price}</Card.Text>
+              </div>
+              <div> Price: KSh.{product.price}</div>
 
               <Button
                 variant="warning"
@@ -169,8 +169,8 @@ export default function SearchPage() {
               >
                 Add to cart
               </Button>
-            </Card.Body>
-          </Card>
+            </div>
+          </div>
         ))}
       </div>
     </div>
