@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Product from "../components/product";
 import SearchBar from "../components/SearchBar";
 import { Button, Card } from "react-bootstrap";
+import Header from "../components/header";
 
 
 // Define the initial state for the reducer
@@ -89,6 +90,7 @@ export default function SearchPage() {
     // Render the component
   return (
     <>
+    <Header />
     <div className="flex mt-16 relative gap-8 justify-center flex-wrap">
       <div>
         <h1 className="text-4xl underline font-sans text-center  font-semibold mb-4">
