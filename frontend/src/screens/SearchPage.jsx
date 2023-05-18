@@ -89,7 +89,7 @@ export default function SearchPage() {
     // Render the component
   return (
     <>
-    <div className="flex mt-16 relative gap-8 justify-center">
+    <div className="flex mt-16 relative gap-8 justify-center flex-wrap">
       <div>
         <h1 className="text-4xl underline font-sans text-center  font-semibold mb-4">
                   Categories
@@ -125,7 +125,7 @@ export default function SearchPage() {
           </div>
         ) : (
           <>
-            <div className="absolute top-[-50px] left-1/2">
+            <div className="absolute top-[-50px] lg:left-1/2 left-16 flex items-center ">
               {countProducts === 0 ? "No" : countProducts} Results
               {query !== "all" && " : " + query}
               {category !== "all" && " : " + category}
@@ -142,7 +142,7 @@ export default function SearchPage() {
         )}
       </div>
 
-      <div className="flex justify-center px-4 gap-6">
+      <div className="flex justify-center px-4 gap-6 flex-wrap">
         {products.length === 0 && <h2> No Product Found </h2>}
         {products.map((product) => (
           
