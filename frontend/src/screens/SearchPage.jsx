@@ -154,7 +154,7 @@ export default function SearchPage() {
                 className="images"
               />
             </Link>
-            <div>
+            <div className="text-center pt-4">
               <div>
                 <Link to={`/products/slug/${product.slug}`}>
                   {product.Comp_Name}
@@ -165,7 +165,7 @@ export default function SearchPage() {
               <Button
                 variant="warning"
                 onClick={() => updateCart(product)}
-                className="mb-1"
+                className="mb-1 "
               >
                 Add to cart
               </Button>
