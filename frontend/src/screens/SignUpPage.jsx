@@ -48,7 +48,7 @@ export default function SignUpPage() {
 
             <h6 className="mt-4 text-white">
              Already have an account?
-              <Link to={`/signin?redirect=${redirect}`}>Sign in</Link>{" "}
+              <Link className='ml-1 text-blue-500' to={`/signin?redirect=${redirect}`}>Sign in</Link>{" "}
             </h6>
           </form>
         </div>
