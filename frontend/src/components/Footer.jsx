@@ -55,7 +55,7 @@ export default function Footer() {
               <Link to="/">
                 <p className="text-center">Support</p>
               </Link>
-              <Link to="/">
+              <Link to="/signup">
                 <p className="text-center">Sign up</p>
               </Link>
               <Link to="/">
