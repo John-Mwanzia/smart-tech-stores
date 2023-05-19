@@ -7,6 +7,7 @@ import ProductPage from "./screens/ProductPage";
 import FeaturedProductPage from "./screens/FeaturedProductPage";
 import SignInPage from "./screens/SignInPage";
 import SearchPage from "./screens/SearchPage";
+import SignUpPage from "./screens/SignUpPage";
 
 function App(){
   return(
