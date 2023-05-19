@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useContext, useEffect, useReducer, useState } from "react";
-import { Badge, Button, Col, Container, ListGroup, Row } from "react-bootstrap";
+import { Badge, Button, } from "react-bootstrap";
 import { Helmet } from "react-helmet-async";
 import { useNavigate, useParams } from "react-router-dom";
 import Header from "../components/header";
@@ -77,45 +77,45 @@ export default function FeaturedProductPage() {
       </Helmet>
       <Header />
       <h1 className="px-4 mt-4">{product.Gadget_Name}</h1>
-      <Container>
-        <Row className="mt-4">
-          <Col md={5}>
+      <div>
+        <div className="mt-4">
+          <div md={5}>
             <img
               src={product.Img_Url}
               alt={product.Gadget_Name}
               className="product-img"
             />
-          </Col>
-          <Col md={5}>
-            <ListGroup variant="flush">
+          </div>
+          <div md={5}>
+            <div variant="flush">
               <h1>Description</h1>
-              <ListGroup.Item>{product.Gadget_Name}</ListGroup.Item>
-              <ListGroup.Item>
+              <div>{product.Gadget_Name}</div>
+              <div>
                 {" "}
                 <strong>Specs:</strong> {product.Specs}
-              </ListGroup.Item>
-            </ListGroup>
-          </Col>
-          <Col md={2}>
-            <ListGroup>
-              <ListGroup.Item>Price: Ksh. {product.price}</ListGroup.Item>
-              <ListGroup.Item className="mb-1">
+              </div>
+            </div>
+          </div>
+          <div md={2}>
+            <div>
+              <div>Price: Ksh. {product.price}</div>
+              <div className="mb-1">
                 Status:{" "}
                 {product.countInStock > 0 ? (
-                  <Badge bg="success">Available</Badge>
+                  <div bg="success">Available</div>
                 ) : (
-                  <Badge bg="danger">out of stock</Badge>
+                  <div bg="danger">out of stock</div>
                 )}
-              </ListGroup.Item>
+              </div>
               <div className="d-grid ">
                 <Button variant="warning" onClick={addToCart}>
                   Add to cart
                 </Button>
               </div>
-            </ListGroup>
-          </Col>
-        </Row>
-      </Container>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
