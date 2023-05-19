@@ -104,7 +104,7 @@ export default function FeaturedProductPage() {
               <div className="mb-1 flex border py-2 px-8 gap-2">
                 Status:{" "}
                 {product.countInStock > 0 ? (
-                  <div bg="success">Available</div>
+                  <div className="bg-successGreen rounded px-2">Available</div>
                 ) : (
                   <div bg="danger">out of stock</div>
                 )}
