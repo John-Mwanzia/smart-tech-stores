@@ -16,7 +16,7 @@ export default function SignUpPage() {
 
 <div className="signin-wrapper">
         <div className="container-signin  bg-black opacity-60 ">
-          <h2 className="text-center">SignIn</h2>
+          <h2 className="text-center">SignUp</h2>
           <form onSubmit={submitHandler}>
 
           <div className="user-box">
