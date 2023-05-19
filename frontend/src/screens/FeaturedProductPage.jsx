@@ -86,8 +86,8 @@ export default function FeaturedProductPage() {
               className="max-w-[470px]"
             />
           </div>
-          <div md={5}>
-            <div variant="flush">
+          <div>
+            <div>
               <h1>Description</h1>
               <div>{product.Gadget_Name}</div>
               <div>
