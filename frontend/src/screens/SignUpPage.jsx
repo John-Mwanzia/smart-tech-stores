@@ -18,6 +18,16 @@ export default function SignUpPage() {
         <div className="container-signin  bg-black opacity-60 ">
           <h2 className="text-center">SignIn</h2>
           <form onSubmit={submitHandler}>
+
+          <div className="user-box">
+              <input
+                type="text"
+                name=""
+                required
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <label>Name</label>
+            </div>
             <div className="user-box">
               <input
                 type="Email"
@@ -35,6 +45,15 @@ export default function SignUpPage() {
                 onChange={(e) => setPassword(e.target.value)}
               />
               <label>Password</label>
+            </div>
+            <div className="user-box">
+              <input
+                type="password"
+                name=""
+                required
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <label>Confirm Password</label>
             </div>
             <div className="button-wrapper" href="#">
               <span></span>
