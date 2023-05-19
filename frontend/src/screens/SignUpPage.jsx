@@ -46,9 +46,9 @@ export default function SignUpPage() {
 
             <h5>or</h5>
 
-            <h6 className="mt-4">
-              Don't have an account?
-              <Link to={`/signup?redirect=${redirect}`}>Sign up</Link>{" "}
+            <h6 className="mt-4 text-white">
+             Already have an account?
+              <Link to={`/signin?redirect=${redirect}`}>Sign in</Link>{" "}
             </h6>
           </form>
         </div>
