@@ -104,7 +104,7 @@ export default function ProductPage() {
               <h4 className="mb-1 flex border py-2 px-8">
                 Status:{" "}
                 {product.countInStock > 0 ? (
-                  <div>Available</div>
+                  <div className="bg-successGreen rounded px-2">Available</div>
                 ) : (
                   <div >out of stock</div>
                 )}
