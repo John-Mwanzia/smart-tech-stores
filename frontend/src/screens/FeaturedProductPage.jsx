@@ -88,18 +88,20 @@ export default function FeaturedProductPage() {
           </div>
           <div>
             <div>
-              <h1>Description</h1>
-              <div>{product.Gadget_Name}</div>
+              <h1 className="text-5xl font-sans text-center lg:text-left mb-5 ">Description</h1>
+              <div>
+              <h4 className="font-sans border-b text-center lg:text-left pb-2">{product.Gadget_Name}</h4>
+              </div>
               <div>
                 {" "}
                 <strong>Specs:</strong> {product.Specs}
               </div>
             </div>
           </div>
-          <div md={2}>
+          <div>
             <div>
-              <div>Price: Ksh. {product.price}</div>
-              <div className="mb-1">
+              <div className="border py-2 px-8 rounded-t-md">Price: Ksh. {product.price}</div>
+              <div className="mb-1 flex border py-2 px-8 gap-2">
                 Status:{" "}
                 {product.countInStock > 0 ? (
                   <div bg="success">Available</div>
@@ -107,7 +109,7 @@ export default function FeaturedProductPage() {
                   <div bg="danger">out of stock</div>
                 )}
               </div>
-              <div className="d-grid ">
+              <div className="grid ">
                 <Button variant="warning" onClick={addToCart}>
                   Add to cart
                 </Button>
