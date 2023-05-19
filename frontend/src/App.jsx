@@ -28,6 +28,7 @@ function App(){
   <Route path="/cart" element={<CartScreen/>}/>
   <Route path="/search" element={<SearchPage />}/>
   <Route path="/signin" element={<SignInPage />}/>
+  <Route path="/signup" element={<SignUpPage />}/>
 </Routes>
 
 </main>
