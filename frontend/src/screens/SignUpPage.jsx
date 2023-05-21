@@ -1,9 +1,13 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import { Store } from '../store';
+import axios from 'axios';
 
 export default function SignUpPage() {
-
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPasssword, setConfirmPassword] = useState("");
   //get redirect value from URL
   const { search } = useLocation();
   const redirectInUrl = new URLSearchParams(search).get("redirect");
@@ -36,7 +40,7 @@ export default function SignUpPage() {
                 type="text"
                 name=""
                 required
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setName(e.target.value)}
               />
               <label>Name</label>
             </div>
@@ -63,7 +67,7 @@ export default function SignUpPage() {
                 type="password"
                 name=""
                 required
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => setConfirmPassword(e.target.value)}
               />
               <label>Confirm Password</label>
             </div>
