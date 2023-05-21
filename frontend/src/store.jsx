@@ -37,6 +37,9 @@ const reducer = (state, action)=>{
 
         case 'USER_SIGNIN':
             return {...state, userInfo: action.payload}    
+
+            case 'USER_SIGNUP':
+                return {...state, userInfo: action.payload} 
         
         default:
             return state
