@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Store } from '../store';
 import axios from 'axios';
 
@@ -8,6 +8,7 @@ export default function SignUpPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPasssword, setConfirmPassword] = useState("");
+  const navigate = useNavigate();
   //get redirect value from URL
   const { search } = useLocation();
   const redirectInUrl = new URLSearchParams(search).get("redirect");
@@ -23,7 +24,9 @@ export default function SignUpPage() {
           password
 
         })
-      ctxDispatch({type: "USER_SIGNUP", payload:data})
+        ctxDispatch({ type: "USER_SIGNIN", payload: data });
+        localStorage.setItem("userInfo", JSON.stringify(data));
+        navigate(redirect || "/");
 
     }
 
