@@ -48,6 +48,21 @@ export default function SearchPage() {
     initialState
   );
 
+  const updateCart = async (item) => {
+    const existItem = cartItems.find((item) => {
+      item._id;
+    });
+    const quantity = existItem ? existItem.quantity + 1 : 1;
+    const { data } = await axios.get(
+      `http://localhost:3000/api/products/${item._id}`
+    );
+    if (data.countInStock < quantity) {
+      window.alert(" Sorry, the product is out of stock");
+      return;
+    } else ctxdispatch({ type: "ADD-TO-CART", payload: { ...item, quantity } });
+    // navigate("/cart")
+  };
+
    // Fetch the search results from the backend API when the component mounts
   useEffect(() => {
     const fetchData = async () => {
