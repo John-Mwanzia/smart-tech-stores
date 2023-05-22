@@ -1,10 +1,11 @@
 import axios from "axios";
-import React, { useEffect, useReducer, useState } from "react";
+import React, { useContext, useEffect, useReducer, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Product from "../components/product";
 import SearchBar from "../components/SearchBar";
 import { Button, Card } from "react-bootstrap";
 import Header from "../components/header";
+import { Store } from "../store";
 
 
 // Define the initial state for the reducer
@@ -35,6 +36,9 @@ const reducer = (state, action) => {
 
 export default function SearchPage() {
   const navigate = useNavigate();
+  const { state, dispatch: ctxdispatch } = useContext(Store);
+  const { cart } = state;
+  const { cartItems } = cart;
 
   // Get the search query and category from the URL using useLocation hook
   const { search } = useLocation();
