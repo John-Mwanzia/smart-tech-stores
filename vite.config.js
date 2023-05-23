@@ -1,19 +1,11 @@
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import dotenv from 'dotenv';
 
-
-
-import { defineConfig, loadEnv } from 'vite'
-
-export default defineConfig(({ command, mode }) => {
- 
-  // Load env file based on `mode` in the current working directory.
-  // Set the third parameter to '' to load all env regardless of the `VITE_` prefix.
-  const env = loadEnv(mode, process.cwd(), '')
-  
-  return {
-    // vite config
-    define: {
-      VITE_CLIENT_ID: env.VITE_CLIENT_ID,
-    },
+export default defineConfig(({ mode }) => {
+  if (mode === 'development') {
+    dotenv.config();
   }
-})
+
+  // Rest of your Vite configuration
+});
+

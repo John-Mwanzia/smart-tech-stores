@@ -7,6 +7,8 @@ import GoogleLogin from "react-google-login";
 export default function SignInPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+             
+console.log(import.meta.env.VITE_CLIENT_ID);
 
   const navigate = useNavigate();
   //get redirect value from URL
