@@ -8,7 +8,7 @@ export default function SignInPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
              
-console.log(import.meta.env.VITE_CLIENT_ID);
+console.log(import.meta.env.VITE_GOOGLE_LOGIN_CLIENT_ID);
 
   const navigate = useNavigate();
   //get redirect value from URL
@@ -37,8 +37,6 @@ console.log(import.meta.env.VITE_CLIENT_ID);
 
 
   };
-
-  // console.log(import.meta.env.VITE_GOOGLE_LOGIN_CLIENT_ID);
   const handleFailure = (result) =>{
     alert(result + "failed to login");
   }
@@ -84,7 +82,7 @@ console.log(import.meta.env.VITE_CLIENT_ID);
             <h5>or</h5>
 
             <GoogleLogin
-              client_id= {import.meta.env.VITE_CLIENT_ID}
+              clientId={import.meta.env.VITE_GOOGLE_LOGIN_CLIENT_ID}
               buttonText="Sign in with Google"
               onSuccess={handleLogin}
               onFailure={handleFailure}
