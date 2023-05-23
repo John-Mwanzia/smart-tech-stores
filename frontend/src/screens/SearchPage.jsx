@@ -3,7 +3,6 @@ import React, { useContext, useEffect, useReducer, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Product from "../components/product";
 import SearchBar from "../components/SearchBar";
-import { Button, Card } from "react-bootstrap";
 import Header from "../components/header";
 import { Store } from "../store";
 
