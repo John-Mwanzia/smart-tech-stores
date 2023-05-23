@@ -1,0 +1,12 @@
+{
+  "name": "vite-project",
+  "version": "1.0.0",
+  "description": "simple web app for selling computer accessories for\r different categories of accessories i.e laptops, phones ,and others\r made using MERN technology",
+  "main": "postcss.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
