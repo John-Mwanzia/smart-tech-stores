@@ -2,7 +2,8 @@ import axios from "axios";
 import React, { useContext, useState } from "react";
 import { Store } from "../store";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useGoogleOneTapLogin } from '@react-oauth/google';
+// import { useGoogleOneTapLogin } from '@react-oauth/google';
+import { useGoogleOneTapLogin } from 'react-google-one-tap-login';
 
 export default function SignInPage() {
   const [email, setEmail] = useState("");
@@ -38,13 +39,23 @@ export default function SignInPage() {
   //   console.log(response);
   // }
 
+  // useGoogleOneTapLogin({
+  //   onSuccess: credentialResponse => {
+  //     console.log(credentialResponse);
+  //   },
+  //   onError: () => {
+  //     console.log('Login Failed');
+  //   },
+  // });
+
+  
   useGoogleOneTapLogin({
-    onSuccess: credentialResponse => {
-      console.log(credentialResponse);
+    onError: error => console.log(error),
+    onSuccess: response => console.log(response),
+    googleAccountConfigs: {
+      client_id: import.meta.env.VITE_GOOGLE_LOGIN_CLIENT_ID,
     },
-    onError: () => {
-      console.log('Login Failed');
-    },
+
   });
 
   return (
