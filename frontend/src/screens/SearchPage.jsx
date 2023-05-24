@@ -182,7 +182,7 @@ export default function SearchPage() {
 
               <button
                 onClick={() => updateCart(product)}
-                className="mb-1 "
+                className="mb-1 btn bg-yellow-400 hover:bg-yellow-500 "
               >
                 Add to cart
               </button>

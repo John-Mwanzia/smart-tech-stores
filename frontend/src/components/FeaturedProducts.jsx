@@ -89,7 +89,7 @@ export default function FeaturedProducts() {
 
                     <button
                       onClick={() => updateCart(product)}
-                      className="mb-1 mt-2 btn"
+                      className="mb-1 mt-2 btn  bg-yellow-400 hover:bg-yellow-500"
                     >
                       Add to cart
                     </button>
@@ -128,7 +128,7 @@ export default function FeaturedProducts() {
 
                     <button
                       onClick={() => updateCart(product)}
-                      className="mb-1 mt-2 btn"
+                      className="mb-1 mt-2 btn bg-yellow-400 hover:bg-yellow-500"
                     >
                       Add to cart
                     </button>
