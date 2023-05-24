@@ -7,8 +7,6 @@ import GoogleLogin from "react-google-login";
 export default function SignInPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-             
-console.log(import.meta.env.VITE_GOOGLE_LOGIN_CLIENT_ID);
 
   const navigate = useNavigate();
   //get redirect value from URL
@@ -34,18 +32,11 @@ console.log(import.meta.env.VITE_GOOGLE_LOGIN_CLIENT_ID);
     } catch (error) {
       alert("invalid email or password");
     }
-
-
   };
-  const handleFailure = (result) =>{
-    alert(result + "failed to login");
-  }
 
-  const handleLogin = (googleData) =>{
-    console.log(googleData);
-  
+  const responseGoogle = (response) => {
+    console.log(response);
   }
-  
 
   return (
     <>
@@ -84,8 +75,8 @@ console.log(import.meta.env.VITE_GOOGLE_LOGIN_CLIENT_ID);
             <GoogleLogin
               clientId={import.meta.env.VITE_GOOGLE_LOGIN_CLIENT_ID}
               buttonText="Sign in with Google"
-              onSuccess={handleLogin}
-              onFailure={handleFailure}
+              onSuccess={responseGoogle}
+              onFailure={responseGoogle}
               cookiePolicy={"single_host_origin"}
             />
 
