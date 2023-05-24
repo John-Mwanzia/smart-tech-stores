@@ -181,7 +181,6 @@ export default function SearchPage() {
               <div> Price: KSh.{product.price}</div>
 
               <button
-                variant="warning"
                 onClick={() => updateCart(product)}
                 className="mb-1 "
               >
