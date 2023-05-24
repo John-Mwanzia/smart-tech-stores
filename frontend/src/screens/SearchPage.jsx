@@ -180,13 +180,13 @@ export default function SearchPage() {
               </div>
               <div> Price: KSh.{product.price}</div>
 
-              <Button
+              <button
                 variant="warning"
                 onClick={() => updateCart(product)}
                 className="mb-1 "
               >
                 Add to cart
-              </Button>
+              </button>
             </div>
           </div>
         ))}
