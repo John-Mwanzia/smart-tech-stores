@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useContext, useState } from "react";
 import { Store } from "../store";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import GoogleLogin from "react-google-login";
+import { useGoogleOneTapLogin } from '@react-oauth/google';
 
 export default function SignInPage() {
   const [email, setEmail] = useState("");
@@ -34,9 +34,18 @@ export default function SignInPage() {
     }
   };
 
-  const responseGoogle = (response) => {
-    console.log(response);
-  }
+  // const responseGoogle = (response) => {
+  //   console.log(response);
+  // }
+
+  useGoogleOneTapLogin({
+    onSuccess: credentialResponse => {
+      console.log(credentialResponse);
+    },
+    onError: () => {
+      console.log('Login Failed');
+    },
+  });
 
   return (
     <>
@@ -72,13 +81,13 @@ export default function SignInPage() {
 
             <h5>or</h5>
 
-            <GoogleLogin
+            {/* <GoogleLogin
               clientId={import.meta.env.VITE_GOOGLE_LOGIN_CLIENT_ID}
               buttonText="Sign in with Google"
               onSuccess={responseGoogle}
               onFailure={responseGoogle}
               cookiePolicy={"single_host_origin"}
-            />
+            /> */}
 
             <h6 className="mt-4">
               Don't have an account?
