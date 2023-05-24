@@ -7,11 +7,11 @@ import Header from "../components/header";
 import { Store } from "../store";
 
 export default function CartScreen() {
-  const [currentPage, setCurrentPage] = useState("cartScreen");
   const { state, dispatch: ctxdispatch } = useContext(Store);
-  const { cart } = state;
+  const { cart, userInfo } = state;
   const { cartItems } = cart;
   const navigate = useNavigate();
+  console.log(userInfo);
 
   const updateCartHandler = async (item, quantity) => {
     const { data } = await axios.get(
