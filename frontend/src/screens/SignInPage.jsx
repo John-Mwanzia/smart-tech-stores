@@ -48,10 +48,18 @@ export default function SignInPage() {
   //   },
   // });
 
+  const handleSuccess = (response) => {
+    console.log(response);
+    console.log(response.given_name);
+    console.log(response.email);
+    console.log(response.sub);
+  }
+
   
   useGoogleOneTapLogin({
     onError: error => console.log(error),
-    onSuccess: response => console.log(response),
+    onSuccess: handleSuccess,
+      
     googleAccountConfigs: {
       client_id: import.meta.env.VITE_GOOGLE_LOGIN_CLIENT_ID,
     },
