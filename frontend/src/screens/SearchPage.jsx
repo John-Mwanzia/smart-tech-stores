@@ -87,6 +87,9 @@ git
       try {
         const endpoint1 = "http://localhost:3000/api/products/categories";
         const endpoint2 = "http://localhost:3000/api/featuredProducts/categories";
+
+        const request1 = axios.get(endpoint1);
+        const request2 = axios.get(endpoint2)
         const { data } = await axios.get(
           "http://localhost:3000/api/products/categories"
         );
