@@ -8,6 +8,17 @@ featuredProductsRouter.get('/', async (req,res)=>{
     res.send(products);
   });
 
+  featuredProductsRouter.get(
+    "/categories",
+    expressAsyncHandler(async (req, res) => {
+       // Retrieve all distinct categories from the products collection
+      const categories = await FeaturedProducts.find().distinct("category");
+     
+        // Send the categories as a response
+      res.send(categories);
+    })
+  );
+
   
   featuredProductsRouter.get('/slug/:slug', async(req,res)=>{
     const product = await FeaturedProducts.findOne({slug: req.params.slug});
