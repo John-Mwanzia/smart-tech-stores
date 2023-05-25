@@ -8,6 +8,7 @@ const userRouter = express.Router();
 
 userRouter.post('/signin', expressAsyncHandler( async(req,res)=>{  //express-async-handler =>middleware for handling exceptions inside of async express routes and passing them to your express error handlers.
     const user = await User.findOne({email: req.body.email})
+    console.log(user);
     if(user){
         if(bcrypt.compareSync(req.body.password, user.password)){
            res.send({
@@ -26,6 +27,7 @@ userRouter.post('/signin', expressAsyncHandler( async(req,res)=>{  //express-asy
 }) )
 
 userRouter.post('/signup', expressAsyncHandler( async(req,res)=>{ 
+    console.log(req.body);
     const newUser = await User({
         name: req.body.name,
         email: req.body.email,

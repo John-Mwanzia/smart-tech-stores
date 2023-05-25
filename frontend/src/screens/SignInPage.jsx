@@ -48,12 +48,34 @@ export default function SignInPage() {
   //   },
   // });
 
-  const handleSuccess = (response) => {
-    console.log(response);
-    console.log(response.given_name);
-    console.log(response.email);
-    console.log(response.sub);
+  const handleSuccess = async(response) => {
+    // console.log(response);
+    // console.log(response.given_name);
+    // console.log(response.email);
+    // console.log(response.sub);
+
+    // const data = {
+    //   name: response.given_name,
+    //   email: response.email,
+    // }
+    // ctxDispatch({ type: "USER_SIGNIN", payload: result });
+    // localStorage.setItem("userInfo", JSON.stringify(result));
+
+    try {
+      const { result } = await axios.post("http://localhost:3000/api/users/signin", {
+        name: response.given_name,
+        email: response.email,
+        password: "987654321",
+      });
+      console.log(result);
+      ctxDispatch({ type: "USER_SIGNIN", payload: result });
+      localStorage.setItem("userInfo", JSON.stringify(result));
+
   }
+  catch (error) {
+    alert("unable to sign in");
+  }
+  };
 
   
   useGoogleOneTapLogin({
