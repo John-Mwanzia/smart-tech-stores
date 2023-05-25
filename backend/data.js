@@ -75,6 +75,7 @@ const data = {
   
       Gadget_Name: " samsung-a23 ",
       slug: "samsung-a23",
+      category: "phones",
       Img_Url:
         "https://www.91-cdn.com/hub/wp-content/uploads/2022/02/Samsung-Galaxy-A23-5G-6.jpeg",
       price: 35000,
@@ -84,6 +85,7 @@ const data = {
     {
       Gadget_Name: "huawei honor 10  ",
       slug: "huawei-honor-10 ",
+      category: "phones",
       Img_Url:
         "https://www.priceinkenya.com/_ipx/b_%23ffffff,f_png,q_75,fit_contain,s_300x300/https://api.priceinkenya.com/media/121038/conversions/huawei-honor-10-64gb-zwXAQG9nI2-original.webp",
       price: 35000,
@@ -93,6 +95,7 @@ const data = {
     {
       Gadget_Name: "headphones",
       slug: "headphones-1",
+      category: "headphones",
       Img_Url:
         "https://t4.ftcdn.net/jpg/05/35/49/97/240_F_535499727_fLDl5BxuoURnqRVLJ9jc46rBMws9lgMs.jpg",
       price: 1500,
@@ -102,6 +105,7 @@ const data = {
     {
       Gadget_Name: "hp laptop charger",
       slug: "hp-laptop-charger",
+      category: "chargers",
       Img_Url:
         "https://3.imimg.com/data3/WG/AR/MY-22059447/19-5v-4-62a-adapter-500x500.jpg",
       price: 2500,
@@ -110,6 +114,7 @@ const data = {
     {
       Gadget_Name: "iphone 14",
       slug: "iphone-14",
+      category: "phones",
       Img_Url:
         "https://s7d1.scene7.com/is/image/dish/iPhone_14_Pro_Max_Deep_Purple_phonewall?$ProductBase$",
       price: 95000,
@@ -118,6 +123,7 @@ const data = {
     {
       Gadget_Name: "wireless mouse",
       slug: "wireless-mouse",
+      category: "mouse",
       Img_Url:
         "https://atlas-content-cdn.pixelsquid.com/assets_v2/200/2009721087641786232/previews/G03-200x200.jpg",
       price: 95000,
@@ -126,6 +132,7 @@ const data = {
     {
       Gadget_Name: "webcam",
       slug: "webcam",
+      category: "webcam",
       Img_Url:
         "https://w7.pngwing.com/pngs/302/546/png-transparent-webcam-camera-microphone-internet-webcam-electronics-microphone-camera-lens-thumbnail.png",
       price: 95000,
@@ -134,6 +141,7 @@ const data = {
     {
       Gadget_Name: "wireless keyboard",
       slug: "wireless-keyboard",
+      category: "keyboard",
       Img_Url:
         "https://png.pngtree.com/png-vector/20210205/ourlarge/pngtree-wireless-keyboard-png-image_2872698.jpg",
       price: 95000,
