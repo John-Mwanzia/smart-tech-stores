@@ -79,12 +79,14 @@ export default function SearchPage() {
     };
     fetchData();
   }, [query, category]);
-
+git 
   const [categories, setCategories] = useState([]);
   // Fetch the list of categories from the backend API when the component mounts
   useEffect(() => {
     const fetchCategories = async () => {
       try {
+        const endpoint1 = "http://localhost:3000/api/products/categories";
+        const endpoint2 = "http://localhost:3000/api/featuredProducts/categories";
         const { data } = await axios.get(
           "http://localhost:3000/api/products/categories"
         );
