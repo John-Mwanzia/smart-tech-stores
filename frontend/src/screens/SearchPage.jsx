@@ -84,16 +84,12 @@ export default function SearchPage() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        // const endpoint1 = "http://localhost:3000/api/products/categories";
-        // const endpoint2 = "http://localhost:3000/api/featuredProducts/categories";
+        // Fetch the categories from both the endpoints
           let urls = [
             "http://localhost:3000/api/products/categories",
             "http://localhost:3000/api/featuredProducts/categories",
           ];
           const requests = urls.map((url) => axios.get(url));
-
-        // const request1 = axios.get(endpoint1);
-        // const request2 = axios.get(endpoint2)
 
         const response = await axios.all([...requests ]);
         const data1 = response[0].data;
@@ -102,9 +98,6 @@ export default function SearchPage() {
         //placed the data from both the endpoints into one data array
         const data = [...data1, ...data2];
         console.log(data);
-        // const { data } = await axios.get(
-        //   "http://localhost:3000/api/featuredProducts/categories"
-        // );
         setCategories(data);
       } catch (err) {
         alert(err.message);
