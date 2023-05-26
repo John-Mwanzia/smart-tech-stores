@@ -79,7 +79,6 @@ export default function SearchPage() {
     };
     fetchData();
   }, [query, category]);
-git 
   const [categories, setCategories] = useState([]);
   // Fetch the list of categories from the backend API when the component mounts
   useEffect(() => {
@@ -90,9 +89,12 @@ git
 
         const request1 = axios.get(endpoint1);
         const request2 = axios.get(endpoint2)
-        const { data } = await axios.get(
-          "http://localhost:3000/api/products/categories"
-        );
+
+        const {data} = await axios.all([request1, request2]);
+        console.log(data);
+        // const { data } = await axios.get(
+        //   "http://localhost:3000/api/products/categories"
+        // );
         setCategories(data);
       } catch (err) {
         alert(err.message);
