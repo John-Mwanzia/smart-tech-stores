@@ -14,6 +14,7 @@ featuredProductsRouter.get('/', async (req,res)=>{
     expressAsyncHandler(async (req, res) => {
        // Retrieve all distinct categories from the products collection
       const categories = await FeaturedProducts.find().distinct("category");
+      console.log(categories);
      
         // Send the categories as a response
       res.send(categories);

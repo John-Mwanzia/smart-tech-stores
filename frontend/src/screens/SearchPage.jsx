@@ -84,13 +84,18 @@ export default function SearchPage() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const endpoint1 = "http://localhost:3000/api/products/categories";
-        const endpoint2 = "http://localhost:3000/api/featuredProducts/categories";
+        // const endpoint1 = "http://localhost:3000/api/products/categories";
+        // const endpoint2 = "http://localhost:3000/api/featuredProducts/categories";
+          let urls = [
+            "http://localhost:3000/api/products/categories",
+            "http://localhost:3000/api/featuredProducts/categories",
+          ];
+          const requests = urls.map((url) => axios.get(url));
 
-        const request1 = axios.get(endpoint1);
-        const request2 = axios.get(endpoint2)
+        // const request1 = axios.get(endpoint1);
+        // const request2 = axios.get(endpoint2)
 
-        const {data} = await axios.all([request1, request2]);
+        const {data} = await axios.all([...requests ]);
         console.log(data);
         // const { data } = await axios.get(
         //   "http://localhost:3000/api/products/categories"
