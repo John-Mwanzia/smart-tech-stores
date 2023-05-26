@@ -95,10 +95,15 @@ export default function SearchPage() {
         // const request1 = axios.get(endpoint1);
         // const request2 = axios.get(endpoint2)
 
-        const {data} = await axios.all([...requests ]);
+        const response = await axios.all([...requests ]);
+        const data1 = response[0].data;
+        const data2 = response[1].data;
+        
+        //placed the data from both the endpoints into one data array
+        const data = [...data1, ...data2];
         console.log(data);
         // const { data } = await axios.get(
-        //   "http://localhost:3000/api/products/categories"
+        //   "http://localhost:3000/api/featuredProducts/categories"
         // );
         setCategories(data);
       } catch (err) {
