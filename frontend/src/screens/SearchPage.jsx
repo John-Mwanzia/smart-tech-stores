@@ -69,9 +69,14 @@ export default function SearchPage() {
     const fetchData = async () => {
       try {
         dispatch({ type: "FETCH_REQUEST" });
+        let urls = [
+          `http://localhost:3000/api/products/search?query=${query}&category=${category}`,
+          `http://localhost:3000/api/featuredProducts/search?query=${query}&category=${category}`,
+        ];
         const { data } = await axios.get(
           `http://localhost:3000/api/products/search?query=${query}&category=${category}`
         );
+        console.log(data);
         dispatch({ type: "FETCH_SUCCESS", payload: data });
       } catch (err) {
         dispatch({ type: "FETCH_FAIL", payload: err.message });
