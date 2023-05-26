@@ -97,7 +97,6 @@ export default function SearchPage() {
         
         //placed the data from both the endpoints into one data array
         const data = [...data1, ...data2];
-        console.log(data);
         setCategories(data);
       } catch (err) {
         alert(err.message);
