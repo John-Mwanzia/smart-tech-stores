@@ -1,5 +1,6 @@
 import express from 'express';
 import FeaturedProducts from '../models/featuredProductsModel.js';
+import expressAsyncHandler from "express-async-handler"
 
 const featuredProductsRouter = express.Router();
 
