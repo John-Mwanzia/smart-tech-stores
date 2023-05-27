@@ -52,8 +52,8 @@ export default function Homepage() {
         <title>Smart Tech Stores</title>
       </Helmet>
       <Header />
-      <div className="bg-customGreen pb-4">
-      <div className="text-center left-1/2">
+      <div className="bg-customGreen pb-4 pt-40">
+        <div className="text-center left-[780px] absolute top-28">
           <label htmlFor="category-select">Select a category:</label>
           <select
             id="category-select"
@@ -70,7 +70,7 @@ export default function Homepage() {
             <option value="other-electronics">Other Electronics</option>
           </select>
         </div>
-        
+
         <div className="flex justify-center gap-24  flex-col  lg:flex-row">
           <div>
             <div>
