@@ -53,8 +53,7 @@ export default function Homepage() {
       </Helmet>
       <Header />
       <div className="bg-customGreen pb-4">
-    
-        <div className="text-center left-1/2">
+      <div className="text-center left-1/2">
           <label htmlFor="category-select">Select a category:</label>
           <select
             id="category-select"
@@ -71,7 +70,8 @@ export default function Homepage() {
             <option value="other-electronics">Other Electronics</option>
           </select>
         </div>
-        <div className="flex justify-center gap-24 mt-40 flex-col  lg:flex-row">
+        
+        <div className="flex justify-center gap-24  flex-col  lg:flex-row">
           <div>
             <div>
               <h1 className="font-sans font-bold text-5xl">
