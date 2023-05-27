@@ -53,7 +53,7 @@ export default function Homepage() {
       </Helmet>
       <Header />
       <div className="bg-customGreen pb-4 pt-40">
-        <div className="text-center left-[780px] absolute top-28">
+        <div className="text-center left-8 top-32 lg:left-[780px] absolute lg:top-28">
           <label htmlFor="category-select">Select a category:</label>
           <select
             id="category-select"
