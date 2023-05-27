@@ -30,13 +30,13 @@ featuredProductsRouter.get('/', async (req,res)=>{
       
   
         // Find products that match the query and category filters
-      const products = await Product.find({
+      const products = await FeaturedProducts.find({
         ...categoryFilter,
         ...queryFilter,
       });
   
       // Count the number of products that match the query and category filters
-      const countProducts = await Product.countDocuments({
+      const countProducts = await FeaturedProducts.countDocuments({
         ...categoryFilter,
         ...queryFilter,
       });

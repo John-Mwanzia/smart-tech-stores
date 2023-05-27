@@ -75,12 +75,19 @@ export default function SearchPage() {
         ];
         const requests = urls.map((url) => axios.get(url));
         const responses = await axios.all([...requests]);
-        console.log(responses);
-        // const { data } = await axios.get(
-        //   `http://localhost:3000/api/products/search?query=${query}&category=${category}`
-        // );
+        const data1 = responses[0].data.products;
+        const data2 = responses[1].data.products;
+
+        // console.log(data1, data2);
+        const data = [...data1, ...data2];
         // console.log(data);
+
+        const { data3 } = await axios.get(
+          `http://localhost:3000/api/products/search?query=${query}&category=${category}`
+        );
+        // console.log(data3);
         dispatch({ type: "FETCH_SUCCESS", payload: data });
+        console.log(products);
       } catch (err) {
         dispatch({ type: "FETCH_FAIL", payload: err.message });
       }
