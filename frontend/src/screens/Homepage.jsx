@@ -74,12 +74,13 @@ export default function Homepage() {
         <div className="flex justify-center gap-24  flex-col  lg:flex-row">
           <div>
             <div>
-              <h1 className="font-sans font-bold text-5xl">
+              <h1 className="font-sans font-bold text-3xl px-4  lg:px-0 lg:text-5xl ">
                 Upgrade Your Tech with <br /> Our High-Quality <br />{" "}
                 Accessories
               </h1>
             </div>
-            <div className="mt-16 font-sans">
+            <div className="mt-16 font-sans px-3 lg:px-0">
+            <p>
               Discover a wide range of computer accessories to elevate your tech
               experience.
               <br /> From keyboards and mice to monitors and headsets, our
@@ -88,9 +89,10 @@ export default function Homepage() {
               level. With our <br /> user-friendly interface and seamless
               checkout process, shopping for tech has <br />
               never been easier.
+            </p>
             </div>
 
-            <div>
+            <div className="pl-3 lg:pl-0">
               <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 mt-8 rounded-3xl">
                 Shop Now
               </button>
