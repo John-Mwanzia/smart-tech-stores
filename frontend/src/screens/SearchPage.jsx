@@ -133,7 +133,7 @@ export default function SearchPage() {
   return (
     <>
     <Header />
-    <div className="flex mt-16 relative gap-8 justify-center flex-wrap">
+    <div className="flex mt-24 lg:mt-16 relative gap-8 justify-center flex-wrap pb-8">
       <div>
         <h1 className="text-4xl underline font-sans text-center  font-semibold mb-4">
                   Categories
