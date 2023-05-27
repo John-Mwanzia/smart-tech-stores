@@ -52,7 +52,7 @@ function Header() {
               <img alt="logo" src="/images/Logo.svg" />
             </Link>
           </div>
-          <div>
+          <div className="absolute top-20 md:top-24 left-8 sm:absolute lg:relative lg:top-0">
             <SearchBar />
           </div>
 
