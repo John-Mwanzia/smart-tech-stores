@@ -53,18 +53,6 @@ export default function Homepage() {
       </Helmet>
       <Header />
       <div className="bg-customGreen pb-4">
-        {/* <div>
-          <ul className="flex flex-wrap gap-4 justify-center mb-3 ">
-          <Link to="/search?category=laptops"> <li>laptops</li></Link>
-          <Link to="/search?category=phones"><li>phones</li></Link>
-          <Link to="/search?category=chargers"><li>Chargers</li></Link>
-          <Link to="/search?category=other-Electronics"><li>other Electronics</li></Link>
-           
-            
-            
-         
-          </ul>
-        </div> */}
     
         <div className="text-center left-1/2">
           <label htmlFor="category-select">Select a category:</label>
