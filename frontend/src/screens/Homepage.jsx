@@ -54,24 +54,28 @@ export default function Homepage() {
       <Header />
       <div className="bg-customGreen pb-4">
         {/* <div>
-          <ul className="d-flex flex-wrap justify-content-center mb-3 landing-list">
+          <ul className="flex flex-wrap gap-4 justify-center mb-3 ">
           <Link to="/search?category=laptops"> <li>laptops</li></Link>
-          <Link to="/search?category=/phones"><li>phones</li></Link>
-          <Link to="/search?category=/Chargers"><li>Chargers</li></Link>
-          <Link to="/search?category=/other-Electronics"><li>other Electronics</li></Link>
+          <Link to="/search?category=phones"><li>phones</li></Link>
+          <Link to="/search?category=chargers"><li>Chargers</li></Link>
+          <Link to="/search?category=other-Electronics"><li>other Electronics</li></Link>
            
             
             
          
           </ul>
         </div> */}
-
-        <div className=" text-center left-1/2">
+    
+        <div className="text-center left-1/2">
           <label htmlFor="category-select">Select a category:</label>
           <select
             id="category-select"
             className="bg-transparent border border-gray-300 rounded-md px-4 py-2"
             name="category"
+            onChange={(e) => {
+              const selectedCategory = e.target.value;
+              window.location.href = `/search?category=${selectedCategory}`;
+            }}
           >
             <option value="laptops">Laptops</option>
             <option value="phones">Phones</option>
@@ -79,7 +83,6 @@ export default function Homepage() {
             <option value="other-electronics">Other Electronics</option>
           </select>
         </div>
-
         <div className="flex justify-center gap-24 mt-40 flex-col  lg:flex-row">
           <div>
             <div>
@@ -241,11 +244,12 @@ export default function Homepage() {
               George
             </h1>
             <p className="text-center">
-              "I was skeptical about buying computer <br /> accessories online, but
-              Smart Tech Stores <br /> exceeded my expectations. Their website was<br /> easy
-              to navigate, their prices were <br /> competitive, and my order arrived
-              on time <br /> and in perfect condition. I will definitely be a <br /> repeat
-              customer."
+              "I was skeptical about buying computer <br /> accessories online,
+              but Smart Tech Stores <br /> exceeded my expectations. Their
+              website was
+              <br /> easy to navigate, their prices were <br /> competitive, and
+              my order arrived on time <br /> and in perfect condition. I will
+              definitely be a <br /> repeat customer."
             </p>
           </div>
         </div>
