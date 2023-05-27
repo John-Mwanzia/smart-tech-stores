@@ -88,7 +88,7 @@ export default function Homepage() {
                 Accessories
               </h1>
             </div>
-            <div className="mt-16 text-xs">
+            <div className="mt-16 font-sans">
               Discover a wide range of computer accessories to elevate your tech
               experience.
               <br /> From keyboards and mice to monitors and headsets, our
