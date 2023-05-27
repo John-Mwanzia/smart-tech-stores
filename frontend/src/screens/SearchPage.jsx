@@ -82,6 +82,11 @@ export default function SearchPage() {
 
         // console.log(data1, data2);
         // const data = {...data1, ...data2};
+        const data = {
+          products: [...data1.products, ...data2.products],
+          countProducts: data1.countProducts + data2.countProducts,
+        };
+        
         
         console.log(data);
 
