@@ -46,8 +46,6 @@ productRouter.get(
       countProducts,
 
     });
-    console.log(products);
-    console.log(countProducts);
   })
 );
 
