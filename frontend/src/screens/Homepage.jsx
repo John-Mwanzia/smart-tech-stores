@@ -9,6 +9,7 @@ import Slider from "../components/Slider";
 import Product from "../components/Product";
 import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
+import HeroSection from "../components/HeroSection";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -54,7 +55,7 @@ export default function Homepage() {
         <title>Smart Tech Stores</title>
       </Helmet>
       <Header />
-      
+        <HeroSection />
 
       <div className="mt-8">
         <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[273px] font-semibold mb-4">
