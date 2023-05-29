@@ -94,7 +94,7 @@ export default function SearchPage() {
           source: "/api/products",
         }));
   
-        // Map the products and add the source property for products from the /api/featuredProducts endpoint
+        // Map the products and add the source property for products from the /api/featuredProducts endpoint. This is done to distinguish between the two types of products in updating the cart
         const products2 = data2.products.map((product) => ({
           ...product,
           source: "/api/featuredProducts",
