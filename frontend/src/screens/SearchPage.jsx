@@ -55,15 +55,6 @@ export default function SearchPage() {
     });
     const quantity = existItem ? existItem.quantity + 1 : 1;
 
-    // let apiUrl = '';
-    // if (item.source === 'http://localhost:3000/api/products') {
-    //   apiUrl = `http://localhost:3000/api/products/${item._id}`;
-    // } else if (item.source === 'http://localhost:3000/api/featuredProducts') {
-    //   apiUrl = `http://localhost:3000/api/featuredProducts/${item._id}`;
-    // }
-
-    // const { data } = await axios.get(apiUrl);
-
     const { data } = await axios.get(
       // `http://localhost:3000/api/products/${item._id}`
       (item.source && item.source.includes('/api/featuredProducts'))
