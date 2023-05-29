@@ -81,11 +81,6 @@ export default function SearchPage() {
         const responses = await axios.all([...requests]);
         const data1 = responses[0].data;
         const data2 = responses[1].data;
-      
-        // const data = {
-        //   products: [...data1.products, ...data2.products],
-        //   countProducts: data1.countProducts + data2.countProducts,
-        // };
 
         const products1 = data1.products.map((product) => ({
           ...product,
