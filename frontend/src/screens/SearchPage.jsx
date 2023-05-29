@@ -55,7 +55,6 @@ export default function SearchPage() {
     const quantity = existItem ? existItem.quantity + 1 : 1;
 
     const { data } = await axios.get(
-      // `http://localhost:3000/api/products/${item._id}`
       item.source && item.source.includes("/api/featuredProducts")
         ? `http://localhost:3000${item.source}/${item._id}`
         : `http://localhost:3000${item.source}/${item._id}`
