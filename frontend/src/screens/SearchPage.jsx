@@ -54,8 +54,21 @@ export default function SearchPage() {
       item._id;
     });
     const quantity = existItem ? existItem.quantity + 1 : 1;
+
+    // let apiUrl = '';
+    // if (item.source === 'http://localhost:3000/api/products') {
+    //   apiUrl = `http://localhost:3000/api/products/${item._id}`;
+    // } else if (item.source === 'http://localhost:3000/api/featuredProducts') {
+    //   apiUrl = `http://localhost:3000/api/featuredProducts/${item._id}`;
+    // }
+
+    // const { data } = await axios.get(apiUrl);
+
     const { data } = await axios.get(
-      `http://localhost:3000/api/products/${item._id}`
+      // `http://localhost:3000/api/products/${item._id}`
+      (item.source && item.source.includes('/api/featuredProducts'))
+      ? `http://localhost:3000${item.source}/${item._id}`
+      : `http://localhost:3000${item.source}/${item._id}`
     );
     if (data.countInStock < quantity) {
       window.alert(" Sorry, the product is out of stock");
@@ -78,8 +91,23 @@ export default function SearchPage() {
         const data1 = responses[0].data;
         const data2 = responses[1].data;
       
+        // const data = {
+        //   products: [...data1.products, ...data2.products],
+        //   countProducts: data1.countProducts + data2.countProducts,
+        // };
+
+        const products1 = data1.products.map((product) => ({
+          ...product,
+          source: '/api/products',
+        }));
+        
+        const products2 = data2.products.map((product) => ({
+          ...product,
+          source: '/api/featuredProducts',
+        }));
+        
         const data = {
-          products: [...data1.products, ...data2.products],
+          products: [...products1, ...products2],
           countProducts: data1.countProducts + data2.countProducts,
         };
         
