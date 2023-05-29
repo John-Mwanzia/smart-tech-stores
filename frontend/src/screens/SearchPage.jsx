@@ -4,7 +4,6 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Header from "../components/header";
 import { Store } from "../store";
 
-
 // Define the initial state for the reducer
 const initialState = {
   loading: true,
@@ -43,7 +42,7 @@ export default function SearchPage() {
   const query = sp.get("query") || "all";
   const category = sp.get("category") || "all";
 
- // Use the reducer to manage the state of the component
+  // Use the reducer to manage the state of the component
   const [{ loading, error, products, countProducts }, dispatch] = useReducer(
     reducer,
     initialState
@@ -57,9 +56,9 @@ export default function SearchPage() {
 
     const { data } = await axios.get(
       // `http://localhost:3000/api/products/${item._id}`
-      (item.source && item.source.includes('/api/featuredProducts'))
-      ? `http://localhost:3000${item.source}/${item._id}`
-      : `http://localhost:3000${item.source}/${item._id}`
+      item.source && item.source.includes("/api/featuredProducts")
+        ? `http://localhost:3000${item.source}/${item._id}`
+        : `http://localhost:3000${item.source}/${item._id}`
     );
     if (data.countInStock < quantity) {
       window.alert(" Sorry, the product is out of stock");
@@ -68,7 +67,7 @@ export default function SearchPage() {
     // navigate("/cart")
   };
 
-   // Fetch the search results from the backend API when the component mounts
+  // Fetch the search results from the backend API when the component mounts
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -84,26 +83,25 @@ export default function SearchPage() {
 
         const products1 = data1.products.map((product) => ({
           ...product,
-          source: '/api/products',
+          source: "/api/products",
         }));
-        
+
         const products2 = data2.products.map((product) => ({
           ...product,
-          source: '/api/featuredProducts',
+          source: "/api/featuredProducts",
         }));
-        
+
         const data = {
           products: [...products1, ...products2],
           countProducts: data1.countProducts + data2.countProducts,
         };
-        
-
-        // const { data3 } = await axios.get(
-        //   `http://localhost:3000/api/products/search?query=${query}&category=${category}`
-        // );
-        // console.log(data3);
-        dispatch({ type: "FETCH_SUCCESS", payload: { products: data.products, countProducts: data.countProducts } });
-
+        dispatch({
+          type: "FETCH_SUCCESS",
+          payload: {
+            products: data.products,
+            countProducts: data.countProducts,
+          },
+        });
       } catch (err) {
         dispatch({ type: "FETCH_FAIL", payload: err.message });
       }
@@ -116,16 +114,16 @@ export default function SearchPage() {
     const fetchCategories = async () => {
       try {
         // Fetch the categories from both the endpoints
-          let urls = [
-            "http://localhost:3000/api/products/categories",
-            "http://localhost:3000/api/featuredProducts/categories",
-          ];
-          const requests = urls.map((url) => axios.get(url));
+        let urls = [
+          "http://localhost:3000/api/products/categories",
+          "http://localhost:3000/api/featuredProducts/categories",
+        ];
+        const requests = urls.map((url) => axios.get(url));
 
-        const response = await axios.all([...requests ]);
+        const response = await axios.all([...requests]);
         const data1 = response[0].data;
         const data2 = response[1].data;
-        
+
         //placed the data from both the endpoints into one data array
         const data = [...data1, ...data2];
         setCategories(data);
@@ -143,96 +141,93 @@ export default function SearchPage() {
     return `/search?query=${filterQuery}&category=${filterCategory}`;
   };
 
-    // Render the component
+  // Render the component
   return (
     <>
-    <Header />
-    <div className="flex mt-24 lg:mt-16 relative gap-8 justify-center flex-wrap pb-8">
-      <div>
-        <h1 className="text-4xl underline font-sans text-center  font-semibold mb-4">
-                  Categories
-        </h1>
-        <ul>
-          <li className="border text-center">
-            <Link
-              className={"all" === category ? "active" : ""}
-              to={getFilterUrl({ category: "all" })}
-            >
-              Any
-            </Link>
-          </li>
-
-          {categories.map((c) => (
-            <li key={c} className="border text-center">
+      <Header />
+      <div className="flex mt-24 lg:mt-16 relative gap-8 justify-center flex-wrap pb-8">
+        <div>
+          <h1 className="text-4xl underline font-sans text-center  font-semibold mb-4">
+            Categories
+          </h1>
+          <ul>
+            <li className="border text-center">
               <Link
-                className={c === category ? "active" : ""}
-                to={getFilterUrl({ category: c })}
+                className={"all" === category ? "active" : ""}
+                to={getFilterUrl({ category: "all" })}
               >
-                {c}
+                Any
               </Link>
             </li>
-          ))}
-        </ul>
-      </div>
-      <div>
-        {loading ? (
-          <div>Loading...</div>
-        ) : error ? (
-          <div>
-            <h2> {error}</h2>
-          </div>
-        ) : (
-          <>
-            <div className="absolute top-[-50px] lg:left-1/2 left-16 flex items-center ">
-              {countProducts === 0 ? "No" : countProducts} Results
-              {query !== "all" && " : " + query}
-              {category !== "all" && " : " + category}
-              {query !== "all" || category !== "all" ? (
-                <button
-                  className="btn ml-3"
-                  onClick={() => navigate("/search")}
+
+            {categories.map((c) => (
+              <li key={c} className="border text-center">
+                <Link
+                  className={c === category ? "active" : ""}
+                  to={getFilterUrl({ category: c })}
                 >
-                  Clear
-                </button>
-              ) : null}
-            </div>
-          </>
-        )}
-      </div>
-
-      <div className="flex justify-center px-4 gap-6 flex-wrap">
-        {products.length === 0 && <h2> No Product Found </h2>}
-        {products.map((product) => (
-          
-          <div className="card">
-            <Link to={`/products/slug/${product.slug}`}>
-              <img
-                src={product.Img_Url}
-                alt={product.Comp_Name}
-                className="images"
-              />
-            </Link>
-            <div className="text-center pt-4">
-              <div>
-                <Link to={`/products/slug/${product.slug}`}>
-                  {product.Comp_Name}
+                  {c}
                 </Link>
-              </div>
-              <div> Price: KSh.{product.price}</div>
-
-              <button
-                onClick={() => updateCart(product)}
-                className="mb-1 btn bg-yellow-400 hover:bg-yellow-500 "
-              >
-                Add to cart
-              </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          {loading ? (
+            <div>Loading...</div>
+          ) : error ? (
+            <div>
+              <h2> {error}</h2>
             </div>
-          </div>
-        ))}
+          ) : (
+            <>
+              <div className="absolute top-[-50px] lg:left-1/2 left-16 flex items-center ">
+                {countProducts === 0 ? "No" : countProducts} Results
+                {query !== "all" && " : " + query}
+                {category !== "all" && " : " + category}
+                {query !== "all" || category !== "all" ? (
+                  <button
+                    className="btn ml-3"
+                    onClick={() => navigate("/search")}
+                  >
+                    Clear
+                  </button>
+                ) : null}
+              </div>
+            </>
+          )}
+        </div>
+
+        <div className="flex justify-center px-4 gap-6 flex-wrap">
+          {products.length === 0 && <h2> No Product Found </h2>}
+          {products.map((product) => (
+            <div className="card">
+              <Link to={`/products/slug/${product.slug}`}>
+                <img
+                  src={product.Img_Url}
+                  alt={product.Comp_Name}
+                  className="images"
+                />
+              </Link>
+              <div className="text-center pt-4">
+                <div>
+                  <Link to={`/products/slug/${product.slug}`}>
+                    {product.Comp_Name}
+                  </Link>
+                </div>
+                <div> Price: KSh.{product.price}</div>
+
+                <button
+                  onClick={() => updateCart(product)}
+                  className="mb-1 btn bg-yellow-400 hover:bg-yellow-500 "
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
     </>
   );
 }
-
-
