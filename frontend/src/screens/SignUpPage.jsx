@@ -17,6 +17,10 @@ export default function SignUpPage() {
 
     const submitHandler = async(e)=>{
         e.preventDefault();
+        if(password !== confirmPasssword){
+          alert("passwords do not match")
+          return;
+        }
 
         const {data} = await axios.post( "http://localhost:3000/api/users/signup", {
           name,
@@ -59,7 +63,7 @@ export default function SignUpPage() {
             <div className="user-box">
               <input
                 type="password"
-                name=""
+                name="password"
                 required
                 onChange={(e) => setPassword(e.target.value)}
               />
@@ -68,7 +72,7 @@ export default function SignUpPage() {
             <div className="user-box">
               <input
                 type="password"
-                name=""
+                name="confirmPassword"
                 required
                 onChange={(e) => setConfirmPassword(e.target.value)}
               />
