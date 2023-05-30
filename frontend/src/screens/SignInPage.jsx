@@ -132,9 +132,9 @@ export default function SignInPage() {
               cookiePolicy={"single_host_origin"}
             /> */}
 
-            <h6 className="mt-4">
+            <h6 className="mt-4 text-white">
               Don't have an account?
-              <Link to={`/signup?redirect=${redirect}`}>Sign up</Link>{" "}
+              <Link className="text-blue-500  ml-1" to={`/signup?redirect=${redirect}`}>Sign up</Link>{" "}
             </h6>
           </form>
         </div>
