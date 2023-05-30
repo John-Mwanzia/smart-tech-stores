@@ -62,14 +62,14 @@ export default function SignInPage() {
     // localStorage.setItem("userInfo", JSON.stringify(result));
 
     try {
-      const { result } = await axios.post("http://localhost:3000/api/users/signin", {
+      const  {data}  = await axios.post("http://localhost:3000/api/users/signin", {
         name: response.given_name,
         email: response.email,
         password: "987654321",
       });
-      console.log(result);
-      ctxDispatch({ type: "USER_SIGNIN", payload: result });
-      localStorage.setItem("userInfo", JSON.stringify(result));
+      console.log(data);
+      ctxDispatch({ type: "USER_SIGNIN", payload: data});
+      localStorage.setItem("userInfo", JSON.stringify(data));
 
   }
   catch (error) {
