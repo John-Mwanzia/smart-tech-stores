@@ -28,6 +28,7 @@ export default function SignInPage() {
         }
       );
       ctxDispatch({ type: "USER_SIGNIN", payload: data });
+      // console.log(data);
       localStorage.setItem("userInfo", JSON.stringify(data));
       navigate(redirect || "/");
     } catch (error) {
