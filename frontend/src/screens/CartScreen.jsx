@@ -121,7 +121,7 @@ export default function CartScreen() {
                 type="button"
                 disabled={cartItems.length === 0}
                 className=" bg-blue-500 text-white px-8 mt-4 py-2 w-full  rounded-xl"
-                onClick={() => userInfo?navigate("/shipping"):navigate("/signin") }
+                onClick={() => userInfo?navigate("/shipping"):navigate("/signin?redirect=/shipping") }
               >
                 proceed to checkout
               </button>
