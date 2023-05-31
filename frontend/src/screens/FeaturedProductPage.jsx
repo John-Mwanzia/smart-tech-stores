@@ -109,9 +109,9 @@ export default function FeaturedProductPage() {
                 )}
               </div>
               <div className="grid ">
-                <Button variant="warning" onClick={addToCart}>
+                <button  onClick={addToCart}>
                   Add to cart
-                </Button>
+                </button>
               </div>
             </div>
           </div>
