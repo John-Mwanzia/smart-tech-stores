@@ -111,7 +111,7 @@ export default function ProductPage() {
               </h4>
           
               <div className="grid btn">
-                <button  onClick={addToCart}>
+                <button  className="mb-1 mt-2 py-2 px-5 btn  bg-yellow-400 hover:bg-yellow-500 " onClick={addToCart}>
                   Add to cart
                 </button>
               </div>
