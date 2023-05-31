@@ -1,5 +1,4 @@
 import express  from "express";
-import data from "./data.js";
 import cors from "cors"
 import mongoose from "mongoose";
 import * as dotenv from 'dotenv'
@@ -7,7 +6,6 @@ import seedRouter from "./routes/seedRoutes.js";
 import productRouter from "./routes/productRoutes.js";
 import featuredProductsRouter from "./routes/featuredProductsRoutes.js";
 import userRouter from "./routes/userRoutes.js";
-// import seedfeaturedRouter from "./routes/seedfeaturedProductsRoutes.js";
 
 dotenv.config()
 const app = express();
