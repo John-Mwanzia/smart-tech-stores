@@ -38,7 +38,6 @@ export default function FeaturedProductPage() {
         const results = await axios.get(
           `http://localhost:3000/api/featuredProducts/slug/${slug}`
         );
-        console.log(results);
         dispatch({ type: "FETCH-SUCCESS", payload: results.data });
       } catch (error) {
         dispatch({ type: "FETCH-FAILURE", payload: error.message });
