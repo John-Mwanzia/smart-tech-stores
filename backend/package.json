@@ -20,15 +20,7 @@
     "google-auth-library": "^8.8.0",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.0.5"
-  },
-
-  "resolutions": {
-    "@babel/core": "7.19.6",
-    "@babel/generator": "7.19.6",
-    "@babel/compat-data": "7.19.4",
-    "@babel/helper-compilation-targets": "7.19.3",
-    "@babel/helper-create-class-features-plugin": "7.19.0",
-    "@babel/helper-module-transforms": "7.19.6",
-    "babel-loader": "8.2.5"
   }
+
+
 }
