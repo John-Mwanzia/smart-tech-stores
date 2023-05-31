@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 app.use(cors())
 
-mongoose.connect('mongodb://127.0.0.1:27017/ProductDB', {useNewUrlParser: true, useUnifiedTopology: true}).then(()=>{
+mongoose.connect(process.env.MONGODB_URL, {useNewUrlParser: true, useUnifiedTopology: true}).then(()=>{
   console.log("connected to db");
 }).catch(err=> console.log(err));
 
