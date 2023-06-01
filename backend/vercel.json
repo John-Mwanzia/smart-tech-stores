@@ -2,10 +2,10 @@
 {
     "version": 2,
      "builds": [
-        { "src": "./server.js", "use": "@now/node" }
+        { "src": "./server.cjs", "use": "@now/node" }
     ],
     "routes": [
-        { "src": "/(.*)", "dest": "server.js" }   
+        { "src": "/(.*)", "dest": "server.cjs" }   
 
     ]
 
