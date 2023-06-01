@@ -35,7 +35,7 @@ export default function ProductPage() {
       dispatch({ type: "FETCH-REQUEST" });
       try {
         const results = await axios.get(
-          `http://localhost:3000/api/products/slug/${slug}`
+          `https://smart-tech-server.onrender.com/api/products/slug/${slug}`
         );
         dispatch({ type: "FETCH-SUCCESS", payload: results.data });
       } catch (error) {
@@ -57,7 +57,7 @@ export default function ProductPage() {
     });
     const quantity = existItem ? existItem.quantity + 1 : 1;
     const { data } = await axios.get(
-      `http://localhost:3000/api/products/${product._id}`
+      `https://smart-tech-server.onrender.com/api/products/${product._id}`
     );
     if (data.countInStock < quantity) {
       window.alert(" Sorry, the product is out of stock");

@@ -22,7 +22,7 @@ export default function SignUpPage() {
           return;
         }
 
-        const {data} = await axios.post( "http://localhost:3000/api/users/signup", {
+        const {data} = await axios.post( "https://smart-tech-server.onrender.com/api/users/signup", {
           name,
           email,
           password

@@ -21,7 +21,7 @@ export default function SignInPage() {
     try {
       //send  a post  request with email & passsword variables and deconstruct data from the response
       const { data } = await axios.post(
-        "http://localhost:3000/api/users/signin",
+        "https://smart-tech-server.onrender.com/api/users/signin",
         {
           email,
           password,
@@ -63,7 +63,7 @@ export default function SignInPage() {
     // localStorage.setItem("userInfo", JSON.stringify(result));
 
     try {
-      const  {data}  = await axios.post("http://localhost:3000/api/users/signin", {
+      const  {data}  = await axios.post("https://smart-tech-server.onrender.com/api/users/signin", {
         name: response.given_name,
         email: response.email,
         password: "987654321",

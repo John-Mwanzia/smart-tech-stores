@@ -15,7 +15,7 @@ export default function Product(props) {
     });
     const quantity = existItem ? existItem.quantity + 1 : 1;
     const { data } = await axios.get(
-      `http://localhost:3000/api/products/${item._id}`
+      `https://smart-tech-server.onrender.com/api/products/${item._id}`
     );
     if (data.countInStock < quantity) {
       window.alert(" Sorry, the product is out of stock");

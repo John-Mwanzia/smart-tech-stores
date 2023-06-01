@@ -38,7 +38,7 @@ export default function Homepage() {
     const fetchData = async () => {
       dispatch({ type: "FETCH-REQUEST" });
       try {
-        const results = await axios.get("http://localhost:3000/api/products");
+        const results = await axios.get("https://smart-tech-server.onrender.com/api/products");
         dispatch({ type: "FETCH-SUCCESS", payload: results.data });
       } catch (error) {
         dispatch({ type: "FETCH-FAILURE", error: error });
