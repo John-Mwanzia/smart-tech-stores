@@ -58,7 +58,7 @@ export default function FeaturedProductPage() {
     });
     const quantity = existItem ? existItem.quantity + 1 : 1;
     const { data } = await axios.get(
-      `http://localhost:3000/api/featuredProducts/${product._id}`
+      `https://smart-tech-server.onrender.com/api/featuredProducts/${product._id}`
     );
     if (data.countInStock < quantity) {
       window.alert(" Sorry, the product is out of stock");

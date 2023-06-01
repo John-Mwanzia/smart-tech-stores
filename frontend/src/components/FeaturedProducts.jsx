@@ -33,7 +33,7 @@ export default function FeaturedProducts() {
       dispatch({ type: "FETCH-REQUEST" });
       try {
         const results = await axios.get(
-          "http://localhost:3000/api/featuredProducts"
+          "https://smart-tech-server.onrender.com/api/featuredProducts"
         );
         dispatch({ type: "FETCH-SUCCESS", payload: results.data });
       } catch (error) {
