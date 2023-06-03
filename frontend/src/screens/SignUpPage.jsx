@@ -40,7 +40,7 @@ export default function SignUpPage() {
     <>
       <Helmet>
         <title>Sign Up</title>
-        <metadata name="description" content="Sign Up Page" />
+        <meta name="description" content="Sign Up page" />
       </Helmet>
       <div className="signin-wrapper">
         <div className="container-signin  bg-black opacity-60 ">

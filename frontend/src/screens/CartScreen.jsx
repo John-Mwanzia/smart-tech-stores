@@ -44,7 +44,7 @@ export default function CartScreen() {
       <Header />
       <Helmet>
         <title>Shopping cart</title>
-        <metadata name="description" content="Shopping cart page " />
+        <meta name="description" content="Shopping cart" />
       </Helmet>
       <div>
         <h1 className="mt-12 lg:mt-4 text-4xl text-center lg:text-left lg:pl-24">Shopping List</h1>

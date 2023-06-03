@@ -72,7 +72,7 @@ export default function FeaturedProductPage() {
     <div>
       <Helmet>
         <title>{slug}</title>
-        <metadata name="description" content="individual featured product page " />
+        <meta name="description" content="individual product page " />
 
       </Helmet>
       <Header />
