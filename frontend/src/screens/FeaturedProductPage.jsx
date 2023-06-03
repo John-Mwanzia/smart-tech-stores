@@ -72,6 +72,8 @@ export default function FeaturedProductPage() {
     <div>
       <Helmet>
         <title>{slug}</title>
+        <metadata name="description" content="individual featured product page " />
+
       </Helmet>
       <Header />
       <h1 className="text-5xl font-sans text-center lg:text-left  lg:ml-[273px]  mt-12 mb-16">{product.Gadget_Name}</h1>

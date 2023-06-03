@@ -71,6 +71,7 @@ export default function ProductPage() {
     <div>
       <Helmet>
         <title>{slug}</title>
+        <metadata name="description" content="Helmet application" />
       </Helmet>
       <Header />
       {/* <h1 className="px-4 mt-4">{product.Comp_Name}</h1> */}
