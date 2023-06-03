@@ -4,6 +4,7 @@ import { Store } from "../store";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 // import { useGoogleOneTapLogin } from '@react-oauth/google';
 import { useGoogleOneTapLogin } from 'react-google-one-tap-login';
+import { Helmet } from "react-helmet-async";
 
 export default function SignInPage() {
   const [email, setEmail] = useState("");
@@ -92,6 +93,10 @@ export default function SignInPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Sign In</title>
+        <meta name="description" content="Sign In" />
+      </Helmet>
       <div className="signin-wrapper">
         <div className="container-signin  bg-black opacity-60 ">
           <h2 className="text-center">SignIn</h2>
