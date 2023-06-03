@@ -94,6 +94,7 @@ function Header() {
                   <img
                     className="cart-img"
                     src="https://cdn-icons-png.flaticon.com/512/8974/8974464.png"
+                    alt="cart"
                   />
                   {cart.cartItems.length > 0 && (
                     <div className="absolute top-[-10px] right-[-24px] rounded-full px-2 bg-red-400">
