@@ -24,7 +24,7 @@ export default function SearchBar() {
           onChange={(e) => setQuery(e.target.value)}
         />
 
-        <button variant="light" type="submit" id="search-button">
+        <button type="submit" id="search-button">
           <i className="fa fa-search" aria-hidden="true"></i>
         </button>
       </form>
