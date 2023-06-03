@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Store } from "../store";
 import axios from "axios";
+import { Helmet } from "react-helmet-async";
 
 export default function SignUpPage() {
   const [name, setName] = useState("");
@@ -37,6 +38,10 @@ export default function SignUpPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Sign Up</title>
+        <metadata name="description" content="Sign Up Page" />
+      </Helmet>
       <div className="signin-wrapper">
         <div className="container-signin  bg-black opacity-60 ">
           <h2 className="text-center">SignUp</h2>
