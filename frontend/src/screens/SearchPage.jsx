@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useReducer, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Header from "../components/header";
 import { Store } from "../store";
+import { Helmet } from "react-helmet-async";
 
 // Define the initial state for the reducer
 const initialState = {
@@ -72,39 +73,39 @@ export default function SearchPage() {
     const fetchData = async () => {
       try {
         dispatch({ type: "FETCH_REQUEST" });
-  
+
         // Define the URLs for the product and featured product searches
         let urls = [
           `https://smart-tech-server.onrender.com/api/products/search?query=${query}&category=${category}`,
           `https://smart-tech-server.onrender.com/api/featuredProducts/search?query=${query}&category=${category}`,
         ];
-  
+
         // Send parallel requests to retrieve data from the URLs
         const requests = urls.map((url) => axios.get(url));
         const responses = await axios.all([...requests]);
-  
+
         // Extract data from the responses
         const data1 = responses[0].data;
         const data2 = responses[1].data;
-  
+
         // Map the products and add the source property for products from the /api/products endpoint
         const products1 = data1.products.map((product) => ({
           ...product,
           source: "/api/products",
         }));
-  
+
         // Map the products and add the source property for products from the /api/featuredProducts endpoint. This is done to distinguish between the two types of products in updating the cart
         const products2 = data2.products.map((product) => ({
           ...product,
           source: "/api/featuredProducts",
         }));
-  
+
         // Combine the products and calculate the total count of products
         const data = {
           products: [...products1, ...products2],
           countProducts: data1.countProducts + data2.countProducts,
         };
-  
+
         // Dispatch a success action with the retrieved products and count
         dispatch({
           type: "FETCH_SUCCESS",
@@ -118,11 +119,11 @@ export default function SearchPage() {
         dispatch({ type: "FETCH_FAIL", payload: err.message });
       }
     };
-  
+
     // Call the fetchData function when the query or category values change
     fetchData();
   }, [query, category]);
-  
+
   const [categories, setCategories] = useState([]);
   // Fetch the list of categories from the backend API when the component mounts
   useEffect(() => {
@@ -159,6 +160,10 @@ export default function SearchPage() {
   // Render the component
   return (
     <>
+      <Helmet>
+        <title>Smart Tech - Search Results</title>
+        <meta name="description" content="Search Results" />
+      </Helmet>
       <Header />
       <div className="flex mt-24 lg:mt-16 relative gap-8 justify-center flex-wrap pb-8">
         <div>
