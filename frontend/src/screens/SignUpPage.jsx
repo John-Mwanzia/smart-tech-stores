@@ -1,7 +1,7 @@
-import React, { useContext, useState } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Store } from '../store';
-import axios from 'axios';
+import React, { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Store } from "../store";
+import axios from "axios";
 
 export default function SignUpPage() {
   const [name, setName] = useState("");
@@ -13,36 +13,35 @@ export default function SignUpPage() {
   const { search } = useLocation();
   const redirectInUrl = new URLSearchParams(search).get("redirect");
   const redirect = redirectInUrl ? redirectInUrl : "/";
-  const {state, dispatch:ctxDispatch} = useContext(Store)
+  const { state, dispatch: ctxDispatch } = useContext(Store);
 
-    const submitHandler = async(e)=>{
-        e.preventDefault();
-        if(password !== confirmPasssword){
-          alert("passwords do not match")
-          return;
-        }
-
-        const {data} = await axios.post( "https://smart-tech-server.onrender.com/api/users/signup", {
-          name,
-          email,
-          password
-
-        })
-        ctxDispatch({ type: "USER_SIGNIN", payload: data });
-        localStorage.setItem("userInfo", JSON.stringify(data));
-        navigate(redirect || "/");
-
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    if (password !== confirmPasssword) {
+      alert("passwords do not match");
+      return;
     }
+
+    const { data } = await axios.post(
+      "https://smart-tech-server.onrender.com/api/users/signup",
+      {
+        name,
+        email,
+        password,
+      }
+    );
+    ctxDispatch({ type: "USER_SIGNIN", payload: data });
+    localStorage.setItem("userInfo", JSON.stringify(data));
+    navigate(redirect || "/");
+  };
 
   return (
     <>
-
-<div className="signin-wrapper">
+      <div className="signin-wrapper">
         <div className="container-signin  bg-black opacity-60 ">
           <h2 className="text-center">SignUp</h2>
           <form onSubmit={submitHandler}>
-
-          <div className="user-box">
+            <div className="user-box">
               <input
                 type="text"
                 name=""
@@ -89,13 +88,17 @@ export default function SignUpPage() {
             <h5>or</h5>
 
             <h6 className="mt-4 text-white">
-             Already have an account?
-              <Link className='ml-1 text-blue-500' to={`/signin?redirect=${redirect}`}>Sign in</Link>{" "}
+              Already have an account?
+              <Link
+                className="ml-1 text-blue-500"
+                to={`/signin?redirect=${redirect}`}
+              >
+                Sign in
+              </Link>{" "}
             </h6>
           </form>
         </div>
       </div>
-      
     </>
-  )
+  );
 }
