@@ -53,6 +53,7 @@ export default function Homepage() {
     <div>
       <Helmet>
         <title>Smart Tech Stores</title>
+        <metadata name="description" content="Smart Tech Stores landing, homepage" />
       </Helmet>
       <Header />
         <HeroSection />
