@@ -1,11 +1,9 @@
 import React, { useEffect, useReducer, useState } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import { Helmet } from "react-helmet-async";
 import Header from "../components/header";
 import Footer from "../components/Footer";
 import FeaturedProducts from "../components/FeaturedProducts";
-import Slider from "../components/Slider";
 import Product from "../components/Product";
 import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
@@ -25,7 +23,7 @@ const reducer = (state, action) => {
 };
 
 export default function Homepage() {
-  // const [products, setproducts] = useState([])
+
 
   const [{ products, loading, error }, dispatch] = useReducer(reducer, {
     products: [],
@@ -44,7 +42,7 @@ export default function Homepage() {
         dispatch({ type: "FETCH-FAILURE", error: error });
       }
 
-      //  setproducts(results.data)
+     
     };
     fetchData();
   }, []);
