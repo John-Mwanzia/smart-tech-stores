@@ -74,7 +74,6 @@ export default function ProductPage() {
         <meta name="description" content="individual product page " />
       </Helmet>
       <Header />
-      {/* <h1 className="px-4 mt-4">{product.Comp_Name}</h1> */}
       <h1 className="text-5xl font-sans text-center lg:text-left  lg:ml-[273px]  mt-12 mb-16">
           {product.Comp_Name}
         </h1>

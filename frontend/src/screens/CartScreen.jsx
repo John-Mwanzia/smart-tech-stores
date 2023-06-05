@@ -40,7 +40,6 @@ export default function CartScreen() {
 
   return (
     <div>
-      {/* <Header currentPage={currentPage} /> */}
       <Header />
       <Helmet>
         <title>Shopping cart</title>
