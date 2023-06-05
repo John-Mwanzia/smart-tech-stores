@@ -37,31 +37,7 @@ export default function SignInPage() {
     }
   };
 
-  // const responseGoogle = (response) => {
-  //   console.log(response);
-  // }
-
-  // useGoogleOneTapLogin({
-  //   onSuccess: credentialResponse => {
-  //     console.log(credentialResponse);
-  //   },
-  //   onError: () => {
-  //     console.log('Login Failed');
-  //   },
-  // });
-
   const handleSuccess = async(response) => {
-    // console.log(response);
-    // console.log(response.given_name);
-    // console.log(response.email);
-    // console.log(response.sub);
-
-    // const data = {
-    //   name: response.given_name,
-    //   email: response.email,
-    // }
-    // ctxDispatch({ type: "USER_SIGNIN", payload: result });
-    // localStorage.setItem("userInfo", JSON.stringify(result));
 
     try {
       const  {data}  = await axios.post("https://smart-tech-server.onrender.com/api/users/signin", {
