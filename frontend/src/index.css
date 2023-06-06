@@ -19,10 +19,7 @@ body {
 
 
 .search-wrapper {
-  width: 300px;
-  height: 40px;
   background-color: rgba(0, 0, 0, 0.068);
-  border-radius: 30px;
 }
 .search-wrapper button > i {
   color: black;
