@@ -21,16 +21,6 @@ body {
 .search-wrapper {
   background-color: rgba(0, 0, 0, 0.068);
 }
-/* .search-wrapper > button {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  padding-left: 6px;
-  padding-right: 6px;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-  cursor: pointer;
-} */
 .search-input {
   flex: 1;
   border: none;
