@@ -21,11 +21,7 @@ body {
 .search-wrapper {
   background-color: rgba(0, 0, 0, 0.068);
 }
-.search-wrapper button > i {
-  color: black;
-  font-size: 20px;
-}
-.search-wrapper > button {
+/* .search-wrapper > button {
   background-color: transparent;
   border: none;
   outline: none;
@@ -34,7 +30,7 @@ body {
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   cursor: pointer;
-}
+} */
 .search-input {
   flex: 1;
   border: none;

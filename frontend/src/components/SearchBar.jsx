@@ -24,8 +24,8 @@ export default function SearchBar() {
           onChange={(e) => setQuery(e.target.value)}
         />
 
-        <button type="submit" id="search-button">
-          <i className="fa fa-search" aria-hidden="true"></i>
+        <button className="bg-transparent border-none outline-none pl-[6px] pr-[6px] rounded-tr-[30px] rounded-br-[30px] cursor-pointer " type="submit" id="search-button">
+          <i className="fa fa-search text-black text-xl" aria-hidden="true"></i>
         </button>
       </form>
     </div>
