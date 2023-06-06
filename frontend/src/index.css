@@ -21,15 +21,6 @@ body {
 .search-wrapper {
   background-color: rgba(0, 0, 0, 0.068);
 }
-.slider-container {
-  max-height: 600px;
-  max-width: 600px;
-}
-.slider-container img {
-  border-radius: 50%;
-  max-width: 100%;
-  height: auto;
-}
 
 
 .images {

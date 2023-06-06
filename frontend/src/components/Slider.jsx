@@ -30,8 +30,8 @@ export default function Slider() {
   return (
     <>
       {/* Display the current image in a container */}
-      <div className="slider-container ">
-        <img src={images[currentImageIndex]} alt="slider" />
+      <div className=" max-h-[600px] max-w-[600px]  ">
+        <img className="rounded-[50%] max-w-[100%] h-auto" src={images[currentImageIndex]} alt="slider" />
       </div>
     </>
   );
