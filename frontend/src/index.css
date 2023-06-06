@@ -21,21 +21,6 @@ body {
 .search-wrapper {
   background-color: rgba(0, 0, 0, 0.068);
 }
-.search-input {
-  flex: 1;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  padding-left: 10px;
-  height: 40px;
-  width: 100%;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
-}
-
-
-
-
 .slider-container {
   max-height: 600px;
   max-width: 600px;

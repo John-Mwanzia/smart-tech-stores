@@ -18,7 +18,7 @@ export default function SearchBar() {
           placeholder="Search"
           aria-label="Search"
           aria-describedby="search-button"
-          className="search-input"
+          className=" flex-1 border-none outline-none rounded-tl-[30px] rounded-bl-[30px] text-[18px] pl-[10px] h-10 w-[100%]"
           name="q"
           id="q"
           onChange={(e) => setQuery(e.target.value)}
