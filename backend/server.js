@@ -24,6 +24,7 @@ app.use("/api/seed", seedRouter)
 app.use("/api/products", productRouter)
 app.use("/api/featuredProducts", featuredProductsRouter)
 app.use("/api/users", userRouter)
+app.use('/api/lipaNaMpesa',lipaNaMpesaRoutes)
 
 app.use((err,req,res,next)=>{   
     res.status(500).send({message: err.message})
