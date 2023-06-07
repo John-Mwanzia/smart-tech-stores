@@ -6,7 +6,8 @@ import seedRouter from "./routes/seedRoutes.js";
 import productRouter from "./routes/productRoutes.js";
 import featuredProductsRouter from "./routes/featuredProductsRoutes.js";
 import userRouter from "./routes/userRoutes.js";
-import lipaNaMpesaRoutes from "./routes/lipanampesa.js";
+import lipaNaMpesaRoute from "./routes/lipanampesa.js";
+
 
 dotenv.config()
 const app = express();
@@ -25,7 +26,7 @@ app.use("/api/seed", seedRouter)
 app.use("/api/products", productRouter)
 app.use("/api/featuredProducts", featuredProductsRouter)
 app.use("/api/users", userRouter)
-app.use('/api/lipaNaMpesa',lipaNaMpesaRoutes)
+app.use('/api/lipaNaMpesa',lipaNaMpesaRoute)
 
 app.use((err,req,res,next)=>{   
     res.status(500).send({message: err.message})
