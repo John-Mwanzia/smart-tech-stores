@@ -5,7 +5,7 @@
   "description": "",
   "main": "server.js",
   "engines": {
-    "node": "18.x" 
+    "node": "18.x"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -23,8 +23,9 @@
     "express-async-handler": "^1.2.0",
     "google-auth-library": "^8.8.0",
     "jsonwebtoken": "^9.0.0",
-    "mongoose": "^7.0.5"
+    "mongoose": "^7.0.5",
+    "ngrok": "^5.0.0-beta.2",
+    "request": "^2.88.2",
+    "uuid": "^9.0.0"
   }
-
-
 }
