@@ -4,10 +4,10 @@ import {
     initiateSTKPush,
     stkPushCallback,
     confirmPayment
-} from "../controllers/controllers.lipanampesa.js";
+} from "../controllers/lipanampesa.js"
 
 //middleware  for the authorization of all Safaricom requests.
-import {accessToken} from "../middlewares/middlewares.generateAccessToken.js";
+import {accessToken} from "../middlewares/generateAccessToken.js"
 
 //stkPush route will initiate stk push popup on the users phone.
 router.route('/stkPush').post(accessToken,initiateSTKPush)

@@ -6,6 +6,7 @@ import seedRouter from "./routes/seedRoutes.js";
 import productRouter from "./routes/productRoutes.js";
 import featuredProductsRouter from "./routes/featuredProductsRoutes.js";
 import userRouter from "./routes/userRoutes.js";
+import lipaNaMpesaRoutes from "./routes/lipanampesa.js";
 
 dotenv.config()
 const app = express();
