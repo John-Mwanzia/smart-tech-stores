@@ -6,7 +6,7 @@ import {
     confirmPayment
 } from "../controllers/controllers.lipanampesa.js";
 
-
+//middleware  for the authorization of all Safaricom requests.
 import {accessToken} from "../middlewares/middlewares.generateAccessToken.js";
 
 router.route('/stkPush').post(accessToken,initiateSTKPush)
