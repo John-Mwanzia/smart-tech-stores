@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useReducer } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { Store } from "../store";
+import { Grid, Loading } from "@nextui-org/react";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -63,85 +64,92 @@ export default function FeaturedProducts() {
   return (
     <div>
       <div>
-        <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[273px] font-semibold mb-4">Featured products</h1>
-        <div className="flex flex-wrap  gap-8 justify-center mb-24">
-          {products.slice(0, 4).map((product) => {
-            return (
-              <div
-                key={product.Gadget_Name}
-                className="flex-1 max-w-[322px] max-h-[332px]  "
-              >
-                <div className="card ">
-                  <Link to={`/featuredProducts/slug/${product.slug}`}>
-                    <img
-                      src={product.Img_Url}
-                      alt={product.Gadget_Name}
-                      className="images max-h-[200px] mx-auto "
-                    />
-                  </Link>
-                  <div className="text-center pt-8">
-                    <div>
+        <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[273px] font-semibold mb-4">
+          Featured products
+        </h1>
+
+        {loading ? (
+          <Grid.Container className="flex justify-center" gap={2}>
+            <Grid>
+              <Loading type="gradient" />
+            </Grid>
+          </Grid.Container>
+        ) : error ? (
+          <div>{error}</div>
+        ) : (
+          <div>
+            <div className="flex flex-wrap  gap-8 justify-center mb-24">
+              {products.slice(0, 4).map((product) => {
+                return (
+                  <div
+                    key={product.Gadget_Name}
+                    className="flex-1 max-w-[322px] max-h-[332px]  "
+                  >
+                    <div className="card ">
                       <Link to={`/featuredProducts/slug/${product.slug}`}>
-                        {product.Gadget_Name}
+                        <img
+                          src={product.Img_Url}
+                          alt={product.Gadget_Name}
+                          className="images max-h-[200px] mx-auto "
+                        />
                       </Link>
+                      <div className="text-center pt-8">
+                        <div>
+                          <Link to={`/featuredProducts/slug/${product.slug}`}>
+                            {product.Gadget_Name}
+                          </Link>
+                        </div>
+                        <div> Price: KSh.{product.price}</div>
+
+                        <button
+                          onClick={() => updateCart(product)}
+                          className="mb-1 mt-2 btn  bg-yellow-400 hover:bg-yellow-500"
+                        >
+                          Add to cart
+                        </button>
+                      </div>
                     </div>
-                    <div> Price: KSh.{product.price}</div>
-
-                    <button
-                      onClick={() => updateCart(product)}
-                      className="mb-1 mt-2 btn  bg-yellow-400 hover:bg-yellow-500"
-                    >
-                      Add to cart
-                    </button>
                   </div>
-                </div>
-              </div>
-            );
-          })}
-
-
-          
-        </div>
-        <div className="flex flex-wrap gap-8 justify-center mt-6">
-          {products.slice(4, 8).map((product) => {
-            return (
-              <div
-                key={product.Gadget_Name}
-                className="flex-1 max-w-[322px] max-h-[332px]"
-            
-              >
-                <div className="card">
-                  <Link to={`/featuredProducts/slug/${product.slug}`}>
-                    <img
-                      src={product.Img_Url}
-                      alt={product.Gadget_Name}
-                      className="images max-h-[210px] mx-auto" 
-                    />
-                  </Link>
-                  <div className="text-center pt-8">
-                    <div>
+                );
+              })}
+            </div>
+            <div className="flex flex-wrap gap-8 justify-center mt-6">
+              {products.slice(4, 8).map((product) => {
+                return (
+                  <div
+                    key={product.Gadget_Name}
+                    className="flex-1 max-w-[322px] max-h-[332px]"
+                  >
+                    <div className="card">
                       <Link to={`/featuredProducts/slug/${product.slug}`}>
-                        {product.Gadget_Name}
+                        <img
+                          src={product.Img_Url}
+                          alt={product.Gadget_Name}
+                          className="images max-h-[210px] mx-auto"
+                        />
                       </Link>
+                      <div className="text-center pt-8">
+                        <div>
+                          <Link to={`/featuredProducts/slug/${product.slug}`}>
+                            {product.Gadget_Name}
+                          </Link>
+                        </div>
+                        <div> Price: KSh.{product.price}</div>
+
+                        <button
+                          onClick={() => updateCart(product)}
+                          className="mb-1 mt-2 btn bg-yellow-400 hover:bg-yellow-500"
+                        >
+                          Add to cart
+                        </button>
+                      </div>
                     </div>
-                    <div> Price: KSh.{product.price}</div>
-
-                    <button
-                      onClick={() => updateCart(product)}
-                      className="mb-1 mt-2 btn bg-yellow-400 hover:bg-yellow-500"
-                    >
-                      Add to cart
-                    </button>
                   </div>
-                </div>
-              </div>
-            );
-          })}
-
-
-          
-        </div>
-
+                );
+              })}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
