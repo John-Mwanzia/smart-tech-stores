@@ -7,6 +7,10 @@ export default function ShippingPage() {
       <Helmet>
         <title>Shipping </title>
       </Helmet>
+
+      <div>
+        <h1>Shipping</h1>
+      </div>
       
     </div>
   )

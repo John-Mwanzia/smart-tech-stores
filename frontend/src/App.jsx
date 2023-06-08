@@ -8,6 +8,7 @@ import FeaturedProductPage from "./screens/FeaturedProductPage";
 import SignInPage from "./screens/SignInPage";
 import SearchPage from "./screens/SearchPage";
 import SignUpPage from "./screens/SignUpPage";
+import ShippingPage from "./screens/ShippingPage";
 
 function App(){
   return(
@@ -30,6 +31,7 @@ function App(){
   <Route path="/search" element={<SearchPage />}/>
   <Route path="/signin" element={<SignInPage />}/>
   <Route path="/signup" element={<SignUpPage />}/>
+  <Route path="/shipping" element={<ShippingPage/>}/>
 </Routes>
 
 </main>
