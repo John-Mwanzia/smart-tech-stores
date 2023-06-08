@@ -42,7 +42,7 @@ export default function SignUpPage() {
         <title>Sign Up</title>
         <meta name="description" content="Sign Up page" />
       </Helmet>
-      <div className="signin-wrapper">
+      <div className="signin-wrapper flex justify-center items-center h-[100vh]">
         <div className="container-signin  bg-black opacity-60 ">
           <h2 className="text-center">SignUp</h2>
           <form onSubmit={submitHandler}>
