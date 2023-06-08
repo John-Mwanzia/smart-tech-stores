@@ -1,5 +1,5 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 export default function ShippingPage() {
   return (
@@ -10,8 +10,15 @@ export default function ShippingPage() {
 
       <div>
         <h1>Shipping</h1>
+        <form>
+          <label>Full name</label>
+          <input></input>
+          <label>Address</label>
+          <input></input>
+          <label>City</label>
+          <input></input>
+        </form>
       </div>
-      
     </div>
-  )
+  );
 }
