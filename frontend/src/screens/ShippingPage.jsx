@@ -18,7 +18,7 @@ export default function ShippingPage() {
     e.preventDefault();
     console.log(paymentMethod, fullname, phoneNumber, address, city, postalCode);
   
-    axios.post("/api/shipping", {
+    axios.post("https://smart-tech-server.onrender.com/api/shipping", {
       paymentMethod,
       fullname,
       phoneNumber,
