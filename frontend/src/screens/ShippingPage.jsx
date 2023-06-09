@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
-import axios from "axios"
+import axios from "axios";
 
 export default function ShippingPage() {
- 
   const navigate = useNavigate();
 
   const [paymentMethod, setPaymentMethod] = useState("paypal");
@@ -16,8 +15,15 @@ export default function ShippingPage() {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(paymentMethod, fullname, phoneNumber, address, city, postalCode);
-  
+    console.log(
+      paymentMethod,
+      fullname,
+      phoneNumber,
+      address,
+      city,
+      postalCode
+    );
+
     axios.post("https://smart-tech-server.onrender.com/api/shipping", {
       paymentMethod,
       fullname,
@@ -25,14 +31,24 @@ export default function ShippingPage() {
       address,
       city,
       postalCode,
+    });
+    localStorage.setItem(
+      "shippingInfo",
+      JSON.stringify({
+        paymentMethod,
+        fullname,
+        phoneNumber,
+        address,
+        city,
+        postalCode,
       })
+    );
 
-   if(paymentMethod==="mpesa"){
-     navigate('/mpesaCheckout')
-    }else{
-      navigate('/payPalCheckout')
+    if (paymentMethod === "mpesa") {
+      navigate("/mpesaCheckout");
+    } else {
+      navigate("/payPalCheckout");
     }
-
   };
 
   return (
@@ -100,7 +116,13 @@ export default function ShippingPage() {
                   Payment method
                 </h1>
                 <div className="flex gap-x-4">
-                  <input type="radio" name="payment" value="paypal"  onChange={(e) => setPaymentMethod(e.target.value)} required /> 
+                  <input
+                    type="radio"
+                    name="payment"
+                    value="paypal"
+                    onChange={(e) => setPaymentMethod(e.target.value)}
+                    required
+                  />
                   <label>
                     <img
                       src="https://logos-world.net/wp-content/uploads/2020/07/PayPal-Logo.png"
@@ -110,7 +132,13 @@ export default function ShippingPage() {
                   </label>
                 </div>
                 <div className="flex gap-x-4">
-                  <input type="radio" name="payment" value="mpesa"  onChange={(e)=>setPaymentMethod(e.target.value)} required /> 
+                  <input
+                    type="radio"
+                    name="payment"
+                    value="mpesa"
+                    onChange={(e) => setPaymentMethod(e.target.value)}
+                    required
+                  />
                   <label>
                     <img
                       src="../images/shipping/mpesa.svg"
