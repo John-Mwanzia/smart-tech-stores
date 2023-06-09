@@ -3,16 +3,16 @@ import { Helmet } from "react-helmet-async";
 
 export default function ShippingPage() {
   const [paymentMethod, setPaymentMethod] = useState("paypal");
-  const [fullname , setFullname] = useState("")
-  const [phoneNumber , setPhoneNumber] = useState("")
-  const [address , setAddress] = useState("")
-  const [city , setCity] = useState("")
-  const [postalCode , setPostalCode] = useState("")
+  const [fullname, setFullname] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [address, setAddress] = useState("");
+  const [city, setCity] = useState("");
+  const [postalCode, setPostalCode] = useState("");
 
   const submitHandler = (e) => {
-    e.preventDefault()
-   
-  }
+    e.preventDefault();
+    console.log(paymentMethod, fullname, phoneNumber, address, city, postalCode);
+  };
 
   return (
     <div>
@@ -22,7 +22,7 @@ export default function ShippingPage() {
 
       <div className="flex justify-center">
         <div className="w-[800px]">
-          <form className="w-full" onSubmit={submitHandler} >
+          <form className="w-full" onSubmit={submitHandler}>
             <div className="flex gap-x-16 justify-between flex-wrap">
               <div className="flex-1">
                 <h1 className="text-3xl font-sans font-semibold mt-8 mb-8">
@@ -57,7 +57,7 @@ export default function ShippingPage() {
                   <input
                     type="text"
                     className="border-2 rounded-xl px-4 py-2"
-                    onChange={(e)=> setCity(e.target.value)}
+                    onChange={(e) => setCity(e.target.value)}
                   />
                 </div>
                 <div className="flex flex-col">
@@ -65,7 +65,7 @@ export default function ShippingPage() {
                   <input
                     type="text"
                     className="border-2 rounded-xl px-4 py-2"
-                    onChange={(e)=> setPostalCode(e.target.value)}
+                    onChange={(e) => setPostalCode(e.target.value)}
                   />
                 </div>
               </div>
@@ -74,7 +74,7 @@ export default function ShippingPage() {
                   Payment method
                 </h1>
                 <div className="flex gap-x-4">
-                  <input type="radio" name="payment" value="paypal" />
+                  <input type="radio" name="payment" value="paypal"  onChange={(e) => setPaymentMethod(e.target.value)} /> 
                   <label>
                     <img
                       src="https://logos-world.net/wp-content/uploads/2020/07/PayPal-Logo.png"
@@ -84,7 +84,7 @@ export default function ShippingPage() {
                   </label>
                 </div>
                 <div className="flex gap-x-4">
-                  <input type="radio" name="payment" value="mpesa" />
+                  <input type="radio" name="payment" value="mpesa"  onChange={(e)=>setPaymentMethod(e.target.value)} /> 
                   <label>
                     <img
                       src="../images/shipping/mpesa.svg"
@@ -94,11 +94,15 @@ export default function ShippingPage() {
                   </label>
                 </div>
                 <div className=" grid mt-8">
-                <button type="submit" className=" bg-indigo-700 text-white px-4 py-2 rounded-xl">Continue</button>
-            </div>
+                  <button
+                    type="submit"
+                    className=" bg-indigo-700 text-white px-4 py-2 rounded-xl"
+                  >
+                    Continue
+                  </button>
+                </div>
               </div>
             </div>
-           
           </form>
         </div>
       </div>
