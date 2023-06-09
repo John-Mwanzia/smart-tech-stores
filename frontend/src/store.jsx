@@ -9,6 +9,10 @@ const initials = {
     ? JSON.parse(localStorage.getItem("userInfo")) 
     : null,
 
+    shippingInfo: localStorage.getItem("shippingInfo")
+    ? JSON.parse(localStorage.getItem("shippingInfo"))
+    : null,
+
    cart: {
     cartItems: localStorage.getItem("cartItems")?  
     JSON.parse(localStorage.getItem("cartItems")) 
@@ -37,6 +41,9 @@ const reducer = (state, action)=>{
 
         case 'USER_SIGNIN':
             return {...state, userInfo: action.payload}   
+
+        case 'SHIPPING_INFO':
+            return {...state, shippingInfo: action.payload}    
         
         default:
             return state
