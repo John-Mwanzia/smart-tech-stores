@@ -9,6 +9,11 @@ export default function ShippingPage() {
   const [city , setCity] = useState("")
   const [postalCode , setPostalCode] = useState("")
 
+  const submitHandler = (e) => {
+    e.preventDefault()
+   
+  }
+
   return (
     <div>
       <Helmet>
