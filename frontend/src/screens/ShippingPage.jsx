@@ -7,13 +7,14 @@ export default function ShippingPage() {
       <Helmet>
         <title>Shipping </title>
       </Helmet>
+      <h1 className="">Shipping information</h1>
 
-      <div>
-        <h1>Shipping</h1>
-        <form className="flex flex-col max-w-[400px] ">
-          <div className="flex flex-col">
+      <div className="flex justify-center">
+         <div className="w-[600px]">
+         <form className="w-full">
+          <div className="flex flex-col ">
             <label>Full Name</label>
-            <input type="text" className="border-2" />
+            <input type="text" className="border-2 rounded-xl" />
           </div>
           <div className="flex flex-col">
             <label>Phone Number</label>
@@ -21,13 +22,18 @@ export default function ShippingPage() {
           </div>
           <div className="flex flex-col">
             <label>Address</label>
-            <input type="text" className="border-2"/>
+            <input type="text" className="border-2" />
           </div>
           <div className="flex flex-col">
             <label>City</label>
             <input type="text" className="border-2" />
           </div>
+          <div className="flex flex-col">
+            <label>Postal code</label>
+            <input type="text" className="border-2" />
+          </div>
         </form>
+         </div>
       </div>
     </div>
   );
