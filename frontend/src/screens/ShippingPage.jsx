@@ -32,6 +32,7 @@ export default function ShippingPage() {
                   <label>Full Name</label>
                   <input
                     type="text"
+                    required
                     className="border-2 rounded-xl px-4 py-2"
                     onChange={(e) => setFullname(e.target.value)}
                   />
@@ -40,6 +41,7 @@ export default function ShippingPage() {
                   <label>Phone Number</label>
                   <input
                     type="text"
+                    required
                     className="border-2 rounded-xl px-4 py-2"
                     onChange={(e) => setPhoneNumber(e.target.value)}
                   />
@@ -48,6 +50,7 @@ export default function ShippingPage() {
                   <label>Address</label>
                   <input
                     type="text"
+                    required
                     className="border-2 rounded-xl px-4 py-2"
                     onChange={(e) => setAddress(e.target.value)}
                   />
@@ -56,6 +59,7 @@ export default function ShippingPage() {
                   <label>City</label>
                   <input
                     type="text"
+                    required
                     className="border-2 rounded-xl px-4 py-2"
                     onChange={(e) => setCity(e.target.value)}
                   />
@@ -64,6 +68,7 @@ export default function ShippingPage() {
                   <label>Postal code</label>
                   <input
                     type="text"
+                    required
                     className="border-2 rounded-xl px-4 py-2"
                     onChange={(e) => setPostalCode(e.target.value)}
                   />
@@ -74,7 +79,7 @@ export default function ShippingPage() {
                   Payment method
                 </h1>
                 <div className="flex gap-x-4">
-                  <input type="radio" name="payment" value="paypal"  onChange={(e) => setPaymentMethod(e.target.value)} /> 
+                  <input type="radio" name="payment" value="paypal"  onChange={(e) => setPaymentMethod(e.target.value)} required /> 
                   <label>
                     <img
                       src="https://logos-world.net/wp-content/uploads/2020/07/PayPal-Logo.png"
@@ -84,7 +89,7 @@ export default function ShippingPage() {
                   </label>
                 </div>
                 <div className="flex gap-x-4">
-                  <input type="radio" name="payment" value="mpesa"  onChange={(e)=>setPaymentMethod(e.target.value)} /> 
+                  <input type="radio" name="payment" value="mpesa"  onChange={(e)=>setPaymentMethod(e.target.value)} required /> 
                   <label>
                     <img
                       src="../images/shipping/mpesa.svg"
