@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
+import axios from "axios"
 
 export default function ShippingPage() {
  
@@ -16,6 +17,16 @@ export default function ShippingPage() {
   const submitHandler = (e) => {
     e.preventDefault();
     console.log(paymentMethod, fullname, phoneNumber, address, city, postalCode);
+  
+    axios.post("/api/shipping", {
+      paymentMethod,
+      fullname,
+      phoneNumber,
+      address,
+      city,
+      postalCode,
+      })
+
    if(paymentMethod==="mpesa"){
      navigate('/mpesaCheckout')
     }else{
