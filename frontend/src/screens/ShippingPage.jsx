@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -8,10 +8,8 @@ export default function ShippingPage() {
   const navigate = useNavigate();
 
   const {state, dispatch:ctxDispatch} = useContext(Store);
-
-  const shippingInfo = localStorage.getItem("shippingInfo")
-    ? JSON.parse(localStorage.getItem("shippingInfo"))
-    : null;
+  const {shippingInfo} = state;
+  // console.log(shippingInfo);
 
   const [paymentMethod, setPaymentMethod] = useState("paypal");
   const [fullname, setFullname] = useState(shippingInfo.fullname || "");
@@ -20,16 +18,10 @@ export default function ShippingPage() {
   const [city, setCity] = useState(shippingInfo.city || "");
   const [postalCode, setPostalCode] = useState(shippingInfo.postalCode || "");
 
+  console.log(fullname, phoneNumber, address, city, postalCode);
+
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(
-      paymentMethod,
-      fullname,
-      phoneNumber,
-      address,
-      city,
-      postalCode
-    );
 
     axios.post("https://smart-tech-server.onrender.com/api/shipping", {
       paymentMethod,
@@ -46,7 +38,7 @@ export default function ShippingPage() {
       address,
       city,
       postalCode,
-      
+
     } } )
 
     localStorage.setItem(
