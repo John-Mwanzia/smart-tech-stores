@@ -2,16 +2,23 @@ import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { Store } from "../store";
 
 export default function ShippingPage() {
   const navigate = useNavigate();
 
+  const {state, dispatch:ctxDispatch} = useContext(Store);
+
+  const shippingInfo = localStorage.getItem("shippingInfo")
+    ? JSON.parse(localStorage.getItem("shippingInfo"))
+    : null;
+
   const [paymentMethod, setPaymentMethod] = useState("paypal");
-  const [fullname, setFullname] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [address, setAddress] = useState("");
-  const [city, setCity] = useState("");
-  const [postalCode, setPostalCode] = useState("");
+  const [fullname, setFullname] = useState(shippingInfo.fullname || "");
+  const [phoneNumber, setPhoneNumber] = useState(shippingInfo.phoneNumber || "");
+  const [address, setAddress] = useState(shippingInfo.address || "");
+  const [city, setCity] = useState(shippingInfo.city || "");
+  const [postalCode, setPostalCode] = useState(shippingInfo.postalCode || "");
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -32,6 +39,16 @@ export default function ShippingPage() {
       city,
       postalCode,
     });
+    ctxDispatch({ type: "SHIPPING_INFO", payload:{
+      paymentMethod,
+      fullname,
+      phoneNumber,
+      address,
+      city,
+      postalCode,
+      
+    } } )
+
     localStorage.setItem(
       "shippingInfo",
       JSON.stringify({
@@ -61,7 +78,7 @@ export default function ShippingPage() {
         <div className="w-[800px]">
           <form className="w-full" onSubmit={submitHandler}>
             <div className="flex gap-x-16 justify-between flex-wrap">
-              <div className="flex-1">
+              <div className="flex-1 space-y-4">
                 <h1 className="text-3xl font-sans font-semibold mt-8 mb-8">
                   Shipping information
                 </h1>
