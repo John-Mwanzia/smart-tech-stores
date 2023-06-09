@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 
 export default function ShippingPage() {
+  const [paymentMethod, setPaymentMethod] = useState("paypal");
+  const [fullname , setFullname] = useState("")
+  const [phoneNumber , setPhoneNumber] = useState("")
+  const [address , setAddress] = useState("")
+  const [city , setCity] = useState("")
+  const [postalCode , setPostalCode] = useState("")
+
   return (
     <div>
       <Helmet>
@@ -10,7 +17,7 @@ export default function ShippingPage() {
 
       <div className="flex justify-center">
         <div className="w-[800px]">
-          <form className="w-full">
+          <form className="w-full" onSubmit={submitHandler} >
             <div className="flex gap-x-16 justify-between flex-wrap">
               <div className="flex-1">
                 <h1 className="text-3xl font-sans font-semibold mt-8 mb-8">
@@ -21,6 +28,7 @@ export default function ShippingPage() {
                   <input
                     type="text"
                     className="border-2 rounded-xl px-4 py-2"
+                    onChange={(e) => setFullname(e.target.value)}
                   />
                 </div>
                 <div className="flex flex-col">
@@ -28,6 +36,7 @@ export default function ShippingPage() {
                   <input
                     type="text"
                     className="border-2 rounded-xl px-4 py-2"
+                    onChange={(e) => setPhoneNumber(e.target.value)}
                   />
                 </div>
                 <div className="flex flex-col">
@@ -35,6 +44,7 @@ export default function ShippingPage() {
                   <input
                     type="text"
                     className="border-2 rounded-xl px-4 py-2"
+                    onChange={(e) => setAddress(e.target.value)}
                   />
                 </div>
                 <div className="flex flex-col">
@@ -42,6 +52,7 @@ export default function ShippingPage() {
                   <input
                     type="text"
                     className="border-2 rounded-xl px-4 py-2"
+                    onChange={(e)=> setCity(e.target.value)}
                   />
                 </div>
                 <div className="flex flex-col">
@@ -49,6 +60,7 @@ export default function ShippingPage() {
                   <input
                     type="text"
                     className="border-2 rounded-xl px-4 py-2"
+                    onChange={(e)=> setPostalCode(e.target.value)}
                   />
                 </div>
               </div>
