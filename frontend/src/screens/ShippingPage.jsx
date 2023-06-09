@@ -89,7 +89,7 @@ export default function ShippingPage() {
                   </label>
                 </div>
                 <div className=" grid mt-8">
-                <button className=" bg-indigo-700 text-white px-4 py-2 rounded-xl">Continue</button>
+                <button type="submit" className=" bg-indigo-700 text-white px-4 py-2 rounded-xl">Continue</button>
             </div>
               </div>
             </div>
