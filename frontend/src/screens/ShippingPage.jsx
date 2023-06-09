@@ -7,10 +7,11 @@ export default function ShippingPage() {
       <Helmet>
         <title>Shipping </title>
       </Helmet>
-      <h1 className="">Shipping information</h1>
+     
 
       <div className="flex justify-center">
         <div className="w-[600px]">
+        <h1 className="text-3xl font-sans font-semibold mt-8 mb-8">Shipping information</h1>
           <form className="w-full">
             <div className="flex flex-col ">
               <label>Full Name</label>
