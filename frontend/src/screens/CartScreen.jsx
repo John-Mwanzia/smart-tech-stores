@@ -46,7 +46,7 @@ export default function CartScreen() {
         <meta name="description" content="Shopping cart" />
       </Helmet>
       <div>
-        <h1 className="mt-20 lg:mt-4 text-4xl text-center lg:text-left lg:pl-24">Shopping List</h1>
+        <h1 className="mt-20 lg:mt-4 text-4xl text-center lg:text-left lg:pl-96">Shopping List</h1>
 
         <div className="flex justify-center gap-16 flex-wrap mt-8">
           <div>
