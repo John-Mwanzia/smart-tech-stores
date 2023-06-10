@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Header from "../components/header";
 import { Store } from "../store";
 import { Helmet } from "react-helmet-async";
+import { Grid, Loading } from "@nextui-org/react";
 
 // Define the initial state for the reducer
 const initialState = {
@@ -194,7 +195,13 @@ export default function SearchPage() {
         </div>
         <div>
           {loading ? (
-            <div>Loading...</div>
+            <div>
+            <Grid.Container className="flex justify-center" gap={2}>
+            <Grid>
+              <Loading type="gradient" />
+            </Grid>
+          </Grid.Container>
+            </div>
           ) : error ? (
             <div>
               <h2> {error}</h2>
