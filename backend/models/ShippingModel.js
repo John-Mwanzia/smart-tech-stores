@@ -3,17 +3,12 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const ShippingSchema = new Schema({
-    name: { type: String, required: true },
+    fullname: { type: String, required: true },
     phoneNumber: { type: String, required: true },
     address: { type: String, required: true },
     city: { type: String, required: true },
     postalCode: { type: String, required: true },
-    PaymentMethod: { type: String, required: true },
-    user: {
-        type: mongoose.Schema.Types.ObjectId,
-        required: true,
-        ref: 'User',
-    },
+    paymentMethod: { type: String, required: true },
 }, {
     timestamps: true,
 });
