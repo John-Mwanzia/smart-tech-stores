@@ -66,12 +66,12 @@ export default function ShippingPage() {
         <title>Shipping </title>
       </Helmet>
 
-      <div className="flex justify-center">
-        <div className="w-[800px]">
+      <div className="flex justify-center h-screen  items-center">
+        <div className="w-[900px]">
           <form className="w-full" onSubmit={submitHandler}>
-            <div className="flex gap-x-16 justify-between flex-wrap">
-              <div className="flex-1 space-y-4">
-                <h1 className="text-3xl font-sans font-semibold mt-8 mb-8">
+            <div className="flex gap-x-16 justify-between flex-wrap bg-gray-100 pb-8 px-12 shadow-lg ">
+              <div className="flex-1 space-y-4 pt-12">
+                <h1 className="text-3xl font-sans font-semibold  mb-12">
                   Shipping information
                 </h1>
                 <div className="flex flex-col ">
@@ -120,8 +120,8 @@ export default function ShippingPage() {
                   />
                 </div>
               </div>
-              <div>
-                <h1 className="text-3xl font-sans font-semibold mt-8 mb-8  ">
+              <div className="pt-12">
+                <h1 className="text-3xl font-sans font-semibold mb-12  ">
                   Payment method
                 </h1>
                 <div className="flex gap-x-4">
