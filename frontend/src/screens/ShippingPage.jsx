@@ -7,13 +7,15 @@ import { Store } from "../store";
 export default function ShippingPage() {
   const navigate = useNavigate();
 
-  const {state, dispatch:ctxDispatch} = useContext(Store);
-  const {shippingInfo} = state;
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const { shippingInfo } = state;
   // console.log(shippingInfo);
 
   const [paymentMethod, setPaymentMethod] = useState("paypal");
   const [fullname, setFullname] = useState(shippingInfo.fullname || "");
-  const [phoneNumber, setPhoneNumber] = useState(shippingInfo.phoneNumber || "");
+  const [phoneNumber, setPhoneNumber] = useState(
+    shippingInfo.phoneNumber || ""
+  );
   const [address, setAddress] = useState(shippingInfo.address || "");
   const [city, setCity] = useState(shippingInfo.city || "");
   const [postalCode, setPostalCode] = useState(shippingInfo.postalCode || "");
@@ -31,15 +33,17 @@ export default function ShippingPage() {
       city,
       postalCode,
     });
-    ctxDispatch({ type: "SHIPPING_INFO", payload:{
-      paymentMethod,
-      fullname,
-      phoneNumber,
-      address,
-      city,
-      postalCode,
-
-    } } )
+    ctxDispatch({
+      type: "SHIPPING_INFO",
+      payload: {
+        paymentMethod,
+        fullname,
+        phoneNumber,
+        address,
+        city,
+        postalCode,
+      },
+    });
 
     localStorage.setItem(
       "shippingInfo",
@@ -71,9 +75,11 @@ export default function ShippingPage() {
           <form className="w-full" onSubmit={submitHandler}>
             <div className="flex gap-x-16 justify-between flex-wrap bg-gray-100 pb-8 px-12 shadow-lg ">
               <div className="flex-1 space-y-4 pt-12">
-                <h1 className="text-3xl font-sans font-semibold  mb-12">
-                  Shipping information
-                </h1>
+                <div>
+                  <h1 className="text-3xl font-sans font-semibold  mb-12"> 
+                    Shipping information
+                  </h1>
+                </div>
                 <div className="flex flex-col ">
                   <label>Full Name</label>
                   <input
