@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function paypalCheckoutScreen() {
+export default function PaypalCheckoutScreen() {
   return (
     <div> 
        <h1>

@@ -9,6 +9,8 @@ import SignInPage from "./screens/SignInPage";
 import SearchPage from "./screens/SearchPage";
 import SignUpPage from "./screens/SignUpPage";
 import ShippingPage from "./screens/ShippingPage";
+import MpesaCheckoutScreen from "./screens/mpesaCheckoutScreen";
+import PaypalCheckoutScreen from "./screens/paypalCheckoutScreen";
 
 function App(){
   return(
