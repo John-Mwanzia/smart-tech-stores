@@ -76,19 +76,19 @@ export default function FeaturedProductPage() {
 
       </Helmet>
       <Header />
-      <h1 className="text-5xl font-sans text-center lg:text-left  lg:ml-[273px]  mt-12 mb-16">{product.Gadget_Name}</h1>
+      <h1 className="text-3xl  lg:text-5xl font-sans text-center lg:text-left  lg:ml-[273px]  mt-20 mb-16">{product.Gadget_Name}</h1>
       <div>
         <div className="mt-4 flex flex-wrap gap-12 justify-center pb-8">
-          <div md={5}>
+          <div>
             <img
               src={product.Img_Url}
               alt={product.Gadget_Name}
-              className="max-w-[470px]"
+              className="lg:max-w-[470px]"
             />
           </div>
           <div>
-            <div>
-              <h1 className="text-5xl font-sans text-center lg:text-left mb-5 ">Description</h1>
+            <div className="px-4">
+              <h1 className="text-3xl  lg:text-5xl font-sans text-center lg:text-left mb-5 ">Description</h1>
               <div>
               <h4 className="font-sans border-b text-center lg:text-left pb-2">{product.Gadget_Name}</h4>
               </div>
