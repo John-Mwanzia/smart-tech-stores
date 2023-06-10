@@ -5,7 +5,6 @@ import expressAsyncHandler from 'express-async-handler';
 const shippingRoute = express.Router();
 
 shippingRoute.post('/', expressAsyncHandler(async (req, res) => {
-    console.log(req.body);
     const { paymentMethod, fullname, phoneNumber, address, city, postalCode } = req.body;
     const newShipping = new Shipping({
         paymentMethod: paymentMethod,
