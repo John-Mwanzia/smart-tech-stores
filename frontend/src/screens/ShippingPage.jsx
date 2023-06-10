@@ -12,7 +12,7 @@ export default function ShippingPage() {
   console.log(shippingInfo.fullname);
 
   const [paymentMethod, setPaymentMethod] = useState("paypal");
-  const [fullname, setFullname] = useState(shippingInfo.fullname);
+  const [fullname, setFullname] = useState(shippingInfo.fullname || "");
   const [phoneNumber, setPhoneNumber] = useState(
     shippingInfo.phoneNumber || ""
   );
@@ -84,6 +84,7 @@ export default function ShippingPage() {
                   <input
                     type="text"
                     required
+                    value={fullname}
                     className="border-2 rounded-xl px-4 py-2"
                     onChange={(e) => setFullname(e.target.value)}
                   />
@@ -93,6 +94,7 @@ export default function ShippingPage() {
                   <input
                     type="text"
                     required
+                    value={phoneNumber}
                     className="border-2 rounded-xl px-4 py-2"
                     onChange={(e) => setPhoneNumber(e.target.value)}
                   />
@@ -102,6 +104,7 @@ export default function ShippingPage() {
                   <input
                     type="text"
                     required
+                    value={address}
                     className="border-2 rounded-xl px-4 py-2"
                     onChange={(e) => setAddress(e.target.value)}
                   />
@@ -111,6 +114,7 @@ export default function ShippingPage() {
                   <input
                     type="text"
                     required
+                    value={city}
                     className="border-2 rounded-xl px-4 py-2"
                     onChange={(e) => setCity(e.target.value)}
                   />
@@ -120,6 +124,7 @@ export default function ShippingPage() {
                   <input
                     type="text"
                     required
+                    value={postalCode}
                     className="border-2 rounded-xl px-4 py-2"
                     onChange={(e) => setPostalCode(e.target.value)}
                   />
