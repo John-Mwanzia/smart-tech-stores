@@ -8,6 +8,7 @@ const featuredProductsSchema = new Schema({
     Img_Url: { type: 'String', required: true },
     price: { type: 'Number', required: true },
     countInStock: { type: 'Number', required: true },
+    Specs: { type: 'String', required: true },
 },
 {
     timestamps: true
