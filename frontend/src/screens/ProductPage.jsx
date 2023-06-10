@@ -87,7 +87,7 @@ export default function ProductPage() {
             />
           </div>
           <div>
-            <div>
+            <div className="px-4">
               <h1 className="text-3xl lg:text-5xl font-sans text-center lg:text-left mb-5 ">Description</h1>
               <h4 className="font-sans border-b mb-2 text-center lg:text-left pb-2">Brand: {product.Brand}</h4>
               <h4 className="font-sans border-b text-center lg:text-left pb-2">{product.Comp_Name}</h4>
