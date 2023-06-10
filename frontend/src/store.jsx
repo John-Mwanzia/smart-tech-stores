@@ -10,7 +10,7 @@ const initials = {
 
   shippingInfo: localStorage.getItem("shippingInfo")
     ? JSON.parse(localStorage.getItem("shippingInfo"))
-    : null,
+    : {},
 
   cart: {
     cartItems: localStorage.getItem("cartItems")

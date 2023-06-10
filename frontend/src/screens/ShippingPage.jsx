@@ -12,7 +12,7 @@ export default function ShippingPage() {
   console.log(shippingInfo.fullname);
 
   const [paymentMethod, setPaymentMethod] = useState("paypal");
-  const [fullname, setFullname] = useState(shippingInfo.fullname || "");
+  const [fullname, setFullname] = useState(shippingInfo.fullname? shippingInfo.fullname : "");
   const [phoneNumber, setPhoneNumber] = useState(
     shippingInfo.phoneNumber || ""
   );
