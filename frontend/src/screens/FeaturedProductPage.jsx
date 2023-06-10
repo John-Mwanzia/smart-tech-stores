@@ -92,7 +92,7 @@ export default function FeaturedProductPage() {
               <div>
               <h4 className="font-sans border-b text-center lg:text-left pb-2">{product.Gadget_Name}</h4>
               </div>
-              <div>
+              <div className="max-w-[500px]">
                 {" "}
                 <strong>Specs:</strong> {product.Specs}
               </div>
