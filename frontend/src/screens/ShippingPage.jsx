@@ -12,7 +12,7 @@ export default function ShippingPage() {
   console.log(shippingInfo.fullname);
 
   const [paymentMethod, setPaymentMethod] = useState("paypal");
-  const [fullname, setFullname] = useState(shippingInfo.fullname? shippingInfo.fullname : "");
+  const [fullname, setFullname] = useState(shippingInfo.fullname);
   const [phoneNumber, setPhoneNumber] = useState(
     shippingInfo.phoneNumber || ""
   );
@@ -43,6 +43,18 @@ export default function ShippingPage() {
         postalCode,
       },
     });
+
+    localStorage.setItem(
+      "shippingInfo",
+      JSON.stringify({
+        paymentMethod,
+        fullname,
+        phoneNumber,
+        address,
+        city,
+        postalCode,
+      })
+    );
 
     if (paymentMethod === "mpesa") {
       navigate("/mpesaCheckout");

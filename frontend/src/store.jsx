@@ -47,17 +47,6 @@ const reducer = (state, action) => {
       return { ...state, userInfo: action.payload };
 
     case "SHIPPING_INFO":
-      localStorage.setItem(
-        "shippingInfo",
-        JSON.stringify({
-          paymentMethod,
-          fullname,
-          phoneNumber,
-          address,
-          city,
-          postalCode,
-        })
-      );
       return { ...state, shippingInfo: action.payload };
 
     default:
