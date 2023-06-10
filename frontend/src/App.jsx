@@ -32,6 +32,8 @@ function App(){
   <Route path="/signin" element={<SignInPage />}/>
   <Route path="/signup" element={<SignUpPage />}/>
   <Route path="/shipping" element={<ShippingPage/>}/>
+  <Route path="/mpesaCheckout" element={<MpesaCheckoutScreen/>}/>
+  <Route path="/paypalCheckout" element={<PaypalCheckoutScreen/>}/>
 </Routes>
 
 </main>
