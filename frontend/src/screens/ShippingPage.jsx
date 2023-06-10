@@ -9,7 +9,7 @@ export default function ShippingPage() {
 
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { shippingInfo } = state;
-  // console.log(shippingInfo);
+  console.log(shippingInfo.fullname);
 
   const [paymentMethod, setPaymentMethod] = useState("paypal");
   const [fullname, setFullname] = useState(shippingInfo.fullname || "");
@@ -20,10 +20,10 @@ export default function ShippingPage() {
   const [city, setCity] = useState(shippingInfo.city || "");
   const [postalCode, setPostalCode] = useState(shippingInfo.postalCode || "");
 
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
 
-    axios.post("https://smart-tech-server.onrender.com/api/shipping", {
+    await axios.post("https://smart-tech-server.onrender.com/api/shipping", {
       paymentMethod,
       fullname,
       phoneNumber,
@@ -42,18 +42,6 @@ export default function ShippingPage() {
         postalCode,
       },
     });
-
-    localStorage.setItem(
-      "shippingInfo",
-      JSON.stringify({
-        paymentMethod,
-        fullname,
-        phoneNumber,
-        address,
-        city,
-        postalCode,
-      })
-    );
 
     if (paymentMethod === "mpesa") {
       navigate("/mpesaCheckout");
@@ -74,7 +62,7 @@ export default function ShippingPage() {
             <div className="flex gap-x-16 justify-between flex-wrap bg-gray-100 pb-8 px-12 shadow-lg ">
               <div className="flex-1 space-y-4 pt-12">
                 <div>
-                  <h1 className="text-3xl font-sans font-semibold  mb-12"> 
+                  <h1 className="text-3xl font-sans font-semibold  mb-12">
                     Shipping information
                   </h1>
                 </div>
