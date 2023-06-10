@@ -20,8 +20,6 @@ export default function ShippingPage() {
   const [city, setCity] = useState(shippingInfo.city || "");
   const [postalCode, setPostalCode] = useState(shippingInfo.postalCode || "");
 
-  console.log(fullname, phoneNumber, address, city, postalCode);
-
   const submitHandler = (e) => {
     e.preventDefault();
 
