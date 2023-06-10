@@ -129,8 +129,8 @@ export default function ShippingPage() {
                   />
                 </div>
               </div>
-              <div className="pt-12">
-                <h1 className="text-3xl font-sans font-semibold mb-12  ">
+              <div className="pt-12 ">
+                <h1 className="text-3xl font-sans text-center font-semibold mb-12  ">
                   Payment method
                 </h1>
                 <div className="flex gap-x-4">
@@ -168,7 +168,7 @@ export default function ShippingPage() {
                 <div className=" grid mt-8">
                   <button
                     type="submit"
-                    className=" bg-indigo-700 text-white px-4 py-2 rounded-xl"
+                    className=" bg-indigo-700 text-white px-4 py-2 rounded-xl hover:bg-indigo-800"
                   >
                     Continue
                   </button>
