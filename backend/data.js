@@ -80,6 +80,9 @@ const data = {
         "https://www.91-cdn.com/hub/wp-content/uploads/2022/02/Samsung-Galaxy-A23-5G-6.jpeg",
       price: 35000,
       countInStock: 4,
+      Specs:
+        " 6.5-inch HD+ Infinity-V display, 1080 x 2408 pixels, 20:9 aspect ratio, 90Hz refresh rate, 270 PPI Android 12 	64GB 4GB RAM,",
+        
     },
 
     {
@@ -90,6 +93,8 @@ const data = {
         "https://www.priceinkenya.com/_ipx/b_%23ffffff,f_png,q_75,fit_contain,s_300x300/https://api.priceinkenya.com/media/121038/conversions/huawei-honor-10-64gb-zwXAQG9nI2-original.webp",
       price: 35000,
       countInStock: 4,
+      Specs:
+        " 6.5-inch HD+ Infinity-V display, 1080 x 2408 pixels, 20:9 aspect ratio, 90Hz refresh rate, 270 PPI Android 12 	64GB 4GB RAM,",
     },
 
     {
@@ -100,6 +105,8 @@ const data = {
         "https://t4.ftcdn.net/jpg/05/35/49/97/240_F_535499727_fLDl5BxuoURnqRVLJ9jc46rBMws9lgMs.jpg",
       price: 1500,
       countInStock: 4,
+      Specs:
+      "Sennheiser Pro Audio Model	HD 280 Pro white	Wireless"
     },
 
     {
@@ -110,6 +117,8 @@ const data = {
         "https://3.imimg.com/data3/WG/AR/MY-22059447/19-5v-4-62a-adapter-500x500.jpg",
       price: 2500,
       countInStock: 4,
+      Specs:
+      "HP 19.5V 4.62A 90W Laptop Charger AC/DC Adapter"
     },
     {
       Gadget_Name: "iphone 14",
@@ -119,6 +128,8 @@ const data = {
         "https://s7d1.scene7.com/is/image/dish/iPhone_14_Pro_Max_Deep_Purple_phonewall?$ProductBase$",
       price: 95000,
       countInStock: 4,
+      Specs:
+      " iPhone 14 Pro Max 256GB 6GB RAM 6.7 inches 5G 20MP Camera 4K Video 5000mAh Battery "
     },
     {
       Gadget_Name: "wireless mouse",
@@ -128,6 +139,8 @@ const data = {
         "https://atlas-content-cdn.pixelsquid.com/assets_v2/200/2009721087641786232/previews/G03-200x200.jpg",
       price: 95000,
       countInStock: 4,
+      Specs:
+      "Wireless Mouse for Laptop, Inphic 2.4G Rechargeable Silent Computer Mouse,1600 DPI Ultra Thin Optical Portable USB Mini Mouse, Cordless Mice for Laptop,PC,MacBook,Mac, white"
     },
     {
       Gadget_Name: "webcam",
@@ -137,6 +150,8 @@ const data = {
         "https://w7.pngwing.com/pngs/302/546/png-transparent-webcam-camera-microphone-internet-webcam-electronics-microphone-camera-lens-thumbnail.png",
       price: 95000,
       countInStock: 4,
+      Specs:
+      "Webcam with Microphone, 1080P HD Streaming USB Computer Webcam [Plug and Play] [30fps] "
     },
     {
       Gadget_Name: "wireless keyboard",
@@ -146,6 +161,8 @@ const data = {
         "https://png.pngtree.com/png-vector/20210205/ourlarge/pngtree-wireless-keyboard-png-image_2872698.jpg",
       price: 95000,
       countInStock: 4,
+      Specs:
+      " Jelly Comb 2.4G Slim Ergonomic Quiet Keyboard "
     },
   ],
 };
