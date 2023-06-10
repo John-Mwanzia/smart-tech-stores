@@ -74,7 +74,7 @@ export default function ProductPage() {
         <meta name="description" content="individual product page " />
       </Helmet>
       <Header />
-      <h1 className="text-5xl font-sans text-center lg:text-left  lg:ml-[273px]  mt-12 mb-16">
+      <h1 className="text-3xl  lg:text-5xl font-sans text-center lg:text-left  lg:ml-[273px] mt-20  lg:mt-12 mb-16">
           {product.Comp_Name}
         </h1>
      
@@ -83,12 +83,12 @@ export default function ProductPage() {
             <img
               src={product.Img_Url}
               alt={product.Comp_Name}
-              className="max-w-[470px]"
+              className=" lg:max-w-[470px]"
             />
           </div>
           <div>
             <div>
-              <h1 className="text-5xl font-sans text-center lg:text-left mb-5 ">Description</h1>
+              <h1 className="text-3xl lg:text-5xl font-sans text-center lg:text-left mb-5 ">Description</h1>
               <h4 className="font-sans border-b mb-2 text-center lg:text-left pb-2">Brand: {product.Brand}</h4>
               <h4 className="font-sans border-b text-center lg:text-left pb-2">{product.Comp_Name}</h4>
               <h4>
