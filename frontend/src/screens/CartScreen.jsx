@@ -46,9 +46,9 @@ export default function CartScreen() {
         <meta name="description" content="Shopping cart" />
       </Helmet>
       <div>
-        <h1 className="mt-12 lg:mt-4 text-4xl text-center lg:text-left lg:pl-24">Shopping List</h1>
+        <h1 className="mt-20 lg:mt-4 text-4xl text-center lg:text-left lg:pl-24">Shopping List</h1>
 
-        <div className="flex justify-center gap-16 flex-wrap">
+        <div className="flex justify-center gap-16 flex-wrap mt-8">
           <div>
             {cartItems.length === 0 ? (
               <Link to="/">Go to shopping</Link>
@@ -57,18 +57,18 @@ export default function CartScreen() {
                 {cartItems.map((item) => (
                   <div key={item._id} >
                     <div className="flex gap-2 lg:gap-28 justify-between items-center border-b pb-4  ">
-                      <div className="flex flex-wrap items-center gap-4">
+                      <div className="flex flex-1 flex-wrap items-center gap-4">
                         <img
                           src={item.Img_Url}
                           alt={item.Comp_Name}
-                          className="img-fluid rounded  img-thumbnail"
+                          className=" rounded  img-thumbnail"
                         ></img>{" "}
                         {"  "}
                         <Link to={`/product/${item.slug}`} className="text-blue-600 underline">
                           {item.Comp_Name || item.Gadget_Name}
                         </Link>
                       </div>
-                      <div className="flex gap-4">
+                      <div className="flex flex-1 gap-4">
                         <button
                           variant="light"
                           disabled={item.quantity == 1}
@@ -95,10 +95,9 @@ export default function CartScreen() {
                           <i className="fas fa-plus-circle" />{" "}
                         </button>
                       </div>
-                      <div md={3}>Ksh.{item.price}</div>
-                      <div md={2}>
+                      <div className="flex-1">Ksh.{item.price}</div>
+                      <div className="lg:flex-1">
                         <button
-                          variant="light"
                           onClick={() => removeItemHandler(item)}
                         >
                           {" "}
