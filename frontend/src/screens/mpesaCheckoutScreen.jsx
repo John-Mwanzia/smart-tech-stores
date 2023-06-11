@@ -9,6 +9,9 @@ export default function MpesaCheckoutScreen() {
           </div>
           <div className="bg-white">
               <h1 className="text-[56px] font-semibold">Checkout</h1>
+              <p className="text-xl">
+              Please complete  the purchase by providing payment details
+              </p>
           </div>
       </div>
     </>
