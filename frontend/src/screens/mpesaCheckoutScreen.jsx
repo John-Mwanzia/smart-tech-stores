@@ -12,12 +12,12 @@ export default function MpesaCheckoutScreen() {
    const shippingPrice = subtotal < 10000 ? 0 :((subtotal*1.5)/100);
     const totalPrice = subtotal + shippingPrice;
   
-  useEffect(() => {
+  // useEffect(() => {
    
-    console.log(subtotal);
-    console.log(shippingPrice);
-    console.log(totalPrice);
-  }, [state]);
+  //   console.log(subtotal);
+  //   console.log(shippingPrice);
+  //   console.log(totalPrice);
+  // }, [state]);
 
   const [phoneNumber, setPhoneNumber] = useState("");
  
@@ -64,20 +64,20 @@ export default function MpesaCheckoutScreen() {
             <div className=" mb-12 bg-gray-100">
               <div className="flex justify-between max-w-xs mx-auto py-4 ">
                 <span>SubTotal</span>
-                <span>Ksh. 10000</span>
+                <span>Ksh. {subtotal}</span>
               </div>
               <div className="flex justify-between max-w-xs mx-auto py-4 ">
                 <span>Delivery</span>
-                <span> Ksh. 200</span>
+                <span> Ksh. {shippingPrice}</span>
               </div>
               <div className="flex justify-between max-w-xs mx-auto py-4">
                 <span>Total</span>
-                <span>Ksh. 10200</span>
+                <span>Ksh. {totalPrice}</span>
               </div>
             </div>
             <div className="grid">
               <button type="submit" className="bg-[#B85E1F] text-white rounded-3xl py-4">
-                Pay ksh. 10200
+                Pay ksh {totalPrice}
               </button>
             </div>
             </form>
