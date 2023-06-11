@@ -1,6 +1,23 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { Store } from "../store";
 
 export default function MpesaCheckoutScreen() {
+
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+
+   const { cart  } = state;
+   const { cartItems } = cart;
+
+   const subtotal = cartItems.reduce((a, c) => a + c.price * c.quantity, 0);
+   const shippingPrice = subtotal < 10000 ? 0 :((subtotal*1.5)/100);
+    const totalPrice = subtotal + shippingPrice;
+  
+  useEffect(() => {
+   
+    console.log(subtotal);
+    console.log(shippingPrice);
+    console.log(totalPrice);
+  }, [state]);
 
   const [phoneNumber, setPhoneNumber] = useState("");
  
@@ -37,6 +54,7 @@ export default function MpesaCheckoutScreen() {
               </label>
               <input
                 type="text"
+                required
                 className="border-2 border-gray-300 rounded-md p-2"
                 onChange={(e) => setPhoneNumber(e.target.value)}
               />
@@ -58,7 +76,7 @@ export default function MpesaCheckoutScreen() {
               </div>
             </div>
             <div className="grid">
-              <button className="bg-[#B85E1F] text-white rounded-3xl py-4">
+              <button type="submit" className="bg-[#B85E1F] text-white rounded-3xl py-4">
                 Pay ksh. 10200
               </button>
             </div>
