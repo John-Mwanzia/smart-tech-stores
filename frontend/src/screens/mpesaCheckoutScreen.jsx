@@ -20,10 +20,28 @@ export default function MpesaCheckoutScreen() {
   // }, [state]);
 
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [newNumber, setNewNumber] = useState("");
  
   const submitHandler = async (e) => {
     e.preventDefault();
+    
+    if(phoneNumber.startsWith('0')){
+       const proceccedPhoneNumber = phoneNumber.replace('0','254');
+       console.log(proceccedPhoneNumber);
+        setNewNumber(proceccedPhoneNumber);
+    }
+    else{
+      const proceccedPhoneNumber = phoneNumber;
+      setNewNumber(proceccedPhoneNumber);
+    }
+
+
   };
+
+  useEffect(() => {
+  
+    console.log(newNumber);
+  }, [newNumber]);
 
   return (
     <>
