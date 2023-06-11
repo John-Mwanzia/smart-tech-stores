@@ -1,8 +1,12 @@
 import React from "react";
 
 export default function MpesaCheckoutScreen() {
+
+  const [phoneNumber, setPhoneNumber] = useState("");
  
-  
+  const submitHandler = async (e) => {
+    e.preventDefault();
+  };
 
   return (
     <>
@@ -27,13 +31,14 @@ export default function MpesaCheckoutScreen() {
             />
           </div>
           <div>
-            <form className="flex flex-col px-4">
+            <form onClick={submitHandler} className="flex flex-col px-4">
               <label className=" text-left mb-2">
                 Phone Number (to pay with)
               </label>
               <input
                 type="text"
                 className="border-2 border-gray-300 rounded-md p-2"
+                onChange={(e) => setPhoneNumber(e.target.value)}
               />
            
 
