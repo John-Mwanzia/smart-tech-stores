@@ -48,7 +48,7 @@ export default function MpesaCheckoutScreen() {
             />
           </div>
           <div>
-            <form onClick={submitHandler} className="flex flex-col px-4">
+            <form onSubmit={submitHandler} className="flex flex-col px-4">
               <label className=" text-left mb-2">
                 Phone Number (to pay with)
               </label>
