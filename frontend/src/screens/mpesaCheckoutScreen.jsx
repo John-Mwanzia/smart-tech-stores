@@ -24,6 +24,12 @@ export default function MpesaCheckoutScreen() {
  
   const submitHandler = async (e) => {
     e.preventDefault();
+
+    if(!phoneNumber.startsWith("01") && !phoneNumber.startsWith("07")){
+      alert("Invalid number! Please start with '01' or '(07)'.");
+      return;
+    }
+    
     
     if(phoneNumber.startsWith('0')){
        const proceccedPhoneNumber = phoneNumber.replace('0','254');
