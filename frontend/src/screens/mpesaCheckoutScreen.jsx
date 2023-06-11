@@ -75,6 +75,8 @@ export default function MpesaCheckoutScreen() {
                 required
                 className="border-2 border-gray-300 rounded-md p-2"
                 onChange={(e) => setPhoneNumber(e.target.value)}
+                maxLength={10}
+                minLength={10}
               />
            
 
