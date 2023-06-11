@@ -4,7 +4,7 @@ export default function MpesaCheckoutScreen() {
   return (
     <>
       <div className=" flex  items-center justify-center  bg-gradient-to-br from-[#dbc596] to-[#70a24f] h-screen">
-        <div>
+        <div className="hidden sm:block">
           <img
             src="/images/mpesaCheckout/lambs.svg"
             alt="lambs"
