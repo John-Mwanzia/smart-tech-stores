@@ -1,6 +1,9 @@
 import React from "react";
 
 export default function MpesaCheckoutScreen() {
+ 
+  
+
   return (
     <>
       <div className=" flex  items-center justify-center  bg-gradient-to-br from-[#dbc596] to-[#70a24f] h-screen">
@@ -25,31 +28,36 @@ export default function MpesaCheckoutScreen() {
           </div>
           <div>
             <form className="flex flex-col px-4">
-            <label className=" text-left mb-2">Phone Number (to pay with)</label>       
+              <label className=" text-left mb-2">
+                Phone Number (to pay with)
+              </label>
               <input
                 type="text"
                 className="border-2 border-gray-300 rounded-md p-2"
               />
+           
+
+            <h2 className="mt-16 text-left mb-1">Purchase Summary</h2>
+            <div className=" mb-12 bg-gray-100">
+              <div className="flex justify-between max-w-xs mx-auto py-4 ">
+                <span>SubTotal</span>
+                <span>Ksh. 10000</span>
+              </div>
+              <div className="flex justify-between max-w-xs mx-auto py-4 ">
+                <span>Delivery</span>
+                <span> Ksh. 200</span>
+              </div>
+              <div className="flex justify-between max-w-xs mx-auto py-4">
+                <span>Total</span>
+                <span>Ksh. 10200</span>
+              </div>
+            </div>
+            <div className="grid">
+              <button className="bg-[#B85E1F] text-white rounded-3xl py-4">
+                Pay ksh. 10200
+              </button>
+            </div>
             </form>
-          </div>
-          <div className="mt-24 mb-12">
-            <div className="flex justify-between max-w-xs mx-auto py-4 ">
-              <span>SubTotal</span>
-              <span>Ksh. 10000</span>
-            </div>
-            <div className="flex justify-between max-w-xs mx-auto py-4 ">
-              <span>Delivery</span>
-              <span> Ksh. 200</span>
-            </div>
-            <div className="flex justify-between max-w-xs mx-auto py-4">
-              <span>Total</span>
-              <span>Ksh. 10200</span>
-            </div>
-          </div>
-          <div className="grid max-w-xs mx-auto">
-            <button className="bg-[#B85E1F] text-white rounded-3xl py-4">
-              Pay ksh. 10200
-            </button>
           </div>
         </div>
       </div>
