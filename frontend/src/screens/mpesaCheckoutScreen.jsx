@@ -29,6 +29,10 @@ export default function MpesaCheckoutScreen() {
     if(phoneNumber.startsWith('0')){
        const proceccedPhoneNumber = phoneNumber.replace('0','254');
         setNewNumber(proceccedPhoneNumber);
+        const result =  await axios.post("http://localhost:3000/api/lipaNaMpesa/stkPush", {
+          phoneNumber: newNumber,
+          amount: totalPrice,
+        });
     }
     else{
       const proceccedPhoneNumber = phoneNumber;
@@ -37,10 +41,7 @@ export default function MpesaCheckoutScreen() {
 
     console.log(newNumber);
 
-    const result =  axios.post("http://localhost:3000/api/lipaNaMpesa/stkPush", {
-      phoneNumber: newNumber,
-      amount: totalPrice,
-    });
+ 
     console.log(result);
 
 
