@@ -34,6 +34,13 @@ export default function MpesaCheckoutScreen() {
       setNewNumber(proceccedPhoneNumber);
     }
 
+    const result = axios.post("http://localhost:3000/api/lipaNaMpesa/stkPush", {
+      phoneNumber: newNumber,
+      amount: totalPrice,
+    });
+    console.log(result);
+    
+
 
   };
 
