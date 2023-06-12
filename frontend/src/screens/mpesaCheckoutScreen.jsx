@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Store } from "../store";
+import axios from "axios";
 
 export default function MpesaCheckoutScreen() {
 
@@ -34,12 +35,14 @@ export default function MpesaCheckoutScreen() {
       setNewNumber(proceccedPhoneNumber);
     }
 
-    const result = axios.post("http://localhost:3000/api/lipaNaMpesa/stkPush", {
+    console.log(newNumber);
+
+    const result =  axios.post("http://localhost:3000/api/lipaNaMpesa/stkPush", {
       phoneNumber: newNumber,
       amount: totalPrice,
     });
     console.log(result);
-    
+
 
 
   };
