@@ -12,12 +12,6 @@ export default function MpesaCheckoutScreen() {
    const shippingPrice = subtotal < 10000 ? 0 :((subtotal*1.5)/100);
     const totalPrice = subtotal + shippingPrice;
   
-  // useEffect(() => {
-   
-  //   console.log(subtotal);
-  //   console.log(shippingPrice);
-  //   console.log(totalPrice);
-  // }, [state]);
 
   const [phoneNumber, setPhoneNumber] = useState("");
   const [newNumber, setNewNumber] = useState("");
@@ -33,7 +27,6 @@ export default function MpesaCheckoutScreen() {
     
     if(phoneNumber.startsWith('0')){
        const proceccedPhoneNumber = phoneNumber.replace('0','254');
-       console.log(proceccedPhoneNumber);
         setNewNumber(proceccedPhoneNumber);
     }
     else{
@@ -44,10 +37,6 @@ export default function MpesaCheckoutScreen() {
 
   };
 
-  useEffect(() => {
-  
-    console.log(newNumber);
-  }, [newNumber]);
 
   return (
     <>
