@@ -42,7 +42,7 @@ export default function SignInPage() {
     try {
       const  {data}  = await axios.post("https://smart-tech-server.onrender.com/api/users/signin", {
         email: response.email,
-        password: "987654321",
+        password: response.sub
       });
       console.log(data);
       ctxDispatch({ type: "USER_SIGNIN", payload: data});

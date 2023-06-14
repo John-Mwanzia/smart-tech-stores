@@ -43,7 +43,7 @@ export default function SignUpPage() {
       const  {data}  = await axios.post("https://smart-tech-server.onrender.com/api/users/signup", {
         name: response.given_name,
         email: response.email,
-        password: "987654321",
+        password: response.sub
       });
       console.log(data);
       ctxDispatch({ type: "USER_SIGNIN", payload: data});
