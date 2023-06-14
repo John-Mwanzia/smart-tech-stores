@@ -36,6 +36,36 @@ export default function SignUpPage() {
     navigate(redirect || "/");
   };
 
+  const handleSuccess = async(response) => {
+
+    try {
+      const  {data}  = await axios.post("https://smart-tech-server.onrender.com/api/users/signin", {
+        name: response.given_name,
+        email: response.email,
+        password: "987654321",
+      });
+      console.log(data);
+      ctxDispatch({ type: "USER_SIGNIN", payload: data});
+      localStorage.setItem("userInfo", JSON.stringify(data));
+      navigate(redirect || "/");
+
+  }
+  catch (error) {
+    alert("unable to sign in");
+  }
+  };
+
+  
+  useGoogleOneTapLogin({
+    onError: error => console.log(error),
+    onSuccess: handleSuccess,
+      
+    googleAccountConfigs: {
+      client_id: import.meta.env.VITE_GOOGLE_LOGIN_CLIENT_ID,
+    },
+
+  });
+
   return (
     <>
       <Helmet>
