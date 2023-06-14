@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Store } from "../store";
 import axios from "axios";
 import { Helmet } from "react-helmet-async";
+import { useGoogleOneTapLogin } from "react-google-one-tap-login";
 
 export default function SignUpPage() {
   const [name, setName] = useState("");
@@ -39,7 +40,7 @@ export default function SignUpPage() {
   const handleSuccess = async(response) => {
 
     try {
-      const  {data}  = await axios.post("https://smart-tech-server.onrender.com/api/users/signin", {
+      const  {data}  = await axios.post("https://smart-tech-server.onrender.com/api/users/signup", {
         name: response.given_name,
         email: response.email,
         password: "987654321",
