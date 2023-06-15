@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useContext, useState } from "react";
 import { Store } from "../store";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-// import { useGoogleOneTapLogin } from '@react-oauth/google';
 import { useGoogleOneTapLogin } from 'react-google-one-tap-login';
 import { Helmet } from "react-helmet-async";
 
@@ -103,14 +102,6 @@ export default function SignInPage() {
             </div>
 
             <h5>or</h5>
-
-            {/* <GoogleLogin
-              clientId={import.meta.env.VITE_GOOGLE_LOGIN_CLIENT_ID}
-              buttonText="Sign in with Google"
-              onSuccess={responseGoogle}
-              onFailure={responseGoogle}
-              cookiePolicy={"single_host_origin"}
-            /> */}
 
             <h6 className="mt-4 text-white">
               Don't have an account?
