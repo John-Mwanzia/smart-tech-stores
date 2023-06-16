@@ -35,8 +35,6 @@ body {
 .img-thumbnail {
   max-height: 40px;
 }
-
-/* make card elements to be of the same size regardless of the image size. */
 .card{
   padding: 20px;
   box-sizing: border-box;
@@ -110,7 +108,6 @@ body {
 
 .container-signin form  .button-wrapper{
  position: relative;
- /* take min width of the available */
  display: inline-block; 
  padding: 10px 20px;
  overflow: hidden;
@@ -121,7 +118,6 @@ body {
 }
 
 .container-signin form  .button-wrapper button{
-  /* outline: none; */
   background-color: transparent;
   color: white;
   border: none;
