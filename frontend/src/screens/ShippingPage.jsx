@@ -21,9 +21,7 @@ export default function ShippingPage() {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-
-    //https://smart-tech-server.onrender.com/api/shipping
-    await axios.post("http://localhost:3000/api/shipping", {
+    await axios.post("https://smart-tech-server.onrender.com/api/shipping", {
       paymentMethod,
       fullname,
       phoneNumber,
