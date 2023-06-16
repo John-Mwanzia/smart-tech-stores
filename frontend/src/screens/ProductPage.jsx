@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useContext, useEffect, useReducer, useState } from "react";
+import React, { useContext, useEffect, useReducer } from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate, useParams } from "react-router-dom";
 import Header from "../components/header";
@@ -29,7 +29,6 @@ export default function ProductPage() {
     error: "",
   });
 
-  // const [state, Dispatch] = useReducer(reducer, initialState)
   useEffect(() => {
     const fetchData = async () => {
       dispatch({ type: "FETCH-REQUEST" });
@@ -42,7 +41,6 @@ export default function ProductPage() {
         dispatch({ type: "FETCH-FAILURE", payload: error.message });
       }
 
-      //  setproducts(results.data)
     };
     fetchData();
   }, [slug]);

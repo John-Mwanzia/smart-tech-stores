@@ -1,10 +1,9 @@
 import axios from "axios";
-import React, { useContext, useEffect, useReducer, useState } from "react";
+import React, { useContext, useEffect, useReducer } from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate, useParams } from "react-router-dom";
 import Header from "../components/header";
 import { Store } from "../store";
-// import data from '../../../backend/data';
 
 const reducer = (state, action) => {
   switch (action.type) {

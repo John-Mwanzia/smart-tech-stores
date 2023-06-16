@@ -30,7 +30,6 @@ export default function Homepage() {
     error: "",
   });
 
-  // const [state, Dispatch] = useReducer(reducer, initialState)
   useEffect(() => {
     const fetchData = async () => {
       dispatch({ type: "FETCH-REQUEST" });
