@@ -51,7 +51,7 @@ export default function CartScreen() {
         <div className="flex justify-center gap-16 flex-wrap mt-8">
           <div>
             {cartItems.length === 0 ? (
-              <Link to="/">Go to shopping</Link>
+              <Link to="/" className="underline text-blue-500">No items here, Go to shopping</Link>
             ) : (
               <div className="flex flex-col border p-2 rounded-xl">
                 {cartItems.map((item) => (
