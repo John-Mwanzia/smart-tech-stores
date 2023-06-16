@@ -8,7 +8,7 @@ export default function Testimonials() {
           Testimonials
         </h1>
         <div className="flex justify-center gap-8  flex-wrap">
-          <div className="font-sans  relative  bg-customBlue rounded-3xl px-4 pb-6 mb-16 lg:mb-0">
+          <div className="font-sans  relative  bg-customBlue px-4 pb-6 mb-16 lg:mb-0 bg-opacity-60 shadow-lg backdrop-blur-0 border-opacity-18 rounded-md border-1 border-white">
             <img
               src="/images/testimonials/avatar1.svg"
               alt="avatar1"
@@ -26,7 +26,7 @@ export default function Testimonials() {
               looking for top-notch tech products."
             </p>
           </div>
-          <div className="font-sans  relative  bg-customBlue rounded-3xl px-4 pb-6  mb-16 lg:mb-0">
+          <div c className="font-sans  relative  bg-customBlue px-4 pb-6 mb-16 lg:mb-0 bg-opacity-60 shadow-lg backdrop-blur-0 border-opacity-18 rounded-md border-1 border-white">
             <img
               src="/images/testimonials/avatar1.svg"
               alt="avatar1"
@@ -44,7 +44,7 @@ export default function Testimonials() {
               their customers."
             </p>
           </div>
-          <div className="font-sans mb-1 bg-customBlue relative rounded-3xl px-4 pb-6 w-[371px]">
+          <div  className="font-sans  relative  bg-customBlue px-4 pb-6 mb-16 lg:mb-0 bg-opacity-60 shadow-lg backdrop-blur-0 border-opacity-18 rounded-md border-1 border-white">
             <img
               src="/images/testimonials/avatar2.svg"
               alt="avatar2"
