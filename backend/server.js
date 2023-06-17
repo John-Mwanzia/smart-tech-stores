@@ -40,3 +40,7 @@ app.listen(port,  (error) =>{
     else 
         console.log("Error occurred, server can't start", error);
     });
+
+
+ //export express api
+ module.exports = app;
