@@ -45,7 +45,7 @@ export default function HeroSection() {
             </div>
 
             <div className="pl-3 lg:pl-0">
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 mt-8 rounded-3xl">
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 mt-8 rounded-3xl">
                 Shop Now
               </button>
             </div>
