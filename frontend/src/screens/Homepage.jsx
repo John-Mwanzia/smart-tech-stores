@@ -87,7 +87,7 @@ export default function Homepage() {
         )}
       </div>
 
-      <div className="mt-4 ">
+      <div className="mt-8 mb-8 ">
         <FeaturedProducts />
       </div>
       {/* Features section */}
