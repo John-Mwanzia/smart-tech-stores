@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-// import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 import { Link } from "react-router-dom";
 import { Store } from "../store";
