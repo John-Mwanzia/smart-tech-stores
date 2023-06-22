@@ -43,7 +43,10 @@ export default function Product(props) {
           </div>
           <div> Price: KSh.{product.price}</div>
 
-          <button  onClick={() => updateCart(product)} className="mb-1 mt-2 py-2 px-5 btn  bg-yellow-400 hover:bg-yellow-500 ">
+          <button
+            onClick={() => updateCart(product)}
+            className="mb-1 mt-2 py-2 px-5 btn  bg-yellow-400 hover:bg-yellow-500 "
+          >
             Add to cart
           </button>
         </div>
