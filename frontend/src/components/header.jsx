@@ -9,8 +9,6 @@ function Header() {
   const { cart, userInfo } = state;
   const { cartItems } = cart;
 
-
-
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = (btn) => {
@@ -23,89 +21,87 @@ function Header() {
 
   return (
     <>
- 
-        <nav className=" flex justify-around w-full items-center p-6  pt-8 lg:pt-12 relative bg-customGreen">
-          {!menuOpen && (
-            <button onClick={() => toggleMenu("open")}>
+      <nav className=" flex justify-around w-full items-center p-6  pt-8 lg:pt-12 relative bg-customGreen">
+        {!menuOpen && (
+          <button onClick={() => toggleMenu("open")}>
+            <img
+              className="md:hidden w-[25px] left-2"
+              src="/images/Hamburger.svg"
+              alt="hamburger"
+            />
+          </button>
+        )}
+        {menuOpen && (
+          <div className="absolute top-0 left-1/2 z-50 ">
+            <button onClick={() => toggleMenu("close")} className="z-50">
               <img
-                className="md:hidden w-[25px] left-2"
-                src="/images/Hamburger.svg"
+                className="md:hidden w-[25px] left-2 "
+                src="/images/Hamburger-closed.svg"
                 alt="hamburger"
               />
             </button>
+          </div>
+        )}
+
+        <div className="">
+          <Link to="/">
+            <img alt="logo" src="/images/Logo.svg" />
+          </Link>
+        </div>
+        <div className="absolute top-24 md:top-24 left-8  lg:relative lg:top-0">
+          <SearchBar />
+        </div>
+
+        <div
+          className={`${
+            menuOpen
+              ? "translate-x-4  lg:translate-x-0 fixed top-0 pt-8 left-0 w-screen  h-screen  bg-gray-200 bg-opacity-10 backdrop-filter backdrop-blur-lg "
+              : "left-[-150px]"
+          } transform transition duration-300 ease-in-out flex flex-col gap-4  lg:flex-row lg:space-x-8 absolute lg:relative lg:left-0`}
+        >
+          <Link to="/">
+            {" "}
+            <p className="font-sans text-lg">Home</p>
+          </Link>
+          <Link to="/">
+            {" "}
+            <p className="font-sans text-lg">About us</p>
+          </Link>
+          <Link to="/">
+            {" "}
+            <p className="font-sans text-lg">Blog</p>
+          </Link>
+          <Link to="/">
+            {" "}
+            <p className="font-sans text-lg">Contact</p>
+          </Link>
+        </div>
+
+        <div className="flex  flex-row items-center  ">
+          {userInfo ? (
+            <div className="mr-2">{userInfo.name}</div>
+          ) : (
+            <Link to="/signin">SignIn</Link>
           )}
-          {menuOpen && (
-            <div className="absolute top-0 left-1/2 z-50 ">
-              <button onClick={() => toggleMenu("close")} className="z-50">
+          {/* the cart image was showing when menuOpen was true, so i had to use conditional rendering to hide it when menuOpen is true */}
+          {!menuOpen && (
+            <div className="relative">
+              <Link to="/cart">
                 <img
-                  className="md:hidden w-[25px] left-2 "
-                  src="/images/Hamburger-closed.svg"
-                  alt="hamburger"
+                  className="cart-img"
+                  src="https://cdn-icons-png.flaticon.com/512/8974/8974464.png"
+                  alt="cart"
                 />
-              </button>
+                {cart.cartItems.length > 0 && (
+                  <div className="absolute top-[-10px] right-[-24px] rounded-full px-2 bg-red-400">
+                    {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
+                  </div>
+                )}
+              </Link>
             </div>
           )}
-
-          <div className="">
-            <Link to="/">
-              <img alt="logo" src="/images/Logo.svg" />
-            </Link>
-          </div>
-          <div className="absolute top-24 md:top-24 left-8  lg:relative lg:top-0">
-            <SearchBar />
-          </div>
-
-          <div
-            className={`${
-              menuOpen
-                ? "translate-x-4  lg:translate-x-0 fixed top-0 pt-8 left-0 w-screen  h-screen  bg-gray-200 bg-opacity-10 backdrop-filter backdrop-blur-lg "
-                : "left-[-150px]"
-            } transform transition duration-300 ease-in-out flex flex-col gap-4  lg:flex-row lg:space-x-8 absolute lg:relative lg:left-0`}
-          >
-            <Link to="/">
-              {" "}
-              <p className="font-sans text-lg">Home</p>
-            </Link>
-            <Link to="/">
-              {" "}
-              <p className="font-sans text-lg">About us</p>
-            </Link>
-            <Link to="/">
-              {" "}
-              <p className="font-sans text-lg">Blog</p>
-            </Link>
-            <Link to="/">
-              {" "}
-              <p className="font-sans text-lg">Contact</p>
-            </Link>
-          </div>
-
-          <div className="flex  flex-row items-center  ">
-            {userInfo ? (
-              <div className="mr-2">{userInfo.name}</div>
-            ) : (
-              <Link to="/signin">SignIn</Link>
-            )}
-            {/* the cart image was showing when menuOpen was true, so i had to use conditional rendering to hide it when menuOpen is true */}
-            {!menuOpen && (
-              <div className="relative">
-                <Link to="/cart">
-                  <img
-                    className="cart-img"
-                    src="https://cdn-icons-png.flaticon.com/512/8974/8974464.png"
-                    alt="cart"
-                  />
-                  {cart.cartItems.length > 0 && (
-                    <div className="absolute top-[-10px] right-[-24px] rounded-full px-2 bg-red-400">
-                      {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
-                    </div>
-                  )}
-                </Link>
-              </div>
-            )}
-          </div>
-        </nav>
-
+        </div>
+      </nav>
     </>
   );
 }
