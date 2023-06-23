@@ -4,8 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -17,11 +15,9 @@ body {
   overflow-x: hidden;
 }
 
-
 .search-wrapper {
   background-color: rgba(0, 0, 0, 0.068);
 }
-
 
 .images {
   max-width: 280px;
@@ -35,187 +31,182 @@ body {
 .img-thumbnail {
   max-height: 40px;
 }
-.card{
+.card {
   padding: 20px;
   box-sizing: border-box;
-  
-    border-image: linear-gradient(90deg, rgba(62, 100, 255, 1) 0%, rgba(94, 223, 255, 1) 100%);
-    border-image-slice: 1;
-    border-width: 1px;
-    border-radius: 20px;
-  
+
+  border-image: linear-gradient(
+    90deg,
+    rgba(62, 100, 255, 1) 0%,
+    rgba(94, 223, 255, 1) 100%
+  );
+  border-image-slice: 1;
+  border-width: 1px;
+  border-radius: 20px;
 }
 
-.btn{
+.btn {
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 8px;
   padding-bottom: 8px;
   border-radius: 5px;
 }
- 
 
-.signin-wrapper{
-  background-color: #393f4a; 
+.signin-wrapper {
+  background-color: #393f4a;
 }
 
-.container-signin{
-  
+.container-signin {
   padding: 60px;
-  box-shadow: 0 15px 25px rgba(0,0, 0, .6);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
-} 
-.container-signin h2{
+}
+.container-signin h2 {
   color: #1da4f2;
   font-size: 50px;
-  font-family: 'Tangerine', cursive;
+  font-family: "Tangerine", cursive;
 }
-.container-signin .user-box{
+.container-signin .user-box {
   position: relative;
 }
-.container-signin .user-box input{
+.container-signin .user-box input {
   padding: 10px 0;
-  font-size: 19px; 
+  font-size: 19px;
   color: #fff;
   margin-bottom: 28px;
-   border: none; 
-  border-bottom: 1px solid #fff; 
+  border: none;
+  border-bottom: 1px solid #fff;
   width: 100%;
-   outline: none; 
+  outline: none;
   background: transparent;
 }
 
-.container-signin .user-box label{
+.container-signin .user-box label {
   position: absolute;
-   top: 0; 
+  top: 0;
   left: 0;
-  padding: 10px 0 ;
+  padding: 10px 0;
   font-size: 16px;
   color: #fff;
   pointer-events: none;
-  transition: .5s;
+  transition: 0.5s;
 }
 
-.container-signin .user-box input:focus~label,
-.container-signin .user-box input:valid~label{
-  top: -20px; 
+.container-signin .user-box input:focus ~ label,
+.container-signin .user-box input:valid ~ label {
+  top: -20px;
   left: 0;
   color: #1da4f2;
   font-size: 1em;
   border-radius: 1em;
-
 }
 
-.container-signin form  .button-wrapper{
- position: relative;
- display: inline-block; 
- padding: 10px 20px;
- overflow: hidden;
- transition: 0.5s;
- margin-top: 40px;
-
-
+.container-signin form .button-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 40px;
 }
 
-.container-signin form  .button-wrapper button{
+.container-signin form .button-wrapper button {
   background-color: transparent;
   color: white;
   border: none;
   text-transform: uppercase;
-  letter-spacing: 4px; 
-
+  letter-spacing: 4px;
 }
 
-.container-signin .button-wrapper:hover{
+.container-signin .button-wrapper:hover {
   background: #1da4f2;
   color: #fff;
   border-radius: 5px;
-   box-shadow: 0 0 5px #1da4f2,
-              0 0 25px #1da4f2,
-               0 0 50px #1da4f2,
-              0 0 100px #1da4f2;  
-
-
-} 
-
-.container-signin .button-wrapper span{
-   position: absolute;
-  display: block;  
+  box-shadow: 0 0 5px #1da4f2, 0 0 25px #1da4f2, 0 0 50px #1da4f2,
+    0 0 100px #1da4f2;
 }
 
+.container-signin .button-wrapper span {
+  position: absolute;
+  display: block;
+}
 
-.container-signin .button-wrapper span:nth-child(1){
+.container-signin .button-wrapper span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
   height: 2px;
   background: linear-gradient(90deg, transparent, #1da4f2);
-  animation: btn-anim1 .5s linear infinite;
+  animation: btn-anim1 0.5s linear infinite;
 }
 
-@keyframes btn-anim1{
-  0%{
-      left: -100%;
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
   }
-  50%,100%{
-      left: 100%;
+  50%,
+  100% {
+    left: 100%;
   }
 }
 
-.container-signin .button-wrapper span:nth-child(2){
+.container-signin .button-wrapper span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(180deg,transparent,#1da4f2);
+  background: linear-gradient(180deg, transparent, #1da4f2);
   animation: btn-anim2 1s linear infinite;
-  animation-delay: .25s;
+  animation-delay: 0.25s;
 }
 
-@keyframes btn-anim2{
-  0%{
-      top: -100%;
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
   }
-  50%,100%{
-      top: 100%;
+  50%,
+  100% {
+    top: 100%;
   }
 }
 
-
-.container-signin .button-wrapper span:nth-child(3){
+.container-signin .button-wrapper span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg, transparent,#03e9f4);
+  background: linear-gradient(270deg, transparent, #03e9f4);
   animation: btn-anim3 1s linear infinite;
-  animation-delay: .5s;
+  animation-delay: 0.5s;
 }
 
-@keyframes btn-anim3{
-  0%{
-      right: -100%;
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
   }
-  50%,100%{
-      right: 100%;
+  50%,
+  100% {
+    right: 100%;
   }
 }
 
-.container-signin .button-wrapper span:nth-child(4){
+.container-signin .button-wrapper span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(360deg,transparent,#1da4f2);
+  background: linear-gradient(360deg, transparent, #1da4f2);
   animation: btn-anim4 1s linear infinite;
-  animation-delay: .75s;
+  animation-delay: 0.75s;
 }
 
-@keyframes btn-anim4{
-  0%{
-  bottom: -100%;
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
   }
-  50%,100%{
-      bottom: 100%;
+  50%,
+  100% {
+    bottom: 100%;
   }
-}  
+}
