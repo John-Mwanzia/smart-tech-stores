@@ -31,7 +31,11 @@ export default function Slider() {
     <>
       {/* Display the current image in a container */}
       <div className=" max-h-[600px] max-w-[600px]  ">
-        <img className="rounded-[50%] max-w-[100%] h-auto" src={images[currentImageIndex]} alt="slider" />
+        <img
+          className="rounded-[50%] max-w-[100%] h-auto"
+          src={images[currentImageIndex]}
+          alt="slider"
+        />
       </div>
     </>
   );
