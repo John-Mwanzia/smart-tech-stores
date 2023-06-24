@@ -11,6 +11,7 @@ import SignUpPage from "./screens/SignUpPage";
 import ShippingPage from "./screens/ShippingPage";
 import MpesaCheckoutScreen from "./screens/mpesaCheckoutScreen";
 import PaypalCheckoutScreen from "./screens/paypalCheckoutScreen";
+import Support from "./screens/Support";
 
 function App(){
   return(
@@ -36,6 +37,7 @@ function App(){
   <Route path="/shipping" element={<ShippingPage/>}/>
   <Route path="/mpesaCheckout" element={<MpesaCheckoutScreen/>}/>
   <Route path="/paypalCheckout" element={<PaypalCheckoutScreen/>}/>
+  <Route path="/Support" element={<Support/>} />
 </Routes>
 
 </main>
