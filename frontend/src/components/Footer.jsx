@@ -58,7 +58,7 @@ export default function Footer() {
               <Link to="/signup">
                 <p className="text-center">Sign up</p>
               </Link>
-              <Link to="/Q & A">
+              <Link to="/QA">
                 <p className="text-center">Q & A</p>
               </Link>
               <Link to="/Chat-support">
