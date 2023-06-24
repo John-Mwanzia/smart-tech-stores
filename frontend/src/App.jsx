@@ -12,6 +12,7 @@ import ShippingPage from "./screens/ShippingPage";
 import MpesaCheckoutScreen from "./screens/mpesaCheckoutScreen";
 import PaypalCheckoutScreen from "./screens/paypalCheckoutScreen";
 import Support from "./screens/Support";
+import QA from "./screens/QA";
 
 function App(){
   return(
