@@ -52,16 +52,16 @@ export default function Footer() {
               help
             </h1>
             <div className="flex flex-col gap-4">
-              <Link to="/">
+              <Link to="/Support">
                 <p className="text-center">Support</p>
               </Link>
               <Link to="/signup">
                 <p className="text-center">Sign up</p>
               </Link>
-              <Link to="/">
+              <Link to="/Q & A">
                 <p className="text-center">Q & A</p>
               </Link>
-              <Link to="/">
+              <Link to="/Chat-support">
                 <p className="text-center">Chat support</p>
               </Link>
             </div>
