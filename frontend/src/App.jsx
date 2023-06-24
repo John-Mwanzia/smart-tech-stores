@@ -38,6 +38,7 @@ function App(){
   <Route path="/mpesaCheckout" element={<MpesaCheckoutScreen/>}/>
   <Route path="/paypalCheckout" element={<PaypalCheckoutScreen/>}/>
   <Route path="/Support" element={<Support/>} />
+  <Route path="/QA" element={<QA/>} />
 </Routes>
 
 </main>
