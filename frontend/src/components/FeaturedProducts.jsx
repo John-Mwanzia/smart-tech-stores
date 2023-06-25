@@ -77,13 +77,13 @@ export default function FeaturedProducts() {
         ) : error ? (
           <div>{error}</div>
         ) : (
-          <div>
-            <div className="flex flex-wrap  gap-8 justify-center mb-24">
+          <div className="">
+            <div className="flex flex-wrap  gap-8 justify-center mb-24 ">
               {products.slice(0, 4).map((product) => {
                 return (
                   <div
                     key={product.Gadget_Name}
-                    className="flex-1 max-w-[322px] max-h-[332px]  "
+                    className="w-full max-w-[322px] max-h-[332px]  "
                   >
                     <div className="card ">
                       <Link to={`/featuredProducts/slug/${product.slug}`}>
@@ -116,9 +116,10 @@ export default function FeaturedProducts() {
             <div className="flex flex-wrap gap-8 justify-center mt-6">
               {products.slice(4, 8).map((product) => {
                 return (
+                  <>
                   <div
                     key={product.Gadget_Name}
-                    className="flex-1 max-w-[322px] max-h-[332px]"
+                    className="w-full max-w-[322px] max-h-[332px]"
                   >
                     <div className="card">
                       <Link to={`/featuredProducts/slug/${product.slug}`}>
@@ -145,6 +146,7 @@ export default function FeaturedProducts() {
                       </div>
                     </div>
                   </div>
+                  </>
                 );
               })}
             </div>
