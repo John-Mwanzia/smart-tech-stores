@@ -25,7 +25,7 @@ function Header() {
         {!menuOpen && (
           <button onClick={() => toggleMenu("open")}>
             <img
-              className="md:hidden w-[25px] left-2"
+              className="lg:hidden w-[25px] left-2"
               src="/images/Hamburger.svg"
               alt="hamburger"
             />
@@ -35,7 +35,7 @@ function Header() {
           <div className="absolute top-0 left-1/2 z-50 ">
             <button onClick={() => toggleMenu("close")} className="z-50">
               <img
-                className="md:hidden w-[25px] left-2 "
+                className="lg:hidden w-[25px] left-2 "
                 src="/images/Hamburger-closed.svg"
                 alt="hamburger"
               />
@@ -85,7 +85,7 @@ function Header() {
           )}
           {/* the cart image was showing when menuOpen was true, so i had to use conditional rendering to hide it when menuOpen is true */}
           {!menuOpen && (
-            <div className="relative">
+            <div className="relative mr-4">
               <Link to="/cart">
                 <img
                   className="cart-img"
