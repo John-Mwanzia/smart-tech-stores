@@ -77,7 +77,7 @@ export default function Homepage() {
             {products.map((product) => {
               return (
                 <div key={product.Comp_Name}>
-                  <div>
+                  <div className=" w-[322px] max-h-[332px]">
                     <Product product={product} />
                   </div>
                 </div>
