@@ -23,7 +23,7 @@ export default function HeroSection() {
           </select>
         </div>
 
-        <div className="flex justify-center gap-24  flex-col  lg:flex-row">
+        <div className="flex justify-center gap-24 md:gap-8  flex-col  md:flex-row">
           <div>
             <div>
               <h1 className="font-sans font-bold text-3xl px-4  lg:px-0 lg:text-5xl ">
@@ -31,7 +31,7 @@ export default function HeroSection() {
                 Accessories
               </h1>
             </div>
-            <div className="mt-16 font-sans px-3 lg:px-0">
+            <div className="mt-16 md:mt-8 font-sans px-3 lg:px-0">
               <p>
                 Discover a wide range of computer accessories to elevate your
                 tech experience.
