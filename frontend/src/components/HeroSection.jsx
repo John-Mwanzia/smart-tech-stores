@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <div>
       <div className="bg-customGreen pb-4 pt-40">
-        <div className=" absolute text-center left-8 top-36 md:left-[250px] lg:left-[730px] lg:top-28">
+        <div className=" absolute text-center left-8 top-36 md:left-[250px] lg:left-[730px] lg:top-28 xl:left-[470px] xl:top-36">
           <label htmlFor="category-select">Select a category:</label>
           <select
             id="category-select"
