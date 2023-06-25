@@ -78,7 +78,7 @@ export default function FeaturedProducts() {
           <div>{error}</div>
         ) : (
           <div className="">
-            <div className="flex flex-wrap  gap-8 justify-center mb-24 ">
+            <div className="flex flex-wrap  gap-y-24 gap-x-8 justify-center mb-24 ">
               {products.slice(0, 4).map((product) => {
                 return (
                   <div
@@ -113,7 +113,7 @@ export default function FeaturedProducts() {
                 );
               })}
             </div>
-            <div className="flex flex-wrap gap-8 justify-center mt-6">
+            <div className="flex flex-wrap gap-y-24 gap-x-8 justify-center mt-6">
               {products.slice(4, 8).map((product) => {
                 return (
                   <>
