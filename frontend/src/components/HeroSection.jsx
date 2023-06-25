@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <div>
       <div className="bg-customGreen pb-4 pt-40">
-        <div className=" absolute text-center left-8 top-36 lg:left-[730px] lg:top-28">
+        <div className=" absolute text-center left-8 top-36 md:left-[250px] lg:left-[730px] lg:top-28">
           <label htmlFor="category-select">Select a category:</label>
           <select
             id="category-select"
@@ -35,10 +35,11 @@ export default function HeroSection() {
               <p>
                 Discover a wide range of computer accessories to elevate your
                 tech experience.
-                <br /> From keyboards and mice to monitors and headsets, our
+                {/* <br /> From keyboards and mice to monitors and headsets, our
                 e-commerce platform <br />
                 has everything you need to take your computer setup to the next
-                level. With our <br /> user-friendly interface and seamless
+                level.  */}
+                With our <br /> user-friendly interface and seamless
                 checkout process, shopping for tech has <br />
                 never been easier.
               </p>
