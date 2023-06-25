@@ -85,7 +85,7 @@ export default function FeaturedProducts() {
                     key={product.Gadget_Name}
                     className="w-full max-w-[322px] max-h-[332px]  "
                   >
-                    <div className="card ">
+                    <div className="card shadow-lg bg-white ">
                       <Link to={`/featuredProducts/slug/${product.slug}`}>
                         <img
                           src={product.Img_Url}
@@ -121,7 +121,7 @@ export default function FeaturedProducts() {
                     key={product.Gadget_Name}
                     className="w-full max-w-[322px] max-h-[332px]"
                   >
-                    <div className="card">
+                    <div className="card shadow-lg  bg-white">
                       <Link to={`/featuredProducts/slug/${product.slug}`}>
                         <img
                           src={product.Img_Url}

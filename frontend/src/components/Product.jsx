@@ -25,7 +25,7 @@ export default function Product(props) {
 
   return (
     <div>
-      <div className="card">
+      <div className="card shadow-lg">
         <div>
           <Link to={`/products/slug/${product.slug}`}>
             <img

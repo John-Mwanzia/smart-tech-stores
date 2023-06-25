@@ -57,7 +57,7 @@ export default function Homepage() {
       <Header />
       <HeroSection />
 
-      <div className="mt-8">
+      <div className="mt-8  bg-zinc-100/50">
         <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[273px] font-semibold mb-4">
           Laptops
         </h1>
@@ -73,7 +73,7 @@ export default function Homepage() {
         ) : error ? (
           <div>{error}</div>
         ) : (
-          <div className="flex justify-center gap-8 flex-wrap mb-16">
+          <div className="flex justify-center gap-8 flex-wrap mb-16  bg-zinc-100/50">
             {products.map((product) => {
               return (
                 <div key={product.Comp_Name}>
@@ -87,7 +87,7 @@ export default function Homepage() {
         )}
       </div>
 
-      <div className="mt-8 mb-8 ">
+      <div className="mt-8 mb-8   bg-zinc-100/50">
         <FeaturedProducts />
       </div>
       {/* Features section */}
