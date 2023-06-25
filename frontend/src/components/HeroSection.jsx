@@ -23,7 +23,7 @@ export default function HeroSection() {
           </select>
         </div>
 
-        <div className="flex justify-center gap-24 md:gap-8 lg:gap-24 flex-col md:flex-row">
+        <div className="flex justify-center gap-24 md:gap-8 lg:gap-24 flex-col md:flex-row xl:px-12">
           <div>
             <div>
               <h1 className="font-sans font-bold text-3xl px-4  lg:px-0 lg:text-5xl ">
