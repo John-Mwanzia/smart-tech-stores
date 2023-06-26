@@ -14,43 +14,35 @@ import PaypalCheckoutScreen from "./screens/paypalCheckoutScreen";
 import Support from "./screens/Support";
 import QA from "./screens/QA";
 
-function App(){
-  return(
+function App() {
+  return (
     <BrowserRouter>
-<div>
+      <div>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+        </Routes>
 
-<Routes>
-<Route path="/" element={<Homepage />}/>
-</Routes>
-
-
-<main>
-
-
-<Routes>
-  
-  <Route path="/products/slug/:slug" element={<ProductPage />} />
-  <Route path="/featuredProducts/slug/:slug" element={<FeaturedProductPage />} />
-  <Route path="/cart" element={<CartScreen/>}/>
-  <Route path="/search" element={<SearchPage />}/>
-  <Route path="/signin" element={<SignInPage />}/>
-  <Route path="/signup" element={<SignUpPage />}/>
-  <Route path="/shipping" element={<ShippingPage/>}/>
-  <Route path="/mpesaCheckout" element={<MpesaCheckoutScreen/>}/>
-  <Route path="/paypalCheckout" element={<PaypalCheckoutScreen/>}/>
-  <Route path="/Support" element={<Support/>} />
-  <Route path="/QA" element={<QA/>} />
-</Routes>
-
-</main>
-
-
-
-</div>
-    
+        <main>
+          <Routes>
+            <Route path="/products/slug/:slug" element={<ProductPage />} />
+            <Route
+              path="/featuredProducts/slug/:slug"
+              element={<FeaturedProductPage />}
+            />
+            <Route path="/cart" element={<CartScreen />} />
+            <Route path="/search" element={<SearchPage />} />
+            <Route path="/signin" element={<SignInPage />} />
+            <Route path="/signup" element={<SignUpPage />} />
+            <Route path="/shipping" element={<ShippingPage />} />
+            <Route path="/mpesaCheckout" element={<MpesaCheckoutScreen />} />
+            <Route path="/paypalCheckout" element={<PaypalCheckoutScreen />} />
+            <Route path="/Support" element={<Support />} />
+            <Route path="/QA" element={<QA />} />
+          </Routes>
+        </main>
+      </div>
     </BrowserRouter>
-  )
-  
+  );
 }
 
 export default App;
