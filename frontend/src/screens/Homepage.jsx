@@ -46,7 +46,7 @@ export default function Homepage() {
   }, []);
 
   return (
-    <div>
+    <div className=" bg-zinc-100/50">
       <Helmet>
         <title>Smart Tech Stores</title>
         <meta
