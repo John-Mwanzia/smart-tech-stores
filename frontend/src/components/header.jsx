@@ -7,7 +7,6 @@ import SearchBar from "./SearchBar";
 function Header() {
   const { state } = useContext(Store);
   const { cart, userInfo } = state;
-  const { cartItems } = cart;
 
   const [menuOpen, setMenuOpen] = useState(false);
 
