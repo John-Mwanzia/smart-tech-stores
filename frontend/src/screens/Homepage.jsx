@@ -73,7 +73,7 @@ export default function Homepage() {
         ) : error ? (
           <div>{error}</div>
         ) : (
-          <div className="flex justify-center gap-8 flex-wrap mb-16 ">
+          <div className="flex justify-center gap-x-8 gap-y-24 flex-wrap mb-16 ">
             {products.map((product) => {
               return (
                 <div key={product.Comp_Name}>
