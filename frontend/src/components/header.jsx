@@ -54,7 +54,7 @@ function Header() {
         <div
           className={`${
             menuOpen
-              ? " fixed top-0 pt-8 left-0  w-full  h-screen  bg-gray-200 bg-opacity-10 backdrop-filter backdrop-blur-lg "
+              ? "fixed top-0 pt-8 left-0  w-full  h-screen  text-center bg-gray-200 bg-opacity-10 backdrop-filter backdrop-blur-lg "
               : "left-[-150px]"
           } transform transition duration-300 ease-in-out flex flex-col gap-4  lg:flex-row lg:space-x-8 absolute lg:relative lg:left-0`}
         >
