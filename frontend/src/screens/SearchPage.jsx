@@ -236,10 +236,10 @@ export default function SearchPage() {
                   className="images"
                 />
               </Link>
-              <div className="text-center pt-4">
+              <div className="text-center pt-4 pb-2">
                 <div>
                   <Link to={`/products/slug/${product.slug}`}>
-                    {product.Comp_Name}
+                    {product.Comp_Name || product.Gadget_Name}
                   </Link>
                 </div>
                 <div> Price: KSh.{product.price}</div>
