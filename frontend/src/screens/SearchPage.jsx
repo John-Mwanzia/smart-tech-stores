@@ -225,15 +225,16 @@ export default function SearchPage() {
           )}
         </div>
 
-        <div className="flex justify-center px-4 gap-y-24 gap-x-8  flex-wrap bg-zinc-100/10">
+        <div className="flex justify-center px-4 gap-y-12 gap-x-8  flex-wrap bg-zinc-100/10 pb-8">
           {products.length === 0 && <h2> No Product Found </h2>}
+          <div className="flex flex-wrap gap-y-24 gap-x-8 justify-center mt-6">
           {products.map((product) => (
-            <div className="card bg-white shadow-lg w-[322px] max-h-[332px]">
+            <div className="card bg-white shadow-lg w-[322px]">
               <Link to={`/products/slug/${product.slug}`}>
                 <img
                   src={product.Img_Url}
                   alt={product.Comp_Name}
-                  className="images"
+                  className=" images max-h-[210px] mx-auto"
                 />
               </Link>
               <div className="text-center pt-4 pb-2">
@@ -253,6 +254,7 @@ export default function SearchPage() {
               </div>
             </div>
           ))}
+          </div>
         </div>
       </div>
     </>
