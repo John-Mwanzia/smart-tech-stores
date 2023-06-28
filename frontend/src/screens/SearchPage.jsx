@@ -228,7 +228,7 @@ export default function SearchPage() {
         <div className="flex justify-center px-4 gap-6 flex-wrap bg-zinc-100/10">
           {products.length === 0 && <h2> No Product Found </h2>}
           {products.map((product) => (
-            <div className="card bg-white">
+            <div className="card bg-white shadow-lg">
               <Link to={`/products/slug/${product.slug}`}>
                 <img
                   src={product.Img_Url}
