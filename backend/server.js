@@ -22,7 +22,9 @@ app.use(cors())
 mongoose.connect(process.env.MONGODB_URL, {useNewUrlParser: true, useUnifiedTopology: true}).then(()=>{
   console.log("connected to db");
 }).catch(err=> console.log(err));
-
+app.get("/", (req, res) => {
+    res.send("Hello this is the server for smart-tech");
+    });
 app.use("/api/seed", seedRouter)
 app.use("/api/products", productRouter)
 app.use("/api/featuredProducts", featuredProductsRouter)
