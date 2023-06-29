@@ -12,7 +12,7 @@ import shippingRoute from "./routes/shippingRoute.js";
 
 dotenv.config()
 const app = express();
-const port = process.env.PORT || 3000
+const port = process.env.PORT
 
 //convert form data in the post request to json object
 app.use(express.json());
