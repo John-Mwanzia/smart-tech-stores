@@ -84,13 +84,13 @@ function Header() {
           )}
           {/* the cart image was showing when menuOpen was true, so i had to use conditional rendering to hide it when menuOpen is true */}
           {!menuOpen && (
-            <div className="relative mr-4 ">
+            <div className="relative mr-4  ">
               <Link to="/cart">
                 <img
                  
                   src="https://cdn-icons-png.flaticon.com/512/8974/8974464.png"
                   alt="cart"
-                  className="cart-img  sm:w-[25px]"
+                  className="max-w-[25px] lg:max-w-[32px] "
                 />
                 {cart.cartItems.length > 0 && (
                   <div className="absolute top-[-10px] right-[-24px] rounded-full px-2 bg-red-400">
