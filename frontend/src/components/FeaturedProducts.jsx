@@ -34,7 +34,7 @@ export default function FeaturedProducts() {
       dispatch({ type: "FETCH-REQUEST" });
       try {
         const results = await axios.get(
-          "https://smart-tech-server.onrender.com/api/featuredProducts"
+          "https://smart-server.vercel.app/api/featuredProducts"
         );
         dispatch({ type: "FETCH-SUCCESS", payload: results.data });
       } catch (error) {
@@ -52,7 +52,7 @@ export default function FeaturedProducts() {
     });
     const quantity = existItem ? existItem.quantity + 1 : 1;
     const { data } = await axios.get(
-      `https://smart-tech-server.onrender.com/api/featuredProducts/${item._id}`
+      `https://smart-server.vercel.app/api/featuredProducts/${item._id}`
     );
     if (data.countInStock < quantity) {
       window.alert(" Sorry, the product is out of stock");
