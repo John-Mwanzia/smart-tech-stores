@@ -14,7 +14,7 @@ export default function CartScreen() {
 
   const updateCartHandler = async (item, quantity) => {
     const { data } = await axios.get(
-      `https://smart-tech-server.onrender.com/api/products/${item._id}`
+      `https://smart-server.vercel.app/api/products/${item._id}`
     );
     if (data.countInStock < quantity) {
       window.alert(" Sorry, the product is out of stock");
@@ -25,7 +25,7 @@ export default function CartScreen() {
 
   const addCartHandler = async (item, quantity) => {
     const { data } = await axios.get(
-      `https://smart-tech-server.onrender.com/api/featuredProducts/${item._id}`
+      `https://smart-server.vercel.app/api/featuredProducts/${item._id}`
     );
     if (data.countInStock < quantity) {
       window.alert(" Sorry, the product is out of stock");
