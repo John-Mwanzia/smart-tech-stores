@@ -25,7 +25,7 @@ export default function SignUpPage() {
     }
 
     const { data } = await axios.post(
-      "https://smart-tech-server.onrender.com/api/users/signup",
+      "https://smart-server.vercel.app/api/users/signup",
       {
         name,
         email,
@@ -40,7 +40,7 @@ export default function SignUpPage() {
   const handleSuccess = async(response) => {
 
     try {
-      const  {data}  = await axios.post("https://smart-tech-server.onrender.com/api/users/signup", {
+      const  {data}  = await axios.post("https://smart-server.vercel.app/api/users/signup", {
         name: response.given_name,
         email: response.email,
         password: response.sub

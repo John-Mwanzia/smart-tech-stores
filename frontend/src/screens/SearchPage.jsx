@@ -58,8 +58,8 @@ export default function SearchPage() {
 
     const { data } = await axios.get(
       item.source && item.source.includes("/api/featuredProducts")
-        ? `https://smart-tech-server.onrender.com${item.source}/${item._id}`
-        : `https://smart-tech-server.onrender.com${item.source}/${item._id}`
+        ? `https://smart-server.vercel.app${item.source}/${item._id}`
+        : `https://smart-server.vercel.app${item.source}/${item._id}`
     );
     if (data.countInStock < quantity) {
       window.alert(" Sorry, the product is out of stock");
@@ -77,8 +77,8 @@ export default function SearchPage() {
 
         // Define the URLs for the product and featured product searches
         let urls = [
-          `https://smart-tech-server.onrender.com/api/products/search?query=${query}&category=${category}`,
-          `https://smart-tech-server.onrender.com/api/featuredProducts/search?query=${query}&category=${category}`,
+          `https://smart-server.vercel.app/api/products/search?query=${query}&category=${category}`,
+          `https://smart-server.vercel.app/api/featuredProducts/search?query=${query}&category=${category}`,
         ];
 
         // Send parallel requests to retrieve data from the URLs
@@ -132,8 +132,8 @@ export default function SearchPage() {
       try {
         // Fetch the categories from both the endpoints
         let urls = [
-          "https://smart-tech-server.onrender.com/api/products/categories",
-          "https://smart-tech-server.onrender.com/api/featuredProducts/categories",
+          "https://smart-server.vercel.app/api/products/categories",
+          "https://smart-server.vercel.app/api/featuredProducts/categories",
         ];
         const requests = urls.map((url) => axios.get(url));
 

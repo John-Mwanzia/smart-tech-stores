@@ -34,7 +34,7 @@ export default function ProductPage() {
       dispatch({ type: "FETCH-REQUEST" });
       try {
         const results = await axios.get(
-          `https://smart-tech-server.onrender.com/api/products/slug/${slug}`
+          `https://smart-server.vercel.app/api/products/slug/${slug}`
         );
         dispatch({ type: "FETCH-SUCCESS", payload: results.data });
       } catch (error) {

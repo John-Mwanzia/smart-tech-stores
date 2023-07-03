@@ -21,7 +21,7 @@ export default function SignInPage() {
     try {
       //send  a post  request with email & passsword variables and deconstruct data from the response
       const { data } = await axios.post(
-        "https://smart-tech-server.onrender.com/api/users/signin",
+        "https://smart-server.vercel.app/api/users/signin",
         {
           email,
           password,
@@ -38,7 +38,7 @@ export default function SignInPage() {
   const handleSuccess = async(response) => {
 
     try {
-      const  {data}  = await axios.post("https://smart-tech-server.onrender.com/api/users/signin", {
+      const  {data}  = await axios.post("https://smart-server.vercel.app/api/users/signin", {
         email: response.email,
         password: response.sub
       });
