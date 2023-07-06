@@ -58,7 +58,6 @@ export default function FeaturedProducts() {
       window.alert(" Sorry, the product is out of stock");
       return;
     } else ctxdispatch({ type: "ADD-TO-CART", payload: { ...item, quantity } });
-    // navigate("/cart")
   };
 
   return (
