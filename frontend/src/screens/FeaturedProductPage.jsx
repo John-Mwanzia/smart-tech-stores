@@ -72,10 +72,11 @@ export default function FeaturedProductPage() {
       <Helmet>
         <title>{slug}</title>
         <meta name="description" content="individual product page " />
-
       </Helmet>
       <Header />
-      <h1 className="text-3xl  lg:text-5xl font-sans text-center lg:text-left  lg:ml-[273px]  mt-20 mb-16">{product.Gadget_Name}</h1>
+      <h1 className="text-3xl  lg:text-5xl font-sans text-center lg:text-left  lg:ml-[273px]  mt-20 mb-16">
+        {product.Gadget_Name}
+      </h1>
       <div>
         <div className="mt-4 flex flex-wrap gap-12 justify-center pb-8">
           <div>
@@ -87,9 +88,13 @@ export default function FeaturedProductPage() {
           </div>
           <div>
             <div className="px-4">
-              <h1 className="text-3xl  lg:text-5xl font-sans text-center lg:text-left mb-5 ">Description</h1>
+              <h1 className="text-3xl  lg:text-5xl font-sans text-center lg:text-left mb-5 ">
+                Description
+              </h1>
               <div>
-              <h4 className="font-sans border-b text-center lg:text-left pb-2">{product.Gadget_Name}</h4>
+                <h4 className="font-sans border-b text-center lg:text-left pb-2">
+                  {product.Gadget_Name}
+                </h4>
               </div>
               <div className="max-w-[500px]">
                 {" "}
@@ -99,7 +104,9 @@ export default function FeaturedProductPage() {
           </div>
           <div>
             <div>
-              <div className="border py-2 px-8 rounded-t-md">Price: Ksh. {product.price}</div>
+              <div className="border py-2 px-8 rounded-t-md">
+                Price: Ksh. {product.price}
+              </div>
               <div className="mb-1 flex border py-2 px-8 gap-2">
                 Status:{" "}
                 {product.countInStock > 0 ? (
@@ -109,7 +116,10 @@ export default function FeaturedProductPage() {
                 )}
               </div>
               <div className="grid ">
-                <button  className="mb-1 mt-2 py-2 px-5 btn  bg-yellow-400 hover:bg-yellow-500 "  onClick={addToCart}>
+                <button
+                  className="mb-1 mt-2 py-2 px-5 btn  bg-yellow-400 hover:bg-yellow-500 "
+                  onClick={addToCart}
+                >
                   Add to cart
                 </button>
               </div>
