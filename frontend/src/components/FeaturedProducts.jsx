@@ -116,35 +116,35 @@ export default function FeaturedProducts() {
               {products.slice(4, 8).map((product) => {
                 return (
                   <>
-                  <div
-                    key={product.Gadget_Name}
-                    className="w-full max-w-[322px] max-h-[332px]"
-                  >
-                    <div className="card shadow-lg  bg-white">
-                      <Link to={`/featuredProducts/slug/${product.slug}`}>
-                        <img
-                          src={product.Img_Url}
-                          alt={product.Gadget_Name}
-                          className="images max-h-[210px] mx-auto"
-                        />
-                      </Link>
-                      <div className="text-center pt-8">
-                        <div>
-                          <Link to={`/featuredProducts/slug/${product.slug}`}>
-                            {product.Gadget_Name}
-                          </Link>
-                        </div>
-                        <div> Price: KSh.{product.price}</div>
+                    <div
+                      key={product.Gadget_Name}
+                      className="w-full max-w-[322px] max-h-[332px]"
+                    >
+                      <div className="card shadow-lg  bg-white">
+                        <Link to={`/featuredProducts/slug/${product.slug}`}>
+                          <img
+                            src={product.Img_Url}
+                            alt={product.Gadget_Name}
+                            className="images max-h-[210px] mx-auto"
+                          />
+                        </Link>
+                        <div className="text-center pt-8">
+                          <div>
+                            <Link to={`/featuredProducts/slug/${product.slug}`}>
+                              {product.Gadget_Name}
+                            </Link>
+                          </div>
+                          <div> Price: KSh.{product.price}</div>
 
-                        <button
-                          onClick={() => updateCart(product)}
-                          className="mb-1 mt-2 btn bg-yellow-400 hover:bg-yellow-500"
-                        >
-                          Add to cart
-                        </button>
+                          <button
+                            onClick={() => updateCart(product)}
+                            className="mb-1 mt-2 btn bg-yellow-400 hover:bg-yellow-500"
+                          >
+                            Add to cart
+                          </button>
+                        </div>
                       </div>
                     </div>
-                  </div>
                   </>
                 );
               })}
