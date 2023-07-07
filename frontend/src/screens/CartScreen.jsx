@@ -46,16 +46,20 @@ export default function CartScreen() {
         <meta name="description" content="Shopping cart" />
       </Helmet>
       <div>
-        <h1 className="mt-20 lg:mt-4 text-4xl text-center lg:text-left lg:pl-96">Shopping List</h1>
+        <h1 className="mt-20 lg:mt-4 text-4xl text-center lg:text-left lg:pl-96">
+          Shopping List
+        </h1>
 
         <div className="flex justify-center gap-16 flex-wrap mt-8">
           <div>
             {cartItems.length === 0 ? (
-              <Link to="/" className="underline text-blue-500">No items here, Go to shopping</Link>
+              <Link to="/" className="underline text-blue-500">
+                No items here, Go to shopping
+              </Link>
             ) : (
               <div className="flex flex-col border p-2 rounded-xl">
                 {cartItems.map((item) => (
-                  <div key={item._id} >
+                  <div key={item._id}>
                     <div className="flex gap-2 lg:gap-28 justify-between items-center border-b pb-4  ">
                       <div className="flex flex-1 flex-wrap items-center gap-4">
                         <img
@@ -64,7 +68,10 @@ export default function CartScreen() {
                           className=" rounded  img-thumbnail"
                         ></img>{" "}
                         {"  "}
-                        <Link to={`/product/${item.slug}`} className="text-blue-600 underline">
+                        <Link
+                          to={`/product/${item.slug}`}
+                          className="text-blue-600 underline"
+                        >
                           {item.Comp_Name || item.Gadget_Name}
                         </Link>
                       </div>
@@ -97,9 +104,7 @@ export default function CartScreen() {
                       </div>
                       <div className="flex-1">Ksh.{item.price}</div>
                       <div className="lg:flex-1">
-                        <button
-                          onClick={() => removeItemHandler(item)}
-                        >
+                        <button onClick={() => removeItemHandler(item)}>
                           {" "}
                           <i className="fas fa-trash" />
                         </button>
@@ -120,7 +125,11 @@ export default function CartScreen() {
                 type="button"
                 disabled={cartItems.length === 0}
                 className=" bg-blue-500 text-white px-8 mt-4 py-2 w-full  rounded-xl"
-                onClick={() => userInfo?navigate("/shipping"):navigate("/signin?redirect=/shipping") }
+                onClick={() =>
+                  userInfo
+                    ? navigate("/shipping")
+                    : navigate("/signin?redirect=/shipping")
+                }
               >
                 proceed to checkout
               </button>
