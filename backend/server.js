@@ -29,6 +29,7 @@ app.use("/api/users", userRouter)
 app.use('/api/lipaNaMpesa',lipaNaMpesaRoute)
 app.use('/api/shipping',shippingRoute)
 
+//error handling middleware
 app.use((err,req,res,next)=>{   
     res.status(500).send({message: err.message})
 })
