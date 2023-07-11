@@ -16,3 +16,25 @@ export const generateToken = (user)=>{
     })
 }
 
+export const protect = (req,res,next)=>{
+    const bearer = req.headers.authorization;
+
+    if(!bearer || !bearer.startsWith("Bearer")){
+        res.status(401).json({message: "No token, authorization denied"})
+    }
+
+    const [,token] = bearer.split(" ");
+
+    if(!token){
+        res.status(401).json({message: "No token, authorization denied"})
+    }
+
+    try {
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        req.user = decoded;
+        next();
+    }
+    catch (error) {
+        res.status(401).json({message: "Token is not valid"})
+    }
+}
