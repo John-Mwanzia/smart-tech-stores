@@ -8,6 +8,7 @@ import featuredProductsRouter from "./routes/featuredProductsRoutes.js";
 import userRouter from "./routes/userRoutes.js";
 import lipaNaMpesaRoute from "./routes/lipanampesa.js";
 import shippingRoute from "./routes/shippingRoute.js";
+import { protect } from "./modules/auth.js";
 
 
 dotenv.config()
@@ -27,7 +28,7 @@ app.use("/api/products", productRouter)
 app.use("/api/featuredProducts", featuredProductsRouter)
 app.use("/api/users", userRouter)
 app.use('/api/lipaNaMpesa',lipaNaMpesaRoute)
-app.use('/api/shipping',shippingRoute)
+app.use('/api/shipping', protect,shippingRoute)
 
 //error handling middleware
 app.use((err,req,res,next)=>{   
