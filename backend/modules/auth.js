@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken"
 
- const generateToken = (user)=>{
+export const generateToken = (user)=>{
     return jwt.sign(
         {
         _id: user._id,
@@ -15,5 +15,4 @@ import jwt from "jsonwebtoken"
         expiresIn: "20d"
     })
 }
-export default generateToken;
 
