@@ -6,6 +6,7 @@ import generateToken from "../utils.js"
 
 const userRouter = express.Router();
 
+//express-async-handler =>middleware for handling exceptions inside of async express routes and passing them to the express error handlers.
 userRouter.post('/signin', expressAsyncHandler( async(req,res)=>{  //express-async-handler =>middleware for handling exceptions inside of async express routes and passing them to your express error handlers.
     const user = await User.findOne({email: req.body.email})
     if(user){
