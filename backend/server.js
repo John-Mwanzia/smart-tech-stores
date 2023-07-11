@@ -9,6 +9,7 @@ import userRouter from "./routes/userRoutes.js";
 import lipaNaMpesaRoute from "./routes/lipanampesa.js";
 import shippingRoute from "./routes/shippingRoute.js";
 import { protect } from "./modules/auth.js";
+import morgan from "morgan";
 
 
 dotenv.config()
@@ -19,6 +20,7 @@ const port = process.env.PORT
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 app.use(cors())
+app.use(morgan('dev'));// logs every request to the console
 
 mongoose.connect(process.env.MONGODB_URL, {useNewUrlParser: true, useUnifiedTopology: true}).then(()=>{
   console.log("connected to db");
