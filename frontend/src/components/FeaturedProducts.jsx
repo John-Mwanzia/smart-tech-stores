@@ -63,7 +63,7 @@ export default function FeaturedProducts() {
   return (
     <div>
       <div>
-        <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[273px] font-semibold mb-12">
+        <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[20%] xl:ml-[10%] 2xl:ml-[12%] font-semibold mb-12">
           Featured products
         </h1>
 
