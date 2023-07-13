@@ -23,7 +23,8 @@ theme: {
       },
   
       fontFamily: {
-        'sans': ['Outfit', 'sans-serif'],
+         sans: ['Outfit', 'sans-serif'],
+         roboto: ['Roboto', 'sans-serif'],
       },
    },
     
