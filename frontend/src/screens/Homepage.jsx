@@ -58,7 +58,7 @@ export default function Homepage() {
       <HeroSection />
 
       <div className="mt-8">
-        <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[273px] font-semibold mb-4">
+        <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[20%] xl:ml-[10%] 2xl:ml-[12%] font-semibold mb-12">
           Laptops
         </h1>
 
