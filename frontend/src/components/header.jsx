@@ -60,19 +60,19 @@ function Header() {
         >
           <Link to="/">
             {" "}
-            <p className="font-sans text-lg">Home</p>
+            <p className=" font-roboto font-normal">Home</p>
           </Link>
           <Link to="/">
             {" "}
-            <p className="font-sans text-lg">About us</p>
+            <p className=" font-roboto font-normal">About us</p>
           </Link>
           <Link to="/">
             {" "}
-            <p className="font-sans text-lg">Blog</p>
+            <p className=" font-roboto font-normal">Blog</p>
           </Link>
           <Link to="/">
             {" "}
-            <p className="font-sans text-lg">Contact</p>
+            <p className=" font-roboto font-normal">Contact</p>
           </Link>
         </div>
 
