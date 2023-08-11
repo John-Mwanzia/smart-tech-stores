@@ -1,23 +1,21 @@
-import bcrypt from "bcryptjs"
+import bcrypt from "bcryptjs";
 const data = {
-
-  users:[
+  users: [
     {
       name: "John",
       email: "johnmwanzia277@gmail.com",
       password: bcrypt.hashSync("987654321"),
-      isAdmin: true
+      isAdmin: true,
     },
     {
       name: "User1",
       email: "user@gmail.com",
       password: bcrypt.hashSync("12345"),
-      isAdmin: false
-    }
+      isAdmin: false,
+    },
   ],
   products: [
     {
-  
       Brand: "Hp",
       Comp_Name: "hp elitebook 840 g4 ",
       slug: "hp-elitebook-840-g4",
@@ -31,7 +29,6 @@ const data = {
     },
 
     {
-    
       Brand: "Hp",
       Comp_Name: "Hp Elitebook 840 G3",
       slug: "Hp-Elitebook-840-G3",
@@ -72,7 +69,6 @@ const data = {
   ],
   featuredProducts: [
     {
-  
       Gadget_Name: " samsung-a23 ",
       slug: "samsung-a23",
       category: "phones",
@@ -82,7 +78,6 @@ const data = {
       countInStock: 4,
       Specs:
         " 6.5-inch HD+ Infinity-V display, 1080 x 2408 pixels, 20:9 aspect ratio, 90Hz refresh rate, 270 PPI Android 12 	64GB 4GB RAM,",
-        
     },
 
     {
@@ -105,8 +100,7 @@ const data = {
         "https://t4.ftcdn.net/jpg/05/35/49/97/240_F_535499727_fLDl5BxuoURnqRVLJ9jc46rBMws9lgMs.jpg",
       price: 1500,
       countInStock: 4,
-      Specs:
-      "Sennheiser Pro Audio Model	HD 280 Pro white	Wireless"
+      Specs: "Sennheiser Pro Audio Model	HD 280 Pro white	Wireless",
     },
 
     {
@@ -117,8 +111,7 @@ const data = {
         "https://3.imimg.com/data3/WG/AR/MY-22059447/19-5v-4-62a-adapter-500x500.jpg",
       price: 2500,
       countInStock: 4,
-      Specs:
-      "HP 19.5V 4.62A 90W Laptop Charger AC/DC Adapter"
+      Specs: "HP 19.5V 4.62A 90W Laptop Charger AC/DC Adapter",
     },
     {
       Gadget_Name: "iphone 14",
@@ -129,7 +122,7 @@ const data = {
       price: 95000,
       countInStock: 4,
       Specs:
-      " iPhone 14 Pro Max 256GB 6GB RAM 6.7 inches 5G 20MP Camera 4K Video 5000mAh Battery "
+        " iPhone 14 Pro Max 256GB 6GB RAM 6.7 inches 5G 20MP Camera 4K Video 5000mAh Battery ",
     },
     {
       Gadget_Name: "wireless mouse",
@@ -140,7 +133,7 @@ const data = {
       price: 95000,
       countInStock: 4,
       Specs:
-      "Wireless Mouse for Laptop, Inphic 2.4G Rechargeable Silent Computer Mouse,1600 DPI Ultra Thin Optical Portable USB Mini Mouse, Cordless Mice for Laptop,PC,MacBook,Mac, white"
+        "Wireless Mouse for Laptop, Inphic 2.4G Rechargeable Silent Computer Mouse,1600 DPI Ultra Thin Optical Portable USB Mini Mouse, Cordless Mice for Laptop,PC,MacBook,Mac, white",
     },
     {
       Gadget_Name: "webcam",
@@ -151,7 +144,7 @@ const data = {
       price: 95000,
       countInStock: 4,
       Specs:
-      "Webcam with Microphone, 1080P HD Streaming USB Computer Webcam [Plug and Play] [30fps] "
+        "Webcam with Microphone, 1080P HD Streaming USB Computer Webcam [Plug and Play] [30fps] ",
     },
     {
       Gadget_Name: "wireless keyboard",
@@ -161,8 +154,7 @@ const data = {
         "https://png.pngtree.com/png-vector/20210205/ourlarge/pngtree-wireless-keyboard-png-image_2872698.jpg",
       price: 95000,
       countInStock: 4,
-      Specs:
-      " Jelly Comb 2.4G Slim Ergonomic Quiet Keyboard "
+      Specs: " Jelly Comb 2.4G Slim Ergonomic Quiet Keyboard ",
     },
   ],
 };
