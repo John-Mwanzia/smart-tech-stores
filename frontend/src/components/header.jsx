@@ -21,7 +21,7 @@ function Header() {
   return (
     <>
       <div className="flex justify-center items-center  bg-customGreen">
-        <nav className=" flex justify-around w-full  items-center px-6 md:justify-between  pt-8 lg:pt-12 relative z-50">
+        <nav className=" flex justify-around w-full  items-center px-6 md:justify-between  pt-8 pb-4 lg:pt-12 relative z-50">
           {!menuOpen && (
             <button onClick={() => toggleMenu("open")}>
               <img
