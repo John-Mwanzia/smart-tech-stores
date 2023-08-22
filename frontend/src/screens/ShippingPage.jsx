@@ -8,7 +8,8 @@ export default function ShippingPage() {
   const navigate = useNavigate();
 
   const { state, dispatch: ctxDispatch } = useContext(Store);
-  const { shippingInfo } = state;
+  const { shippingInfo,userInfo } = state;
+    console.log(userInfo.token);
 
   const [paymentMethod, setPaymentMethod] = useState("paypal");
   const [fullname, setFullname] = useState(shippingInfo.fullname || "");
