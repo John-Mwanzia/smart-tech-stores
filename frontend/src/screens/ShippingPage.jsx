@@ -9,7 +9,6 @@ export default function ShippingPage() {
 
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { shippingInfo,userInfo } = state;
-    console.log(userInfo.token);
 
   const [paymentMethod, setPaymentMethod] = useState("paypal");
   const [fullname, setFullname] = useState(shippingInfo.fullname || "");
