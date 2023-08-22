@@ -22,14 +22,26 @@ export default function ShippingPage() {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    await axios.post("https://smart-server.vercel.app/api/shipping", {
+    const data = {
       paymentMethod,
       fullname,
       phoneNumber,
       address,
       city,
       postalCode,
-    });
+    };
+  
+    try {
+      const response = await axios.post("https://smart-server.vercel.app/api/shipping", data, {
+        headers: {
+          Authorization: `Bearer ${userInfo.token}`,
+        },
+      });
+      
+    } catch (error) {
+      // Handle errors
+      alert("unable to save shipping info", error)
+    }
     ctxDispatch({
       type: "SHIPPING_INFO",
       payload: {
