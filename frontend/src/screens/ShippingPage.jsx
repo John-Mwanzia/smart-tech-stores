@@ -8,7 +8,7 @@ export default function ShippingPage() {
   const navigate = useNavigate();
 
   const { state, dispatch: ctxDispatch } = useContext(Store);
-  const { shippingInfo,userInfo } = state;
+  const { shippingInfo, userInfo } = state;
 
   const [paymentMethod, setPaymentMethod] = useState("paypal");
   const [fullname, setFullname] = useState(shippingInfo.fullname || "");
@@ -29,17 +29,20 @@ export default function ShippingPage() {
       city,
       postalCode,
     };
-  
+
     try {
-      const response = await axios.post("https://smart-server.vercel.app/api/shipping", data, {
-        headers: {
-          Authorization: `Bearer ${userInfo.token}`,
-        },
-      });
-      
+      const response = await axios.post(
+        "https://smart-server.vercel.app/api/shipping",
+        data,
+        {
+          headers: {
+            Authorization: `Bearer ${userInfo.token}`,
+          },
+        }
+      );
     } catch (error) {
       // Handle errors
-      alert("unable to save shipping info", error)
+      alert("unable to save shipping info", error);
     }
     ctxDispatch({
       type: "SHIPPING_INFO",
