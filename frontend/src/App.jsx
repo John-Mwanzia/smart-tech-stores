@@ -10,9 +10,9 @@ import SearchPage from "./screens/SearchPage";
 import SignUpPage from "./screens/SignUpPage";
 import ShippingPage from "./screens/ShippingPage";
 import MpesaCheckoutScreen from "./screens/mpesaCheckoutScreen";
-import PaypalCheckoutScreen from "./screens/paypalCheckoutScreen";
 import Support from "./screens/Support";
 import QA from "./screens/QA";
+import StripeCheckoutScreen from "./screens/StripeCheckoutScreen";
 
 function App() {
   return (
@@ -35,7 +35,7 @@ function App() {
             <Route path="/signup" element={<SignUpPage />} />
             <Route path="/shipping" element={<ShippingPage />} />
             <Route path="/mpesaCheckout" element={<MpesaCheckoutScreen />} />
-            <Route path="/paypalCheckout" element={<PaypalCheckoutScreen />} />
+            <Route path="/paypalCheckout" element={<StripeCheckoutScreen />} />
             <Route path="/Support" element={<Support />} />
             <Route path="/QA" element={<QA />} />
           </Routes>

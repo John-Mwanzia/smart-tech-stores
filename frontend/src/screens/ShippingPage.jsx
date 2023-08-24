@@ -71,7 +71,7 @@ export default function ShippingPage() {
     if (paymentMethod === "mpesa") {
       navigate("/mpesaCheckout");
     } else {
-      navigate("/payPalCheckout");
+      navigate("/StripeCheckout");
     }
   };
 
