@@ -156,8 +156,8 @@ export default function ShippingPage() {
                   />
                   <label>
                     <img
-                      src="https://logos-world.net/wp-content/uploads/2020/07/PayPal-Logo.png"
-                      alt="paypal"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Stripe_Logo%2C_revised_2016.svg/2560px-Stripe_Logo%2C_revised_2016.svg.png"
+                      alt="stripe"
                       className="h-12"
                     />
                   </label>
