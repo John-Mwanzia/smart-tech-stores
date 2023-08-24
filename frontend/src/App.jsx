@@ -35,7 +35,7 @@ function App() {
             <Route path="/signup" element={<SignUpPage />} />
             <Route path="/shipping" element={<ShippingPage />} />
             <Route path="/mpesaCheckout" element={<MpesaCheckoutScreen />} />
-            <Route path="/paypalCheckout" element={<StripeCheckoutScreen />} />
+            <Route path="/StripeCheckout" element={<StripeCheckoutScreen />} />
             <Route path="/Support" element={<Support />} />
             <Route path="/QA" element={<QA />} />
           </Routes>
