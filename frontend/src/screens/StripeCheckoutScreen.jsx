@@ -27,6 +27,15 @@ const StripeCheckoutScreen = async()=> {
   const {data} = await axios.post("http://localhost:3000/api/checkout", {
     lineItems,
   });
+  const stripe = await stripePromise;
+  const { error } = await stripe.redirectToCheckout({
+    sessionId: data.id,
+  });
+  if (error) {
+    alert(error.message);
+  }
+
+  
   return (
     <div> 
        <h1>
