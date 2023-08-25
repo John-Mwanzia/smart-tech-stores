@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { Store } from '../store';
+import axios from 'axios';
 // import { loadStripe } from '@stripe/stripe-js';
 
 const StripeCheckoutScreen = async()=> {
