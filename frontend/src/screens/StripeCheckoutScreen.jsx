@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import { Store } from '../store';
 import axios from 'axios';
-// import { loadStripe } from '@stripe/stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
 
 const StripeCheckoutScreen = async()=> {
-  // const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY)
+  const stripePromise = loadStripe(import.meta.env.VITE_APP_STRIPE_PUBLISHABLE_KEY)
   const { state} = useContext(Store);
   const { cart } = state;
   const { cartItems } = cart;
@@ -23,8 +23,8 @@ const StripeCheckoutScreen = async()=> {
       quantity: item.quantity,
     }
   })
-
-  const {data} = await axios.post("https://smart-server.vercel.app/api/checkout", {
+//https://smart-server.vercel.app/api/checkout
+  const {data} = await axios.post("http://localhost:3000/api/checkout", {
     lineItems,
   });
   return (
