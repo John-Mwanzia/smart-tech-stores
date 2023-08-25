@@ -1,5 +1,9 @@
 import express from 'express';
 const stripeRouter = express.Router();
+import Stripe from 'stripe';
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+
+
 
 stripeRouter.post('/', async (req, res) => {
     const { lineItems } = req.body;
@@ -13,3 +17,5 @@ stripeRouter.post('/', async (req, res) => {
     res.json({ id: session.id });
     }
 );
+
+export default stripeRouter;
