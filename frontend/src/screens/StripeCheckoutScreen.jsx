@@ -8,7 +8,7 @@ const StripeCheckoutScreen = async()=> {
   const { state} = useContext(Store);
   const { cart } = state;
   const { cartItems } = cart;
-  console.log(cartItems);
+
 
   const lineItems = cartItems.map((item) => {
     return {
@@ -35,7 +35,7 @@ const StripeCheckoutScreen = async()=> {
     alert(error.message);
   }
 
-  
+
   return (
     <div> 
        <h1>
