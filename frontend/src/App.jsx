@@ -13,6 +13,7 @@ import MpesaCheckoutScreen from "./screens/mpesaCheckoutScreen";
 import Support from "./screens/Support";
 import QA from "./screens/QA";
 import StripeCheckoutScreen from "./screens/StripeCheckoutScreen";
+import SuccessScreen from "./screens/Success_Screen";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             <Route path="/StripeCheckout" element={<StripeCheckoutScreen />} />
             <Route path="/Support" element={<Support />} />
             <Route path="/QA" element={<QA />} />
+            <Route path="/success" element={<SuccessScreen/>} />
           </Routes>
         </main>
       </div>
