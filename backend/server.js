@@ -31,6 +31,9 @@ mongoose
     console.log("connected to db");
   })
   .catch((err) => console.log(err));
+  app.get('/', (req, res) => {
+    res.send('API is running....')
+  })
 app.use("/api/seed", seedRouter);
 app.use("/api/products", productRouter);
 app.use("/api/featuredProducts", featuredProductsRouter);
