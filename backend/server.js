@@ -31,16 +31,16 @@ mongoose
     console.log("connected to db");
   })
   .catch((err) => console.log(err));
-  app.get('/', (req, res) => {
-    res.send('API is running....')
-  })
+app.get("/", (req, res) => {
+  res.send("API is running....");
+});
 app.use("/api/seed", seedRouter);
 app.use("/api/products", productRouter);
 app.use("/api/featuredProducts", featuredProductsRouter);
 app.use("/api/users", userRouter);
 app.use("/api/lipaNaMpesa", lipaNaMpesaRoute);
 app.use("/api/shipping", protect, shippingRoute);
-app.use('/api/checkout', stripeRouter)
+app.use("/api/checkout", stripeRouter);
 
 //error handling middleware
 app.use((err, req, res, next) => {
