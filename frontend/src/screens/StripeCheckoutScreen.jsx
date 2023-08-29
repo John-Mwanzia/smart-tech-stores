@@ -14,7 +14,7 @@ const StripeCheckoutScreen = async () => {
   const lineItems = cartItems.map((item) => {
     return {
       price_data: {
-        currency: "usd",
+        currency: "kes",
         product_data: {
           name: item.Gadget_Name || item.Comp_Name,
           images: [item.Img_Url],
