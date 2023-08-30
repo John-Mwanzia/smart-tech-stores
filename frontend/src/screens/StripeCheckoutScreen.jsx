@@ -12,6 +12,7 @@ const StripeCheckoutScreen = () => {
   const { cartItems } = cart;
   const [loading, setLoading] = useState(true);
 
+  //handle asynchronous operations within a React functional component, you typically use the useEffect hook.
   useEffect(() => {
     const fetchData = async () => {
       const lineItems = cartItems.map((item) => {
