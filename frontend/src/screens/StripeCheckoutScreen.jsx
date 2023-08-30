@@ -55,7 +55,7 @@ const StripeCheckoutScreen = () => {
     fetchData();
   }, []);
 
-  return <div>{loading ? <h1>Loading...</h1> : <h1>Paypal Checkout</h1>}</div>;
+  return <div>{loading ? <h1>Loading...</h1> : <h1>Stripe Checkout</h1>}</div>;
 };
 
 export default StripeCheckoutScreen;
