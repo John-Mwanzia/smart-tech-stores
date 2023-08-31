@@ -130,7 +130,7 @@ const data = {
       category: "mouse",
       Img_Url:
         "https://atlas-content-cdn.pixelsquid.com/assets_v2/200/2009721087641786232/previews/G03-200x200.jpg",
-      price: 95000,
+      price: 1000,
       countInStock: 4,
       Specs:
         "Wireless Mouse for Laptop, Inphic 2.4G Rechargeable Silent Computer Mouse,1600 DPI Ultra Thin Optical Portable USB Mini Mouse, Cordless Mice for Laptop,PC,MacBook,Mac, white",
@@ -141,7 +141,7 @@ const data = {
       category: "webcam",
       Img_Url:
         "https://w7.pngwing.com/pngs/302/546/png-transparent-webcam-camera-microphone-internet-webcam-electronics-microphone-camera-lens-thumbnail.png",
-      price: 95000,
+      price: 5000,
       countInStock: 4,
       Specs:
         "Webcam with Microphone, 1080P HD Streaming USB Computer Webcam [Plug and Play] [30fps] ",
@@ -152,7 +152,7 @@ const data = {
       category: "keyboard",
       Img_Url:
         "https://png.pngtree.com/png-vector/20210205/ourlarge/pngtree-wireless-keyboard-png-image_2872698.jpg",
-      price: 95000,
+      price: 1500,
       countInStock: 4,
       Specs: " Jelly Comb 2.4G Slim Ergonomic Quiet Keyboard ",
     },
