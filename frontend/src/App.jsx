@@ -41,8 +41,8 @@ function App() {
             <Route path="/StripeCheckout" element={<StripeCheckoutScreen />} />
             <Route path="/Support" element={<Support />} />
             <Route path="/QA" element={<QA />} />
-            <Route path="/success" element={<SuccessScreen/>} />
-            <Route path="/cancel" element={<CancelPage/>} />
+            <Route path="/success" element={<SuccessScreen />} />
+            <Route path="/cancel" element={<CancelPage />} />
           </Routes>
         </main>
         <Routes>
