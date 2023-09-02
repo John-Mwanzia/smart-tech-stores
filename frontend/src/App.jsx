@@ -15,6 +15,7 @@ import QA from "./screens/QA";
 import StripeCheckoutScreen from "./screens/StripeCheckoutScreen";
 import SuccessScreen from "./screens/Success_Screen";
 import CancelPage from "./screens/CancelPage";
+import AdminDashboard from "./screens/AdminDashboard";
 
 function App() {
   return (
@@ -44,6 +45,9 @@ function App() {
             <Route path="/cancel" element={<CancelPage/>} />
           </Routes>
         </main>
+        <Routes>
+          <Route path="/admin" element={<AdminDashboard />} />
+        </Routes>
       </div>
     </BrowserRouter>
   );
