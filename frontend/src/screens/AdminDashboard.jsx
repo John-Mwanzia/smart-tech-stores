@@ -2,6 +2,30 @@ import React from "react";
 import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { Route, Routes } from "react-router-dom";
+import {
+  Ecommerce,
+  Orders,
+  Calendar,
+  Employees,
+  Stacked,
+  Pyramid,
+  Customers,
+  Kanban,
+  Line,
+  Area,
+  Bar,
+  Pie,
+  Financial,
+  ColorPicker,
+  ColorMapping,
+  Editor,
+} from "./Admin/pages";
+import {
+  Navbar,
+  Footer,
+  Sidebar,
+  ThemeSettings,
+} from "../components/AdminDashBoardComponents";
 
 export default function AdminDashboard() {
   const activeMenu = true;
@@ -21,10 +45,12 @@ export default function AdminDashboard() {
         </div>
         {activeMenu ? (
           <div className="w-72 bg-white fixed sidebar dark:bg-secondary-dark-bg">
-            SideBar
+            <Sidebar />
           </div>
         ) : (
-          <div className="w-0 dark:bg-secondary-dark-bg ">SideBar w-0</div>
+          <div className="w-0 dark:bg-secondary-dark-bg ">
+            <Sidebar />
+          </div>
         )}
         <div
           className={
@@ -37,7 +63,7 @@ export default function AdminDashboard() {
             <Navbar />
           </div>
           <div>
-            {themeSettings && <ThemeSettings />}
+            {/* {themeSettings && <ThemeSettings />} */}
 
             <Routes>
               {/* dashboard  */}
