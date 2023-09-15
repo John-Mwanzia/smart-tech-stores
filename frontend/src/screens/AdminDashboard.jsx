@@ -12,7 +12,8 @@ export default function AdminDashboard() {
             <TooltipComponent content="Settings" position="Top">
               <button
                 type="button"
-                className="text-3xl text-blue-300 p-3 hover:drop-shadow-xl hover:bg-light-gray"
+                className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
+                style={{background:"blue", borderRadius: '50%'}}
               >
                 <FiSettings />
               </button>
