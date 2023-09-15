@@ -7,11 +7,12 @@ export default function AdminDashboard() {
     <>
       
         <div className="flex relative dark:bg-main-dark-bg">
+        <h1>Hello</h1>
           <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>
             <TooltipComponent content="Settings" position="Top">
               <button
                 type="button"
-                className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
+                className="text-3xl text-blue-300 p-3 hover:drop-shadow-xl hover:bg-light-gray"
               >
                 <FiSettings />
               </button>
