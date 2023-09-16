@@ -26,9 +26,10 @@ import {
   Sidebar,
   ThemeSettings,
 } from "../components/AdminDashBoardComponents";
+import { useStateContext } from "../context/AdminContext";
 
 export default function AdminDashboard() {
-  const activeMenu = true;
+  const {activeMenu, setActiveMenu} = useStateContext()
   return (
     <>
       <div className="flex relative dark:bg-main-dark-bg">
