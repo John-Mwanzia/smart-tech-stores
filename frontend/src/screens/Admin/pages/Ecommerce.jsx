@@ -8,9 +8,9 @@ import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { earningData, medicalproBranding, recentTransactions, weeklyStats, dropdownData, SparklineAreaData, ecomPieChartData } from '../../../data/dummy';
 import { useStateContext } from '../../../context/AdminContext';
 import product9 from '../../../data/product9.jpg';
-import Stacked from './Charts/Stacked';
+
 import Pie from './Charts/Pie';
-import { Button, LineChart, SparkLine } from '../../../components/AdminDashBoardComponents';
+import { Button, LineChart, SparkLine, Stacked } from '../../../components/AdminDashBoardComponents';
 
 const DropDown = ({ currentMode }) => (
   <div className="w-28 border-1 border-color px-2 py-1 rounded-md">
