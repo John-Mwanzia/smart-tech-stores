@@ -27,6 +27,22 @@ module.exports = {
         sans: ["Outfit", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
       },
+      borderWidth: {
+        1: '1px',
+      },
+      borderColor: {
+        color: 'rgba(0, 0, 0, 0.1)',
+      },
+      height: {
+        80: '80px',
+      },
+      minHeight: {
+        590: '590px',
+      },
+      backgroundImage: {
+        'hero-pattern':
+          "url('https://i.ibb.co/MkvLDfb/Rectangle-4389.png')",
+      },
     },
   },
   plugins: [],
