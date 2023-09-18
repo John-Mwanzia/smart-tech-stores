@@ -29,7 +29,7 @@ import {
 import { useStateContext } from "../context/AdminContext";
 
 export default function AdminDashboard() {
-  const {activeMenu, setActiveMenu} = useStateContext()
+  const { activeMenu, setActiveMenu } = useStateContext();
   return (
     <>
       <div className="flex relative dark:bg-main-dark-bg">
@@ -68,29 +68,29 @@ export default function AdminDashboard() {
 
             <Routes>
               {/* dashboard  */}
-              <Route path="/" element={<Ecommerce />} />
-              <Route path="/ecommerce" element={<Ecommerce />} />
+              <Route path="/admin/ecommerce" element={<Ecommerce />} />
+              <Route path="/admin/ecommerce" element={<Ecommerce />} />
 
               {/* pages  */}
-              <Route path="/orders" element={<Orders />} />
-              <Route path="/employees" element={<Employees />} />
-              <Route path="/customers" element={<Customers />} />
+              <Route path="/admin/orders" element={<Orders />} />
+              <Route path="/admin/employees" element={<Employees />} />
+              <Route path="/admin/customers" element={<Customers />} />
 
               {/* apps  */}
-              <Route path="/kanban" element={<Kanban />} />
-              <Route path="/editor" element={<Editor />} />
-              <Route path="/calendar" element={<Calendar />} />
+              <Route path="/admin/kanban" element={<Kanban />} />
+              <Route path="/admin/editor" element={<Editor />} />
+              <Route path="/admin/calendar" element={<Calendar />} />
               <Route path="/color-picker" element={<ColorPicker />} />
 
               {/* charts  */}
-              <Route path="/line" element={<Line />} />
-              <Route path="/area" element={<Area />} />
-              <Route path="/bar" element={<Bar />} />
-              <Route path="/pie" element={<Pie />} />
-              <Route path="/financial" element={<Financial />} />
-              <Route path="/color-mapping" element={<ColorMapping />} />
-              <Route path="/pyramid" element={<Pyramid />} />
-              <Route path="/stacked" element={<Stacked />} />
+              <Route path="/admin/line" element={<Line />} />
+              <Route path="/admin/area" element={<Area />} />
+              <Route path="/admin/bar" element={<Bar />} />
+              <Route path="/admin/pie" element={<Pie />} />
+              <Route path="/admin/financial" element={<Financial />} />
+              <Route path="/admin/color-mapping" element={<ColorMapping />} />
+              <Route path="/admin/pyramid" element={<Pyramid />} />
+              <Route path="/admin/stacked" element={<Stacked />} />
             </Routes>
           </div>
           <Footer />
