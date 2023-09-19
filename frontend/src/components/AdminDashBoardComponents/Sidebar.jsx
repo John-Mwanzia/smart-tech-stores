@@ -37,7 +37,7 @@ export default function Sidebar() {
                 </p>
                 {item.links.map((link) => (
                   <NavLink
-                    to={`/${link.name}`}
+                    to={`/admin/${link.name}`}
                     key={link.name}
                     onClick={()=>{}}
                     className={({ isActive }) => (isActive ? activeLink : normalLink)}

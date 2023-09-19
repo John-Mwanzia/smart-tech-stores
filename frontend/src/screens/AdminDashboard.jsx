@@ -68,11 +68,11 @@ export default function AdminDashboard() {
 
             <Routes>
               {/* dashboard  */}
-              <Route path="/admin/ecommerce" element={<Ecommerce />} />
-              <Route path="/admin/ecommerce" element={<Ecommerce />} />
+              <Route path="/" element={<Ecommerce />} />
+              <Route path="ecommerce" element={<Ecommerce />} />
 
               {/* pages  */}
-              <Route path="/admin/orders" element={<Orders />} />
+              <Route path="orders" element={<Orders />} />
               <Route path="/admin/employees" element={<Employees />} />
               <Route path="/admin/customers" element={<Customers />} />
 
