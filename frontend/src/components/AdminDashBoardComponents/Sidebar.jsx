@@ -11,6 +11,12 @@ export default function Sidebar() {
   const {activeMenu, setActiveMenu, currentColor} = useStateContext()
   const activeLink = 'flex items-center gap-4 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2';
   const normalLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700  dark:hover:text-black hover:bg-light-gray m-2';
+
+  const handleCloseSideBar = () => {
+    if (activeMenu !== undefined && screenSize <= 900) {
+      setActiveMenu(false);
+    }
+  }
   return (
     <div className='ml-3 h-screen lg:overflow-hidden overflow-auto lg:hover:overflow-auto pb-10'>
          {activeMenu && (
@@ -39,7 +45,7 @@ export default function Sidebar() {
                   <NavLink
                     to={`/admin/${link.name}`}
                     key={link.name}
-                    onClick={()=>{}}
+                    onClick={handleCloseSideBar}
                     style={({ isActive }) => ({
                       backgroundColor: isActive ? currentColor : '',
                     })}
