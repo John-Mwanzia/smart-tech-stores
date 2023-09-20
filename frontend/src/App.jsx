@@ -16,7 +16,7 @@ import StripeCheckoutScreen from "./screens/StripeCheckoutScreen";
 import SuccessScreen from "./screens/Success_Screen";
 import CancelPage from "./screens/CancelPage";
 import AdminDashboard from "./screens/AdminDashboard";
-import './App.css'
+import "./App.css";
 import { Orders } from "./screens/Admin/pages";
 
 function App() {

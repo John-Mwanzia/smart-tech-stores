@@ -1,34 +1,44 @@
-import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
-import { TooltipComponent } from '@syncfusion/ej2-react-popups';
+import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 
-import {links} from '../../data/dummy'
-import { MdOutlineCancel } from 'react-icons/md';
-import { useStateContext } from '../../context/AdminContext';
+import { links } from "../../data/dummy";
+import { MdOutlineCancel } from "react-icons/md";
+import { useStateContext } from "../../context/AdminContext";
 
 export default function Sidebar() {
-  const {activeMenu, setActiveMenu, currentColor} = useStateContext()
-  const activeLink = 'flex items-center gap-4 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2';
-  const normalLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700  dark:hover:text-black hover:bg-light-gray m-2';
+  const { activeMenu, setActiveMenu, currentColor } = useStateContext();
+  const activeLink =
+    "flex items-center gap-4 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2";
+  const normalLink =
+    "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700  dark:hover:text-black hover:bg-light-gray m-2";
 
   const handleCloseSideBar = () => {
     if (activeMenu !== undefined && screenSize <= 900) {
       setActiveMenu(false);
     }
-  }
+  };
   return (
-    <div className='ml-3 h-screen lg:overflow-hidden overflow-auto lg:hover:overflow-auto pb-10'>
-         {activeMenu && (
+    <div className="ml-3 h-screen lg:overflow-hidden overflow-auto lg:hover:overflow-auto pb-10">
+      {activeMenu && (
         <>
           <div className="flex justify-between items-center">
-            <Link to="/" onClick={()=>{setActiveMenu(false)}} className="   mt-4  text-xl font-extrabold  dark:text-white text-slate-900">
-            <img alt="logo" src="/images/Logo.svg" />
+            <Link
+              to="/"
+              onClick={() => {
+                setActiveMenu(false);
+              }}
+              className="   mt-4  text-xl font-extrabold  dark:text-white text-slate-900"
+            >
+              <img alt="logo" src="/images/Logo.svg" />
             </Link>
             <TooltipComponent content="Menu" position="BottomCenter">
               <button
                 type="button"
-                onClick={() => {setActiveMenu((prevActiveMenu)=>!prevActiveMenu)}}
+                onClick={() => {
+                  setActiveMenu((prevActiveMenu) => !prevActiveMenu);
+                }}
                 className="text-xl rounded-full p-2 hover:bg-light-gray mt-4 block "
               >
                 <MdOutlineCancel />
@@ -47,9 +57,11 @@ export default function Sidebar() {
                     key={link.name}
                     onClick={handleCloseSideBar}
                     style={({ isActive }) => ({
-                      backgroundColor: isActive ? currentColor : '',
+                      backgroundColor: isActive ? currentColor : "",
                     })}
-                    className={({ isActive }) => (isActive ? activeLink : normalLink)}
+                    className={({ isActive }) =>
+                      isActive ? activeLink : normalLink
+                    }
                   >
                     {link.icon}
                     <span className="capitalize ">{link.name}</span>
@@ -61,5 +73,5 @@ export default function Sidebar() {
         </>
       )}
     </div>
-  )
+  );
 }

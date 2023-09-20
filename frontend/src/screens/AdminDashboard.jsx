@@ -29,7 +29,15 @@ import {
 import { useStateContext } from "../context/AdminContext";
 
 export default function AdminDashboard() {
-  const { setCurrentColor, setCurrentMode, currentMode, activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
+  const {
+    setCurrentColor,
+    setCurrentMode,
+    currentMode,
+    activeMenu,
+    currentColor,
+    themeSettings,
+    setThemeSettings,
+  } = useStateContext();
   return (
     <>
       <div className="flex relative dark:bg-main-dark-bg">
@@ -66,7 +74,7 @@ export default function AdminDashboard() {
           </div>
           <div>
             {themeSettings && <ThemeSettings />}
-            
+
             <Routes>
               {/* dashboard  */}
               <Route path="/" element={<Ecommerce />} />
