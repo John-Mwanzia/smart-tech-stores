@@ -65,7 +65,7 @@ export default function AdminDashboard() {
           </div>
           <div>
             {/* {themeSettings && <ThemeSettings />} */}
-
+            <ThemeSettings />
             <Routes>
               {/* dashboard  */}
               <Route path="/" element={<Ecommerce />} />
