@@ -8,7 +8,7 @@ import { MdOutlineCancel } from 'react-icons/md';
 import { useStateContext } from '../../context/AdminContext';
 
 export default function Sidebar() {
-  const {activeMenu, setActiveMenu} = useStateContext()
+  const {activeMenu, setActiveMenu, currentColor} = useStateContext()
   const activeLink = 'flex items-center gap-4 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2';
   const normalLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700  dark:hover:text-black hover:bg-light-gray m-2';
   return (
@@ -40,6 +40,9 @@ export default function Sidebar() {
                     to={`/admin/${link.name}`}
                     key={link.name}
                     onClick={()=>{}}
+                    style={({ isActive }) => ({
+                      backgroundColor: isActive ? currentColor : '',
+                    })}
                     className={({ isActive }) => (isActive ? activeLink : normalLink)}
                   >
                     {link.icon}
