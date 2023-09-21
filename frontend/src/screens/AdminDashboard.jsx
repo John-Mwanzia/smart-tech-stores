@@ -46,7 +46,7 @@ export default function AdminDashboard() {
             <button
               type="button"
               className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
-              style={{ background: "blue", borderRadius: "50%" }}
+              style={{ background: currentColor, borderRadius: "50%" }}
               onClick={() => setThemeSettings(true)}
             >
               <FiSettings />
