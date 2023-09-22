@@ -41,7 +41,7 @@ export default function AdminDashboard() {
   return (
     <>
     <div className={currentMode === 'Dark' ? 'dark' : ''}>
-      <div className="flex relative dark:[#33373E]">
+      <div className="flex relative dark:bg-main-dark-bg">
         <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>
           <TooltipComponent content="Settings" position="Top">
             <button
