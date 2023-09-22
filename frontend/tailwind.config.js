@@ -1,7 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  darkMode: 'class',
+  plugins: [require("tailwindcss-dark-mode")()],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -10,11 +11,14 @@ module.exports = {
         customGreen: "rgba(62, 151, 108, 0.25)",
         customGray: "#FAFAFB",
         successGreen: "#4BB543",
-        'main-bg': '#FAFBFB',
-        'main-dark-bg': '#20232A',
-        'secondary-dark-bg': '#33373E',
-        'light-gray': '#F7F7F7',
-        'half-transparent': 'rgba(0, 0, 0, 0.5)',
+      },
+
+      backgroundColor: {
+        "main-bg": "#FAFBFB",
+        "main-dark-bg": "#20232A",
+        "secondary-dark-bg": "#33373E",
+        "light-gray": "#F7F7F7",
+        "half-transparent": "rgba(0, 0, 0, 0.5)",
       },
       screens: {
         sm: { max: "639px" },
@@ -29,20 +33,19 @@ module.exports = {
         roboto: ["Roboto", "sans-serif"],
       },
       borderWidth: {
-        1: '1px',
+        1: "1px",
       },
       borderColor: {
-        color: 'rgba(0, 0, 0, 0.1)',
+        color: "rgba(0, 0, 0, 0.1)",
       },
       height: {
-        80: '80px',
+        80: "80px",
       },
       minHeight: {
-        590: '590px',
+        590: "590px",
       },
       backgroundImage: {
-        'hero-pattern':
-          "url('https://i.ibb.co/MkvLDfb/Rectangle-4389.png')",
+        "hero-pattern": "url('https://i.ibb.co/MkvLDfb/Rectangle-4389.png')",
       },
     },
   },
