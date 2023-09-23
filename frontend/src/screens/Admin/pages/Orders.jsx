@@ -3,7 +3,6 @@ import { GridComponent, ColumnsDirective, ColumnDirective, Resize, Sort, Context
 
 import { ordersData, contextMenuItems, ordersGrid } from '../../../data/dummy';
 import { Header } from '../../../components/AdminDashBoardComponents';
-import AdminLayout from '../../../components/AdminDashBoardComponents/Layout/AdminLayout';
 
 
 const Orders = () => {
