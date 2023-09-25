@@ -9,3 +9,5 @@ orderRouter.post('/', expressAsyncHandler(async(req, res)=>{
 
     })
 }))
+
+export default orderRouter;

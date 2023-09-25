@@ -11,6 +11,7 @@ import shippingRoute from "./routes/shippingRoute.js";
 import { protect } from "./modules/auth.js";
 import morgan from "morgan";
 import stripeRouter from "./routes/stripeRoute.js";
+import orderRouter from "./routes/OrderRoute.js";
 
 dotenv.config();
 const app = express();
@@ -41,6 +42,7 @@ app.use("/api/users", userRouter);
 app.use("/api/lipaNaMpesa", lipaNaMpesaRoute);
 app.use("/api/shipping", protect, shippingRoute);
 app.use("/api/checkout", stripeRouter);
+app.use('/api/order', orderRouter)
 
 //error handling middleware
 app.use((err, req, res, next) => {
