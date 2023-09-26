@@ -17,8 +17,7 @@ const ThemeSettings = () => {
 
   return (
     <div className="bg-black/50 w-screen fixed nav-item top-0 right-0">
-    {/*   */}
-      <div className="float-right bg-white dark:text-gray-200   dark:bg-[#484B52] h-screen w-400">     
+      <div className="float-right bg-white dark:text-gray-200   dark:bg-[#484B52] h-screen w-400">
         <div className="flex justify-between items-center p-4 ml-4">
           <p className="font-semibold text-lg">Settings</p>
           <button
