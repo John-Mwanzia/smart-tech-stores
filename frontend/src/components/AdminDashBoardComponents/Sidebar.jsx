@@ -64,7 +64,9 @@ export default function Sidebar() {
                     }
                   >
                     {link.icon}
-                    <span className="capitalize ">{link.name}</span>
+                    <span className="capitalize dark:text-gray-400 ">
+                      {link.name}
+                    </span>
                   </NavLink>
                 ))}
               </div>
