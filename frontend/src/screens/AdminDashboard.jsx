@@ -38,6 +38,7 @@ export default function AdminDashboard() {
     themeSettings,
     setThemeSettings,
   } = useStateContext();
+  console.log(currentMode);
   return (
     <>
       <div className={currentMode === "Dark" ? "dark" : ""}>
