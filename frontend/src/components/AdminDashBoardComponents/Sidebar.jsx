@@ -33,17 +33,6 @@ export default function Sidebar() {
             >
               <img alt="logo" src="/images/Logo.svg" />
             </Link>
-            <TooltipComponent content="Menu" position="BottomCenter">
-              <button
-                type="button"
-                onClick={() => {
-                  setActiveMenu((prevActiveMenu) => !prevActiveMenu);
-                }}
-                className="text-xl rounded-full p-2 hover:bg-light-gray mt-4 block "
-              >
-                <MdOutlineCancel />
-              </button>
-            </TooltipComponent>
           </div>
           <div className="mt-10 ">
             {links.map((item) => (
