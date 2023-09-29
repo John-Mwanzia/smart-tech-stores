@@ -15,6 +15,7 @@ orderRouter.post(
       shippingPrice: req.body.shippingPrice,
       taxPrice: req.body.taxPrice,
       totalPrice: req.body.totalPrice,
+      user: req.body.user,
       isPaid: req.body.isPaid,
       paidAt: req.body.paidAt,
       isDelivered: req.body.isDelivered,
@@ -22,6 +23,7 @@ orderRouter.post(
     });
     console.log(newOrder);
     const createdOrder = await newOrder.save();
+    res.status(201).json({ message: "New Order Created", order: createdOrder });
   })
 );
 
