@@ -21,7 +21,6 @@ orderRouter.post(
       isDelivered: req.body.isDelivered,
       deliveredAt: req.body.deliveredAt,
     });
-    console.log(newOrder);
     const createdOrder = await newOrder.save();
     res.status(201).json({ message: "New Order Created", order: createdOrder });
   })
