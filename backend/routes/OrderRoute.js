@@ -15,7 +15,7 @@ orderRouter.post(
       shippingPrice: req.body.shippingPrice,
       taxPrice: req.body.taxPrice,
       totalPrice: req.body.totalPrice,
-      user: req.body.user,
+      user: req.user,
       isPaid: req.body.isPaid,
       paidAt: req.body.paidAt,
       isDelivered: req.body.isDelivered,
