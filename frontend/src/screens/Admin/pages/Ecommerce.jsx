@@ -1,21 +1,15 @@
 import React from "react";
 import { BsCurrencyDollar } from "react-icons/bs";
-// import { GoPrimitiveDot } from 'react-icons/go';
-import { IoIosMore } from "react-icons/io";
 import { DropDownListComponent } from "@syncfusion/ej2-react-dropdowns";
 
-// import { Stacked, Pie, Button, LineChart, SparkLine } from '../pages/Charts/';
 import {
   earningData,
-  medicalproBranding,
   recentTransactions,
-  weeklyStats,
   dropdownData,
   SparklineAreaData,
   ecomPieChartData,
 } from "../../../data/dummy";
 import { useStateContext } from "../../../context/AdminContext";
-import product9 from "../../../data/product9.jpg";
 
 import Pie from "./Charts/Pie";
 import {
