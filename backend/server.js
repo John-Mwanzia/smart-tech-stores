@@ -42,7 +42,7 @@ app.use("/api/users", userRouter);
 app.use("/api/lipaNaMpesa", lipaNaMpesaRoute);
 app.use("/api/shipping", protect, shippingRoute);
 app.use("/api/checkout", stripeRouter);
-app.use("/api/order",protect, orderRouter);
+app.use("/api/order", protect, orderRouter);
 
 //error handling middleware
 app.use((err, req, res, next) => {
