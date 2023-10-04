@@ -10,9 +10,11 @@ const initialState = {
 
 export const ContextProvider = ({ children }) => {
   const [screenSize, setScreenSize] = useState(undefined);
-  const [currentColor, setCurrentColor] = useState( localStorage.getItem("colorMode")
-  ? localStorage.getItem("colorMode")
-  :"#03C9D7");
+  const [currentColor, setCurrentColor] = useState(
+    localStorage.getItem("colorMode")
+      ? localStorage.getItem("colorMode")
+      : "#03C9D7"
+  );
   const [currentMode, setCurrentMode] = useState(
     localStorage.getItem("themeMode")
       ? localStorage.getItem("themeMode")
