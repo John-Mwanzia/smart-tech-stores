@@ -13,6 +13,8 @@ function Header() {
   const toggleMenu = (btn) => {
     if (btn === "open") {
       setMenuOpen(true);
+      //prevent scrolling when menu is open
+      document.body.style.overflow = "hidden";
     } else {
       setMenuOpen(false);
     }
