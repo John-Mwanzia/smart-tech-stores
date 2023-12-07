@@ -34,7 +34,7 @@ function Header() {
             </button>
           )}
           {menuOpen && (
-            <div className="absolute top-0 left-1/2 z-50 ">
+            <div className="absolute top-6 left-1/2 z-50 ">
               <button onClick={() => toggleMenu("close")} className="z-50">
                 <img
                   className="lg:hidden w-[25px] left-2 "
@@ -58,7 +58,7 @@ function Header() {
             className={`${
               menuOpen
                 ? "fixed top-0 pt-8 left-0  w-full  h-screen  text-center bg-gray-200 bg-opacity-10 backdrop-filter backdrop-blur-lg "
-                : "left-[-150px]"
+                : "hidden"
             } transform transition duration-300 ease-in-out flex flex-col gap-4  lg:flex-row lg:space-x-8 absolute lg:relative lg:left-0`}
           >
             <Link to="/">
