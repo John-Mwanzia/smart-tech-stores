@@ -34,10 +34,10 @@ function Header() {
             </button>
           )}
           {menuOpen && (
-            <div className="absolute top-6 left-1/2 z-50 ">
+            <div className="absolute top-8 left-8 z-50 ">
               <button onClick={() => toggleMenu("close")} className="z-50">
                 <img
-                  className="lg:hidden w-[25px] left-2 "
+                  className="lg:hidden w-[17px] left-2 "
                   src="/images/Hamburger-closed.svg"
                   alt="hamburger"
                 />
@@ -45,9 +45,9 @@ function Header() {
             </div>
           )}
 
-          <div className="">
+          <div className={`${menuOpen ? "absolute right-4 top-8" : "block"} `}>
             <Link to="/">
-              <img alt="logo" src="/images/Logo.svg" />
+              <img alt="logo" src="/images/Logo.svg"  className={`${menuOpen ? "w-56 " : "block"}`}/>
             </Link>
           </div>
           <div className="absolute top-24  left-8 md:relative md:top-0  md:left-0 ">
@@ -57,7 +57,7 @@ function Header() {
           <div
             className={`${
               menuOpen
-                ? "fixed top-16 pt-8 left-0  w-full  h-screen  text-center bg-gray-200 bg-opacity-10 backdrop-filter backdrop-blur-lg "
+                ? "fixed top-20 pt-8 left-0  w-full  h-screen  text-center bg-gray-200 bg-opacity-10 backdrop-filter backdrop-blur-lg "
                 : "hidden lg:flex"
             } transform transition duration-300 ease-in-out flex flex-col gap-16  lg:flex-row lg:space-x-8 lg:gap-12 absolute lg:relative lg:left-0`}
           >
