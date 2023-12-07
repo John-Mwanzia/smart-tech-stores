@@ -57,9 +57,9 @@ function Header() {
           <div
             className={`${
               menuOpen
-                ? "fixed top-0 pt-8 left-0  w-full  h-screen  text-center bg-gray-200 bg-opacity-10 backdrop-filter backdrop-blur-lg "
-                : "hidden"
-            } transform transition duration-300 ease-in-out flex flex-col gap-4  lg:flex-row lg:space-x-8 absolute lg:relative lg:left-0`}
+                ? "fixed top-16 pt-8 left-0  w-full  h-screen  text-center bg-gray-200 bg-opacity-10 backdrop-filter backdrop-blur-lg "
+                : "hidden lg:flex"
+            } transform transition duration-300 ease-in-out flex flex-col gap-16  lg:flex-row lg:space-x-8 lg:gap-12 absolute lg:relative lg:left-0`}
           >
             <Link to="/">
               {" "}
@@ -80,11 +80,12 @@ function Header() {
           </div>
 
           <div className="flex  flex-row items-center  ">
-            {userInfo ? (
-              <div className="mr-2">{userInfo.name}</div>
-            ) : (
-              <Link to="/signin">SignIn</Link>
-            )}
+            {!menuOpen &&
+              (userInfo ? (
+                <div className="mr-2">{userInfo.name}</div>
+              ) : (
+                <Link to="/signin">SignIn</Link>
+              ))}
             {/* the cart image was showing when menuOpen was true, so i had to use conditional rendering to hide it when menuOpen is true */}
             {!menuOpen && (
               <div className="relative mr-4  ">
