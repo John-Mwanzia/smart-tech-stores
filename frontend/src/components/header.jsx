@@ -8,6 +8,10 @@ function Header() {
   const { state } = useContext(Store);
   const { cart, userInfo } = state;
 
+  console.log('====================================');
+  console.log(userInfo);
+  console.log('====================================');
+
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = (btn) => {
@@ -77,6 +81,7 @@ function Header() {
               {" "}
               <p className=" font-roboto font-normal">Contact</p>
             </Link>
+            {/* if there is userInfo, and userinfo.isAdmin is truthy show a link to the admin page */}
           </div>
 
           <div className="flex  flex-row items-center  ">
