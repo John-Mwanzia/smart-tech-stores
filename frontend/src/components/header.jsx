@@ -8,10 +8,6 @@ function Header() {
   const { state } = useContext(Store);
   const { cart, userInfo } = state;
 
-  console.log('====================================');
-  console.log(userInfo);
-  console.log('====================================');
-
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = (btn) => {
@@ -51,7 +47,11 @@ function Header() {
 
           <div className={`${menuOpen ? "absolute right-4 top-8" : "block"} `}>
             <Link to="/">
-              <img alt="logo" src="/images/Logo.svg"  className={`${menuOpen ? "w-56 " : "block"}`}/>
+              <img
+                alt="logo"
+                src="/images/Logo.svg"
+                className={`${menuOpen ? "w-56 " : "block"}`}
+              />
             </Link>
           </div>
           <div className="absolute top-24  left-8 md:relative md:top-0  md:left-0 ">
@@ -63,7 +63,7 @@ function Header() {
               menuOpen
                 ? "fixed top-20 pt-8 left-0  w-full  h-screen  text-center bg-gray-200 bg-opacity-10 backdrop-filter backdrop-blur-lg "
                 : "hidden lg:flex"
-            } transform transition duration-300 ease-in-out flex flex-col gap-16  lg:flex-row lg:space-x-8 lg:gap-12 absolute lg:relative lg:left-0`}
+            } transform transition duration-300 ease-in-out flex flex-col gap-16  lg:flex-row lg:items-center lg:space-x-8 lg:gap-12 absolute lg:relative lg:left-0`}
           >
             <Link to="/">
               {" "}
@@ -82,6 +82,7 @@ function Header() {
               <p className=" font-roboto font-normal">Contact</p>
             </Link>
             {/* if there is userInfo, and userinfo.isAdmin is truthy show a link to the admin page */}
+            {userInfo && userInfo.isAdmin && <Link to="/admin" className="bg-[#FB9678] shadow-lg text-white px-4 py-2 rounded-xl">Admin</Link>}
           </div>
 
           <div className="flex  flex-row items-center  ">
