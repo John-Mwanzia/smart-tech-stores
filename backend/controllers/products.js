@@ -1,3 +1,4 @@
+import expressAsyncHandler from "express-async-handler";
 import Product from "../models/ProductsModel";
 
 export const getProducts = async (req, res) => {
@@ -37,4 +38,12 @@ export const searchProducts = expressAsyncHandler(async (req, res) => {
     products,
     countProducts,
   });
+});
+
+export const getCategories = expressAsyncHandler(async (req, res) => {
+  // Retrieve all distinct categories from the products collection
+  const categories = await Product.find().distinct("category");
+
+  // Send the categories as a response
+  res.send(categories);
 });

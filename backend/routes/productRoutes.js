@@ -1,6 +1,9 @@
 import express from "express";
-import expressAsyncHandler from "express-async-handler";
-import { getProducts, searchProducts } from "../controllers/products.js";
+import {
+  getCategories,
+  getProducts,
+  searchProducts,
+} from "../controllers/products.js";
 import Product from "../models/ProductsModel.js";
 
 const productRouter = express.Router();
@@ -9,16 +12,7 @@ productRouter.get("/", getProducts);
 
 productRouter.get("/search", searchProducts);
 
-productRouter.get(
-  "/categories",
-  expressAsyncHandler(async (req, res) => {
-    // Retrieve all distinct categories from the products collection
-    const categories = await Product.find().distinct("category");
-
-    // Send the categories as a response
-    res.send(categories);
-  })
-);
+productRouter.get("/categories", getCategories);
 
 productRouter.get("/slug/:slug", async (req, res) => {
   const product = await Product.findOne({ slug: req.params.slug });
