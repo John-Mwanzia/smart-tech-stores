@@ -47,3 +47,12 @@ export const getCategories = expressAsyncHandler(async (req, res) => {
   // Send the categories as a response
   res.send(categories);
 });
+
+export const getProductBySlug = async (req, res) => {
+  const product = await Product.findOne({ slug: req.params.slug });
+  if (product) {
+    res.send(product);
+  } else {
+    res.status(404).send({ message: "product not found" });
+  }
+};
