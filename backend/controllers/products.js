@@ -56,3 +56,12 @@ export const getProductBySlug = async (req, res) => {
     res.status(404).send({ message: "product not found" });
   }
 };
+
+export const getProductById = async (req, res) => {
+  const product = await Product.findById(req.params.id);
+  if (product) {
+    res.send(product);
+  } else {
+    res.status(404).send({ message: "product not found" });
+  }
+};
