@@ -1,5 +1,5 @@
 import expressAsyncHandler from "express-async-handler";
-import Order from "../models/orderModel";
+import Order from "../models/orderModel.js";
 
 export const createOrder = expressAsyncHandler(async (req, res) => {
     const newOrder = await Order({

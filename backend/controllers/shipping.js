@@ -1,5 +1,5 @@
 import expressAsyncHandler from "express-async-handler";
-import Shipping from "../models/ShippingModel";
+import Shipping from "../models/ShippingModel.js";
 
 export const createShipping = expressAsyncHandler(async (req, res) => {
   const {
