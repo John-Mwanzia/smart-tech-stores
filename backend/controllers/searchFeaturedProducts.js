@@ -1,5 +1,5 @@
 import expressAsyncHandler from "express-async-handler";
-import FeaturedProducts from "../models/featuredProductsModel";
+import FeaturedProducts from "../models/featuredProductsModel.js";
 
 export const searchFeaturedProducts = expressAsyncHandler(async (req, res) => {
   /* query is an object that has category and query properties */

@@ -1,7 +1,7 @@
-import request from "request";
 import "dotenv/config";
-import { getTimestamp } from "../Utils/timestamp.js";
 import ngrok from "ngrok";
+import request from "request";
+import { getTimestamp } from "../Utils/timestamp.js";
 
 // @desc initiate stk push
 // @method POST
