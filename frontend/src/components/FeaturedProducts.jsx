@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, useReducer } from "react";
+import { Grid, Loading } from "@nextui-org/react";
 import axios from "axios";
+import React, { useContext, useEffect, useReducer } from "react";
 import { Link } from "react-router-dom";
 import { Store } from "../store";
-import { Grid, Loading } from "@nextui-org/react";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -101,8 +101,17 @@ export default function FeaturedProducts() {
                         <div> Price: KSh.{product.price}</div>
 
                         <button
+                          // disable if product is already in cart and use a different color for the button
+                          disabled={cartItems.some(
+                            (item) => item._id === product._id
+                          )}
                           onClick={() => updateCart(product)}
-                          className="mb-1 mt-2 btn  bg-yellow-400 hover:bg-yellow-500"
+                          className={`mb-1 mt-2 py-2 px-5 btn
+                          ${
+                            cartItems.some((item) => item._id === product._id)
+                              ? "bg-gray-300 cursor-not-allowed"
+                              : "  bg-yellow-400 hover:bg-yellow-500 "
+                          } font-poppins`}
                         >
                           Add to cart
                         </button>
@@ -137,8 +146,17 @@ export default function FeaturedProducts() {
                           <div> Price: KSh.{product.price}</div>
 
                           <button
+                            // disable if product is already in cart and use a different color for the button
+                            disabled={cartItems.some(
+                              (item) => item._id === product._id
+                            )}
                             onClick={() => updateCart(product)}
-                            className="mb-1 mt-2 btn bg-yellow-400 hover:bg-yellow-500"
+                            className={`mb-1 mt-2 py-2 px-5 btn
+                           ${
+                             cartItems.some((item) => item._id === product._id)
+                               ? "bg-gray-300 cursor-not-allowed"
+                               : "  bg-yellow-400 hover:bg-yellow-500 "
+                           } font-poppins`}
                           >
                             Add to cart
                           </button>
