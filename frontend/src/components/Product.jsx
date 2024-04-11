@@ -1,7 +1,7 @@
+import axios from "axios";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Store } from "../store";
-import axios from "axios";
 
 export default function Product(props) {
   const { state, dispatch: ctxdispatch } = useContext(Store);
@@ -44,8 +44,15 @@ export default function Product(props) {
           <div> Price: KSh.{product.price}</div>
 
           <button
+            // disable if product is already in cart and use a different color for the button
+            disabled={cartItems.some((item) => item._id === product._id)}
             onClick={() => updateCart(product)}
-            className="mb-1 mt-2 py-2 px-5 btn  bg-yellow-400 hover:bg-yellow-500 "
+            className={`mb-1 mt-2 py-2 px-5 btn
+            ${
+              cartItems.some((item) => item._id === product._id)
+                ? "bg-gray-300 cursor-not-allowed"
+                : "  bg-yellow-400 hover:bg-yellow-500 "
+            } font-poppins`}
           >
             Add to cart
           </button>
