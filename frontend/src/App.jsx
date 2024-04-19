@@ -18,6 +18,7 @@ import CancelPage from "./screens/CancelPage";
 import AdminDashboard from "./screens/AdminDashboard";
 import "./App.css";
 import { Orders } from "./screens/Admin/pages";
+import NotFound from "./screens/NotFound";
 
 function App() {
   return (
@@ -47,6 +48,11 @@ function App() {
 
       <Routes>
         <Route path="/admin/*" element={<AdminDashboard />} />
+      </Routes>
+      {/* 404 page  */}
+      <Routes>
+        <Route path="*" 
+        element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
