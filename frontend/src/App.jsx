@@ -1,6 +1,5 @@
 import React from "react";
-import { Link, Route, Routes } from "react-router-dom";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CartScreen from "./screens/CartScreen";
 import Homepage from "./screens/Homepage";
 import ProductPage from "./screens/ProductPage";
@@ -16,18 +15,16 @@ import StripeCheckoutScreen from "./screens/StripeCheckoutScreen";
 import SuccessScreen from "./screens/Success_Screen";
 import CancelPage from "./screens/CancelPage";
 import AdminDashboard from "./screens/AdminDashboard";
-import "./App.css";
 import { Orders } from "./screens/Admin/pages";
 import NotFound from "./screens/NotFound";
+import "./App.css";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Homepage />} />
-      </Routes>
 
-      <Routes>
         <Route path="/products/slug/:slug" element={<ProductPage />} />
         <Route
           path="/featuredProducts/slug/:slug"
@@ -44,15 +41,10 @@ function App() {
         <Route path="/QA" element={<QA />} />
         <Route path="/success" element={<SuccessScreen />} />
         <Route path="/cancel" element={<CancelPage />} />
-      </Routes>
 
-      <Routes>
         <Route path="/admin/*" element={<AdminDashboard />} />
-      </Routes>
-      {/* 404 page  */}
-      <Routes>
-        <Route path="*" 
-        element={<NotFound />} />
+
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
