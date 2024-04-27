@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 export default function Features() {
   return (
     <div>
-         <div className="mt-32 mb-32">
+      <div className="mt-32 mb-32">
         <h1 className="text-4xl font-sans text-center lg:text-left  lg:ml-[273px] font-semibold mb-16">
           Features
         </h1>
@@ -62,5 +62,5 @@ export default function Features() {
         </div>
       </div>
     </div>
-  )
+  );
 }
