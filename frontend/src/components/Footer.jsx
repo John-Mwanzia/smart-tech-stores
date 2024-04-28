@@ -75,17 +75,32 @@ export default function Footer() {
               <div className="flex gap-6">
                 <div>
                   <Link to="/">
-                    <img src="/images/footer/facebook.png" width={40} height={40} alt="facebook image"/>
+                    <img
+                      src="/images/footer/facebook.png"
+                      width={40}
+                      height={40}
+                      alt="facebook image"
+                    />
                   </Link>
                 </div>
                 <div>
                   <Link to="/">
-                    <img src="/images/footer/instagram.png" width={40} height={40} alt="instagram image" />
+                    <img
+                      src="/images/footer/instagram.png"
+                      width={40}
+                      height={40}
+                      alt="instagram image"
+                    />
                   </Link>
                 </div>
                 <div>
                   <Link to="/">
-                    <img src="/images/footer/twitter.png" width={40} height={40} alt="twitter img" />
+                    <img
+                      src="/images/footer/twitter.png"
+                      width={40}
+                      height={40}
+                      alt="twitter img"
+                    />
                   </Link>
                 </div>
               </div>
@@ -93,8 +108,13 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex justify-center items-center pb-8">
-            <img src="/images/footer/copyRight.svg" alt="copyRight" width={40} height={40} />
-             <p>2023 Smart Tech. All rights reserved</p>
+          <img
+            src="/images/footer/copyRight.svg"
+            alt="copyRight"
+            width={40}
+            height={40}
+          />
+          <p>2023 Smart Tech. All rights reserved</p>
         </div>
       </div>
     </>
